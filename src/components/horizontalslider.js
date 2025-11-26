@@ -124,7 +124,7 @@ export default function HorizontalSlider({ onImageClick }) {
           threshold={1}
           delay={500}
         >
-          <h1>Latest <span>Project</span></h1>
+          <h1>Highlight <span>Projects</span></h1>
         </AnimatedContent>
 
         <AnimatedContent
