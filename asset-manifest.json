@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.21279f66.css",
-    "main.js": "/static/js/main.9b5cbd34.js",
+    "main.js": "/static/js/main.be262933.js",
     "static/js/198.9db6c00f.chunk.js": "/static/js/198.9db6c00f.chunk.js",
     "static/media/WAKTU AHKIR.jpg": "/static/media/WAKTU AHKIR.3d5012ce93fcad922880.jpg",
     "static/media/galpod-app.png": "/static/media/galpod-app.64e7b931b97ef620af03.png",
@@ -19,11 +19,11 @@
     "index.html": "/index.html",
     "static/media/plus-paricle.svg": "/static/media/plus-paricle.a91328f68783c0a77b08cac4564e650d.svg",
     "main.21279f66.css.map": "/static/css/main.21279f66.css.map",
-    "main.9b5cbd34.js.map": "/static/js/main.9b5cbd34.js.map",
+    "main.be262933.js.map": "/static/js/main.be262933.js.map",
     "198.9db6c00f.chunk.js.map": "/static/js/198.9db6c00f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21279f66.css",
-    "static/js/main.9b5cbd34.js"
+    "static/js/main.be262933.js"
   ]
 }
