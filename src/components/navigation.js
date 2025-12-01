@@ -10,11 +10,9 @@ function open() {
     ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon'].forEach(id => document.getElementById(id)?.classList.toggle('open'))
 }
 
-// Fungsi untuk update theme color di browser navigation bar
 function updateBrowserThemeColor(color) {
     let metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-    // Jika meta tag belum ada, buat yang baru
     if (!metaThemeColor) {
         metaThemeColor = document.createElement('meta');
         metaThemeColor.name = 'theme-color';
@@ -25,15 +23,30 @@ function updateBrowserThemeColor(color) {
 }
 
 function Navigation() {
-    // Inisialisasi state berdasarkan CSS variable yang sedang aktif
     const [darkMode, setDarkMode] = useState(() => {
         const root = document.documentElement;
         const currentPrimary = getComputedStyle(root).getPropertyValue('--primary').trim();
-        // Jika primary adalah warna gelap (#0a0a0a), maka dark mode = true
         return currentPrimary === '#0a0a0a' || currentPrimary === 'rgb(10, 10, 10)';
     });
 
-    // Sinkronkan button UI dengan state saat komponen mount
+    // 🔥 FIX: Disable overscroll dan set background
+    useEffect(() => {
+        // Set background color untuk html dan body
+        const backgroundColor = darkMode ? '#0a0a0a' : '#dbdbce';
+        document.documentElement.style.backgroundColor = backgroundColor;
+        document.body.style.backgroundColor = backgroundColor;
+
+        // Disable overscroll behavior
+        document.body.style.overscrollBehavior = 'none';
+        document.body.style.overscrollBehaviorY = 'none';
+        document.documentElement.style.overscrollBehavior = 'none';
+
+        return () => {
+            // Cleanup jika perlu
+            document.body.style.overscrollBehavior = 'auto';
+        };
+    }, [darkMode]);
+
     useEffect(() => {
         const isDark = darkMode;
         ['swchbtn1', 'swchbtn2', 'theme', 'theme2'].forEach(id => {
@@ -47,9 +60,8 @@ function Navigation() {
             }
         });
 
-        // Update theme-color meta tag saat mount
         updateBrowserThemeColor(isDark ? '#0a0a0a' : '#dbdbce');
-    }, [darkMode]); // Jalankan setiap darkMode berubah
+    }, [darkMode]);
 
     function toggleTheme() {
         const root = document.documentElement;
@@ -72,7 +84,6 @@ function Navigation() {
 
             root.style.setProperty('--yl-code', '#d41515');
 
-            // 🌞 Light mode code theme
             root.style.setProperty('--code-bg', '#f5f5f5');
             root.style.setProperty('--code-inline-bg', '#dbdbce');
             root.style.setProperty('--code-text', '#1e1e1e');
@@ -94,6 +105,10 @@ function Navigation() {
             root.style.setProperty('--toolbar-bg', 'rgba(0, 0, 0, 0.1)');
             root.style.setProperty('--toolbar-text', '#444');
 
+            // 🔥 Update background color
+            document.documentElement.style.backgroundColor = '#dbdbce';
+            document.body.style.backgroundColor = '#dbdbce';
+
             updateBrowserThemeColor('#dbdbce');
         } else {
             // 🌑 Dark Mode
@@ -112,7 +127,6 @@ function Navigation() {
 
             root.style.setProperty('--yl-code', '#fcf18d');
 
-            // 🌑 Dark mode code theme (Okaidia style)
             root.style.setProperty('--code-bg', 'var(--border)');
             root.style.setProperty('--code-inline-bg', '#0a0a0a');
             root.style.setProperty('--code-text', '#f8f8f2');
@@ -134,9 +148,12 @@ function Navigation() {
             root.style.setProperty('--toolbar-bg', 'rgba(224, 224, 224, 0.2)');
             root.style.setProperty('--toolbar-text', '#bbb');
 
+            // 🔥 Update background color
+            document.documentElement.style.backgroundColor = '#0a0a0a';
+            document.body.style.backgroundColor = '#0a0a0a';
+
             updateBrowserThemeColor('#0a0a0a');
         }
-
 
         setDarkMode(!darkMode);
     }
@@ -158,11 +175,9 @@ function Navigation() {
                 </button>
             </ul>
 
-
             <button id='theme' className='theme theme1' onClick={toggleTheme}>
                 <div id='swchbtn1' className='button-swch'>{darkMode ? (<p></p>) : (<p></p>)}</div>
             </button>
-
         </div>
     );
 }

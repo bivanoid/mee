@@ -37,14 +37,7 @@ export default function HorizontalSlider({ onImageClick }) {
       type: "individual",
       title: "Gallery Photo",
       tags: ["JAVA", "XML", "FIREBASE"],
-      link: "https://bivanoid.github.io/me/#/article/43"
-    },
-    {
-      img: Bebrave,
-      alt: "Be Brave",
-      type: "individual",
-      title: "Be Brave",
-      tags: ["Figma", "Design", "Snapsheed"],
+      link: "https://bivanoid.site/article/73"
     },
     {
       img: calc,
@@ -55,26 +48,12 @@ export default function HorizontalSlider({ onImageClick }) {
       link: "https://vandyaaa.github.io/calculablew/"
     },
     {
-      img: StarNight,
-      alt: "Starnight",
-      type: "individual",
-      title: "Star Night",
-      tags: ["FIGMA"]
-    },
-    {
       img: kasir,
       alt: "Cashier",
       type: "individual",
       title: "Cashier",
       tags: ["PHP", "BOOTSTRAP", "MYSQL"]
-    },
-    {
-      img: EaktuAhkir,
-      alt: "WaktuAhkir",
-      type: "individual",
-      title: "Waktu Ahkir",
-      tags: ["FIGMA", "DESIGN"]
-    },
+    }
   ];
 
   useEffect(() => {

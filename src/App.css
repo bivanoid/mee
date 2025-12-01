@@ -30,6 +30,18 @@
   --green-cl: rgb(88, 252, 143);
 
 }
+
+
+
+:root {
+  color-scheme: only light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: only dark;
+  }
+}
 /* 
         p {
           text-shadow: 0 0 5px var(--primary), 0 0 10px #c4c4c4;
@@ -38,6 +50,7 @@
 * {
   cursor: none;
   padding: 0;
+  
   margin: 0;
   box-sizing: border-box;
   /* transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */

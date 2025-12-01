@@ -1,5 +1,12 @@
 @import url(../App.css);
 
+html,
+body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
 .navigation {
     width: calc(100%);
     height: min-content;
