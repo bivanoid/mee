@@ -48,6 +48,14 @@ export default function HorizontalSlider({ onImageClick }) {
       link: "https://vandyaaa.github.io/calculablew/"
     },
     {
+      img: "Bynna's shop",
+      alt: "bynna's shop",
+      type: "individual",
+      title: "Bynna's shop",
+      tags: ["JAVASCRIPT", "CSS", "PHP"],
+      link: "https://bynnaaa.lovestoblog.com/"
+    },
+    {
       img: kasir,
       alt: "Cashier",
       type: "individual",
