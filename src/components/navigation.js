@@ -71,6 +71,7 @@ function Navigation() {
             // 🌞 Light Mode
             root.style.setProperty('--primary', '#dbdbce');
             root.style.setProperty('--primary2', '#dadaddff');
+            root.style.setProperty('--primary25', '#d1d1c4');
             root.style.setProperty('--primary3', '#fafaff');
             root.style.setProperty('--blue', '#173ff0');
             root.style.setProperty('--button', '#1c1c1c');
@@ -114,6 +115,7 @@ function Navigation() {
             // 🌑 Dark Mode
             root.style.setProperty('--primary', '#0a0a0a');
             root.style.setProperty('--primary2', '#131313');
+            root.style.setProperty('--primary25', '#1414143a');
             root.style.setProperty('--primary3', '#232222');
             root.style.setProperty('--blue', '#729cf7');
             root.style.setProperty('--button', '#e9ecef');

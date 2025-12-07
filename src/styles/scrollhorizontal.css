@@ -3,7 +3,9 @@
     height: calc(fit-content);
     overflow: hidden;
     position: relative;
-    background-color: var();
+    background-color: var(--primary25);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
 }
 
 .swiper {
@@ -13,6 +15,7 @@
 .title-swiper {
     height: fit-content;
     padding-block: 30px;
+    border-bottom: 1px solid var(--border);
 }
 
 .con-title-HZ {
@@ -23,7 +26,7 @@
 .title-swiper h1 {
     color: var(--button);
     font-weight: 400;
-    font-size: 4em;
+    font-size: 4rem;
     color: var(--button);
     font-family: var(--secondfont);
     text-transform: uppercase;
@@ -38,12 +41,13 @@
 
 .title-swiper span {
     opacity: 0.3;
+    font-size: 4rem;
 }
 
 .title-swiper p {
-    font-size: 0.8em;
+    font-size: 1rem;
     font-weight: 200;
-    opacity: 0.7;
+    opacity: 0.5;
     line-height: 1;
     color: var(--button);
     margin: 0;
@@ -59,9 +63,7 @@
     align-items: flex-end;
     box-sizing: border-box;
     padding-bottom: 30px;
-    border-top: 1px solid var(--border);
     border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
     border-left: 0px solid var(--border);
     height: auto !important
 }
@@ -78,37 +80,8 @@
 }
 
 
-
-.see-more-project::before {
-    content: 'under construction :)';
-    padding: 20px;
-    position: absolute;
-    display: grid;
-    background-color: var(--yellow-cl);
-    color: #0a0a0a;
-    font-family: var(--secondfont);
-        text-transform: uppercase;
-        font-weight: 800;
-        margin: 1em;
-        font-size: 1em;
-        place-items: center;
-        opacity: 0;
-        scale: 0.7;
-        transition: 0.2s;
-        transition-delay: scale 0.3s;
-        filter: brightness(100%) !important;
-        z-index: 2;
-}
-
-
-.see-more-project:hover::before {
-    opacity: 1;
-    scale: 1;
-    
-}
-
 .more-btn {
-    width: 5em;
+    width: 5rem;
         aspect-ratio: 1 / 1;
         background-color: transparent;
         border: 1px solid var(--border);
@@ -134,8 +107,8 @@
     font-family: var(--secondfont);
     text-transform: uppercase;
     font-weight: 800;
-    margin: 1em;
-    font-size: 1em;
+    margin: 1rem;
+    font-size: 1rem;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -169,6 +142,7 @@
     border: 1px solid var(--border);
     scale: 1;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 1rem;
 }
 
 .gambar a {
@@ -178,13 +152,13 @@
 }
 
 .gambar .fi {
-    font-size: 1em;
+    font-size: 1rem;
     padding-left: 3px;
 }
 
 .gambar-h2 {
     color: var(--button);
-    font-size: 0.6em;
+    font-size: 1rem;
     margin-top: 0;
     position: relative;
     top: 0;
@@ -207,7 +181,7 @@
     position: relative;
     text-transform: uppercase;
     top: 0;
-    height: 1.5em;
+    height: fit-content;
     overflow: hidden;
 }
 
@@ -218,7 +192,9 @@
     padding-inline: 30px;
     width: calc(100% - 20px);
     overflow: hidden;
-    gap: 0.3em;
+    gap: 0.3rem;
+    font-weight: 1000;
+    font-family: var(--secondfont);
 }
 
 .tag-language .taglang:nth-last-child(1) {
@@ -228,14 +204,13 @@
 .taglang {
     width: fit-content;
     height: fit-content;
-    font-size: 0.8em;
+    font-size: 1rem;
     border: 1px solid var(--border);
-    padding-inline: 0.8em;
-    padding-block: 0.5em;
+    padding-inline: 0.5rem;
+    padding-block: 0.5rem;
     color: var(--button);
-    font-weight: 500;
+    font-weight: 800;
     filter: grayscale(60%);
-    font-weight: 100;
     text-transform: uppercase;
 }
 
@@ -249,7 +224,7 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-    border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
 }
 
 .next-hz,
@@ -261,8 +236,9 @@
     place-items: center;
     font-family: var(--secondfont);
     color: var(--button);
-    font-size: 0.8em;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
     padding-inline: 30px;
 }
 
@@ -296,18 +272,25 @@
     color: white;
     border-radius: 0px;
     bottom: 0px;
-    font-size: 1em;
+    font-size: 1rem;
     right: 0px;
     font-family: var(--secondfont);
     width: 60px;
     height: 60px;
-    background: var(--radial-grad);
+    background: var(--button);
+    border-radius: 1rem 0 0 1rem;
     box-sizing: border-box;
     border: 1px solid var(--border);
 }
 
 .mySwiper .gambar:hover a svg {
     width: 25%;
+    
+}
+
+.mySwiper .gambar:hover a svg path {
+    fill: var(--primary2);
+    
 }
 
 
@@ -365,7 +348,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,8 +364,13 @@
 
 @media (max-width:767px) {
     .title-swiper h1 {
-        font-size: 3.3em;
+        font-size: 3rem;
     }
+
+        .title-swiper span {
+            opacity: 0.3;
+            font-size: 3rem;
+        }
 
     .con-all-project {
         display: flex;
@@ -419,11 +407,11 @@
         align-items: center;
         position: fixed;
         z-index: 1000;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 1);
     }
 
     .fullscreen-overlay img {
-        max-width: 90%;
+        max-width: 90%; 
         max-height: 90%;
         object-fit: contain;
     }
@@ -445,15 +433,15 @@
     }
 
     .gambar-h2 {
-        font-size: 0.6em;
+        font-size: 1rem;
         color: var(--button);
     }
 
     .gambar-h1 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
     .taglang {
-        font-size: 0.8em;
+        font-size: 1rem;
     }
 }

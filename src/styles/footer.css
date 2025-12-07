@@ -1,7 +1,7 @@
 @import url(../App.css);
 
 .footer {
-    height: 100svh;
+    height: fit-content;
     width: 100%;
     font-family: var(--primaryfont);
     position: relative;
@@ -12,11 +12,13 @@
 .footer-header {
     height: 62px;
     width: calc(100%);
-    border-bottom: 1px solid var(--border);
-    padding-inline: 30px;
+    /* background-color: var(--primary25); */
+    border-block: 1px solid var(--border);
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .triple-shapes {
@@ -42,11 +44,11 @@
 
 .footer-main {
     width: 100%;
-    height: 100%;
     display: flex;
+    height: fit-content;
+    padding: 1rem;
+    gap: 1rem;
 }
-
-
 
 .footer1 {
     border-right: 1px solid var(--border);
@@ -59,18 +61,21 @@
 }
 
 .logo-footer {
-    padding-top: 30px;
-    max-width: 300px;
+    width: 100px;
 }
 
-.logo-footer2 {
-    display: none;
+.logo-footer svg {
+    height: fit-content;
+    aspect-ratio: 1/1;
 }
+
+/* .logo-footer2 {
+    display: none;
+} */
 
 .footer1-main {
     height: 100%;
     overflow: hidden;
-    background: url(../assets/sheep.jpeg);
     filter: grayscale(20%);
     background-position: center;
     background-size: cover;
@@ -83,30 +88,29 @@
 .social-media-footer {
     display: flex;
     flex-wrap: wrap;
-    white-space: nowrap;
-    width: 70%;
     gap: 10px;
-    margin-top: 15px
+    margin-top: 15px;
 }
 
 .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth) {
     color: var(--button);
     text-decoration: none;
     display: grid;
-    width: 3vw;
-    aspect-ratio: 1/1;
+    width: 45px;
+    height: 45px;
     border-radius: 0px;
     transition: 0.3s;
-    font-size: 0.8em;
+    font-size: 1rem;
     border: 1px solid var(--border);
     place-items: center;
     outline: none;
 }
 
+/* 
 .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth):hover {
     scale: 0.9;
     outline: 1px solid var(--button);
-    outline-offset: 0.5em;
+    outline-offset: 0.5rem;
     color: var(--primary);
 }
 
@@ -138,73 +142,103 @@
 .gth:hover {
     background-color: #24292e;
     color: white !important;
-}
+} */
 
 .footer1 .footer1-main img {
     width: 70px;
     aspect-ratio: 1/1;
 }
 
-.copyright {
-    padding-bottom: 30px;
-    width: 100%;
-    font-size: 0.8em;
-    color: var(--button)
-}
-
 .footer2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-inline: 30px;
-    flex: 0.5;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.top-footer2 {
+    background-color: var(--primary25);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.con-footer3-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+:is(.get-in-touch, .navigation-link-footer) {
+    background-color: var(--primary25);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    height: 100%;
 }
 
 .footer2 .top-footer2 p {
     color: var(--button);
     font-family: var(--primaryfont);
     font-weight: 400;
-    padding-top: 30px;
-    font-size: 0.8em;
+    font-size: 1rem;
     margin: 0;
+    line-height: 1.6;
 }
-
 
 .footer3 {
-    height: calc(100% - 60px);
-    padding-block: 30px;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
+    flex-direction: row;
+    justify-content: space-between;
     box-sizing: border-box;
-    gap: 30px;
-    padding-right: 30px;
 }
-
 
 .footer3 h1 {
     font-family: var(--secondfont);
     color: var(--button);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 1em;
-    margin: 0;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
 }
 
 .footer3 ul {
     padding: 0;
+    margin: 0;
 }
 
 .footer3 li {
     color: var(--button);
-    font-size: 0.8em;
+    font-size: 1rem;
     font-family: var(--primaryfont);
     opacity: 0.5;
     list-style: none;
     padding-bottom: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
 }
 
+.footer3 li:hover {
+    opacity: 1;
+}
 
+.footer3 a {
+    color: var(--button);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer3 a:hover {
+    opacity: 1;
+}
 
 .con-starfuter {
     left: 30px;
@@ -218,84 +252,94 @@
     fill: var(--button);
 }
 
-.get-in-touch ul li a {
-    color: var(--button);
-}
-
-:is(.navigation-link-footer, .get-in-touch) h1 {
-    margin-bottom: 15px;
-}
-
 .copyright2 {
     display: none;
 }
 
-@media (max-width:767px) {
+/* Tablet - 768px to 1024px */
+@media (max-width: 1024px) {
     .footer-main {
         flex-direction: column;
     }
 
-    .copyright2 {
-        width: calc(100%);
-        font-size: 0.6em;
+    .footer1 {
+        display: none;
+    }
+
+    .footer3 {
+        gap: 1rem;
+    }
+
+    .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth) {
+        width: 50px;
         height: 50px;
-        display: flex;
-        align-items: center;
-        font-family: var(--secondfont);
-        color: var(--button);
-        padding: 0px 30px 0px 30px;
-        background-color: var(--border);
+    }
+}
+
+/* Mobile - 480px to 767px */
+@media (max-width: 767px) {
+    .footer {
+        min-height: auto;
+    }
+
+    .footer-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .footer-main {
+        flex-direction: column;
     }
 
     .logo-footer {
-        width: 15%;
-    }
-
-    .logo-footer1 {
-        display: none;
+        width: 40px;
+        padding: 0;
     }
 
     .logo-footer2 {
         display: block;
     }
 
-    .copyright {
-        position: absolute;
-        bottom: 0;
-        width: fit-content;
-        opacity: 0.5;
-        width: calc(100%);
-        scale: 0.8;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        padding-block: 10px;
-        border: none;
+    .top-footer2 {
+        flex-direction: column;
     }
 
-    .copyright {
+    .footer2 .top-footer2 p {
+        font-size: 1rem;
+    }
+
+    .footer2 .top-footer2 p br {
         display: none;
     }
 
+    .social-media-footer {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
     .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth) {
-        width: 10vw;
+        width: calc((100% - 40px) / 6);
+        min-width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .con-footer3-content {
+        flex-direction: column;
     }
 
     .footer3 {
-        padding-top: 30px;
         flex-direction: column;
-        padding-left: 30px;
-        left: 0;
-        padding-left: 30px;
-        gap: 20px;
+        gap: 1rem;
     }
 
     .footer3 h1 {
-        font-size: 1em;
+        font-size: 1rem;
+        margin-bottom: 12px;
     }
 
     .footer3 li {
-        font-size: 0.8em;
+        font-size: 1rem;
+        padding-bottom: 8px;
     }
 
     .footer1 {
@@ -303,7 +347,84 @@
     }
 
     .con-starfuter {
-        left: calc(100% - 60px);
-        bottom: 80px;
+        right: 20px;
+        left: auto;
+        bottom: 70px;
+        width: 25px;
     }
+}
+
+/* Extra Small Mobile - Below 480px */
+@media (max-width: 480px) {
+    .footer-header {
+        height: 55px;
+        padding: 0.5rem 1rem;
+    }
+
+    .triple-shapes {
+        gap: 5px;
+    }
+
+    :is(.rectangle, .triangle, .circle) {
+        width: 8px;
+    }
+
+    .top-footer2 {
+        padding: 30px;
+    }
+
+    .footer2 .top-footer2 p {
+        font-size: 1rem;
+    }
+
+    .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth) {
+        width: calc((100% - 30px) / 6);
+        min-width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .footer3 {
+        gap: 1rem;
+    }
+
+    .footer3 h1 {
+        font-size: 1rem;
+    }
+
+    .footer3 li {
+        font-size: 1rem;
+    }
+}
+
+/* Large Desktop - Above 1440px */
+@media (min-width: 1440px) {
+    .footer3 {
+        gap: 80px;
+        padding: 40px;
+    }
+
+    .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth) {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .footer2 .top-footer2 p {
+        font-size: 1rem;
+    }
+
+    .footer3 h1 {
+        font-size: 1rem;
+    }
+
+    .footer3 li {
+        font-size: 1rem;
+    }
+}
+
+.copyright {
+    opacity: 0.5;
+    padding-top: 1rem;
+
 }

@@ -12,7 +12,7 @@ import kasir from '../assets/Casier.png';
 import calc from '../assets/calc.png';
 import gallery from '../assets/galpod-app.png';
 import EaktuAhkir from '../assets/WAKTU AHKIR.jpg';
-import StarNight from '../assets/starnight.jpg';
+import Bynaa from "../assets/byna's-shop.png";
 import Bebrave from '../assets/bebrave.jpg';
 import Logo from './logo';
 import FadeContent from './FadeContent';
@@ -48,7 +48,7 @@ export default function HorizontalSlider({ onImageClick }) {
       link: "https://vandyaaa.github.io/calculablew/"
     },
     {
-      img: "Bynna's shop",
+      img: Bynaa,
       alt: "bynna's shop",
       type: "individual",
       title: "Bynna's shop",
@@ -71,7 +71,7 @@ export default function HorizontalSlider({ onImageClick }) {
     const setEqualHeights = () => {
       let maxHeight = 0;
       slides.forEach(slide => {
-        slide.style.height = 'auto'; // reset dulu
+        slide.style.height = 'auto';
         maxHeight = Math.max(maxHeight, slide.offsetHeight);
       });
       slides.forEach(slide => {
@@ -171,7 +171,7 @@ export default function HorizontalSlider({ onImageClick }) {
           ))}
           <SwiperSlide className='see-more-project'>
             <div className='more-btn'><Logo /></div>
-            <p>See Other Projects</p>
+            <p>That's all for now</p>
           </SwiperSlide>
         </Swiper>
       </FadeContent>

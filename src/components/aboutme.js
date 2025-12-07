@@ -16,7 +16,7 @@ function AboutMe({ onImageClick }) {
             <div className='contents'>
                 <div className='abouts'>
                     <FadeContent blur={false} delay={500} duration={300} easing="ease-out" initialOpacity={0}>
-                        <div className='text-abouts'><p className='title-about'>About</p><br></br>
+                        <div className='text-abouts'><p className='title-about'>About/Me</p><br></br>
                             <p className='content-about'>
                                 Hello! My name is Firdhan Abivandya, born on June 21, 2007, in Surakarta, Central Java, Indonesia. Since an early age, I’ve been passionate about technology—especially in software and mobile application development. I enjoy exploring new ideas, solving problems creatively, and building applications that bring real value to users.
                                 <br></br>
@@ -32,7 +32,7 @@ function AboutMe({ onImageClick }) {
                         config={{ tension: 100, friction: 30 }}
                         initialOpacity={0}
                     >
-                        <div className='text-abouts  '><p className='title-about title-about2'>Education</p><br></br>
+                        <div className='text-abouts  '><p className='title-about title-about2'>Education/Me</p><br></br>
                             <ul className='content-carrier'>
                                 <FadeContent blur={false} duration={1500} delay={0} easing="ease-in" initialOpacity={0}>
                                     <li><span><div className='circle-crr'></div></span> <p>SDN Purwodiningratan NO.34</p></li>

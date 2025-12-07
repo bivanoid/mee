@@ -32,48 +32,48 @@ function Introduction() {
         return `${hours} :. ${minutes} :. ${seconds}`;
     };
 
-    useEffect(() => {
-        const lenis = new Lenis({
-            duration: 1.5,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            smooth: true,
-            gestureDirection: 'vertical',
-            touchMultiplier: 2,
-        });
+    // useEffect(() => {
+    //     const lenis = new Lenis({
+    //         duration: 1.5,
+    //         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    //         smooth: true,
+    //         gestureDirection: 'vertical',
+    //         touchMultiplier: 2,
+    //     });
 
-        function raf(time) {
-            lenis.raf(time);
+    //     function raf(time) {
+    //         lenis.raf(time);
 
-            const scrollY = window.scrollY || window.pageYOffset;
-            const maxScroll = 4000;
-            let opacity = 1 - scrollY / (maxScroll / 8);
-            opacity = Math.max(0, Math.min(1, opacity));
+    //         const scrollY = window.scrollY || window.pageYOffset;
+    //         const maxScroll = 4000;
+    //         let opacity = 1 - scrollY / (maxScroll / 8);
+    //         opacity = Math.max(0, Math.min(1, opacity));
 
-            const isMobile = window.innerWidth <= 767;
+    //         const isMobile = window.innerWidth <= 767;
 
-            if (conImageRef.current) {
-                if (isMobile) {
-                    // Mobile: hanya scale
+    //         if (conImageRef.current) {
+    //             if (isMobile) {
+    //                 // Mobile: hanya scale
 
-                } else {
-                    // Desktop: scale + translateX
+    //             } else {
+    //                 // Desktop: scale + translateX
 
-                }
+    //             }
 
-                conImageRef.current.style.opacity = `${opacity}`;
-            }
+    //             conImageRef.current.style.opacity = `${opacity}`;
+    //         }
 
-            requestAnimationFrame(raf);
-        }
+    //         requestAnimationFrame(raf);
+    //     }
 
-        // Set initial opacity explicitly
-        if (conImageRef.current) {
-            conImageRef.current.style.setProperty('opacity', '1', 'important');
-        }
+    //     // Set initial opacity explicitly
+    //     if (conImageRef.current) {
+    //         conImageRef.current.style.setProperty('opacity', '1', 'important');
+    //     }
 
-        requestAnimationFrame(raf);
-        return () => lenis.destroy();
-    }, []);
+    //     requestAnimationFrame(raf);
+    //     return () => lenis.destroy();
+    // }, []);
 
     const scrollToSection = () => {
         const section = document.getElementById('sc2');
@@ -88,12 +88,12 @@ function Introduction() {
             <p className='number'></p>
 
             <div className='text' ref={conImageRef} style={{ opacity: 1 }}>
-                <FadeContent blur={false} duration={1500} easing="ease-out" initialOpacity={0}>
+                {/* <FadeContent blur={false} duration={1500} easing="ease-out" initialOpacity={0}>
                     <div className='header-int'>
                         <p className='revealed'><strong>BY bIVANOId</strong></p>
                         <p className='currndate'>{formatTime(currentTime)}</p>
                     </div>
-                </FadeContent>
+                </FadeContent> */}
 
                 <div className='hero'>
                     <div className='hero-1'>
@@ -114,7 +114,9 @@ function Introduction() {
                         
                         
                     </div>
-                    <LogoMiring />
+                    <div className='image-logo'>
+                        <LogoMiring />
+                    </div>
                     <div className='hero-2'>
                         <AnimatedContent
                             distance={10}

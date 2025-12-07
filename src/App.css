@@ -1,25 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css');
-@import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Syne+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 :root {
   --primary: #0a0a0a;
-  --primary25: #1414143a;
+  --primary25: #0d0d0d;
   --primary2: #131313;
   --primary3: #232222;
   --blue: #729cf7;
   --grey: rgb(59, 59, 59);
   --button: #f8f8f8;
   --border: #2f2e3136;
-  --radial-grad:radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--border) 100%);
+  --radial-grad: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--border) 100%);
   --secondfont: "Kode Mono",
     monospace;
-  --primaryfont: "Syne Mono",
-    monospace;
+  --primaryfont: "Space Grotesk", sans-serif;
 
   --yl-code: #fcf18d;
 
@@ -42,18 +38,34 @@
     color-scheme: only dark;
   }
 }
+
 /* 
         p {
           text-shadow: 0 0 5px var(--primary), 0 0 10px #c4c4c4;
         } */
 
 * {
-  cursor: none;
+  /* cursor: none; */
   padding: 0;
-  
+
   margin: 0;
   box-sizing: border-box;
   /* transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  /* font-size: 16px; */
+}
+
+@media (max-width:900px) {
+  @media (min-width:747px) {
+    * {
+        font-size: 20px;
+      }
+  }
+}
+
+@media (max-width:747px) {
+  * {
+    font-size: 16px;
+  }
 }
 
 .kode-mono {
@@ -113,7 +125,7 @@ svg path {
 ::selection {
   background-color: var(--blue);
   color: var(--primary);
-  
+
 }
 
 @keyframes alertyo {
@@ -121,14 +133,17 @@ svg path {
     opacity: 0.1;
     fill: var(--button);
   }
+
   50% {
     opacity: 0.1;
     fill: var(--button);
   }
+
   50.01% {
     opacity: 0.6;
     fill: var(--red-cl);
   }
+
   100% {
     opacity: 0.6;
     fill: var(--red-cl);
@@ -181,14 +196,16 @@ a {
     letter-spacing: 1px;
     filter: grayscale(100%);
   }
+
   99% {
     opacity: 0;
     letter-spacing: 1px;
     filter: grayscale(100%);
   }
+
   100% {
-     opacity: 1;
-     letter-spacing: 1px;
+    opacity: 1;
+    letter-spacing: 1px;
     filter: grayscale(0%);
   }
 }
@@ -209,28 +226,28 @@ a {
 }
 
 @media (min-width:1000px) {
-    ::-webkit-scrollbar {
-        width: 10px;
-        padding: 5px;
-        background-color: var(--primary2);
-    
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background-color: var(--border);
-        position: relative;
-      }
-    
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--button);
-    
-      }
-    
-      ::-webkit-scrollbar-button {
-        display: none;
-        margin: 20px;
-      }
-} 
+  ::-webkit-scrollbar {
+    width: 10px;
+    padding: 5px;
+    background-color: var(--primary2);
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    position: relative;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button);
+
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+    margin: 20px;
+  }
+}
 
 @media (max-width:1000px) {
   ::-webkit-scrollbar {
@@ -249,9 +266,10 @@ a {
     top: 0px;
   }
 
-    .loading-screen h1 {
-      font-weight: 400;
-      font-size: 1rem;
-      animation: fadeIn 3.8s ease-in-out; }
-  
+  .loading-screen h1 {
+    font-weight: 400;
+    font-size: 1rem;
+    animation: fadeIn 3.8s ease-in-out;
+  }
+
 }

@@ -1,18 +1,22 @@
 .feedback {
     height: fit-content;
+    background-color: var(--primary25);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    overflow: hidden;
 }
 
 .title-feedback {
     color: var(--button);
     font-weight: 800;
-    font-size: 3.3em;
+    font-size: 3rem;
     font-family: var(--secondfont);
     padding: 0;
     margin: 0;
 }
 
 .subtitle-feedback {
-    font-size: 0.8em;
+    font-size: 1rem;
     font-weight: 200;
     opacity: 0.7;
     line-height: 1;
@@ -49,6 +53,7 @@
     height: 70px;
     display: flex;
     position: relative;
+    border-top: 1px solid var(--border);
     justify-content: space-between;
 }
 
@@ -61,7 +66,9 @@
     place-items: center;
     font-family: var(--secondfont);
     color: var(--button);
-    font-size: 0.8em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
     font-weight: 600;
     padding-inline: 30px;
 }
@@ -117,7 +124,7 @@
 
     .next-fb,
     .prev-fb {
-        font-size: 0.8em;
+        font-size: 1rem;
         width: fit-content;
 
     }
@@ -128,7 +135,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-block: 1px solid var(--border);
     border-right: 1px solid var(--border);
     height: calc(fit-content + 20px);
     min-height: 380px;
@@ -160,6 +166,8 @@
     margin: 0;
     margin-bottom: 40px;
     margin-top: 5px;
+    overflow: hidden;
+    border-radius: 1rem;
     border: 1px solid var(--border);
 }
 
@@ -169,7 +177,7 @@
 }
 
 .user-feedback .fromuser {
-    font-size: 0.8em;
+    font-size: 0.7rem;
     color: var(--button);
     margin-right: 5px;
     text-transform: lowercase;
@@ -177,9 +185,9 @@
 }
 
 .user-feedback .username {
-    font-size: 1.3em;
+    font-size: 1.5rem;
     display: flex;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: var(--button);
     font-family: var(--secondfont);
     font-weight: 800;
@@ -199,8 +207,8 @@
 }
 
 .user-feedback .usertext {
-    font-size: 0.8em;
-    opacity: 0.7;
+    font-size: 1rem;
+    opacity: 0.5;
     width: 100%;
     color: var(--button);
     line-height: 1.1;
@@ -218,35 +226,38 @@
 .user-feedback .userrating {
     display: grid;
     place-items: center;
-    padding: 0.5em;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    
 }
 
 .user-feedback .userrating .rating-1 {
-    width: 0.5em;
+    width: 0.9rem;
     aspect-ratio: 1 / 1;
     background-color: var(--red-cl);
+    
 }
 
 .user-feedback .userrating .rating-2 {
-    width: 0.5em;
+    width: 0.9rem;
     aspect-ratio: 1 / 1;
     background-color: var(--orange-cl);
 }
 
 .user-feedback .userrating .rating-3 {
-    width: 0.5em;
+    width: 0.9rem;
     aspect-ratio: 1 / 1;
     background-color: var(--yellow-cl);
 }
 
 .user-feedback .userrating .rating-4 {
-    width: 0.5em;
+    width: 0.9rem;
     aspect-ratio: 1 / 1;
     background-color: var(--lime-cl);
 }
 
 .user-feedback .userrating .rating-5 {
-    width: 0.5em;
+    width: 0.9rem;
     aspect-ratio: 1 / 1;
     background-color: var(--green-cl);
 }
@@ -263,7 +274,7 @@
     place-items: center;
     padding-inline: 10px;
     width: max-content;
-    background: var(--radial-grad);
+    background: var(--border);
     color: var(--button);
 }
 
@@ -290,9 +301,10 @@
     height: 62px;
     display: grid;
     place-items: center;
-    border-block: 1px solid var(--border);
+    border-top: 1px solid var(--border);
     font-weight: 600;
     position: relative;
+    background-color: var(--primary);
     text-transform: uppercase;
     overflow: hidden;
     gap: 10px;
@@ -302,7 +314,7 @@
     transform: translateY(2px);
     margin-right: 10px;
     opacity: 0.3;
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 .link-to-addfeedback-title1 {
@@ -312,7 +324,7 @@
     align-items: center;
     padding-inline: 20px;
     justify-content: center;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .link-to-addfeedback:hover {
@@ -333,7 +345,7 @@
 }
 
 .error-title {
-    font-size: 1em;
+    font-size: 1rem;
     width: 100%;
     height: 50svh;
     padding-block: 30px;
@@ -347,7 +359,7 @@
 .error-title .error-sub {
     color: var(--button);
     font-family: var(--secondfont);
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 800;
     max-width: 80%;
     margin-block: 15px;
@@ -370,7 +382,7 @@
     font-family: var(--primaryfont);
     padding: 10px 20px 10px 20px;
     color: var(--button);
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 @media (max-width:767px) {
@@ -381,7 +393,7 @@
     .error-title .error-sub {
         color: var(--button);
         font-family: var(--secondfont);
-        font-size: 1em;
+        font-size: 1rem;
         max-width: 80%;
         text-align: center;
         margin-block: 15px;
@@ -455,7 +467,7 @@
 
     .con-userfeedback .usertext {
         width: calc(100%);
-        font-size: 0.8em;
+        font-size: 1rem;
         padding-left: 5px;
         text-align: left;
     }
@@ -467,14 +479,15 @@
         align-items: stretch;
         justify-content: stretch;
         height: fit-content;
+        overflow: hidden;
     }
 
     .user-feedback .userdate {
-        font-size: 0.8em;
+        font-size: 1rem;
     }
 
     .user-feedback .userrating {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .swiper-button-prev-custom,

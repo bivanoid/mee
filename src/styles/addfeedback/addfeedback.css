@@ -28,7 +28,7 @@
     padding: 0;
     margin-left: 9px;
     font-family: var(--secondfont);
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 400;
     padding: 2px 5px 2px 5px;
     background-color: var(--button);
@@ -40,13 +40,13 @@
     height: fit-content;
     flex-direction: column;
     color: var(--button);
-    padding: 30px;
+    padding: 1rem;
 }
 
 .con-addfeedback h2 {
     font-family: var(--secondfont);
     color: var(--button);
-    font-size: 4.5em;
+    font-size: 3rem;
     margin: 0;
     font-weight: 800;
     text-transform: uppercase;
@@ -61,13 +61,14 @@
 
 .con-addfeedback h2 .andText {
     opacity: 0.3;
+    font-size: 3rem;
 }
 
 .con-addfeedback form {
     display: flex;
     width: 100%;
     flex-direction: row;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .con-addfeedback form .con-input {
@@ -78,27 +79,29 @@
 
 .rating-container {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .rating-box {
     width: fit-content;
-    padding: 1em;
+    padding: 1rem;
     aspect-ratio: 1/1;
-    border: 1px solid var(--border);
     display: grid;
     place-items: center;
     transition: 0.3s;
-    font-size: 2em;
+    font-size: 2rem;
     outline: none;
     width: 100%;
+        background-color: var(--primary25);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
 }
 
 .rating-box:hover {
     scale: 0.9;
     outline: 1px solid var(--border);
     background-color: var(--button);
-    outline-offset: 0.5em;
+    outline-offset: 0.5rem;
 }
 
 .rating-box.selected {
@@ -135,11 +138,12 @@
     border: none;
     outline: none;
     height: 8vh;
-    margin-block: 10px;
+    margin-block: 1rem;
     font-size: 1em;
     padding: 10px;
     font-family: var(--primaryfont);
-    background-color: transparent;
+    background-color: var(--primary25);
+    border-radius: 1rem;
     border: 1px solid var(--border);
     color: var(--button);
 }
@@ -157,8 +161,9 @@
     height: 150px;
     padding: 20px 10px 10px 10px;
     font-family: var(--primaryfont);
-    background-color: transparent;
-    border: 1px solid var(--border);
+    background-color: var(--primary25);
+        border-radius: 1rem;
+        border: 1px solid var(--border);
     color: var(--button);
     resize: none;
 }
@@ -183,8 +188,9 @@
     outline: none;
     writing-mode: sideways-rl;
     text-orientation: upright;
-    border: 1px solid var(--border);
-    background: transparent;
+        background-color: var(--primary25);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
     flex: 1;
     width: 20%;
     
@@ -202,10 +208,6 @@
 }
 
 @media (max-width:767px) {
-    .body-addfeedback h2 {
-        font-size: 2.5em;
-    }
-
     .con-addfeedback form .con-input {
         width: 100%;
     }
@@ -416,17 +418,17 @@ button:disabled {
 
 .note-addfb {
     font-family: var(--secondfont);
-    text-transform: uppercase;
-    font-size: 0.8em;
+    text-transform: capitalize;
+    font-size: 1rem;
     padding-bottom: 1em;
     color: var(--button);
+    font-family: var(--primaryfont);
     height: 35px;
     opacity: 0.4;
 }
 
 @media (max-width:767px) {
     .note-addfb {
-        font-size: 0.6em;
         margin-bottom: 10svh;
     }
 }
