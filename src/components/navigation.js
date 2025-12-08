@@ -6,10 +6,6 @@ import ShareSvg from '../iconSvg/shareic';
 import Menus from '../iconSvg/menus';
 import Close from '../iconSvg/close';
 
-
-
-
-
 // 🔥 Fungsi untuk update theme-color meta tag
 function updateThemeColor(color) {
     // Update meta theme-color
