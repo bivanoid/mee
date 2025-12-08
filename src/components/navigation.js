@@ -31,12 +31,18 @@ function Navigation() {
         return currentPrimary === '#0a0a0a' || currentPrimary === 'rgb(10, 10, 10)';
     });
 
+    let isOpen = false;
+
     function open() {
-        ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon'].forEach(id => document.getElementById(id)?.classList.toggle('open'))
-        document.body.style.overflow = 'hidden'
+        // toggle class
+        ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon']
+            .forEach(id => document.getElementById(id)?.classList.toggle('open'));
+
+        isOpen = !isOpen;
+
+        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     }
-    
-    document.body.style.overflow = 'auto'
+
 
     useEffect(() => {
         const backgroundColor = darkMode ? '#0a0a0a' : '#dbdbce';
@@ -181,9 +187,9 @@ function Navigation() {
             </div>
             <ul className='navigasi-menu' id='menu'>
                 <h1>/Menus<span className="dot-introduction"></span></h1>
-                <li><Link to="/">PORTOFOLIO <div className='arrow'><ShareSvg /></div></Link></li>
-                <li><a href='https://github.com/Vandyaaa'>REPOSITORY <div className='arrow'><ShareSvg /></div></a></li>
-                <li><Link to='/blog'>MY BLOG <div className='arrow'><ShareSvg /></div></Link></li>
+                <li><Link onClick={() => { document.body.style.overflow = isOpen ? 'auto' : 'auto'; }} to="/">Portfolio <div className='arrow'><ShareSvg /></div></Link></li>
+                <li><a href='https://github.com/Vandyaaa'>Repository <div className='arrow'><ShareSvg /></div></a></li>
+                <li><Link onClick={() => { document.body.style.overflow = isOpen ? 'auto' : 'auto'; }} to='/blog'>My Blog <div className='arrow'><ShareSvg /></div></Link></li>
                 <button id='theme2' className='theme theme2' onClick={toggleTheme}>
                     <div id='swchbtn2' className='button-swch'>{darkMode ? (<p></p>) : (<p></p>)}</div>
                 </button>

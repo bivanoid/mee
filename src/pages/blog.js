@@ -273,11 +273,19 @@ export default function Blog() {
     setDisplayedBlogs([])
   }
 
+  let isOpenBlog = false;
+
   function openBlog() {
     ["menuShow", "closeBlog", "conArticle", "footerBlog", "backMenuIcon", "menuBlogIcon", "logoBlogIcon"].forEach((id) => {
       document.getElementById(id)?.classList.toggle("open-menu-blog")
     })
+
+    isOpenBlog = !isOpenBlog;
+
+    document.body.style.overflow = isOpenBlog ? 'hidden' : 'auto';
   }
+
+  
 
   function openArticle(article) {
     const scrollPos = lenisRef?.current?.scroll || window.pageYOffset
@@ -308,7 +316,7 @@ export default function Blog() {
       <div className="con-blog">
         <main>
           <div className="navigation-blog">
-            <Link to='/' className="clstgr back-to-home-from-blog" id="backMenuIcon">
+            <Link onClick={() => { document.body.style.overflow = isOpenBlog ? 'auto' : 'auto'; }} to='/' className="clstgr back-to-home-from-blog" id="backMenuIcon">
               <Backic />
             </Link>
             <div className="logoBlog" id="logoBlogIcon">
@@ -368,11 +376,6 @@ export default function Blog() {
               </div>
             ) : (
               <>
-                <div className="info-blog">
-                  <div className="debug-info">
-                    <p>Showing {displayedBlogs.length} of {totalCount} articles</p>
-                  </div>
-                </div>
 
                 {displayedBlogs.map((blog) => (
                   <div
@@ -426,19 +429,13 @@ export default function Blog() {
           </div>
         </main>
 
-        <div className="close-blog" id="closeBlog" onClick={openBlog}>
-          <div className="menu-button-close-blog">
-            <Close />
-          </div>
-        </div>
-
         <div className="con-blog-sticky" id="menuShow">
           <div className="main-sticky-blog">
             <h1>
               /Options<span className="dot-introduction"></span>
             </h1>
             <div className="filter-by">
-              <h2>Filter By</h2>
+            
               <ul>
                 <li
                   className={filter === "latest" ? "active" : ""}

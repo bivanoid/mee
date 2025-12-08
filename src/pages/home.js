@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div>
       <div>
-        <div className='body body-home'>
+        <div className='body body-home' id='bodyHome'>
           <div id='thenav'>
             <Navigation />
           </div>

@@ -44,7 +44,7 @@ body {
     padding: 0px;
     display: flex;
     gap: 30px;
-    transition: 0.5s;
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     margin-top: 0px;
     margin: 0;
 }
@@ -57,8 +57,11 @@ body {
     align-items: center;
     min-width: 104px;
     width: fit-content;
+    text-transform: uppercase;
+    font-family: var(--secondfont);
     border-bottom: 1px solid var(--border);
     transition: 0.2s;
+    font-weight: 800;
 }
 
 .navigasi-menu li a .arrow {

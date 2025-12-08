@@ -43,11 +43,12 @@
 
 .try-again-blog {
     border: 1px solid var(--border);
-    background-color: transparent;
+    background-color: var(--primary);
     font-family: var(--primaryfont);
     padding: 10px 20px 10px 20px;
+    border-radius: 1rem;
     color: var(--button);
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 .try-again-blog2 {
@@ -58,7 +59,7 @@
 .error-state p {
     color: var(--button);
     font-family: var(--secondfont);
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 800;
     max-width: 80%;
     text-align: center;
@@ -86,15 +87,17 @@ main {
     display: flex;
     justify-content: space-between;
     height: fit-content;
-    padding-right: 10px;
     align-items: stretch;
 }
 
 .navigation-blog {
-    height: 57px;
+    height: calc(86px);
+    width: calc(100% - 2rem);
     padding-inline: 30px;
-    border-bottom: 1px solid var(--border);
-    border-right: none;
+    bottom: 1px solid var(--border);
+    border-radius: 1rem;
+    background-color: var(--primary25);
+    margin: 1rem 1rem 0 1rem;
 }
 
 .info-blog {
@@ -114,7 +117,7 @@ main {
     border: 1px solid rgb(63, 224, 90);
     font-family: var(--primaryfont);
     padding: 5px 10px 5px 10px;
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 .debug-info {
@@ -126,7 +129,7 @@ main {
     border-left: 1px solid var(--border);
     font-family: var(--primaryfont);
     padding: 5px 10px 5px 10px;
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 
@@ -139,18 +142,21 @@ main {
     display: flex;
     flex-direction: column;
     min-height: calc(100svh - 57px);
-    gap: 10px;
+    gap: 1rem;
+    padding-inline: 1rem;
 }
 
 .con-blog-sticky {
-    width: calc(25% - 50px);
-    border-left: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    width: calc(25vw - 1rem);
     height: auto;
     background-color: var(--primary);
-    padding: 0px 30px 0px 20px;
+    padding: 0px 1rem 0px 0;
     position: relative;
     flex-shrink: 0;
+    background-color: var(--primary25);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    margin: 1rem 1rem 0 0;
 }
 
 .main-sticky-blog {
@@ -158,13 +164,15 @@ main {
     padding-top: 20px;
     padding-bottom: 20px;
     top: 0;
+
+    padding-inline: 30px;
 }
 
 .con-blog-sticky h1 {
     font-family: var(--secondfont);
     color: var(--button);
     font-weight: 800;
-    font-size: 2em;
+    font-size: 2rem;
     margin: 0;
     padding-bottom: 20px;
     /* border-bottom: 1px solid var(--border); */
@@ -193,7 +201,7 @@ main {
     color: var(--button);
     font-family: var(--secondfont);
     font-weight: 400;
-    font-size: 0.8em;
+    font-size: 1rem;
     opacity: 0.5;
 }
 
@@ -206,7 +214,7 @@ main {
 .filter-by li {
     color: var(--button);
     font-family: var(--primaryfont);
-    font-size: 1em;
+    font-size: 1rem;
     margin-bottom: 10px;
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -214,6 +222,7 @@ main {
     width: 50%;
     padding: 10px;
     border: 1px solid var(--border);
+    border-radius: 1rem;
 }
 
 .rendered-html img {
@@ -240,9 +249,10 @@ main {
     height: fit-content;
     padding: 30px;
     position: relative;
-
+    background-color: var(--primary25);
+    border-radius: 1rem;
     display: flex;
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
     transition: all 0.3s ease;
 }
 
@@ -265,6 +275,8 @@ main {
 .article .con-image-article {
     width: 100%;
     max-width: 300px;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .article .con-image-article img {
@@ -309,7 +321,7 @@ main {
 
 .name-and-date p:nth-child(1) {
     font-family: var(--secondfont);
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 800;
 }
 
@@ -321,7 +333,7 @@ main {
     color: var(--button);
     font-style: normal;
     font-weight: 100;
-    font-size: 1em !important;
+    font-size: 1rem !important;
     text-align: left;
     align-items: left;
     margin: 0;
@@ -329,7 +341,7 @@ main {
     pointer-events: none;
 }
 
-@media (max-width:747px) {
+@media (max-width:900px) {
 
     .content-article :is(a, p, .MsoNormal, .editor-bold, .editor-italic, .editor-underline, .editor-strikethrough,
         .editor-heading, .editor-quote, .editor-code, .editor-text-color, .editor-bg-color, .editor-align-left,
@@ -339,7 +351,7 @@ main {
         color: var(--button);
         font-style: normal;
         font-weight: 100;
-        font-size: 1em !important;
+        font-size: 1rem !important;
         text-align: left;
         align-items: left;
         margin: 0;
@@ -355,7 +367,7 @@ main {
 
 
 .name-and-date p:nth-child(2) {
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 .column-article {
@@ -374,7 +386,7 @@ main {
     color: var(--button);
     font-family: var(--secondfont);
     font-weight: 800;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-transform: uppercase;
     width: 100%;
     margin: 0;
@@ -383,7 +395,7 @@ main {
 .content-article {
     color: var(--button);
     margin: 0;
-    font-size: 0.8em;
+    font-size: 1rem;
     opacity: 0.5;
     overflow: hidden;
     display: -webkit-box;
@@ -620,12 +632,12 @@ main {
 .author-info {
     display: flex;
     flex-direction: column;
-    font-size: 1em;
+    font-size: 1rem;
     width: 100%;
 }
 
 .author-info p:nth-child(2) {
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 .author-info span {
@@ -644,7 +656,7 @@ main {
 
 .con-loading-more {
     width: 100%;
-    height: 2em;
+    height: 2rem;
     display: grid;
     place-items: center;
 }
@@ -657,7 +669,7 @@ main {
     animation: pulse 1.5s ease-in-out infinite;
     opacity: 0.7;
     font-family: var(--primaryfont);
-    font-size: 1em;
+    font-size: 1rem;
     color: var(--button);
     opacity: 0.5;
 }
@@ -697,7 +709,7 @@ main {
     color: var(--button);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 1rem;
     opacity: 0.3;
     margin-top: 30px;
 }
@@ -709,13 +721,13 @@ main {
     padding: 5px 15px;
     border-radius: 20px;
     font-family: var(--primaryfont);
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 .article-modal-title {
     color: var(--button);
     font-family: var(--secondfont);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
     width: 100%;
@@ -731,7 +743,7 @@ main {
 .article-modal-body {
     color: var(--button);
     font-family: var(--primaryfont);
-    font-size: 0.8em;
+    font-size: 1rem;
     width: 100%;
 }
 
@@ -777,7 +789,7 @@ main {
 
 .editor-list li::marker {
     font-family: var(--primaryfont);
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 0.4;
     font-weight: 800;
     width: 100px;
@@ -788,9 +800,9 @@ main {
     color: var(--button);
 }
 
-@media (max-width:767px) {
+@media (max-width:900px) {
     .editor-list li::before {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .con-user-uploader {
@@ -820,7 +832,7 @@ main {
     }
 
     .editor-list li::marker {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
 }
@@ -881,18 +893,21 @@ hr {
 
     .close-blog {
         display: grid;
-        place-items: center;
-        color: var(--button);
-        top: -100%;
-        left: 0;
-        width: 100%;
-        position: fixed;
-        z-index: 101;
-        background-color: var(--primary);
-        height: 86px;
-        transition: 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-        transition-delay: 0.4s;
-        border-bottom: 1px solid var(--border);
+            place-items: center;
+            color: var(--button);
+            top: -100%;
+            left: 0;
+            width: calc(100% - 2rem);
+            position: fixed;
+            z-index: 101;
+            background-color: var(--primary);
+            height: 86px;
+            transition: 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition-delay: 0s;
+            background-color: var(--primary25);
+            border-radius: 1rem;
+            margin: 1rem;
+            border: 1px solid var(--border);
     }
 
     .menu-button-close-blog {
@@ -910,8 +925,8 @@ hr {
 
     .close-blog.open-menu-blog {
         top: 0;
-        transition: top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-        transition-delay: 0.2s;
+            transition: top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition-delay: 0.4s;
     }
 
     #footerBlog {
@@ -925,13 +940,55 @@ hr {
         transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
+    .con-blog-sticky {
+        list-style: none;
+        padding: 0px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 2rem);
+        height: fit-content;
+        border-radius: 1rem;
+        border: 0px solid var(--border);
+        margin-inline: 1rem;
+        padding-bottom: 30px;
+        background-color: var(--primary25);
+        /* top: -100%; */
+        overflow: hidden;
+        z-index: 100;
+        opacity: 1;
+        left: 0%;
+        top: calc(0% + 87px + 1rem);
+        width: 0;
+        padding-inline: 0;
+        transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
 
+    .con-blog-sticky .main-sticky-blog {
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 
-    .con-blog-sticky.open-menu-blog {
-        top: 0%;
+    .con-blog-sticky.open-menu-blog .main-sticky-blog {
+        opacity: 1;
+        
+        
     }
 
 
+    .con-blog-sticky.open-menu-blog {
+        top: calc(0% + 87px + 1rem);
+        left: 0;
+        opacity: 1;
+        width: calc(100% - 2rem);
+        padding-inline: 30px;
+        border: 1px solid var(--border);
+    }
+
+    .main-sticky-blog{
+        padding: 0;
+        padding-top: 30px;
+    }
 
     :is(#menuBlogIcon, #logoBlogIcon, #backMenuIcon) {
         transition: 0.3s;
@@ -941,33 +998,11 @@ hr {
         display: none;
     }
 
-    :is(#menuBlogIcon, #logoBlogIcon, #backMenuIcon).open-menu-blog {
-        transform: translateY(-500%);
-    }
-
     .main-sticky-blog h1 {
-        font-size: 2.3em;
+        font-size: 2rm;
     }
 
-    .con-blog-sticky {
-        list-style: none;
-        padding: 0px;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        padding-left: 30px;
-        padding-right: 30px;
-        width: calc(100%);
-        height: fit-content;
-        padding-top: 87px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid var(--border);
-        top: -200%;
-        left: 0;
-        z-index: 100;
-        transition: top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-        opacity: 1 !important;
-    }
+
 
     .article {
         display: flex;
@@ -1020,12 +1055,12 @@ hr {
     }
 
     .title-article {
-        font-size: 1em;
+        font-size: 1rem;
 
     }
 
     .content-article {
-        font-size: 0.8em;
+        font-size: 1rem;
     }
 
     .info-blog {
@@ -1033,11 +1068,11 @@ hr {
     }
 
     .status-conection-blog p {
-        font-size: 0.8em;
+        font-size: 1rem;
     }
 
     .debug-info p {
-        font-size: 0.8em;
+        font-size: 1rem;
     }
 
 
@@ -1048,7 +1083,7 @@ hr {
     .error-state p {
         color: var(--button);
         font-family: var(--secondfont);
-        font-size: 1em;
+        font-size: 1rem;
         max-width: 80%;
         text-align: center;
         margin-block: 15px;
@@ -1131,7 +1166,7 @@ hr {
     }
 
     .editor-bold {
-        font-size: 0.8em !important;
+        font-size: 1rem !important;
     }
 }
 
@@ -1141,8 +1176,8 @@ hr {
     overflow-wrap: break-word;
     color: var(--button);
     font-family: var(--primaryfont);
-    font-size: 0.8em;
-    opacity: 0.9;
+    font-size: 1rem;
+    opacity: 0.5;
 }
 
 #date-post {
@@ -1150,7 +1185,7 @@ hr {
     color: var(--button);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 1rem;
     opacity: 0.3;
     margin-top: 30px;
 }
@@ -1162,11 +1197,11 @@ hr {
 /* ========== HEADINGS ========== */
 .rendered-html h1 {
     font-family: var(--secondfont);
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--button);
-    margin-top: 2.5em;
-    margin-bottom: 1em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     line-height: 1.3;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1178,65 +1213,65 @@ hr {
 
 .rendered-html h2 {
     font-family: var(--secondfont);
-    font-size: 1.6em;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--button);
-    margin-top: 2em;
-    margin-bottom: 0.8em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     line-height: 1.4;
 }
 
 .rendered-html h3 {
     font-family: var(--secondfont);
-    font-size: 1.3em;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--button);
-    margin-top: 1.8em;
-    margin-bottom: 0.6em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     line-height: 1.4;
 }
 
 .rendered-html h4 {
     font-family: var(--secondfont);
-    font-size: 1.15em;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--button);
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     line-height: 1.5;
 }
 
 .rendered-html h5 {
     font-family: var(--secondfont);
-    font-size: 1.05em;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--button);
-    margin-top: 1.3em;
-    margin-bottom: 0.4em;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .rendered-html h6 {
     font-family: var(--secondfont);
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--button);
-    margin-top: 1.2em;
-    margin-bottom: 0.3em;
+    margin-top: 1em;
+    margin-bottom: 0.3rem;
 }
 
 /* ========== PARAGRAPHS ========== */
 .rendered-html p {
     font-family: var(--primaryfont);
-    font-size: 1em;
+    font-size: 1rem;
     color: var(--button);
-    margin-bottom: 1.2em;
+    margin-bottom: 1.2rem;
     line-height: 1.8;
     text-align: justify;
     hyphens: auto;
 }
 
 .rendered-html p:empty {
-    margin-bottom: 0.6em;
+    margin-bottom: 0.5rem;
 }
 
 .rendered-html p:last-child {
@@ -1249,8 +1284,8 @@ hr {
     font-family: var(--primaryfont);
     color: var(--button);
     margin-left: 0;
-    margin-bottom: 1.5em;
-    padding-left: 2.5em;
+    margin-bottom: 1.5rem;
+    padding-left: 2.5rem;
 }
 
 .rendered-html ul {
@@ -1264,11 +1299,11 @@ hr {
 .rendered-html li,
 .rendered-html .doc-list-item {
     font-family: var(--primaryfont);
-    font-size: 1em;
+    font-size: 1rem;
     color: var(--button);
-    margin-bottom: 0.6em;
+    margin-bottom: 0.6rem;
     line-height: 1.8;
-    padding-left: 0.5em;
+    padding-left: 0.5rem;
 }
 
 .rendered-html li:last-child {
@@ -1284,7 +1319,7 @@ hr {
 .rendered-html ul ul,
 .rendered-html ol ul {
     list-style-type: circle;
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
 
 .rendered-html ul ul ul,
@@ -1294,7 +1329,7 @@ hr {
 
 .rendered-html ol ol {
     list-style-type: lower-alpha;
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
 
 .rendered-html ol ol ol {
@@ -1303,8 +1338,8 @@ hr {
 
 /* Numbered Items Custom (untuk format "1. Item") */
 .rendered-html .numbered-item {
-    margin-bottom: 1em;
-    padding-left: 2em;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
     position: relative;
     text-align: justify;
 }
@@ -1342,16 +1377,16 @@ hr {
 
 .rendered-html mark {
     background-color: rgba(255, 255, 0, 0.3);
-    padding: 0.1em 0.2em;
+    padding: 0.1rem 0.2rem;
 }
 
 .rendered-html sub {
-    font-size: 0.75em;
+    font-size: 1rem;
     vertical-align: sub;
 }
 
 .rendered-html sup {
-    font-size: 0.75em;
+    font-size: 1rem;
     vertical-align: super;
 }
 
@@ -1375,23 +1410,23 @@ hr {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 2em auto;
+    margin: 2rem auto;
     border: 1px solid var(--border);
     padding: 10px;
     background-color: var(--primary);
 }
 
 .rendered-html figure {
-    margin: 2em 0;
+    margin: 2rem 0;
     text-align: center;
 }
 
 .rendered-html figcaption {
-    font-size: 0.9em;
+    font-size: 1rem;
     font-style: italic;
     color: var(--button);
     opacity: 0.7;
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     text-align: center;
 }
 
@@ -1402,11 +1437,11 @@ hr {
 }
 
 .rendered-html table {
-    
+
     border-collapse: collapse;
-    margin: 2em 0;
+    margin: 2rem 0;
     font-family: var(--primaryfont);
-    font-size: 0.95em;
+    font-size: 1rem;
     border: none;
 }
 
@@ -1424,7 +1459,7 @@ hr {
     font-family: var(--secondfont);
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 1rem;
 }
 
 .rendered-html table tr:nth-child(even) {
@@ -1436,18 +1471,18 @@ hr {
 }
 
 .rendered-html table td {
-    min-width: 12em;
+    min-width: 12rem;
 }
 
 .rendered-html table td:nth-child(1) {
-    min-width: 5em;
+    min-width: 5rem;
 }
 
 /* ========== BLOCKQUOTE ========== */
 .rendered-html blockquote {
     border-left: 4px solid var(--blue);
-    padding: 1em 1.5em;
-    margin: 2em 0;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
     font-style: italic;
     background-color: rgba(0, 0, 0, 0.02);
     color: var(--button);
@@ -1455,7 +1490,7 @@ hr {
 }
 
 .rendered-html blockquote p {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .rendered-html blockquote p:last-child {
@@ -1465,28 +1500,28 @@ hr {
 .rendered-html blockquote cite {
     display: block;
     text-align: right;
-    margin-top: 0.5em;
-    font-size: 0.9em;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
     opacity: 0.7;
 }
 
 /* ========== CODE ========== */
 .rendered-html code {
     font-family: 'Courier New', 'Consolas', monospace;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: #355aff;
     background-color: var(--border);
-    padding: 0.2em 0.5em;
+    padding: 0.2rem 0.5rem;
     border-radius: 4px;
     border: 1px solid var(--border);
 }
 
 .rendered-html pre {
     background-color: var(--border);
-    padding: 1.5em;
+    padding: 1.5rem;
     border-radius: 8px;
     overflow-x: auto;
-    margin: 2em 0;
+    margin: 2rem 0;
     border: 1px solid var(--border);
 }
 
@@ -1495,7 +1530,7 @@ hr {
     padding: 0;
     border: none;
     border-radius: 0;
-    font-size: 0.85em;
+    font-size: 0.85rem;
     line-height: 1.6;
 }
 
@@ -1503,30 +1538,30 @@ hr {
 .rendered-html hr {
     border: none;
     border-top: 2px solid var(--border);
-    margin: 3em 0;
+    margin: 3rem 0;
     opacity: 0.5;
 }
 
 /* ========== SPECIAL STYLES ========== */
 .rendered-html .subtitle {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-style: italic;
     color: var(--button);
     opacity: 0.8;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     font-family: var(--secondfont);
 }
 
 .rendered-html h1.title {
-    font-size: 2.8em;
+    font-size: 2.8rem;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
     margin-top: 0;
 }
 
 .rendered-html .list-item {
-    padding-left: 1em;
-    margin-bottom: 0.8em;
+    padding-left: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 p.list-item[list-type="bullet"],
@@ -1537,19 +1572,19 @@ p.list-item[list-type="number"] {
 
 /* ========== DEFINITION LISTS ========== */
 .rendered-html dl {
-    margin: 1.5em 0;
+    margin: 1.5rem 0;
 }
 
 .rendered-html dt {
     font-family: var(--secondfont);
     font-weight: 700;
     color: var(--button);
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .rendered-html dd {
-    margin-left: 2em;
-    margin-bottom: 0.5em;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
     color: var(--button);
 }
 
@@ -1576,38 +1611,38 @@ p.list-item[list-type="number"] {
     }
 
     .rendered-html h1 {
-        font-size: 1.6em;
-        margin-top: 1.5em;
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
     }
 
     .rendered-html h2 {
-        font-size: 1.4em;
-        margin-top: 1.3em;
+        font-size: 1.4rem;
+        margin-top: 1.3rem;
     }
 
     .rendered-html h3 {
-        font-size: 1.2em;
-        margin-top: 1.2em;
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
     }
 
     .rendered-html h4 {
-        font-size: 1.1em;
+        font-size: 1.1rem;
     }
 
     .rendered-html p,
     .rendered-html li {
-        font-size: 1em;
+        font-size: 1rem;
         text-align: left;
         line-height: 1.7;
     }
 
     .rendered-html ul,
     .rendered-html ol {
-        padding-left: 1.8em;
+        padding-left: 1.8rem;
     }
 
     .rendered-html table {
-        font-size: 0.85em;
+        font-size: 0.85rem;
         overflow-x: auto;
     }
 
@@ -1617,37 +1652,37 @@ p.list-item[list-type="number"] {
     }
 
     .rendered-html img {
-        margin: 1.5em auto;
+        margin: 1.5rem auto;
         padding: 5px;
     }
 
     .rendered-html pre {
-        padding: 1em;
-        font-size: 0.85em;
+        padding: 1rem;
+        font-size: 0.85rem;
     }
 
     .rendered-html blockquote {
-        padding: 0.8em 1em;
-        margin: 1.5em 0;
+        padding: 0.8rem 1rem;
+        margin: 1.5rem 0;
     }
 
     .rendered-html .numbered-item {
-        padding-left: 1.5em;
+        padding-left: 1.5rem;
     }
 }
 
 /* ========== TABLET ========== */
 @media (min-width: 768px) and (max-width: 1023px) {
     .rendered-html h1 {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
 
     .rendered-html h2 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
     .rendered-html p {
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
 
@@ -1660,14 +1695,17 @@ pre[class*="language-"] code {
 }
 
 .search-bar-container {
-    padding: 30px 30px 0 30px;
-    width: calc(100% - 60px);
+    width: calc(100%);
+    background-color: var(--primary25);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    overflow: hidden;
 }
 
 .search-bar {
     position: relative;
     width: 100%;
-    border: 1px solid var(--border);
     background-color: var(--primary);
     display: flex;
     align-items: center;
@@ -1677,7 +1715,7 @@ pre[class*="language-"] code {
     width: 100%;
     padding: 15px 140px 15px 20px;
     font-family: var(--primaryfont);
-    font-size: 1em;
+    font-size: 1rem;
     color: var(--button);
     background-color: transparent;
     border: none;
@@ -1696,14 +1734,14 @@ pre[class*="language-"] code {
     height: 100%;
     transform: translateY(-50%);
     padding: 8px 20px;
-    background-color: transparent;
+    background-color: var(--primary25);
     border: none;
     border-left: 1px solid var(--border);
     color: var(--primary);
     font-family: var(--secondfont);
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
     color: var(--blue);
     transition: opacity 0.3s ease;
@@ -1723,20 +1761,20 @@ pre[class*="language-"] code {
     background-color: var(--border);
     border: none;
     color: var(--button);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: opacity 0.3s ease;
     gap: 10px;
-    padding-inline: 0.5em;
+    padding-inline: 0.5rem;
     z-index: 10;
 }
 
 .clear-search span {
     font-family: var(--secondfont);
-    font-size: 0.5em;
+    font-size: 0.5rem;
 }
 
 .clear-search:hover {
@@ -1745,18 +1783,17 @@ pre[class*="language-"] code {
 
 @media (max-width: 767px) {
     .search-bar-container {
-        padding: 20px 30px 0 30px;
         width: calc(100% - 0px);
     }
 
     .search-input {
         padding: 12px 40% 12px 15px;
-        font-size: aem;
+        font-size: 1rem;
     }
 
     .clear-search {
         height: 30px;
-        font-size: 1.3em;
+        font-size: 1.3rem;
     }
 }
 
@@ -1860,24 +1897,24 @@ pre[class*="language-"] code {
 /* Code Block Wrapper with Copy Button */
 .code-block-wrapper {
     position: relative;
-    margin: 1.5em 0;
+    margin: 1.5rem 0;
 }
 
 /* Copy Code Button - positioned relative to wrapper, not pre */
 .copy-code-btn {
     position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    padding: 0.5em 0.75em;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 0.75rem;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     color: #fff;
     cursor: pointer;
-    font-size: 0.875em;
+    font-size: 0.875rem;
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.5rem;
     transition: all 0.2s ease;
     z-index: 10;
 }
@@ -1900,7 +1937,23 @@ pre[class*="language-"] code {
 /* Responsive */
 @media (max-width: 768px) {
     .copy-code-btn {
-        padding: 0.4em 0.6em;
-        font-size: 0.8em;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:900px) {
+    @media (min-width:767px) {
+        .con-blog-sticky {
+            width: 40vw;
+        }
+
+        .article {
+            flex-direction: column;
+        }
+
+        .text-article {
+            padding: 0;
+        }
     }
 }
