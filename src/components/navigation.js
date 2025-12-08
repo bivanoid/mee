@@ -6,20 +6,26 @@ import ShareSvg from '../iconSvg/shareic';
 import Menus from '../iconSvg/menus';
 import Close from '../iconSvg/close';
 
-function open() {
-    ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon'].forEach(id => document.getElementById(id)?.classList.toggle('open'))
-}
 
-function updateBrowserThemeColor(color) {
+
+
+
+// 🔥 Fungsi untuk update theme-color meta tag
+function updateThemeColor(color) {
+    // Update meta theme-color
     let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-
     if (!metaThemeColor) {
         metaThemeColor = document.createElement('meta');
         metaThemeColor.name = 'theme-color';
         document.head.appendChild(metaThemeColor);
     }
+    metaThemeColor.content = color;
 
-    metaThemeColor.setAttribute('content', color);
+    // Update untuk iOS Safari
+    let appleStatusBar = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    if (appleStatusBar) {
+        appleStatusBar.content = color === '#0a0a0a' ? 'black-translucent' : 'default';
+    }
 }
 
 function Navigation() {
@@ -29,12 +35,22 @@ function Navigation() {
         return currentPrimary === '#0a0a0a' || currentPrimary === 'rgb(10, 10, 10)';
     });
 
-    // 🔥 FIX: Disable overscroll dan set background
+    function open() {
+        ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon'].forEach(id => document.getElementById(id)?.classList.toggle('open'))
+        document.body.style.overflow = 'hidden'
+    }
+    
+    document.body.style.overflow = 'auto'
+
     useEffect(() => {
-        // Set background color untuk html dan body
         const backgroundColor = darkMode ? '#0a0a0a' : '#dbdbce';
+
+        // Set background color untuk html dan body
         document.documentElement.style.backgroundColor = backgroundColor;
         document.body.style.backgroundColor = backgroundColor;
+
+        // 🔥 Update address bar color
+        updateThemeColor(backgroundColor);
 
         // Disable overscroll behavior
         document.body.style.overscrollBehavior = 'none';
@@ -42,7 +58,6 @@ function Navigation() {
         document.documentElement.style.overscrollBehavior = 'none';
 
         return () => {
-            // Cleanup jika perlu
             document.body.style.overscrollBehavior = 'auto';
         };
     }, [darkMode]);
@@ -59,8 +74,6 @@ function Navigation() {
                 }
             }
         });
-
-        updateBrowserThemeColor(isDark ? '#0a0a0a' : '#dbdbce');
     }, [darkMode]);
 
     function toggleTheme() {
@@ -69,7 +82,9 @@ function Navigation() {
 
         if (darkMode) {
             // 🌞 Light Mode
-            root.style.setProperty('--primary', '#dbdbce');
+            const lightColor = '#dbdbce';
+
+            root.style.setProperty('--primary', lightColor);
             root.style.setProperty('--primary2', '#dadaddff');
             root.style.setProperty('--primary25', '#d1d1c4');
             root.style.setProperty('--primary3', '#fafaff');
@@ -106,16 +121,18 @@ function Navigation() {
             root.style.setProperty('--toolbar-bg', 'rgba(0, 0, 0, 0.1)');
             root.style.setProperty('--toolbar-text', '#444');
 
-            // 🔥 Update background color
-            document.documentElement.style.backgroundColor = '#dbdbce';
-            document.body.style.backgroundColor = '#dbdbce';
+            // 🔥 Update background color dan address bar
+            document.documentElement.style.backgroundColor = lightColor;
+            document.body.style.backgroundColor = lightColor;
+            updateThemeColor(lightColor);
 
-            updateBrowserThemeColor('#dbdbce');
         } else {
             // 🌑 Dark Mode
-            root.style.setProperty('--primary', '#0a0a0a');
+            const darkColor = '#0a0a0a';
+
+            root.style.setProperty('--primary', darkColor);
             root.style.setProperty('--primary2', '#131313');
-            root.style.setProperty('--primary25', '#1414143a');
+            root.style.setProperty('--primary25', '#0d0d0d');
             root.style.setProperty('--primary3', '#232222');
             root.style.setProperty('--blue', '#729cf7');
             root.style.setProperty('--button', '#e9ecef');
@@ -150,11 +167,10 @@ function Navigation() {
             root.style.setProperty('--toolbar-bg', 'rgba(224, 224, 224, 0.2)');
             root.style.setProperty('--toolbar-text', '#bbb');
 
-            // 🔥 Update background color
-            document.documentElement.style.backgroundColor = '#0a0a0a';
-            document.body.style.backgroundColor = '#0a0a0a';
-
-            updateBrowserThemeColor('#0a0a0a');
+            // 🔥 Update background color dan address bar
+            document.documentElement.style.backgroundColor = darkColor;
+            document.body.style.backgroundColor = darkColor;
+            updateThemeColor(darkColor);
         }
 
         setDarkMode(!darkMode);
@@ -163,7 +179,7 @@ function Navigation() {
     return (
         <div className='navigation'>
             <div className='menu-button' id='expandMenuIcon' onClick={open}><Menus /></div>
-            <div className='close' id='close' onClick={open}><div className='menu-button'><Close /></div></div>
+            {/* <div className='close' id='close' onClick={open}><div className='menu-button'><Close /></div></div> */}
             <div id='logoMenuIcon'>
                 <Logo />
             </div>

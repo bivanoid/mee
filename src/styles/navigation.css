@@ -56,20 +56,20 @@ body {
     justify-content: space-between;
     align-items: center;
     min-width: 104px;
-    width: 100%;
+    width: fit-content;
     border-bottom: 1px solid var(--border);
     transition: 0.2s;
 }
 
 .navigasi-menu li a .arrow {
-    width: 12px;
+
     margin-bottom: 5px;
     display: grid;
     place-items: center;
 }
 
 .navigasi-menu li a .arrow svg {
-    width: 100%;
+    width: 15px;
 }
 
 .navigasi-menu:hover li {
@@ -86,11 +86,12 @@ body {
 
 .navigasi-menu li a {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     color: var(--button);
     align-items: center;
     min-width: 104px;
-    width: 100%;
+    font-size: 1rem;
+    width:fit-content;
 }
 
 
@@ -327,8 +328,6 @@ body {
         position: fixed;
         display: flex;
         flex-direction: column;
-        padding-left: 30px;
-        padding-right: 30px;
         width: calc(100% - 2rem);
         height: fit-content;
         border-radius: 1rem;
@@ -338,24 +337,25 @@ body {
         background-color: var(--primary25);
         border-bottom: 1px solid var(--border);
         /* top: -100%; */
-        scale: 0.9;
-        top: -100%;
+        overflow: hidden;
         z-index: 100;
-        opacity: 0.9;
-        left: 0;
-        transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-        /* top: calc(0% + 87px + 2rem); */
-        transition-delay: 0.4s;
+        opacity: 0.3;
+        left: 0%;
+        top: calc(0% + 87px + 2rem);
+        width: 0;     
+        padding-inline: 0; 
     }
-
 
     .navigasi-menu.open {
         top: calc(0% + 87px + 2rem);
-        transition-delay: 0.3s;
+        left: 0;
         opacity: 1;
-        scale: 1;
-        
-    }
+        width: calc(100% - 2rem);
+        padding-inline: 30px;
+        }
+
+
+
 
     .navigasi-menu li {
         font-size: 1em;
@@ -404,14 +404,13 @@ body {
     .close.open {
         top: 0;
         transition: top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-transition-delay: 0.4s;
+        transition-delay: 0.4s;
     }
 
     #thecontent,
     #theblog {
         transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
         opacity: 1;
-
     }
 
     #thecontent.open,
@@ -419,14 +418,16 @@ transition-delay: 0.4s;
         opacity: 0.2;
         filter: grayscale(100%) brightness(50%);
         transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+        overflow: hidden !important;
     }
+
 
     #logoMenuIcon {
         width: 6vw;
         aspect-ratio: 1 / 1;
     }
 
-    :is(#logoMenuIcon, #expandMenuIcon) {
+    /* :is(#logoMenuIcon, #expandMenuIcon) {
         transition: 0.5s;
         height: 30px;
         display: flex;
@@ -435,6 +436,6 @@ transition-delay: 0.4s;
 
     :is(#logoMenuIcon, #expandMenuIcon).open {
         transform: translateY(-500%);
-    }
+    } */
 
 }
