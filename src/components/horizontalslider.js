@@ -130,7 +130,7 @@ export default function HorizontalSlider({ onImageClick }) {
       <FadeContent blur={false} delay={1000} duration={1500} easing="ease-out" initialOpacity={0}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={0}
+          spaceBetween={1}
           slidesPerView={1}
           loop={false}
           navigation={{
@@ -143,10 +143,10 @@ export default function HorizontalSlider({ onImageClick }) {
           }}
           
           breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 10 },
-            768: { slidesPerView: 2, spaceBetween: 0 },
-            1024: { slidesPerView: 2.5, spaceBetween: 0 },
-            1424: { slidesPerView: 3.5, spaceBetween: 0 },
+            640: { slidesPerView: 1, spaceBetween: 1 },
+            768: { slidesPerView: 2, spaceBetween: 1 },
+            1024: { slidesPerView: 2.5, spaceBetween: 1 },
+            1424: { slidesPerView: 3.5, spaceBetween: 1 },
           }}
           className="mySwiper"
         >
@@ -177,8 +177,8 @@ export default function HorizontalSlider({ onImageClick }) {
       </FadeContent>
 
       <div className='con-swiper-button-hz'>
-        <div className='prev prev-hz'>Swipe Left</div>
-        <div className='next next-hz'>Swipe Right</div>
+        <div className='prev prev-hz'>Prev</div>
+        <div className='next next-hz'>Next</div>
       </div>
     </div>
   );

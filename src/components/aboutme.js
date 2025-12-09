@@ -35,25 +35,18 @@ function AboutMe({ onImageClick }) {
                         <div className='text-abouts  '><p className='title-about title-about2'>Education/Me</p><br></br>
                             <ul className='content-carrier'>
                                 <FadeContent blur={false} duration={1500} delay={0} easing="ease-in" initialOpacity={0}>
-                                    <li><span><div className='circle-crr'></div></span> <p>SDN Purwodiningratan NO.34</p></li>
-                                </FadeContent>
-                                <FadeContent blur={false} duration={1500} delay={100} easing="ease-in" initialOpacity={0}>
-                                    <hr></hr>
+                                    <span>1</span><li><p>SDN Purwodiningratan</p></li>
                                 </FadeContent>
                                 <FadeContent blur={false} duration={1500} delay={200} easing="ease-in" initialOpacity={0}>
-                                    <li><span><div className='circle-crr'></div></span> <p>SMPN 14 Surakarta</p></li>
+                                    <span>2</span><li><p>SMPN 14 Surakarta</p></li>
                                 </FadeContent>
-                                <FadeContent blur={false} duration={1500} delay={300} easing="ease-in" initialOpacity={0}>
-                                    <hr></hr>
-                                </FadeContent>
+
                                 <FadeContent blur={false} duration={1500} delay={400} easing="ease-in" initialOpacity={0}>
-                                    <li><span><div className='circle-crr'></div></span> <p>SMKN 5 Surakarta</p></li>
+                                    <span>3</span><li><p>SMKN 5 Surakarta</p></li>
                                 </FadeContent>
-                                <FadeContent blur={false} duration={1500} delay={500} easing="ease-in" initialOpacity={0}>
-                                    <hr></hr>
-                                </FadeContent>
+                    
                                 <FadeContent blur={false} duration={1500} delay={600} easing="ease-in" initialOpacity={0}>
-                                    <li><span><div className='circle-crr'></div></span> <p>Universitas Pignateli Triputra</p></li>
+                                    <span>4</span><li><p>Pignateli Triputra University</p></li>
                                 </FadeContent>
                             </ul>
                         </div>

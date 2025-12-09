@@ -97,6 +97,7 @@ main {
     bottom: 1px solid var(--border);
     border-radius: 1rem;
     background-color: var(--primary25);
+    border: 1px solid var(--border);
     margin: 1rem 1rem 0 1rem;
 }
 

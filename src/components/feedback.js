@@ -112,7 +112,7 @@ function Feedback() {
         <div className="swiper-container">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={0}
+            spaceBetween={1}
             slidesPerView={1}
             loop={true}
             navigation={{
@@ -126,15 +126,15 @@ function Feedback() {
             breakpoints={{
               640: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 1,
               },
               768: {
                 slidesPerView: 2,
-                spaceBetween: 0,
+                spaceBetween: 1,
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 0,
+                spaceBetween: 1,
               },
             }}
             loop={users.length > 3}
@@ -176,10 +176,10 @@ function Feedback() {
 
           {/* Custom Navigation Buttons */}
           <div className='con-swiper-button-fb' >
-            <div className='prev prev-fb'>Swipe Left</div>
+            <div className='prev prev-fb'>Prev</div>
             {/* Custom Pagination */}
             {/* <div className="swiper-pagination-custom"></div> */}
-            <div className='next next-fb'>Swipe Right</div>
+            <div className='next next-fb'>Next</div>
           </div>
 
 

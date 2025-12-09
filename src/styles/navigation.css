@@ -334,7 +334,7 @@ body {
         width: calc(100% - 2rem);
         height: fit-content;
         border-radius: 1rem;
-        border: 1px solid var(--border);
+        border: none;
         margin-inline: 1rem;
         padding-bottom: 30px;
         background-color: var(--primary25);
@@ -355,6 +355,7 @@ body {
         opacity: 1;
         width: calc(100% - 2rem);
         padding-inline: 30px;
+        border: 1px solid var(--border);
         }
 
 
