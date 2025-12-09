@@ -7,22 +7,22 @@ import Menus from '../iconSvg/menus';
 import Close from '../iconSvg/close';
 
 // 🔥 Fungsi untuk update theme-color meta tag
-function updateThemeColor(color) {
-    // Update meta theme-color
-    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (!metaThemeColor) {
-        metaThemeColor = document.createElement('meta');
-        metaThemeColor.name = 'theme-color';
-        document.head.appendChild(metaThemeColor);
-    }
-    metaThemeColor.content = color;
+// function updateThemeColor(color) {
+//     // Update meta theme-color
+//     let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+//     if (!metaThemeColor) {
+//         metaThemeColor = document.createElement('meta');
+//         metaThemeColor.name = 'theme-color';
+//         document.head.appendChild(metaThemeColor);
+//     }
+//     metaThemeColor.content = color;
 
-    // Update untuk iOS Safari
-    let appleStatusBar = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-    if (appleStatusBar) {
-        appleStatusBar.content = color === '#0a0a0a' ? 'black-translucent' : 'default';
-    }
-}
+//     // Update untuk iOS Safari
+//     let appleStatusBar = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+//     if (appleStatusBar) {
+//         appleStatusBar.content = color === '#0a0a0a' ? 'black-translucent' : 'default';
+//     }
+// }
 
 function Navigation() {
     const [darkMode, setDarkMode] = useState(() => {
