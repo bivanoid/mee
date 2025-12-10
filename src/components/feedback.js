@@ -114,7 +114,6 @@ function Feedback() {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={1}
             slidesPerView={1}
-            loop={true}
             navigation={{
               nextEl: ".next-fb",
               prevEl: ".prev-fb",
@@ -137,7 +136,7 @@ function Feedback() {
                 spaceBetween: 1,
               },
             }}
-            loop={users.length > 3}
+            loop = {users.length > 3}
             className="feedback-swiper"
           >
             {users.map((user) => {
@@ -157,14 +156,14 @@ function Feedback() {
                       </div>
                     </div>
                     <div className="con-btm-fd">
-                      <p className="con-username">
+                      <div className="con-username">
                         <p className="fromuser">from</p>
                         <p className="username">{user.name}</p>
-                      </p>
+                      </div>
                       <div className="con-feedback-btm">
-                        <p className="userrating">
+                        <div className="userrating">
                           <div className={emoji}></div>
-                        </p>
+                        </div>
                         <p className="userdate">{date}</p>
                       </div>
                     </div>

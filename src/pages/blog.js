@@ -15,6 +15,8 @@ import { LenisContext } from "../App"
 
 const ITEMS_PER_PAGE = 6 // Increased for better UX
 
+
+
 export default function Blog() {
   const [blogs, setBlogs] = useState([])
   const [displayedBlogs, setDisplayedBlogs] = useState([])
@@ -262,9 +264,6 @@ export default function Blog() {
     }
   }, [location.state, lenisRef])
 
-  // ============================================
-  // HANDLERS
-  // ============================================
   function handleFilterChange(newFilter) {
     setFilter(newFilter)
     setSearchQuery("")
@@ -282,7 +281,11 @@ export default function Blog() {
 
     isOpenBlog = !isOpenBlog;
 
-    document.body.style.overflow = isOpenBlog ? 'hidden' : 'auto';
+    if (isOpenBlog) {
+      document.body.classList.add('body-overflow-hidden-blog')
+    } else {
+      document.body.classList.remove('body-overflow-hidden-blog')
+    }
   }
 
   
@@ -308,15 +311,12 @@ export default function Blog() {
     return new Date(dateString).toLocaleDateString("id-ID", options)
   }
 
-  // ============================================
-  // RENDER
-  // ============================================
   return (
     <div className="body-blog" id="theblog">
       <div className="con-blog">
         <main>
           <div className="navigation-blog">
-            <Link onClick={() => { document.body.style.overflow = isOpenBlog ? 'auto' : 'auto'; }} to='/' className="clstgr back-to-home-from-blog" id="backMenuIcon">
+            <Link onClick={() => { document.body.classList.remove('body-overflow-hidden-blog') }} to='/' className="clstgr back-to-home-from-blog" id="backMenuIcon">
               <Backic />
             </Link>
             <div className="logoBlog" id="logoBlogIcon">

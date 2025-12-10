@@ -5,6 +5,10 @@
     user-select: none;
 }
 
+body.body-overflow-hidden-blog {
+    overflow: hidden;
+}
+
 .body-blog1 {
     box-sizing: border-box;
     user-select: none;
@@ -162,8 +166,8 @@ main {
 
 .main-sticky-blog {
     position: sticky;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     top: 0;
 
     padding-inline: 30px;
@@ -894,21 +898,21 @@ hr {
 
     .close-blog {
         display: grid;
-            place-items: center;
-            color: var(--button);
-            top: -100%;
-            left: 0;
-            width: calc(100% - 2rem);
-            position: fixed;
-            z-index: 101;
-            background-color: var(--primary);
-            height: 86px;
-            transition: 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-            transition-delay: 0s;
-            background-color: var(--primary25);
-            border-radius: 1rem;
-            margin: 1rem;
-            border: 1px solid var(--border);
+        place-items: center;
+        color: var(--button);
+        top: -100%;
+        left: 0;
+        width: calc(100% - 2rem);
+        position: fixed;
+        z-index: 101;
+        background-color: var(--primary);
+        height: 86px;
+        transition: 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition-delay: 0s;
+        background-color: var(--primary25);
+        border-radius: 1rem;
+        margin: 1rem;
+        border: 1px solid var(--border);
     }
 
     .menu-button-close-blog {
@@ -926,8 +930,8 @@ hr {
 
     .close-blog.open-menu-blog {
         top: 0;
-            transition: top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-            transition-delay: 0.4s;
+        transition: top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition-delay: 0.4s;
     }
 
     #footerBlog {
@@ -943,26 +947,34 @@ hr {
 
     .con-blog-sticky {
         list-style: none;
-        padding: 0px;
         position: fixed;
         display: flex;
         flex-direction: column;
         width: calc(100% - 2rem);
         height: fit-content;
         border-radius: 1rem;
-        border: 0px solid var(--border);
+        border: none;
         margin-inline: 1rem;
-        padding-bottom: 30px;
         background-color: var(--primary25);
+        border: 0px solid transparent;
         /* top: -100%; */
         overflow: hidden;
         z-index: 100;
-        opacity: 1;
         left: 0%;
-        top: calc(0% + 87px + 1rem);
-        width: 0;
-        padding-inline: 0;
-        transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        top: calc(0% + 85px + 2rem);
+        height: 0;
+        padding: 0;
+        padding-top: 0;
+        max-height: fit-content;
+        transition: height 0.5s var(--cubic-slow), padding 0.5s var(--cubic-toeng), border 0.5s var(--cubic-slow);
+    }
+
+    .con-blog-sticky.open-menu-blog {
+        left: 0;
+        padding: 30px;
+        height: 100%;
+        padding-top: 0;
+        border: 1px solid var(--border);
     }
 
     .con-blog-sticky .main-sticky-blog {
@@ -972,23 +984,14 @@ hr {
 
     .con-blog-sticky.open-menu-blog .main-sticky-blog {
         opacity: 1;
-        
-        
     }
 
 
-    .con-blog-sticky.open-menu-blog {
-        top: calc(0% + 87px + 1rem);
-        left: 0;
-        opacity: 1;
-        width: calc(100% - 2rem);
-        padding-inline: 30px;
-        border: 1px solid var(--border);
-    }
 
-    .main-sticky-blog{
+
+    .main-sticky-blog {
         padding: 0;
-        padding-top: 30px;
+        padding-top: 0px;
     }
 
     :is(#menuBlogIcon, #logoBlogIcon, #backMenuIcon) {
@@ -1001,6 +1004,8 @@ hr {
 
     .main-sticky-blog h1 {
         font-size: 2rm;
+        padding-top: 30px;
+        padding-bottom: 1rem;
     }
 
 

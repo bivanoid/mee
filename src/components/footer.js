@@ -53,21 +53,18 @@ export default function Footer() {
                             <p>Creative developer passionate about building exceptional digital experiences with modern<br /> technologies.</p>
                             <p>Connect with me.</p>
                             <div className='social-media-footer'>
-                                <a href='https://www.instagram.com/bivanoid/' className='ig'><i class="fi fi-brands-instagram"></i></a>
-                                <a href='' className='lnkdn'><i class="fi fi-brands-linkedin"></i></a>
+                                <a href='https://www.instagram.com/bivanoid/' className='ig'><i className="fi fi-brands-instagram"></i></a>
+                                <a href='' className='lnkdn'><i className="fi fi-brands-linkedin"></i></a>
 
-                                <a href='https://x.com/riyadhlearning' className='twt'><i class="fi fi-brands-twitter-alt-circle"></i></a>
-                                <a href='https://wa.me/087739770494' className='wa'><i class="fi fi-brands-whatsapp"></i></a>
-                                <a href='https://t.me/Teufelie' className='tele'><i class="fi fi-brands-telegram"></i></a>
-                                <a href='https://github.com/Vandyaaa' className='gth'><i class="fi fi-brands-github"></i></a>
+                                <a href='https://x.com/frdnavn?t=_OWYH1ArXL6VGadD3H-L_w&s=08' className='twt'><i className="fi fi-brands-twitter-alt-circle"></i></a>
+                                <a href='https://wa.me/087739770494' className='wa'><i className="fi fi-brands-whatsapp"></i></a>
+                                <a href='https://t.me/bieblupee' className='tele'><i className="fi fi-brands-telegram"></i></a>
+                                <a href='https://github.com/bivanoid' className='gth'><i className="fi fi-brands-github"></i></a>
                             </div>
                             <p className='copyright'>&copy; 2025 Firdhan Abivandya. All rights reserved.</p>
                             </div>
                         </div>
 
-                        {/* <p className='copyright
-                        '>© 2025 Firdhan Abivandya. All rights reserved.</p> */}
-                      
                     </div>
                     <div className='footer3'>
                         <div className='con-footer3-content'>
@@ -75,17 +72,9 @@ export default function Footer() {
                             <h1>Get In Touch</h1>
                             <ul>
                                 <li><a href='mailto:abivandyafirdhan@gmail.com'>abivandyafirdhan@gmail.com</a></li>
-                                <li><a href='https://wa.me/087739770494'>+62 877-3977-0494</a></li>
-                                <li><a href='https://id.wikipedia.org/wiki/Indonesia'>Indonesia</a></li>
+                                <li><a href='https://wa.me/087739770494'>Whatsapp</a></li>
+                                <li><a href='https://t.me/bieblupee'>Telegram</a></li>
 
-                            </ul>
-                        </div>
-                        <div className='navigation-link-footer'>
-                            <h1>Other Website</h1>
-                            <ul>
-                                <li onClick={toSc1}>Dashboard</li>
-                                <li onClick={toSc2}>Aboutme</li>
-                                <li>Footer</li>
                             </ul>
                         </div>
                         </div>

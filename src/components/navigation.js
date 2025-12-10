@@ -30,19 +30,6 @@ function Navigation() {
         return currentPrimary === '#0a0a0a' || currentPrimary === 'rgb(10, 10, 10)';
     });
 
-    let isOpen = false;
-
-    function open() {
-        // toggle class
-        ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon']
-            .forEach(id => document.getElementById(id)?.classList.toggle('open'));
-
-        isOpen = !isOpen;
-
-        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-    }
-
-
     useEffect(() => {
         const backgroundColor = darkMode ? '#0a0a0a' : '#dbdbce';
 
@@ -77,14 +64,14 @@ function Navigation() {
         });
     }, [darkMode]);
 
+    let isOpen = false;
+
     function toggleTheme() {
         const root = document.documentElement;
         ['swchbtn1', 'swchbtn2'].forEach(id => document.getElementById(id)?.classList.toggle('switchTheme'))
-
         if (darkMode) {
             // 🌞 Light Mode
             const lightColor = '#dbdbce';
-
             root.style.setProperty('--primary', lightColor);
             root.style.setProperty('--primary2', '#dadaddff');
             root.style.setProperty('--primary25', '#d1d1c4');
@@ -121,16 +108,15 @@ function Navigation() {
             root.style.setProperty('--token-variable', '#1e1e1e');
             root.style.setProperty('--toolbar-bg', 'rgba(0, 0, 0, 0.1)');
             root.style.setProperty('--toolbar-text', '#444');
-
-            // 🔥 Update background color dan address bar
             document.documentElement.style.backgroundColor = lightColor;
             document.body.style.backgroundColor = lightColor;
             updateThemeColor(lightColor);
 
+
+
         } else {
             // 🌑 Dark Mode
             const darkColor = '#0a0a0a';
-
             root.style.setProperty('--primary', darkColor);
             root.style.setProperty('--primary2', '#131313');
             root.style.setProperty('--primary25', '#0d0d0d');
@@ -167,14 +153,29 @@ function Navigation() {
             root.style.setProperty('--token-variable', '#f8f8f2');
             root.style.setProperty('--toolbar-bg', 'rgba(224, 224, 224, 0.2)');
             root.style.setProperty('--toolbar-text', '#bbb');
-
-            // 🔥 Update background color dan address bar
             document.documentElement.style.backgroundColor = darkColor;
             document.body.style.backgroundColor = darkColor;
             updateThemeColor(darkColor);
         }
 
+        open();
+
         setDarkMode(!darkMode);
+    }
+
+    function open() {
+        // toggle class
+        ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon']
+            .forEach(id => document.getElementById(id)?.classList.toggle('open'));
+        isOpen = !isOpen;
+
+        if (isOpen) {
+            document.body.classList.add('body-overflow-hidden-home')
+        } else {
+            document.body.classList.remove('body-overflow-hidden-home')
+        }
+
+
     }
 
     return (
@@ -185,13 +186,15 @@ function Navigation() {
                 <Logo />
             </div>
             <ul className='navigasi-menu' id='menu'>
-                <h1>/Menus<span className="dot-introduction"></span></h1>
-                <li><Link onClick={() => { document.body.style.overflow = isOpen ? 'auto' : 'auto'; }} to="/">Portfolio <div className='arrow'><ShareSvg /></div></Link></li>
-                <li><a href='https://github.com/Vandyaaa'>Repository <div className='arrow'><ShareSvg /></div></a></li>
-                <li><Link onClick={() => { document.body.style.overflow = isOpen ? 'auto' : 'auto'; }} to='/blog'>My Blog <div className='arrow'><ShareSvg /></div></Link></li>
-                <button id='theme2' className='theme theme2' onClick={toggleTheme}>
-                    <div id='swchbtn2' className='button-swch'>{darkMode ? (<p></p>) : (<p></p>)}</div>
-                </button>
+                <div className='con-menus'>
+                    <h1>/Menus<span className="dot-introduction"></span></h1>
+                    <li><Link to="/">Portfolio <div className='arrow'><ShareSvg /></div></Link></li>
+                    <li><a href='https://github.com/Vandyaaa'>Repository <div className='arrow'><ShareSvg /></div></a></li>
+                    <li><Link onClick={() => { document.body.classList.remove('body-overflow-hidden-home') }} to='/blog'>My Blog <div className='arrow'><ShareSvg /></div></Link></li>
+                    <button id='theme2' className='theme theme2' onClick={toggleTheme}>
+                        <div id='swchbtn2' className='button-swch'>{darkMode ? (<p></p>) : (<p></p>)}</div>
+                    </button>
+                </div>
             </ul>
 
             <button id='theme' className='theme theme1' onClick={toggleTheme}>
