@@ -36,32 +36,20 @@ export default function Blog() {
   const observerTarget = useRef(null)
   const imageCache = useRef(new Set())
 
-  // ============================================
-  // OPTIMIZED IMAGE COMPRESSION & CACHING
-  // ============================================
   const getOptimizedImageUrl = useCallback((url) => {
     if (!url) return null
-
-    // Jika menggunakan Supabase Storage, tambahkan parameter transformasi
     if (url.includes('supabase')) {
-      // Supabase Image Transformation
       return `${url}?width=400&quality=75&format=webp`
     }
-
-    // Untuk URL eksternal, gunakan image proxy (opsional)
     return url
   }, [])
 
-  // ============================================
-  // LAZY LOAD IMAGES
-  // ============================================
   const LazyImage = ({ src, alt, className }) => {
     const [imageSrc, setImageSrc] = useState(null)
     const [imageLoaded, setImageLoaded] = useState(false)
     const imgRef = useRef()
 
     useEffect(() => {
-      // Check if image is already cached
       if (imageCache.current.has(src)) {
         setImageSrc(src)
         setImageLoaded(true)
@@ -153,12 +141,10 @@ export default function Blog() {
         .select('id, title_blog, sub_title, created_at, image_url', { count: 'exact' })
         .range(startIndex, endIndex)
 
-      // Apply search filter
       if (isSearch && searchQuery) {
         query = query.or(`title_blog.ilike.%${searchQuery}%,sub_title.ilike.%${searchQuery}%,`)
       }
 
-      // Apply sorting
       if (filterType === "latest") {
         query = query.order("created_at", { ascending: false })
       } else if (filterType === "oldest") {

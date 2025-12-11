@@ -5,6 +5,14 @@
     user-select: none;
 }
 
+
+.con-title-article {
+    background-color: var(--primary25);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 30px;
+}
+
 body.body-overflow-hidden-blog {
     overflow: hidden;
 }
@@ -424,73 +432,6 @@ main {
 .menu-button-blog {
     display: none;
 }
-
-/* CSS untuk mengatasi masalah Lenis dengan fixed positioning */
-.con-progress {
-    width: 87px;
-    height: calc(100vh - 87px);
-    position: fixed !important;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 17px;
-    pointer-events: none;
-    /* Tambahan untuk Lenis */
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Alternatif: Gunakan transform alih-alih fixed positioning */
-.con-progress-lenis-alternative {
-    width: 87px;
-    height: calc(100vh - 87px);
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 17px;
-    pointer-events: none;
-    /* Gunakan transform untuk "fixed" positioning dengan Lenis */
-    transform: translateY(var(--scroll-progress, 0px)) translateY(-50%);
-    will-change: transform;
-}
-
-/* Media query untuk mobile */
-@media (max-width: 767px) {
-    .con-progress {
-        width: 30px !important;
-        right: 10px !important;
-    }
-
-    .con-progress-lenis-alternative {
-        width: 30px;
-        right: 10px;
-    }
-}
-
-/* Media query untuk mobile */
-@media (max-width: 767px) {
-    .con-progress {
-        width: 30px;
-        right: 10px;
-        /* Sedikit margin dari tepi pada mobile */
-    }
-
-    .scroll-progress-container-vertical {
-        width: 3px;
-    }
-}
-
 /* Article Modal Styles */
 .article-modal-overlay {
     position: fixed;
@@ -530,36 +471,31 @@ main {
 }
 
 .asside-article {
-    min-width: 17%;
-    max-width: 17%;
+    min-width: 25vw;
+    max-width: 25vw;
     height: auto;
     flex: 1;
     flex-shrink: 0;
-    border-right: 1px solid var(--border);
+    padding-top: 0;
 }
 
 .asside-main {
     position: sticky;
     display: flex;
-    justify-content: space-between;
-    padding: 30px 30px 30px 0px;
+    height: calc(100vh);
+    gap: 1rem;
     flex-direction: column;
-    top: 0;
+    top: 1rem;
 }
 
 .close-article-btn {
     width: 50px;
     height: 50px;
-    margin-bottom: 30px;
     border: none;
-    background-color: var(--border);
-    display: grid;
-    place-items: center;
-    z-index: 10;
 }
 
 .close-article-btn svg {
-    width: 35%;
+    width: 40%;
 }
 
 .close-article-btn:hover {
@@ -567,14 +503,18 @@ main {
 }
 
 .main-article {
-    padding-inline: 20vw;
+    padding-inline: 10vw;
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
+    width: calc(100% - 25vw);
     align-items: center;
     flex-direction: column;
     pointer-events: painted;
     user-select: text;
+    background-color: var(--primary25);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
 }
 
 .editor-link {
@@ -582,19 +522,19 @@ main {
 }
 
 .article-modal-content {
-    padding: 0 30px 0px 30px;
+    padding: 1rem;
     display: flex;
-    padding-inline: 30px;
-    padding-right: 5%;
     height: fit-content;
     position: relative;
-    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+    gap: 1rem;
 }
 
 .article-modal-image {
     width: 100%;
-
+    border-radius: 1rem;
     object-position: center;
+    overflow: hidden;
 }
 
 .article-modal-image img {
@@ -691,19 +631,7 @@ main {
     }
 }
 
-.sharePage {
-    width: 100%;
-    height: 60px;
-    border: 1px solid var(--border);
-    background-color: var(--blue);
-    margin-top: 30px;
-    color: var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-family: var(--primaryfont);
-}
+
 
 .sharePage i {
     transform: translateY(1.5px);
@@ -810,30 +738,18 @@ main {
         font-size: 1rem;
     }
 
+    .con-header-top-article {
+        position: fixed;
+        top: 1rem;
+        width: calc(100% - 2rem);
+    }
+
     .con-user-uploader {
         flex-direction: row;
     }
 
     .author-info {
         margin: 0;
-    }
-
-    .sharePage {
-        width: fit-content;
-        height: 50px;
-        border: none;
-        background-color: var(--border);
-        backdrop-filter: blur(5px);
-        color: var(--button);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        position: fixed;
-        padding-inline: 30px;
-        right: 30px;
-        top: 0;
-        font-family: var(--primaryfont);
     }
 
     .editor-list li::marker {
@@ -855,13 +771,17 @@ hr {
 }
 
 .logoBlog {
-    width: 1.5vw;
+    width: 50px;
     aspect-ratio: 1/1;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .logoBlog svg {
-    width: 100%;
+    width: 40%;
+    position: relative;
+    right: 0;
 }
 
 @media (max-width: 767px) {
@@ -1096,9 +1016,11 @@ hr {
     }
 
     .article-modal-content {
-        padding: 80px 30px 15px 30px;
+        padding: 1rem;
+        padding-bottom: 0;
         width: 100% - 60px;
         flex-direction: column;
+        padding-top: calc(84px + 2rem);
     }
 
     .asside-article {
@@ -1109,14 +1031,13 @@ hr {
     }
 
     .asside-main {
-        padding-bottom: 20px;
         height: fit-content;
         padding-right: 0px;
     }
 
     .main-article {
-        padding-top: 20px;
-        padding-inline: 0px;
+        padding-top: 30px;
+        padding-inline: 30px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -1152,16 +1073,6 @@ hr {
         padding: 3px 10px;
     }
 
-    .close-article-btn {
-        height: 50px;
-        aspect-ratio: 0;
-        top: 30px;
-        width: 50px;
-        position: fixed;
-        z-index: 80;
-        backdrop-filter: blur(5px);
-    }
-
     .con-progress {
         width: 30px;
     }
@@ -1194,6 +1105,10 @@ hr {
     font-size: 1rem;
     opacity: 0.3;
     margin-top: 30px;
+}
+
+.rendered-html {
+    border-radius: 1rem;
 }
 
 .rendered-html * {
@@ -1440,12 +1355,18 @@ hr {
 .con-table {
     width: 100%;
     overflow-x: auto !important;
+    border-radius: 1rem !important;
+    padding: 0 !important;
+    background: var(--border);
+}
+
+.rendered-html tbody {
+    background-color: var(--primary);
 }
 
 .rendered-html table {
-
+    border-radius: 1rem !important;
     border-collapse: collapse;
-    margin: 2rem 0;
     font-family: var(--primaryfont);
     font-size: 1rem;
     border: none;
@@ -1513,9 +1434,10 @@ hr {
 
 /* ========== CODE ========== */
 .rendered-html code {
-    font-family: 'Courier New', 'Consolas', monospace;
+    font-family: var(--secondfont);
+    font-weight: 800;
     font-size: 0.9rem;
-    color: #355aff;
+    color: var(--blue);
     background-color: var(--border);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
@@ -1525,7 +1447,6 @@ hr {
 .rendered-html pre {
     background-color: var(--border);
     padding: 1.5rem;
-    border-radius: 8px;
     overflow-x: auto;
     margin: 2rem 0;
     border: 1px solid var(--border);
@@ -1692,11 +1613,16 @@ p.list-item[list-type="number"] {
     }
 }
 
+:not(pre)>code[class*=language-],
+pre[class*=language-] {
+    border-radius: 1rem !important;
+}
+
 :not(pre)>code[class*="language-"],
 pre[class*="language-"] code {
     font-family: var(--secondfont);
     font-weight: 600;
-    border-radius: 0px;
+    border-radius: 1rem;
     border: 1px solid var(--border);
 }
 

@@ -8,6 +8,7 @@ import Footer from "../components/footer"
 import Backic from "../iconSvg/backic"
 import { LenisContext } from "../App"
 
+import ShareSvg from '../iconSvg/shareic';
 import Prism from "prismjs";
 import "../styles/prism-custom.css";
 import "prismjs/components/prism-clike";
@@ -181,31 +182,28 @@ export default function ArticlePage() {
           <div className="article-modal-content">
             <aside className="asside-article">
               <div className="asside-main">
-                <Link to="/blog"
-                  
-                  className="close-article-btn"
-                  style={{ cursor: 'pointer' }}
-                >
-                  <Backic />
-                </Link>
-                <h1 className="article-modal-title">{article.title_blog || "Judul tidak tersedia"}</h1>
-                <div className="con-user-uploader">
-                  <div className="author-photo"></div>
-                  <div className="article-modal-author">
-                    <div className="author-info">
-                      <Link to="/" className="author-name">{article.author || "/Firdhan Abivandya"}</Link>
-                      <p className="publish-date">
-                        {article.created_at ? formatDate(article.created_at) : "Tanggal tidak tersedia"}
-                      </p>
+                <div className="con-header-top-article">
+                  <Link to="/blog"
 
-                      {/* IMPROVED SHARE BUTTON */}
-                      <div className="share-menu-container" style={{ position: 'relative' }}>
-                        <button className="sharePage" onClick={handleShare}>
-                          <i className="fi fi-rs-share"></i>
-                          <p> Share</p>
-                        </button>
-
-                        
+                    className="close-article-btn"
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <Backic />
+                  </Link>
+                  <button className="sharePage" onClick={handleShare}>
+                    <ShareSvg />
+                  </button>
+                </div>
+                <div className="con-title-article">
+                  <h1 className="article-modal-title">{article.title_blog || "Judul tidak tersedia"}</h1>
+                  <div className="con-user-uploader">
+                    <div className="author-photo"></div>
+                    <div className="article-modal-author">
+                      <div className="author-info">
+                        <Link to="/" className="author-name">{article.author || "/Firdhan Abivandya"}</Link>
+                        <p className="publish-date">
+                          {article.created_at ? formatDate(article.created_at) : "Tanggal tidak tersedia"}
+                        </p>
                       </div>
                     </div>
                   </div>
