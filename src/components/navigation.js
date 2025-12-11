@@ -6,23 +6,6 @@ import ShareSvg from '../iconSvg/shareic';
 import Menus from '../iconSvg/menus';
 import Close from '../iconSvg/close';
 
-function updateThemeColor(color) {
-    // Update meta theme-color
-    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (!metaThemeColor) {
-        metaThemeColor = document.createElement('meta');
-        metaThemeColor.name = 'theme-color';
-        document.head.appendChild(metaThemeColor);
-    }
-    metaThemeColor.content = color;
-
-    // Update untuk iOS Safari
-    let appleStatusBar = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-    if (appleStatusBar) {
-        appleStatusBar.content = color === '#0a0a0a' ? 'black-translucent' : 'default';
-    }
-}
-
 function Navigation() {
     const [darkMode, setDarkMode] = useState(() => {
         const root = document.documentElement;
@@ -36,9 +19,6 @@ function Navigation() {
         // Set background color untuk html dan body
         document.documentElement.style.backgroundColor = backgroundColor;
         document.body.style.backgroundColor = backgroundColor;
-
-        // 🔥 Update address bar color
-        updateThemeColor(backgroundColor);
 
         // Disable overscroll behavior
         document.body.style.overscrollBehavior = 'none';
@@ -110,9 +90,6 @@ function Navigation() {
             root.style.setProperty('--toolbar-text', '#444');
             document.documentElement.style.backgroundColor = lightColor;
             document.body.style.backgroundColor = lightColor;
-            updateThemeColor(lightColor);
-
-
 
         } else {
             // 🌑 Dark Mode
@@ -155,7 +132,6 @@ function Navigation() {
             root.style.setProperty('--toolbar-text', '#bbb');
             document.documentElement.style.backgroundColor = darkColor;
             document.body.style.backgroundColor = darkColor;
-            updateThemeColor(darkColor);
         }
 
         open();
