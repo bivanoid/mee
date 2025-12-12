@@ -62,6 +62,27 @@ export default function ArticlePage() {
     else window.scrollTo(0, 0)
   }, [lenisRef])
 
+  const [showUpTop, setShowUpTop] = useState(false)
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY >= 84) {
+        setShowUpTop(true)
+      } else {
+        setShowUpTop(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  })
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+
+
   // Ambil data dari Supabase
   useEffect(() => {
     async function fetchArticle() {
@@ -176,7 +197,9 @@ export default function ArticlePage() {
     )
 
   return (
+    
     <div className="body-blog">
+      <div id="upTop" style={{ bottom: showUpTop ? "1rem " : "-100%" }} onClick={scrollToTop}>scroll to up</div>
       <div className="article-modal-overlay" style={{ background: "transparent" }}>
         <div className="article-modal" style={{ border: "none" }}>
           <div className="article-modal-content">

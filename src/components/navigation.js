@@ -13,12 +13,28 @@ function Navigation() {
         return currentPrimary === '#0a0a0a' || currentPrimary === 'rgb(10, 10, 10)';
     });
 
+    // 🔥 Update meta theme-color dengan smooth transition
+    const updateThemeColor = (color) => {
+        // Hapus semua meta theme-color yang ada
+        const existingMetas = document.querySelectorAll('meta[name="theme-color"]');
+        existingMetas.forEach(meta => meta.remove());
+
+        // Buat meta theme-color baru
+        const meta = document.createElement('meta');
+        meta.name = 'theme-color';
+        meta.content = color;
+        document.head.appendChild(meta);
+    };
+
     useEffect(() => {
-        const backgroundColor = darkMode ? '#0a0a0a' : '#dbdbce';
+        const backgroundColor = darkMode ? '#0d0d0d' : '#dbdbce';
 
         // Set background color untuk html dan body
         document.documentElement.style.backgroundColor = backgroundColor;
         document.body.style.backgroundColor = backgroundColor;
+
+        // 🔥 Update theme-color saat component mount dan darkMode berubah
+        updateThemeColor(backgroundColor);
 
         // Disable overscroll behavior
         document.body.style.overscrollBehavior = 'none';
@@ -48,7 +64,9 @@ function Navigation() {
 
     function toggleTheme() {
         const root = document.documentElement;
+        const html = document.documentElement;
         ['swchbtn1', 'swchbtn2'].forEach(id => document.getElementById(id)?.classList.toggle('switchTheme'))
+
         if (darkMode) {
             // 🌞 Light Mode
             const lightColor = '#dbdbce';
@@ -91,6 +109,8 @@ function Navigation() {
             document.documentElement.style.backgroundColor = lightColor;
             document.body.style.backgroundColor = lightColor;
 
+            html.classList.add("light");
+
         } else {
             // 🌑 Dark Mode
             const darkColor = '#0a0a0a';
@@ -132,6 +152,8 @@ function Navigation() {
             root.style.setProperty('--toolbar-text', '#bbb');
             document.documentElement.style.backgroundColor = darkColor;
             document.body.style.backgroundColor = darkColor;
+
+            html.classList.remove("light");
         }
 
         open();
@@ -150,14 +172,11 @@ function Navigation() {
         } else {
             document.body.classList.remove('body-overflow-hidden-home')
         }
-
-
     }
 
     return (
         <div className='navigation'>
             <div className='menu-button' id='expandMenuIcon' onClick={open}><Menus /></div>
-            {/* <div className='close' id='close' onClick={open}><div className='menu-button'><Close /></div></div> */}
             <div id='logoMenuIcon'>
                 <Logo />
             </div>
