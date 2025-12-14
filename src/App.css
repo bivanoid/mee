@@ -161,18 +161,22 @@ svg path {
 
 
 #upTop {
-    position: fixed;
     padding: 1rem;
-    background-color: var(--primary25);
-    width: fit-content;
+    background-color: var(--blue);
+    width: calc(100%);
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--primary);
     z-index: 9999999;
     border: 1px solid var(--border);
     border-radius: 1rem;
     transition: 0s var(--cubic-toeng);
     font-family: var(--secondfont);
     font-weight: 800;
+    bottom: 1rem;
     text-transform: uppercase;
     right: 1rem;
+    transition: 0.5s;
 }
 
 .habibi-regular {
@@ -194,7 +198,6 @@ svg path {
 }
 
 body {
-  background-color: var(--primary);
   margin: 0;
   height: 100%;
   padding: 0;
@@ -204,6 +207,7 @@ body {
   background-attachment: fixed; */
   fill: #919191;
   background-position: center;
+  background-color: var(--primary) !important;
 }
 
 a {

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useContext, useRef } from "react"
-import { useParams, useLocation, useNavigate, Link } from "react-router-dom"
+import { useParams, useNavigate, Link } from "react-router-dom"
 import { supabase } from "./supabaseClient"
 import "../styles/blogs/blog.css"
 import Footer from "../components/footer"
@@ -52,7 +52,6 @@ export default function ArticlePage() {
   const [article, setArticle] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [imageLoaded, setImageLoaded] = useState(false)
 
   const mainRef = useRef(null)
 
@@ -62,20 +61,6 @@ export default function ArticlePage() {
     else window.scrollTo(0, 0)
   }, [lenisRef])
 
-  const [showUpTop, setShowUpTop] = useState(false)
-
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY >= 84) {
-        setShowUpTop(true)
-      } else {
-        setShowUpTop(false)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  })
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -199,7 +184,7 @@ export default function ArticlePage() {
   return (
     
     <div className="body-blog">
-      <div id="upTop" style={{ bottom: showUpTop ? "1rem " : "-100%" }} onClick={scrollToTop}>scroll to up</div>
+      
       <div className="article-modal-overlay" style={{ background: "transparent" }}>
         <div className="article-modal" style={{ border: "none" }}>
           <div className="article-modal-content">
@@ -263,11 +248,12 @@ export default function ArticlePage() {
                   <p>Konten tidak tersedia</p>
                 )}
               </div>
-
+              <div id="upTop" onClick={scrollToTop}>scroll to up</div>
             </main>
           </div>
         </div>
       </div>
+      
       <Footer />
 
       

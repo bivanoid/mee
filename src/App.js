@@ -1,9 +1,6 @@
 import './App.css';
 import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-
-import Introduction from './components/introduction';
-import PopupImage from './components/popupimage';
 import FadeContent from './components/FadeContent';
 // Halaman
 import Home from './pages/home';
@@ -88,21 +85,6 @@ function App() {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, []);
-
-  // Initialize Lenis (jika Lenis diinisialisasi di sini)
-  useEffect(() => {
-    // Jika Anda menggunakan Lenis, simpan instance-nya di ref
-    // Contoh:
-    // import Lenis from '@studio-freight/lenis'
-    // const lenis = new Lenis()
-    // lenisRef.current = lenis
-    // 
-    // function raf(time) {
-    //   lenis.raf(time)
-    //   requestAnimationFrame(raf)
-    // }
-    // requestAnimationFrame(raf)
   }, []);
 
   return (

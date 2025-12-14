@@ -10,16 +10,13 @@ import riyadh from '../assets/riyadhmckp.png';
 import bicture from '../assets/bicturemckp.png';
 import kasir from '../assets/Casier.png';
 import calc from '../assets/calc.png';
-import gallery from '../assets/galpod-app.png';
-import EaktuAhkir from '../assets/WAKTU AHKIR.jpg';
 import Bynaa from "../assets/byna's-shop.png";
-import Bebrave from '../assets/bebrave.jpg';
 import Logo from './logo';
 import FadeContent from './FadeContent';
 import AnimatedContent from './AnimatedContent';
 import ShareSvg from '../iconSvg/shareic';
 
-export default function HorizontalSlider({ onImageClick }) {
+export default function HorizontalSlider() {
   const gambarRefs = useRef([]);
 
   const projects = [
@@ -91,13 +88,6 @@ export default function HorizontalSlider({ onImageClick }) {
     };
   }, []);
 
-
-  const handleImageClick = (e) => {
-    if (e.currentTarget.tagName === 'IMG') {
-      onImageClick(e.currentTarget.src);
-    }
-  };
-
   return (
     <div className='con-swiper' id='sc3'>
 
@@ -153,7 +143,7 @@ export default function HorizontalSlider({ onImageClick }) {
           {projects.map((proj, index) => (
             <SwiperSlide key={index}>
               <div className='gambar' ref={(el) => (gambarRefs.current[index] = el)}>
-                <img onClick={handleImageClick} src={proj.img} alt={proj.alt} />
+                <img src={proj.img} alt={proj.alt} />
                 {proj.link && (
                   <a href={proj.link} target="_blank" rel="noopener noreferrer">
                     <ShareSvg/>

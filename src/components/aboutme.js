@@ -32,7 +32,7 @@ function AboutMe({ onImageClick }) {
                         config={{ tension: 100, friction: 30 }}
                         initialOpacity={0}
                     >
-                        <div className='text-abouts  '><p className='title-about title-about2'>Education/Me</p><br></br>
+                        <div className='text-abouts  '><p className='title-about title-about2'>My/Education</p><br></br>
                             <ul className='content-carrier'>
                                 <FadeContent blur={false} duration={1500} delay={0} easing="ease-in" initialOpacity={0}>
                                     <span>1</span><li><p>SDN Purwodiningratan</p></li>

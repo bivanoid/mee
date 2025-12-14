@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Logo from './logo';
 import ShareSvg from '../iconSvg/shareic';
 import Menus from '../iconSvg/menus';
-import Close from '../iconSvg/close';
 
 function Navigation() {
     const [darkMode, setDarkMode] = useState(() => {
@@ -27,7 +26,7 @@ function Navigation() {
     };
 
     useEffect(() => {
-        const backgroundColor = darkMode ? '#0d0d0d' : '#dbdbce';
+        const backgroundColor = darkMode ? '#0d0d0d' : '#d1d1c4';
 
         // Set background color untuk html dan body
         document.documentElement.style.backgroundColor = backgroundColor;
@@ -163,7 +162,7 @@ function Navigation() {
 
     function open() {
         // toggle class
-        ['menu', 'close', 'thecontent', 'logoMenuIcon', 'expandMenuIcon']
+        ['menu', 'thecontent', 'logoMenuIcon', 'expandMenuIcon']
             .forEach(id => document.getElementById(id)?.classList.toggle('open'));
         isOpen = !isOpen;
 

@@ -60,8 +60,8 @@
     background-color: rgba(var(--border), var(--border), var(--border), 1);
     outline-offset: -2px;
     display: flex;
+    flex-direction: column;
     position: relative;
-    align-items: flex-end;
     box-sizing: border-box;
     padding-bottom: 30px;
     height: auto !important;
