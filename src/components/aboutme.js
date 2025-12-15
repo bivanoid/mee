@@ -18,10 +18,15 @@ function AboutMe({ onImageClick }) {
                     <FadeContent blur={false} delay={500} duration={300} easing="ease-out" initialOpacity={0}>
                         <div className='text-abouts'><p className='title-about'>About/Me</p><br></br>
                             <p className='content-about'>
-                                Hello! My name is Firdhan Abivandya, born on June 21, 2007, in Surakarta, Central Java, Indonesia. Since an early age, I’ve been passionate about technology—especially in software and mobile application development. I enjoy exploring new ideas, solving problems creatively, and building applications that bring real value to users.
+                                Hello! My name is Firdhan Abivandya. I am from Surakarta, Central Java Province, Indonesia.
+                                I have been studying various programming languages such as C#, JavaScript, and others.
                                 <br></br>
                                 <br></br>
-                                Throughout my studies, I’ve worked on various projects, including Android applications using Firebase and several data management systems. These experiences have strengthened my belief that technology can be a powerful tool for positive impact. I am committed to growing as a developer and contributing to meaningful innovations. Through this portfolio, I aim to showcase my projects, skills, and progress in the field of information technology.
+                                I like to use my imagination, and that is where I began to discover a collaboration between imagination and technology,
+                                namely as a Front-End Developer and UI/UX Designer, which is my main focus at the moment.
+                                <br></br>
+                                <br></br>
+                                I have also worked on various projects during my time at school. You can scroll further to see more of them.
                             </p>
                         </div>
                     </FadeContent>
