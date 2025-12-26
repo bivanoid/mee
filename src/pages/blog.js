@@ -13,9 +13,7 @@ import Close from '../iconSvg/close'
 import { Link } from 'react-router-dom'
 import { LenisContext } from "../App"
 
-const ITEMS_PER_PAGE = 6 // Increased for better UX
-
-
+const ITEMS_PER_PAGE = 6
 
 export default function Blog() {
   const [blogs, setBlogs] = useState([])
@@ -36,15 +34,26 @@ export default function Blog() {
   const observerTarget = useRef(null)
   const imageCache = useRef(new Set())
 
+  // ✨ UPDATED: Optimasi untuk WebP images
   const getOptimizedImageUrl = useCallback((url) => {
     if (!url) return null
-    if (url.includes('supabase')) {
-      return `${url}?width=400&quality=75&format=webp`
+    
+    // Jika sudah WebP dari Supabase, tidak perlu transform lagi
+    if (url.includes('.webp')) {
+      // Hanya resize jika perlu
+      if (url.includes('supabase')) {
+        return `${url}?width=400&quality=80`
+      }
+      return url
     }
+    
+    // Untuk format lain (legacy images), tetap convert ke WebP
+    if (url.includes('supabase')) {
+      return `${url}?width=400&quality=80&format=webp`
+    }
+    
     return url
   }, [])
-
-
 
   const LazyImage = ({ src, alt, className }) => {
     const [imageSrc, setImageSrc] = useState(null)
@@ -117,9 +126,6 @@ export default function Blog() {
     )
   }
 
-  // ============================================
-  // OPTIMIZED FETCH - DATABASE LEVEL PAGINATION
-  // ============================================
   const fetchBlogs = useCallback(async (filterType, page = 0, isSearch = false) => {
     const isInitialLoad = page === 0
 
@@ -134,7 +140,6 @@ export default function Blog() {
     setError(null)
 
     try {
-      // OPTIMIZED: Fetch hanya data yang dibutuhkan
       const startIndex = page * ITEMS_PER_PAGE
       const endIndex = startIndex + ITEMS_PER_PAGE - 1
 
@@ -177,9 +182,6 @@ export default function Blog() {
     }
   }, [searchQuery])
 
-  // ============================================
-  // SEARCH HANDLER
-  // ============================================
   const handleSearch = useCallback(() => {
     const query = searchInput.trim()
     setSearchQuery(query)
@@ -188,17 +190,11 @@ export default function Blog() {
     fetchBlogs(filter, 0, !!query)
   }, [searchInput, filter, fetchBlogs])
 
-  // ============================================
-  // LOAD MORE HANDLER
-  // ============================================
   const loadMoreBlogs = useCallback(() => {
     if (isLoadingMore || !hasMore) return
     fetchBlogs(filter, currentPage + 1, !!searchQuery)
   }, [currentPage, filter, hasMore, isLoadingMore, searchQuery, fetchBlogs])
 
-  // ============================================
-  // INTERSECTION OBSERVER
-  // ============================================
   useEffect(() => {
     if (!observerTarget.current || !hasMore) return
 
@@ -219,16 +215,10 @@ export default function Blog() {
     }
   }, [hasMore, isLoadingMore, loadMoreBlogs])
 
-  // ============================================
-  // INITIAL LOAD
-  // ============================================
   useEffect(() => {
     fetchBlogs(filter, 0, false)
   }, [filter, fetchBlogs])
 
-  // ============================================
-  // SCROLL RESTORATION
-  // ============================================
   useEffect(() => {
     if (location.state?.restoreScroll) {
       const savedPosition = sessionStorage.getItem('blogScrollPosition')
@@ -276,8 +266,6 @@ export default function Blog() {
     }
   }
 
-  
-
   function openArticle(article) {
     const scrollPos = lenisRef?.current?.scroll || window.pageYOffset
     sessionStorage.setItem('blogScrollPosition', scrollPos.toString())
@@ -286,13 +274,12 @@ export default function Blog() {
       state: {
         article: {
           ...article,
-          content_html: article.content_html, // pastikan kolom ini di-fetch
+          content_html: article.content_html,
           docx_url: article.docx_url
         }
       }
     })
   }
-
 
   function formatDate(dateString) {
     const options = { year: "numeric", month: "long", day: "numeric" }
@@ -316,7 +303,6 @@ export default function Blog() {
           </div>
 
           <div className="con-article" id="conArticle">
-            {/* Search Bar */}
             <div className="search-bar-container">
               <div className="search-bar">
                 <input
@@ -364,7 +350,6 @@ export default function Blog() {
               </div>
             ) : (
               <>
-
                 {displayedBlogs.map((blog) => (
                   <div
                     className="article"
@@ -398,7 +383,6 @@ export default function Blog() {
                   </div>
                 ))}
 
-                {/* Load More Trigger */}
                 {hasMore && (
                   <div ref={observerTarget} className="con-loading-more">
                     {isLoadingMore ? (
@@ -423,7 +407,6 @@ export default function Blog() {
               /Options<span className="dot-introduction"></span>
             </h1>
             <div className="filter-by">
-            
               <ul>
                 <li
                   className={filter === "latest" ? "active" : ""}
@@ -455,7 +438,6 @@ export default function Blog() {
         <Footer />
       </div>
 
-      {/* Add shimmer animation CSS */}
       <style>{`
         @keyframes shimmer {
           0% { background-position: -200% 0; }
