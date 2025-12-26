@@ -1,8 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
   <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Loading…</title>
+    <script>
+      (async function() {
+        try {
+          // Ambil index.html dari root build
+          const res = await fetch('/index.html');
+          if (!res.ok) {
+            // fallback: redirect ke root bila index.html tidak tersedia
+            location.replace('/');
+            return;
+          }
+          const html = await res.text();
+          // Ganti dokumen dengan isi index.html sehingga asset & script SPA dimuat
+          document.open();
+          document.write(html);
+          document.close();
+          // Pastikan history tetap pada URL awal supaya router SPA membaca path yang benar
+          history.replaceState({}, '', location.pathname + location.search + location.hash);
+        } catch (e) {
+          // fallback safety
+          location.replace('/');
+        }
+      })();
+    </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
