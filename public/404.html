@@ -5,25 +5,28 @@
     <meta name="robots" content="noindex" />
     <title>Loading…</title>
     <script>
-      (async function() {
+      (async function () {
         try {
-          // Ambil index.html dari root build
-          const res = await fetch('/index.html');
+          const res = await fetch('./index.html');
           if (!res.ok) {
-            // fallback: redirect ke root bila index.html tidak tersedia
-            location.replace('/');
+            location.replace('./');
             return;
           }
+
           const html = await res.text();
-          // Ganti dokumen dengan isi index.html sehingga asset & script SPA dimuat
+
           document.open();
           document.write(html);
           document.close();
-          // Pastikan history tetap pada URL awal supaya router SPA membaca path yang benar
-          history.replaceState({}, '', location.pathname + location.search + location.hash);
+
+          // Pertahankan URL asli agar SPA router membaca path dengan benar
+          history.replaceState(
+            {},
+            '',
+            location.pathname + location.search + location.hash
+          );
         } catch (e) {
-          // fallback safety
-          location.replace('/');
+          location.replace('./');
         }
       })();
     </script>
