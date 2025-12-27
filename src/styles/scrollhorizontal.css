@@ -334,6 +334,8 @@
     .con-swiper-button-hz {
         gap: 1px;
         background-color: var(--border);
+        padding-top: 1px;
+        border: none;
     }
 
     .next-hz,

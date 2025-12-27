@@ -10,6 +10,10 @@
     border: 1px solid var(--border);
     border-radius: 1rem;
     padding: 30px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 body.body-overflow-hidden-blog {
@@ -176,7 +180,9 @@ main {
     padding-top: 30px;
     padding-bottom: 30px;
     top: 0;
-
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding-inline: 30px;
 }
 
@@ -220,21 +226,32 @@ main {
 .filter-by ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .filter-by li {
+    font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-block: 3px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid var(--border);
+}
+
+.filter-by li p {
+        display: flex;
+    gap: 10px;
     color: var(--button);
-    font-family: var(--primaryfont);
+    align-items: center;
+    min-width: 104px;
     font-size: 1rem;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    height: 100px;
-    width: 50%;
-    padding: 10px;
-    border: 1px solid var(--border);
-    border-radius: 1rem;
+    width: fit-content;
+    font-family: var(--secondfont);
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .rendered-html img {
@@ -242,14 +259,15 @@ main {
     height: fit-content;
 }
 
-.filter-by li:hover {
-    opacity: 0.7;
+.filter-ic {
+    height: 1rem;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
 }
 
-.filter-by li.active {
+.filter-by li.active .filter-ic {
     opacity: 1;
     background-color: var(--blue);
-    color: var(--primary);
 }
 
 .filter-by li::marker {
@@ -293,7 +311,7 @@ main {
 
 .article .con-image-article img {
     width: 100%;
-    aspect-ratio: 6 / 4;
+    aspect-ratio: 16/9;
     object-fit: cover;
 }
 
@@ -481,7 +499,7 @@ main {
 .asside-main {
     position: sticky;
     display: flex;
-    height: calc(100vh);
+    height: auto;
     gap: 1rem;
     flex-direction: column;
     top: 1rem;
@@ -503,7 +521,7 @@ main {
 
 .main-article {
     padding-inline: 10vw;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 30px;
     display: flex;
     width: calc(100% - 25vw);
@@ -527,21 +545,26 @@ main {
     position: relative;
     padding-bottom: 0;
     gap: 1rem;
+    object-fit: contain;
+    object-position: center;
 }
 
 .article-modal-image {
     width: 100%;
     border-radius: 1rem;
-    object-position: center;
     overflow: hidden;
+    aspect-ratio: 16/9;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 .article-modal-image img {
     width: 100%;
-
+    
     height: auto;
-    object-fit: contain;
-    object-position: center;
+    border-radius: 1rem;
+    
 }
 
 .article-modal-meta {
@@ -578,6 +601,8 @@ main {
     flex-direction: column;
     font-size: 1rem;
     width: 100%;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .author-info p:nth-child(2) {
@@ -643,7 +668,6 @@ main {
     text-transform: uppercase;
     font-size: 1rem;
     opacity: 0.3;
-    margin-top: 30px;
 }
 
 
@@ -664,7 +688,6 @@ main {
     text-transform: uppercase;
     width: 100%;
     overflow: hidden;
-    margin: 0 0 30px 0;
     line-height: 1.2;
 }
 
@@ -882,7 +905,7 @@ hr {
         height: fit-content;
         border-radius: 1rem;
         border: none;
-        margin-inline: 1rem;
+        margin-inline: 1rem;margin-top: 0;
         background-color: var(--primary25);
         border: 0px solid transparent;
         /* top: -100%; */
@@ -931,7 +954,7 @@ hr {
     }
 
     .main-sticky-blog h1 {
-        font-size: 2rm;
+        font-size: 2.3rem;
         padding-top: 30px;
         padding-bottom: 1rem;
     }
@@ -1116,7 +1139,19 @@ hr {
 
 .rendered-html {
     border-radius: 1rem;
+    border-inline: 1px solid var(--border);
+    padding-inline: 1rem;
+    padding-top: 30px;
 }
+
+ @media (max-width:747px) {
+    .rendered-html {
+    border-radius: 1rem;
+    border-inline: none;
+    padding-inline: 0;
+    padding-bottom: 0;
+    }
+ }
 
 .rendered-html * {
     max-width: 100%;

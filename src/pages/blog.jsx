@@ -412,13 +412,13 @@ export default function Blog() {
                   className={filter === "latest" ? "active" : ""}
                   onClick={() => handleFilterChange("latest")}
                 >
-                  Latest
+                  <p>Latest <div className="filter-ic"></div></p>
                 </li>
                 <li
                   className={filter === "oldest" ? "active" : ""}
                   onClick={() => handleFilterChange("oldest")}
                 >
-                  Oldest
+                  <p>Oldest <div className="filter-ic"></div></p>
                 </li>
               </ul>
               <button
