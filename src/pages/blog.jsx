@@ -12,6 +12,7 @@ import Menus from '../iconSvg/menus'
 import Close from '../iconSvg/close'
 import { Link } from 'react-router-dom'
 import { LenisContext } from "../App"
+import DownSvg from "../iconSvg/scrollToBottomic"
 
 const ITEMS_PER_PAGE = 6
 
@@ -412,13 +413,13 @@ export default function Blog() {
                   className={filter === "latest" ? "active" : ""}
                   onClick={() => handleFilterChange("latest")}
                 >
-                  <p>Latest <div className="filter-ic"></div></p>
+                  <p>Latest <div className="filter-ic filter-ic-latest"><DownSvg/></div></p>
                 </li>
                 <li
                   className={filter === "oldest" ? "active" : ""}
                   onClick={() => handleFilterChange("oldest")}
                 >
-                  <p>Oldest <div className="filter-ic"></div></p>
+                  <p>Oldest <div className="filter-ic"><DownSvg/></div></p>
                 </li>
               </ul>
               <button

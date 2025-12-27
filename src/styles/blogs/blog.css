@@ -260,14 +260,18 @@ main {
 }
 
 .filter-ic {
-    height: 1rem;
+    height: 2rem;
     border-radius: 1rem;
     aspect-ratio: 1/1;
 }
 
-.filter-by li.active .filter-ic {
+.filter-ic-latest {
+    rotate: 180deg;
+}
+
+.filter-by li.active .filter-ic svg path{
     opacity: 1;
-    background-color: var(--blue);
+    fill: var(--blue);
 }
 
 .filter-by li::marker {
