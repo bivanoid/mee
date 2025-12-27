@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9259f25c.css",
-    "main.js": "/static/js/main.a6845612.js",
+    "main.css": "/static/css/main.f5c83197.css",
+    "main.js": "/static/js/main.aa99fba9.js",
     "static/js/198.9db6c00f.chunk.js": "/static/js/198.9db6c00f.chunk.js",
     "static/media/riyadhmckp.png": "/static/media/riyadhmckp.c4e186f986912c99b816.png",
     "static/media/byna's-shop.png": "/static/media/byna's-shop.e515c6f92e359cf8ff38.png",
@@ -13,12 +13,12 @@
     "static/media/legosleep.jpg": "/static/media/legosleep.5f14d4fd5502ed81fab4.jpg",
     "index.html": "/index.html",
     "static/media/plus-paricle.svg": "/static/media/plus-paricle.a91328f68783c0a77b08cac4564e650d.svg",
-    "main.9259f25c.css.map": "/static/css/main.9259f25c.css.map",
-    "main.a6845612.js.map": "/static/js/main.a6845612.js.map",
+    "main.f5c83197.css.map": "/static/css/main.f5c83197.css.map",
+    "main.aa99fba9.js.map": "/static/js/main.aa99fba9.js.map",
     "198.9db6c00f.chunk.js.map": "/static/js/198.9db6c00f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9259f25c.css",
-    "static/js/main.a6845612.js"
+    "static/css/main.f5c83197.css",
+    "static/js/main.aa99fba9.js"
   ]
 }

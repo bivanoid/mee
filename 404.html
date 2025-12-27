@@ -7,9 +7,10 @@
     <script>
       (async function () {
         try {
-          const res = await fetch('./index.html');
+          // SELALU ke root
+          const res = await fetch('/index.html');
           if (!res.ok) {
-            location.replace('./');
+            location.replace('/');
             return;
           }
 
@@ -19,14 +20,14 @@
           document.write(html);
           document.close();
 
-          // Pertahankan URL asli agar SPA router membaca path dengan benar
+          // kembalikan URL asli supaya router SPA baca path
           history.replaceState(
             {},
             '',
             location.pathname + location.search + location.hash
           );
         } catch (e) {
-          location.replace('./');
+          location.replace('/');
         }
       })();
     </script>
