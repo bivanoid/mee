@@ -6,11 +6,11 @@ import 'swiper/css/pagination';
 import '../styles/scrollhorizontal.css';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-import riyadh from '../assets/riyadhmckp.png';
-import bicture from '../assets/bicturemckp.png';
+import riyadh from '../assets/riyadhmckp.webp';
+import bicture from '../assets/bicturemckp.webp';
 import kasir from '../assets/Casier.png';
 import calc from '../assets/calc.png';
-import Bynaa from "../assets/byna's-shop.png";
+import Bynaa from "../assets/byna's-shop.webp";
 import Logo from './logo';
 import FadeContent from './FadeContent';
 import AnimatedContent from './AnimatedContent';
@@ -26,7 +26,7 @@ export default function HorizontalSlider() {
       type: "collective",
       title: "Alquran Website",
       tags: ["PHP", "CSS", "MYSQL"],
-      link: "https://github.com/Vandyaaa/Riyadh-Al-quran"
+      link: "https://github.com/bivanoid/Riyadh-Al-quran"
     },
     {
       img: bicture,
@@ -34,7 +34,7 @@ export default function HorizontalSlider() {
       type: "individual",
       title: "Gallery Photo",
       tags: ["JAVA", "XML", "FIREBASE"],
-      link: "https://bivanoid.site/article/73"
+      link: "https://bivanoid.site/article/77"
     },
     {
       img: calc,
@@ -42,7 +42,6 @@ export default function HorizontalSlider() {
       type: "individual",
       title: "Calculator",
       tags: ["JAVASCRIPT", "CSS"],
-      link: "https://vandyaaa.github.io/calculablew/"
     },
     {
       img: Bynaa,

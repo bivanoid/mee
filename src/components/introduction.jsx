@@ -1,12 +1,7 @@
 import '../styles/introduction.css'
 import React, { useState, useEffect, useRef } from 'react';
-import { ReactComponent as StarIcon } from '../assets/plus-paricle.svg';
 import AnimatedContent from './AnimatedContent';
-import FadeContent from './FadeContent';
-import Magnet from './Magnet';
-import Lenis from '@studio-freight/lenis';
 import lenis from './lenisSc';
-import bgImage from '../assets/e3b4ba54-3742-495d-aa8e-1e0c75f69437 (1).jpg';
 import Logo from './logo';
 import DownSvg from '../iconSvg/scrollToBottomic';
 import LogoMiring from '../iconSvg/logoMiring';

@@ -1,9 +1,6 @@
 import '../styles/footer.css';
-import logo from '../assets/logo.png'
-import AnimatedContent from './AnimatedContent';
 import Logo from './logo';
 import lenis from './lenisSc';
-import LogoPattern from './LogoPattern';
 
 export default function Footer() {
 

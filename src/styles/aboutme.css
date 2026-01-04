@@ -70,36 +70,6 @@
     font-size: 2rem;
 }
 
-.con-image-bio {
-    width: 3.7vw;
-    background: url(../assets/legosleep.jpg);
-    aspect-ratio: 1/1;
-    display: none;
-
-    background-position: center;
-    background-size: cover;
-    border-radius: 0;
-    place-items: center;
-    position: relative;
-}
-
-.image-profile {
-    background: url(../assets/84cdd9d2-8c16-4371-82f6-d1cd9d8c8ef9.jpeg);
-    filter: grayscale(0%);
-    width: 100%;
-    height: 100%;
-    border-radius: 1000px;
-    position: relative;
-    background-position: top;
-    background-size: contain;
-    object-position: center;
-    overflow: hidden;
-    z-index: 2;
-    object-fit: cover;
-
-}
-
-
 .bio {
     width: calc(100%);
     box-sizing: border-box;
