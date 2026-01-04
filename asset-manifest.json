@@ -1,24 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.f5c83197.css",
-    "main.js": "/static/js/main.aa99fba9.js",
+    "main.css": "/static/css/main.be812e4c.css",
+    "main.js": "/static/js/main.c74b37e8.js",
     "static/js/198.9db6c00f.chunk.js": "/static/js/198.9db6c00f.chunk.js",
-    "static/media/riyadhmckp.png": "/static/media/riyadhmckp.c4e186f986912c99b816.png",
-    "static/media/byna's-shop.png": "/static/media/byna's-shop.e515c6f92e359cf8ff38.png",
     "static/media/Casier.png": "/static/media/Casier.ab3270f4095b6fe2ce78.png",
     "static/media/calc.png": "/static/media/calc.1a26671ef3739b01684c.png",
-    "static/media/e3b4ba54-3742-495d-aa8e-1e0c75f69437 (1).jpg": "/static/media/e3b4ba54-3742-495d-aa8e-1e0c75f69437 (1).a8488c270f30c70bdff7.jpg",
-    "static/media/bicturemckp.png": "/static/media/bicturemckp.f0db5e2400b5e2e2e3b8.png",
-    "static/media/84cdd9d2-8c16-4371-82f6-d1cd9d8c8ef9.jpeg": "/static/media/84cdd9d2-8c16-4371-82f6-d1cd9d8c8ef9.25d2ec1202490885de0c.jpeg",
-    "static/media/legosleep.jpg": "/static/media/legosleep.5f14d4fd5502ed81fab4.jpg",
+    "static/media/riyadhmckp.webp": "/static/media/riyadhmckp.7d53b9d5441830e9c949.webp",
+    "static/media/byna's-shop.webp": "/static/media/byna's-shop.d7e37ee9bbfb3497e9dc.webp",
+    "static/media/bicturemckp.webp": "/static/media/bicturemckp.c0fa65f13d1e280faa01.webp",
     "index.html": "/index.html",
-    "static/media/plus-paricle.svg": "/static/media/plus-paricle.a91328f68783c0a77b08cac4564e650d.svg",
-    "main.f5c83197.css.map": "/static/css/main.f5c83197.css.map",
-    "main.aa99fba9.js.map": "/static/js/main.aa99fba9.js.map",
+    "main.be812e4c.css.map": "/static/css/main.be812e4c.css.map",
+    "main.c74b37e8.js.map": "/static/js/main.c74b37e8.js.map",
     "198.9db6c00f.chunk.js.map": "/static/js/198.9db6c00f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5c83197.css",
-    "static/js/main.aa99fba9.js"
+    "static/css/main.be812e4c.css",
+    "static/js/main.c74b37e8.js"
   ]
 }
