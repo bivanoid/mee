@@ -15,6 +15,7 @@ import Logo from './logo';
 import FadeContent from './FadeContent';
 import AnimatedContent from './AnimatedContent';
 import ShareSvg from '../iconSvg/shareic';
+import RevealUp from '../animation/reveal';
 
 export default function HorizontalSlider() {
   const gambarRefs = useRef([]);
@@ -50,6 +51,14 @@ export default function HorizontalSlider() {
       title: "Bynna's shop",
       tags: ["JAVASCRIPT", "CSS", "PHP"],
       link: "https://bynnaaa.lovestoblog.com/"
+    },
+    {
+      img: Bynaa,
+      alt: "Loom&Yarn",
+      type: "individual",
+      title: "Loom&Yarn",
+      tags: ["JAVASCRIPT", "CSS", "PHP"],
+      link: "https://loomnyarn.lovestoblog.com/"
     },
     {
       img: kasir,
@@ -91,35 +100,18 @@ export default function HorizontalSlider() {
     <div className='con-swiper' id='sc3'>
 
       <div className='title-swiper'>
-        <AnimatedContent
-          distance={50}
-          direction="vertical"
-          config={{ tension: 100, friction: 30 }}
-          initialOpacity={0}
-          animateOpacity
-          threshold={1}
-          delay={500}
-        >
+        <RevealUp threshold={0.5} reverse={false} distance={100}>
           <h1>Highlight <span>Projects</span></h1>
-        </AnimatedContent>
-
-        <AnimatedContent
-          distance={50}
-          direction="vertical"
-          config={{ tension: 100, friction: 30 }}
-          initialOpacity={0}
-          animateOpacity
-          threshold={0}
-          delay={1000}
-        >
+        </RevealUp>
+        <RevealUp direction='vertical' delay={500} distance={20}>
           <p>individual or collective projects.</p>
-        </AnimatedContent>
+        </RevealUp>
       </div>
 
       <FadeContent blur={false} delay={1000} duration={1500} easing="ease-out" initialOpacity={0}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={1}
+          spaceBetween={4}
           slidesPerView={1}
           loop={false}
           navigation={{
@@ -153,7 +145,7 @@ export default function HorizontalSlider() {
               <h1 className='gambar-h1'>{proj.title}</h1>
               <div className='tag-language'>
                 {proj.tags.map((tag, i) => (
-                  <div key={i} className='taglang'>{tag}</div>
+                  <div key={i} className='box-skill'>{tag}</div>
                 ))}
               </div>
             </SwiperSlide>

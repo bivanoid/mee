@@ -1,231 +1,237 @@
 .con-swiper {
-    width: 100%;
-    height: calc(fit-content);
-    overflow: hidden;
-    position: relative;
-    background-color: var(--primary25);
-    border-radius: 1rem;
-    border: 1px solid var(--border);
+  width: 100%;
+  height: calc(fit-content);
+  overflow: hidden;
+  position: relative;
+  background-color: var(--primary25);
+  border-radius: 1rem;
+  border: var(--border-width) solid var(--border);
 }
 
 .swiper {
-    width: 100%;
-    background-color: var(--border);
+  width: 100%;
 }
 
 .title-swiper {
-    height: fit-content;
-    padding-block: 30px;
-    border-bottom: 1px solid var(--border);
+  height: fit-content;
+  padding-block: 30px;
+  border-bottom: 1px solid var(--border);
 }
 
 .con-title-HZ {
-    overflow: hidden;
-    height: fit-content;
+  overflow: hidden;
+  height: fit-content;
 }
 
 .title-swiper h1 {
-    color: var(--button);
-    font-weight: 400;
-    font-size: 4rem;
-    color: var(--button);
-    font-family: var(--secondfont);
-    text-transform: uppercase;
-    font-weight: 800;
-    margin: 0;
+  color: var(--button);
+  font-weight: 400;
+  font-size: 4rem;
+  color: var(--button);
+  font-family: var(--secondfont);
+  text-transform: uppercase;
+  font-weight: 800;
+  /* text-box-trim: trim-both;
+    text-box-edge: cap alphabetic; */
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .swiper-wrapper {
-    display: flex;
-    align-items: stretch;
+  display: flex;
+  align-items: stretch;
 }
 
 .title-swiper span {
-    opacity: 0.3;
-    font-size: 4rem;
+  opacity: 0.3;
+  font-size: 4rem;
 }
 
 .title-swiper p {
-    font-size: 1rem;
-    font-weight: 200;
-    opacity: 0.5;
-    line-height: 1;
-    color: var(--button);
-    margin: 0;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1;
+  color: var(--color-font-grey);
+  margin: 0;
 }
 
-
 .swiper-slide {
-    text-align: left;
-    background-color: rgba(var(--border), var(--border), var(--border), 1);
-    outline-offset: -2px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-sizing: border-box;
-    padding-bottom: 30px;
-    height: auto !important;
-    background-color: var(--primary25);
+  text-align: left;
+  outline-offset: -2px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  height: auto !important;
 }
 
 .see-more-project {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    color: var(--button);
-
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: var(--button);
 }
 
-
 .more-btn {
-    width: 5rem;
-    aspect-ratio: 1 / 1;
-    background-color: transparent;
-    border: 1px solid var(--border);
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
+  width: 5rem;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  border: var(--border-width) solid var(--border);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
 }
 
 .more-btn svg {
-    width: 50%;
+  width: 50%;
 }
 
-
 .more-btn svg path {
-    fill: transparent;
-    stroke: var(--button);
-    stroke-width: 2px;
-    opacity: 0.6;
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  fill: transparent;
+  stroke: var(--button);
+  stroke-width: 2px;
+  opacity: 0.6;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .see-more-project p {
-    font-family: var(--secondfont);
-    text-transform: uppercase;
-    font-weight: 800;
-    margin: 1rem;
-    font-size: 1rem;
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.see-more-project:hover .more-btn {
-    filter: brightness(40%) grayscale(100%);
-}
-
-.see-more-project:hover p {
-    filter: brightness(40%) grayscale(100%);
+  font-family: var(--secondfont);
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 1rem;
+  font-size: 1rem;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .gambar {
-    width: calc(100%);
-    box-sizing: border-box;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: center;
-    transition: 0.2s;
-    position: relative;
-    scale: 1;
-    position: relative;
-    display: grid;
-    place-items: center;
-    padding: 30px 30px 15px 30px;
-    overflow: hidden;
+  width: calc(100%);
+  box-sizing: border-box;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.2s;
+  position: relative;
+  scale: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 30px 30px 15px 30px;
 }
 
 .gambar img {
-    width: calc(100%);
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border: 1px solid var(--border);
-    scale: 1;
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    border-radius: 1rem;
+  width: calc(100%);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: var(--border-width) solid var(--border);
+  scale: 1;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 0rem;
 }
 
 .gambar a {
-    display: none;
-    position: absolute;
-    transition: .6s;
+  display: grid;
+  position: absolute;
+  place-items: center;
+  transition: 0.6s;
+  color: white;
+  border-radius: 0px;
+  bottom: 0%;
+  font-size: 1rem;
+  right: 0px;
+  font-family: var(--secondfont);
+  width: 60px;
+  height: 60px;
+  background: var(--button);
+  border-radius: 5rem;
+  box-sizing: border-box;
+  border: var(--border-width) solid var(--border);
+}
+
+.mySwiper .gambar a svg {
+  width: 25%;
+}
+
+.mySwiper .gambar a svg path {
+  fill: var(--primary);
 }
 
 .gambar .fi {
-    font-size: 1rem;
-    padding-left: 3px;
+  font-size: 1rem;
+  padding-left: 3px;
 }
 
 .gambar-h2 {
-    color: var(--button);
-    font-size: 1rem;
-    margin-top: 0;
-    position: relative;
-    top: 0;
-    text-transform: capitalize;
-    opacity: 0.5;
-    font-weight: 400;
-    padding: 0;
-    padding-inline: 30px;
-    margin: 0;
+  color: var(--button);
+  font-size: 1rem;
+  margin-top: 0;
+  position: relative;
+  top: 0;
+  text-transform: capitalize;
+  opacity: 0.5;
+  font-weight: 400;
+  padding: 0;
+  padding-inline: 30px;
+  margin: 0;
 }
 
 .gambar-h1 {
-    padding-inline: 30px;
-    font-size: 1.5em;
-    font-family: var(--secondfont);
-    color: var(--button);
-    font-weight: 800;
-    margin: 0;
-    padding-top: 5px;
-    position: relative;
-    text-transform: uppercase;
-    top: 0;
-    height: fit-content;
-    overflow: hidden;
+  padding-inline: 30px;
+  font-size: 1.5em;
+  font-family: var(--secondfont);
+  color: var(--button);
+  font-weight: 800;
+  margin: 0;
+  padding-top: 5px;
+  position: relative;
+  text-transform: uppercase;
+  top: 0;
+  height: fit-content;
+  overflow: hidden;
 }
 
 .tag-language {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 5px;
-    padding-inline: 30px;
-    width: calc(100% - 20px);
-    overflow: hidden;
-    gap: 0.3rem;
-    font-weight: 1000;
-    font-family: var(--secondfont);
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-inline: 30px;
+  width: calc(100% - 20px);
+  overflow: hidden;
+  gap: 0.3rem;
+  font-weight: 1000;
+  font-family: var(--secondfont);
 }
 
 .tag-language .taglang:nth-last-child(1) {
-    border-right: 1px solid var(--border);
+  border-right: var(--border-width) solid var(--border);
 }
 
 .taglang {
-    width: fit-content;
-    height: fit-content;
-    font-size: 1rem;
-    border: 1px solid var(--border);
-    padding-inline: 0.5rem;
-    padding-block: 0.5rem;
-    color: var(--button);
-    font-weight: 800;
-    filter: grayscale(60%);
-    text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  border: var(--border-width) solid var(--border);
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  color: var(--button);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .mySwiper {
-    position: relative;
+  position: relative;
 }
 
 .con-swiper-button-hz {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    border-top: 1px solid var(--border);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-top: var(--border-width) solid var(--border);
 }
 
 .next-hz,
@@ -244,273 +250,237 @@
 }
 
 .prev-hz {
-    border-right: 1px solid var(--border);
+  border-right: var(--border-width) solid var(--border);
 }
 
 .next-hz {
-    border-left: 1px solid var(--border);
+  border-left: var(--border-width) solid var(--border);
 }
 
 .mySwiper:hover .gambar {
-    filter: brightness(40%) grayscale(100%);
-    background-color: transparent;
-    opacity: 0.5;
+  filter: grayscale(100%) brightness(50%) opacity(0.75);
+  background-color: transparent;
+  opacity: 0.5;
 }
 
 .mySwiper .gambar:hover {
-    filter: none;
-    opacity: 1;
+  filter: none;
+  opacity: 1;
 }
 
 .mySwiper .gambar img {
-    transition: 0.2s;
+  transition: 0.2s;
 }
-
-.mySwiper .gambar:hover a {
-    display: grid;
-    place-items: center;
-    transition: 0.6s;
-    color: white;
-    border-radius: 0px;
-    bottom: 0px;
-    font-size: 1rem;
-    right: 0px;
-    font-family: var(--secondfont);
-    width: 60px;
-    height: 60px;
-    background: var(--button);
-    border-radius: 1rem 0 0 1rem;
-    box-sizing: border-box;
-    border: 1px solid var(--border);
-}
-
-.mySwiper .gambar:hover a svg {
-    width: 25%;
-
-}
-
-.mySwiper .gambar:hover a svg path {
-    fill: var(--primary2);
-
-}
-
 
 .null {
-    height: fit-content;
-    aspect-ratio: 1/1;
+  height: fit-content;
+  aspect-ratio: 1/1;
 }
 
-
 .swiper-slide img {
-    display: block;
-
+  display: block;
 }
 
 .con-swipe {
-    display: flex;
-    width: 100%;
-    margin-top: 30px;
-    align-items: center;
-    flex-direction: row-reverse;
-    color: white;
-    justify-content: flex-start;
-    margin-left: auto;
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  align-items: center;
+  flex-direction: row-reverse;
+  color: white;
+  justify-content: flex-start;
+  margin-left: auto;
 }
 
 .swipe {
-    display: none;
+  display: none;
 }
 
-@media (max-width:767px) {
-    .swipe {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        opacity: 0.7;
-        font-family: var(--secondfont);
-    }
+@media (max-width: 767px) {
+  .swipe {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.7;
+    font-family: var(--secondfont);
+  }
 
-    .con-swiper-button-hz {
-        gap: 1px;
-        background-color: var(--border);
-        padding-top: 1px;
-        border: none;
-    }
+  .con-swiper-button-hz {
+    gap: 2px;
+    background-color: var(--border);
+    padding-top: 2px;
+    border: none;
+  }
 
-    .next-hz,
-    .prev-hz {
-        width: 100%;
-        padding-inline: 30px;
-        background-color: var(--primary25);
-        border-inline: none;
-    }
+  .next-hz,
+  .prev-hz {
+    width: 100%;
+    padding-inline: 30px;
+    background-color: var(--primary);
+    border-inline: none;
+  }
 }
 
 .swipe .fi {
-    transform: translateY(2.5px);
-
+  transform: translateY(2.5px);
 }
 
 .fullscreen-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fullscreen-overlay.visible {
-    opacity: 1;
-    filter: none;
+  opacity: 1;
+  filter: none;
 }
 
 .fullscreen-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    transform: translateX(-10%);
-    opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-        opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 1rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transform: translateX(-10%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .fullscreen-overlay img.loaded {
-    transform: translateX(0%);
-    opacity: 1;
-    
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .fullscreen-overlay img:hover {
-    cursor: default;
+  cursor: default;
 }
 
 /* Tombol close */
 .close-button {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    width: 3rem;
-    height: 3rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    color: white;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transform: scale(0.8);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: var(--border-width) solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 .fullscreen-overlay.visible .close-button {
-    opacity: 1;
-    transform: scale(1);
-    transition-delay: 0.2s;
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.2s;
 }
 
 .close-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1) rotate(90deg);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1) rotate(90deg);
 }
 
 .close-button:active {
-    transform: scale(0.95) rotate(90deg);
+  transform: scale(0.95) rotate(90deg);
 }
 
-@media (max-width:767px) {
-    .title-swiper h1 {
-        font-size: 3rem;
-    }
+@media (max-width: 767px) {
+  .title-swiper h1 {
+    font-size: 3rem;
+  }
 
-    .title-swiper span {
-        opacity: 0.3;
-        font-size: 3rem;
-    }
+  .title-swiper span {
+    opacity: 0.3;
+    font-size: 3rem;
+  }
 
-    .con-all-project {
-        display: flex;
-        margin-top: 30px;
-        align-items: center;
-        color: white;
-        justify-content: flex-start;
-    }
+  .con-all-project {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    color: white;
+    justify-content: flex-start;
+  }
 
-    .circle-arrow-all-project {
-        width: 30px;
-        aspect-ratio: 1/1;
-        border-radius: 200px;
-    }
+  .circle-arrow-all-project {
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 200px;
+  }
 
-    .mySwiper:hover .gambar {
-        filter: none;
-        scale: 1;
-    }
+  .mySwiper:hover .gambar {
+    filter: none;
+    scale: 1;
+  }
 
-    .mySwiper .gambar:hover {
-        filter: none;
-        scale: 1;
-    }
+  .mySwiper .gambar:hover {
+    filter: none;
+    scale: 1;
+  }
 
+  .fullscreen-overlay img {
+    max-width: 95%;
+    max-height: 95%;
+  }
 
-    .fullscreen-overlay img {
-        max-width: 95%;
-        max-height: 95%;
-    }
+  .close-button {
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 
-    .close-button {
-        top: 1rem;
-        right: 1rem;
-        width: 2.5rem;
-        height: 2.5rem;
-    }
+  .close-button svg {
+    width: 20px;
+    height: 20px;
+  }
 
-    .close-button svg {
-        width: 20px;
-        height: 20px;
-    }
+  .mySwiper:hover .gambar {
+    filter: none;
+    background-color: transparent;
+    opacity: 1;
+  }
 
+  .mySwiper .gambar:hover {
+    filter: none;
+    background-color: transparent;
+    opacity: 1;
+  }
 
-    .mySwiper:hover .gambar {
-        filter: none;
-        background-color: transparent;
-        opacity: 1;
-    }
+  .mySwiper .gambar:hover a {
+    transition: 0.3s;
+  }
 
-    .mySwiper .gambar:hover {
-        filter: none;
-        background-color: transparent;
-        opacity: 1;
-    }
+  .gambar-h2 {
+    font-size: 1rem;
+    color: var(--button);
+  }
 
-    .mySwiper .gambar:hover a {
-        transition: 0.3s;
-    }
+  .gambar-h1 {
+    font-size: 1.5rem;
+  }
 
-    .gambar-h2 {
-        font-size: 1rem;
-        color: var(--button);
-    }
-
-    .gambar-h1 {
-        font-size: 1.5rem;
-    }
-
-    .taglang {
-        font-size: 1rem;
-    }
+  .taglang {
+    font-size: 1rem;
+  }
 }

@@ -10,7 +10,6 @@ function Introduction() {
     const conImageRef = useRef(null);
     const [currentTime, setCurrentTime] = useState(new Date());
 
-    // Update waktu setiap detik
     useEffect(() => {
         const timeInterval = setInterval(() => {
             setCurrentTime(new Date());
@@ -19,13 +18,27 @@ function Introduction() {
         return () => clearInterval(timeInterval);
     }, []);
 
-    // Format waktu menjadi HH:MM:SS
-    const formatTime = (date) => {
-        const hours = String(date.getHours()).padStart(2, '0');
-        const minutes = String(date.getMinutes()).padStart(2, '0');
-        const seconds = String(date.getSeconds()).padStart(2, '0');
-        return `${hours} :. ${minutes} :. ${seconds}`;
-    };
+    // ngebuat jam digital aysyasy --- header (container-about)
+const formatTime = (date) => {
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    
+    // Mendapatkan timezone dengan nama singkat
+    const offset = -date.getTimezoneOffset();
+    const offsetHours = Math.floor(Math.abs(offset) / 60);
+    const offsetMinutes = Math.abs(offset) % 60;
+    const offsetSign = offset >= 0 ? '+' : '−'; // Menggunakan minus sign yang lebih elegan
+    const gmtString = `GMT${offsetSign}${String(offsetHours).padStart(2, '0')}`;
+    
+    return (
+        <>
+            {gmtString} <span>{hours} :. {minutes} :. {seconds}</span>
+        </>
+    )
+    
+    ;
+};
 
     // useEffect(() => {
     //     const lenis = new Lenis({
@@ -79,35 +92,45 @@ function Introduction() {
 
     return (
         <div className='section' id='sc1'>
+            <header className='navigation'>
+                <div className="con-web-name">
+                    <p>bivanoid.site</p>
+                </div>
+                <p>/</p>
+                <div className="con-web-name">
+                    <p>Portfolio</p>
+                </div>
+            </header>
             {/* <img className='bgImage-INT' src={bgImage}></img> */}
             <p className='number'></p>
 
             <div className='text' ref={conImageRef} style={{ opacity: 1 }}>
-                {/* <FadeContent blur={false} duration={1500} easing="ease-out" initialOpacity={0}>
-                    <div className='header-int'>
-                        <p className='revealed'><strong>BY bIVANOId</strong></p>
-                        <p className='currndate'>{formatTime(currentTime)}</p>
-                    </div>
-                </FadeContent> */}
-
                 <div className='hero'>
                     <div className='hero-1'>
-                    
-                            <AnimatedContent
-                                distance={10}
-                                direction="vertical"
-                                config={{ tension: 100, friction: 30 }}
-                                reverse={true}
-                                initialOpacity={0}
-                                animateOpacity
-                                delay={500}
-                                
-                            >
-                                <p>E<span><Logo /></span>plore The</p>
-                                <h1>Ideas and works</h1>
-                            </AnimatedContent>
-                        
-                        
+
+                        <AnimatedContent
+                            distance={10}
+                            direction="vertical"
+                            config={{ tension: 100, friction: 30 }}
+                            reverse={true}
+                            initialOpacity={0}
+                            animateOpacity
+                            delay={500}
+
+                        >
+                            {/* <p>E<span><Logo /></span>plore The</p> */}
+                            {/* <h1>
+                                Welcome to my <span>portfolio</span> <br />
+                                a place where my <span>current work</span> <br />
+                                and <span>future directions</span> <br />
+                                take shape.
+                            </h1> */}
+                            <div className='header-int'>
+                                <h1 className='currndate'>{formatTime(currentTime)}</h1>
+                            </div>
+                        </AnimatedContent>
+
+
                     </div>
                     <div className='image-logo'>
                         <LogoMiring />
@@ -123,15 +146,17 @@ function Introduction() {
                             delay={500}
 
                         >
-                            <h1>that define me.</h1>
+                            <h1>
+                                Welcome to my <span>portfolio</span> <br />
+                                a place where my <span>current work</span> <br />
+                                and <span>future directions</span> <br />
+                                take shape.
+                            </h1>
+                            <button onClick={scrollToSection} ><DownSvg/></button>
                         </AnimatedContent>
-                        
+
                     </div>
                 </div>
-
-                <button onClick={scrollToSection} className="arrow-to-sc2">
-                    <DownSvg />
-                </button>
             </div>
         </div>
     )

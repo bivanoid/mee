@@ -3,8 +3,8 @@ import Biodata from './biodata';
 import HorizontalSlider from './horizontalslider';
 import Feedback from './feedback';
 import { useMediaQuery } from 'react-responsive';
-import AnimatedContent from './AnimatedContent';
 import FadeContent from './FadeContent';
+import RevealUp from '../animation/reveal';
 
 function AboutMe({ onImageClick }) {
     const isLargeScreen = useMediaQuery({ minWidth: 701 });
@@ -15,48 +15,41 @@ function AboutMe({ onImageClick }) {
             <Biodata />
             <div className='contents'>
                 <div className='abouts'>
-                    <FadeContent blur={false} delay={500} duration={300} easing="ease-out" initialOpacity={0}>
+                    <RevealUp isLargeScreen={isLargeScreen} threshold={0.8}>
                         <div className='text-abouts'><p className='title-about'>About/Me</p><br></br>
                             <p className='content-about'>
-                                Hello! My name is Firdhan Abivandya. I am from Surakarta, Central Java Province, Indonesia.
+                                Hello! My name is <span>Firdhan Abivandya</span>. I am from Surakarta, Central Java Province, <span>Indonesia</span> <span className='indonesia-flag'></span>.
                                 I have been studying various programming languages such as C#, JavaScript, and others.
                                 <br></br>
                                 <br></br>
-                                I like to use my imagination, and that is where I began to discover a collaboration between imagination and technology,
-                                namely as a Front-End Developer and UI/UX Designer, which is my main focus at the moment.
+                                I like to use my imagination, and that is where I began to discover a <span>collaboration between imagination and technology</span>,
+                                namely as a <span>Front-End Developer</span> and <span>UI/UX Designer</span>, which is my main focus at the moment.
                                 <br></br>
                                 <br></br>
-                                I have also worked on various projects during my time at school. You can scroll further to see more of them.
+                                I have also <span>worked on various projects</span> during my time at school. You can scroll further to see more of them.
                             </p>
                         </div>
-                    </FadeContent>
-                    <AnimatedContent
-                        distance={50}
-                        direction="horizontal"
-                        reverse={!isLargeScreen}
-                        config={{ tension: 100, friction: 30 }}
-                        initialOpacity={0}
-                    >
+                    </RevealUp>
+                    <RevealUp isLargeScreen={isLargeScreen} threshold={0.8}>
                         <div className='text-abouts  '><p className='title-about title-about2'>My/Education</p><br></br>
                             <ul className='content-carrier'>
                                 <FadeContent blur={false} duration={1500} delay={0} easing="ease-in" initialOpacity={0}>
-                                    <span>1</span><li><p>SDN Purwodiningratan</p></li>
+                                    <span></span><li><p> Purwodiningratan</p><p>2013 - 2019</p></li>
                                 </FadeContent>
                                 <FadeContent blur={false} duration={1500} delay={200} easing="ease-in" initialOpacity={0}>
-                                    <span>2</span><li><p>SMPN 14 Surakarta</p></li>
+                                    <span></span><li><p>SMPN 14 Surakarta</p><p>2019 - 2022</p></li>
                                 </FadeContent>
 
                                 <FadeContent blur={false} duration={1500} delay={400} easing="ease-in" initialOpacity={0}>
-                                    <span>3</span><li><p>SMKN 5 Surakarta</p></li>
+                                    <span></span><li><p>SMKN 5 Surakarta</p><p>2022 - 2025</p></li>
                                 </FadeContent>
                     
                                 <FadeContent blur={false} duration={1500} delay={600} easing="ease-in" initialOpacity={0}>
-                                    <span>4</span><li><p>Pignateli Triputra University</p></li>
+                                    <span></span><li><p>Pignateli Triputra University</p><p>2025 - Current</p></li>
                                 </FadeContent>
                             </ul>
                         </div>
-                    </AnimatedContent>
-
+                    </RevealUp>
                 </div>
                 <HorizontalSlider onImageClick={onImageClick} />
                 <Feedback />

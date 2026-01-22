@@ -3,14 +3,37 @@
 .section {
     font-family: var(--primaryfont);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: start;
     align-items: start;
-    height: calc(100svh - (87px + 3rem));
+    height: 100dvh;
     position: relative;
     overflow: hidden;
     object-fit: cover;
     object-position: center;
+}
+
+.navigation {
+    height: 86px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--button);
+}
+
+.navigation .con-web-name {
+    padding: 0.5rem;
+    background-color: var(--border);
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.navigation .con-web-name p {
+    color: var(--button);
+
 }
 
 .bgImage-INT {
@@ -38,14 +61,14 @@
     height: 100%;
     overflow: hidden;
     padding: 30px;
-    background-color: var(--primary25);
     border-radius: 1rem;
-    border: 1px solid var(--border);
+    border: var(--border-width) solid var(--border);
     position: relative;
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
+
     /* background: url(../assets/ordosocialist_eurasia_flag_by_neobolshevik_dhfr6jm.png);
     background-size: cover;
     background-position: center; */
@@ -74,11 +97,10 @@
 }
 
 .hero svg path {
-    fill: transparent;
-    stroke: var(--button);
-    opacity: 0.12;
-    stroke-width: 1px;
-    animation: brokenLamp 3s linear infinite;
+    fill: var(--border);
+    stroke: var(--border);
+    stroke-width: 4px;
+    /* animation: brokenLamp 3s linear infinite; */
 }
 
 @keyframes brokenLamp {
@@ -94,9 +116,9 @@
 }
 
 .hero .hero-1, .hero-2 {
-    font-family: var(--secondfont);
-    color: var(--button);
-    text-transform: uppercase;
+    font-family: var(--primaryfont);
+    color: var(--color-font-grey);
+    /* text-transform: uppercase; */
 }
 
 .hero .hero-1 {
@@ -104,9 +126,8 @@
     overflow: hidden;
 }
 
-.hero .hero-1 span {
-    display: inline-block;
-    margin-inline: 1px;
+.hero span {
+    color: var(--button);
 }
 
 .hero .hero-1 svg {
@@ -123,12 +144,28 @@
     align-self: flex-end;
 }
 
-.hero .hero-1{
-    text-align: right;
+.hero .hero-2 button {
+    font-size: 1rem;
+    padding: 1rem;
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    border-radius: 5rem;
+    background: var(--border);
+    color: var(--button);
+    margin-top: 1rem;
 }
 
-.hero .hero-2 h1 {
-    opacity: 0.3;
+.hero .hero-2 button svg {
+    rotate: 180deg;
+}
+
+.hero .hero-2 button svg path {
+    fill: var(--button);
+}
+
+.hero .hero-1{
+    text-align: right;
 }
 
 .hero p {
@@ -138,13 +175,14 @@
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 1.5rem;
     margin: 0;
 } 
 
 @media (max-width:1024px) {
     .hero {
         flex-direction: column;
+        padding-inline: 0;
     }
 
     .hero .hero-1 {
@@ -167,14 +205,14 @@
     }
 
     .hero h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 
 @media (max-width:767px) {
     .hero {
         flex-direction: column;
-        
+        padding-inline: 30px;
     }
 
     .hero .hero-1 {
@@ -197,7 +235,7 @@
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -208,25 +246,26 @@
 
 .header-int {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    place-items: end;
     padding-inline: 1rem;
     margin-top: 1rem;
     box-sizing: border-box;
-    padding: 30px;
-        background-color: var(--primary25);
-        border-radius: 1rem;
-        border: 1px solid var(--border);
 }
 
 .text .revealed, .currndate {
     font-size: 1rem;
     letter-spacing: 1;
     color: var(--button);
-    font-family: var(--primaryfont);
+    font-family: var(--secondfont);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     font-weight: 800;
+    flex-direction: column;
+}
+
+.header-int span{
+    color: var(--color-font-grey);
 }
 
 .text .explore {
@@ -295,7 +334,7 @@
     display: none;
     /* clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%); */
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid var(--border);
+    border: var(--border-width) solid var(--border);
 }
 
 .arrow-to-sc2 svg {
@@ -339,10 +378,9 @@
 
 @media (max-width:767px) {
     .section {
-        flex-direction: column-reverse;
         justify-content: start;
         align-items: start;
-        height: calc(100svh - (87px + 3rem));
+        height: calc(100svh);
         border-width: 1px;
         object-fit: cover;
         object-position: center;

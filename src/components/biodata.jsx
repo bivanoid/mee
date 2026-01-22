@@ -6,6 +6,12 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+//icon
+import { ReactComponent as PinIc} from "../assets/svg/pin.svg";
+import { ReactComponent as AtIc} from "../assets/svg/at.svg";
+import { ReactComponent as CallIc} from "../assets/svg/call.svg";
+import RevealUp from '../animation/reveal';
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Biodata() {
@@ -31,32 +37,9 @@ function Biodata() {
             <div className='sticky'>
                 <div className='con-scroll-sticky'>
                     <div className='sticky-header'>
-                        <AnimatedContent
-                            distance={0}
-                            direction="horizontal"
-                            reverse={true}
-                            config={{ tension: 80, friction: 10 }}
-                            initialOpacity={0}
-                            animateOpacity
-                            scale={0}
-                            delay={400}
-                            threshold={1}
-                        >
-                            <div className='con-image-bio'>
-                            </div>
-                        </AnimatedContent>
-                        <AnimatedContent
-                            distance={50}
-                            direction="horizontal"
-                            reverse={false}
-                            config={{ tension: 80, friction: 40 }}
-                            initialOpacity={0}
-                            animateOpacity
-                            threshold={0}
-                        >
+                        <RevealUp direction='horizontal' threshold={0.8}>
                             <h1 id='namamu'>/Firdhan <span>Abivandya.</span></h1>
-                        </AnimatedContent>
-
+                        </RevealUp>
                     </div>
                     <FadeContent blur={false} breakpoints={{ 747: { blur: false } }} delay={1000} duration={500} easing="ease-out" initialOpacity={0}>
                         <div className='bio' id='bio'>
@@ -66,13 +49,13 @@ function Biodata() {
                                     <div className='text-bio'><i class="fi fi-rs-cake-birthday"></i><p>21 June 2007</p></div>
                                 </li> */}
                                 <li>
-                                    <div className='text-bio'><i className="fi fi-rs-thumbtack"></i><p>Surakarta, Centar Java</p></div>
+                                    <div className='text-bio'><PinIc className='text-bio-icon'/><p>Surakarta, Centar Java</p></div>
                                 </li>
                                 <li>
-                                    <div className='text-bio'><i className="fi fi-rs-envelope"></i><p>abivandyafirdhan<br />@gmail.com</p></div>
+                                    <div className='text-bio'><AtIc className='text-bio-icon'/><p>abivandyafirdhan<br />@gmail.com</p></div>
                                 </li>
                                 <li>
-                                    <div className='text-bio'><i className="fi fi-rs-phone-rotary"></i><p>+62 877-3977-0494</p></div>
+                                    <div className='text-bio'><CallIc className='text-bio-icon'/><p>+62 877-3977-0494</p></div>
                                 </li>
 
                             </ul>
@@ -91,10 +74,9 @@ function Biodata() {
                         </div>
                     </FadeContent>
 
-                    <div className='con-hire-me'>
+                    {/* <div className='con-hire-me'>
                         <a href='https://wa.me/087739770494' className='contactme'><p>Contact Me</p></a>
-
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </FadeContent >

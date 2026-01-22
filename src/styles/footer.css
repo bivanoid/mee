@@ -101,7 +101,7 @@
     border-radius: 0px;
     transition: 0.3s;
     font-size: 1rem;
-    border: 1px solid var(--border);
+    border: var(--border-width) solid var(--border);
     place-items: center;
     outline: none;
 }
@@ -160,7 +160,7 @@
 .top-footer2 {
     background-color: var(--primary25);
     border-radius: 1rem;
-    border: 1px solid var(--border);
+    border: var(--border-width) solid var(--border);
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -176,7 +176,7 @@
 :is(.get-in-touch, .navigation-link-footer) {
     background-color: var(--primary25);
     border-radius: 1rem;
-    border: 1px solid var(--border);
+    border: var(--border-width) solid var(--border);
     padding: 30px;
     display: flex;
     flex-direction: column;

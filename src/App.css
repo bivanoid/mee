@@ -4,6 +4,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
+  --primary: #dbdbce;
+  --primary2: #dadaddff linear-gradient(45deg, #dadaddff, rgb(185, 185, 187));
+  --primary25: linear-gradient(0deg, #d1d1c4, #ccccc0);
+  --primary3: #fafaff;
+  --blue: #173ff0;
+  --grey: #252525;
+
+  --color-font-grey: #757575;
+
+  --button: #1c1c1c;
+  --border: rgba(53, 52, 52, 0.048);
+  --border-gradient: linear-gradient(45deg, black, transparent);
+  --border-light: rgb(34, 34, 34);
+  --radial-grad: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--border) 100%);
+  --secondfont: "Kode Mono",
+    monospace;
+  --primaryfont: "Space Grotesk", sans-serif;
+
+  --yl-code: #fcf18d;
+
+  --red-cl: #b83232;
+  --orange-cl: rgba(182, 99, 51, 1);
+  --yellow-cl: rgba(223, 182, 49, 1);
+  --lime-cl: rgba(125, 187, 43, 1);
+  --green-cl: rgba(36, 170, 81, 1);
+  --cubic-toeng: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --cubic-slow: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --border-width: 2px;
+
+  color-scheme: dark;
+}
+/* 
+:root {
   --primary: #0a0a0a;
   --primary25: #0d0d0d;
   --primary2: #131313;
@@ -19,16 +53,16 @@
 
   --yl-code: #fcf18d;
 
-  --red-cl: rgb(252, 88, 88);
-  --orange-cl: rgb(250, 134, 66);
-  --yellow-cl: rgb(252, 214, 88);
-  --lime-cl: rgb(181, 252, 88);
-  --green-cl: rgb(88, 252, 143);
+  --red-cl: #b83232;
+  --orange-cl: rgba(182, 99, 51, 1);
+  --yellow-cl: rgba(223, 182, 49, 1);
+  --lime-cl: rgba(125, 187, 43, 1);
+  --green-cl: rgba(36, 170, 81, 1);
   --cubic-toeng: cubic-bezier(0.34, 1.56, 0.64, 1);
   --cubic-slow: cubic-bezier(0.4, 0, 0.2, 1);
 
   color-scheme: dark;
-}
+} */
 
 /* Light */
 /* html.light {
