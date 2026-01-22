@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.be812e4c.css",
-    "main.js": "/static/js/main.c74b37e8.js",
+    "main.css": "/static/css/main.6f7b0220.css",
+    "main.js": "/static/js/main.c86a8bde.js",
     "static/js/198.9db6c00f.chunk.js": "/static/js/198.9db6c00f.chunk.js",
     "static/media/Casier.png": "/static/media/Casier.ab3270f4095b6fe2ce78.png",
     "static/media/calc.png": "/static/media/calc.1a26671ef3739b01684c.png",
@@ -9,12 +9,15 @@
     "static/media/byna's-shop.webp": "/static/media/byna's-shop.d7e37ee9bbfb3497e9dc.webp",
     "static/media/bicturemckp.webp": "/static/media/bicturemckp.c0fa65f13d1e280faa01.webp",
     "index.html": "/index.html",
-    "main.be812e4c.css.map": "/static/css/main.be812e4c.css.map",
-    "main.c74b37e8.js.map": "/static/js/main.c74b37e8.js.map",
+    "static/media/pin.svg": "/static/media/pin.b024de1a285fd59573e0a76bc10cf0e2.svg",
+    "static/media/call.svg": "/static/media/call.ccd910e521571993fc1f4b1f5d36126a.svg",
+    "static/media/at.svg": "/static/media/at.3472bb53d2e58366752d0caf9cce9775.svg",
+    "main.6f7b0220.css.map": "/static/css/main.6f7b0220.css.map",
+    "main.c86a8bde.js.map": "/static/js/main.c86a8bde.js.map",
     "198.9db6c00f.chunk.js.map": "/static/js/198.9db6c00f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be812e4c.css",
-    "static/js/main.c74b37e8.js"
+    "static/css/main.6f7b0220.css",
+    "static/js/main.c86a8bde.js"
   ]
 }
