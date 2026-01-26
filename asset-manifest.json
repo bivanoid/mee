@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.9224b4b2.css",
+    "main.css": "/static/css/main.d5b041ee.css",
     "main.js": "/static/js/main.a0a93d15.js",
     "static/js/198.9db6c00f.chunk.js": "/static/js/198.9db6c00f.chunk.js",
     "static/media/Casier.png": "/static/media/Casier.ab3270f4095b6fe2ce78.png",
@@ -12,12 +12,12 @@
     "static/media/pin.svg": "/static/media/pin.b024de1a285fd59573e0a76bc10cf0e2.svg",
     "static/media/call.svg": "/static/media/call.ccd910e521571993fc1f4b1f5d36126a.svg",
     "static/media/at.svg": "/static/media/at.3472bb53d2e58366752d0caf9cce9775.svg",
-    "main.9224b4b2.css.map": "/static/css/main.9224b4b2.css.map",
+    "main.d5b041ee.css.map": "/static/css/main.d5b041ee.css.map",
     "main.a0a93d15.js.map": "/static/js/main.a0a93d15.js.map",
     "198.9db6c00f.chunk.js.map": "/static/js/198.9db6c00f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9224b4b2.css",
+    "static/css/main.d5b041ee.css",
     "static/js/main.a0a93d15.js"
   ]
 }
