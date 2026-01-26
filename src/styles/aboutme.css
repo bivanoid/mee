@@ -198,7 +198,7 @@
     border-radius: 1rem;
     border: var(--border-width) solid var(--border);
     overflow: hidden;
-    background-color: var(--primary25);
+
     justify-content: space-between;
 }
 
@@ -390,7 +390,6 @@
     color: var(--button);
     border: var(--border-width) solid var(--border);
     border-radius: 1rem;
-    background-color: var(--primary25);
     padding: 30px;
 }
 
@@ -479,7 +478,6 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 10PX;
-    background-color: var(--primary25);
     width: 100%;
     height: auto;
     position: relative;

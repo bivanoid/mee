@@ -5,7 +5,7 @@ import lenis from './lenisSc';
 import Logo from './logo';
 import DownSvg from '../iconSvg/scrollToBottomic';
 import LogoMiring from '../iconSvg/logoMiring';
-import { href } from 'react-router-dom';
+import { href, Link } from 'react-router-dom';
 import { a } from '@react-spring/web';
 
 function Introduction() {
@@ -92,10 +92,6 @@ const formatTime = (date) => {
         }
     };
 
-    const menuLinks = [
-        {label: 'Blogs', href: '/blog', id:'blogs'}
-    ]
-
     
     const [openLinkS, setOpenLinks] = useState(false)
 
@@ -105,17 +101,15 @@ const formatTime = (date) => {
                 <div className='path-name'>
                     <p>bivanoid.site</p>
                 </div>
-                <p>/</p>
 
                 <div className="con-path-name">
                     <div onClick={() => {setOpenLinks(prev => !prev)}}  className="path-name">
-                        <p>Portfolio <span><i class={`fi fi-rs-caret-down ${openLinkS ? 'open' : 'close'}`}></i></span></p>
+                        <p>/ <span><i class={`fi fi-rs-caret-down ${openLinkS ? 'open' : 'close'}`}></i></span></p>
                     </div>
-                    {menuLinks.map((items) => (
-                    <a className={`path-name other-path-name ${openLinkS ? 'open' : 'close'}`} href={items.href} id={items.id}>
-                        {items.label}
-                    </a>
-                    ))}
+                    <Link to={"/blog"} className={`path-name other-path-name ${openLinkS ? 'open' : 'close'}`}>
+                        /blogs
+                    </Link>
+         
                 </div>
                 
                 

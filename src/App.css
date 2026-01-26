@@ -6,7 +6,7 @@
 :root {
   --primary: #dbdbce;
   --primary2: #dadaddff linear-gradient(45deg, #dadaddff, rgb(185, 185, 187));
-  --primary25: linear-gradient(0deg, #d1d1c4, #ccccc0);
+  --primary25: #d8d8ce;
   --primary3: #fafaff;
   --blue: #173ff0;
   --grey: #252525;
@@ -24,7 +24,7 @@
 
   --yl-code: #fcf18d;
 
-  --red-cl: #b83232;
+  --red-cl: #c81414;
   --orange-cl: rgba(182, 99, 51, 1);
   --yellow-cl: rgba(223, 182, 49, 1);
   --lime-cl: rgba(125, 187, 43, 1);
@@ -36,16 +36,17 @@
 
   color-scheme: dark;
 }
-/* 
-:root {
+
+
+/* :root {
   --primary: #0a0a0a;
   --primary25: #0d0d0d;
   --primary2: #131313;
   --primary3: #232222;
-  --blue: #729cf7;
+  --blue: #73bcec;
   --grey: rgb(59, 59, 59);
   --button: #f8f8f8;
-  --border: #2f2e3136;
+  --border: rgb(18, 18, 18);
   --radial-grad: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--border) 100%);
   --secondfont: "Kode Mono",
     monospace;

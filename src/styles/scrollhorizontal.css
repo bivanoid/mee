@@ -3,7 +3,6 @@
   height: calc(fit-content);
   overflow: hidden;
   position: relative;
-  background-color: var(--primary25);
   border-radius: 1rem;
   border: var(--border-width) solid var(--border);
 }
@@ -148,7 +147,7 @@
   background: var(--button);
   border-radius: 5rem;
   box-sizing: border-box;
-  border: 0.5rem solid var(--border);
+  border: 0.5rem solid var(--primary);
 }
 
 .mySwiper .gambar a svg {

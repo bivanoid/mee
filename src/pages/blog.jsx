@@ -38,7 +38,7 @@ export default function Blog() {
   // ✨ UPDATED: Optimasi untuk WebP images
   const getOptimizedImageUrl = useCallback((url) => {
     if (!url) return null
-    
+
     // Jika sudah WebP dari Supabase, tidak perlu transform lagi
     if (url.includes('.webp')) {
       // Hanya resize jika perlu
@@ -47,12 +47,12 @@ export default function Blog() {
       }
       return url
     }
-    
+
     // Untuk format lain (legacy images), tetap convert ke WebP
     if (url.includes('supabase')) {
       return `${url}?width=400&quality=80&format=webp`
     }
-    
+
     return url
   }, [])
 
@@ -289,9 +289,20 @@ export default function Blog() {
 
   return (
     <div className="body-blog" id="theblog">
+
+      <header className='navigation-blog'>
+        <div className='path-name'>
+          <p>bivanoid.site</p>
+        </div>
+        <div className="con-path-name">
+          <Link to={"/"} className="path-name path-name-back">
+            / (back)
+          </Link>
+        </div>
+      </header>
       <div className="con-blog">
         <main>
-          <div className="navigation-blog">
+          {/* <div className="navigation-blog">
             <Link onClick={() => { document.body.classList.remove('body-overflow-hidden-blog') }} to='/' className="clstgr back-to-home-from-blog" id="backMenuIcon">
               <Backic />
             </Link>
@@ -301,10 +312,11 @@ export default function Blog() {
             <div className="menu-button-blog" id="menuBlogIcon" onClick={openBlog}>
               <Menus />
             </div>
-          </div>
+          </div> */}
+
 
           <div className="con-article" id="conArticle">
-            <div className="search-bar-container">
+            {/* <div className="search-bar-container">
               <div className="search-bar">
                 <input
                   type="text"
@@ -331,7 +343,7 @@ export default function Blog() {
                   </button>
                 )}
               </div>
-            </div>
+            </div> */}
 
             {isLoading ? (
               <div className="loading-state">
@@ -358,6 +370,9 @@ export default function Blog() {
                     style={{ cursor: "pointer" }}
                     key={blog.id}
                   >
+                    <p id="date-post">
+                        {blog.created_at ? formatDate(blog.created_at) : "No date"}
+                    </p>
                     <div className="con-image-article">
                       {blog.image_url ? (
                         <LazyImage
@@ -376,9 +391,6 @@ export default function Blog() {
                         {blog.sub_title && (
                           <p className="subtitle-article">{blog.sub_title}</p>
                         )}
-                        <p id="date-post">
-                          {blog.created_at ? formatDate(blog.created_at) : "No date"}
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -401,7 +413,6 @@ export default function Blog() {
             )}
           </div>
         </main>
-
         <div className="con-blog-sticky" id="menuShow">
           <div className="main-sticky-blog">
             <h1>
@@ -414,14 +425,14 @@ export default function Blog() {
                   onClick={() => handleFilterChange("latest")}
                 >
                   <p>Latest</p>
-                  <DownSvg/>
+                  <DownSvg />
                 </li>
                 <li
                   className={filter === "oldest" ? "active" : ""}
                   onClick={() => handleFilterChange("oldest")}
                 >
                   <p>Oldest</p>
-                  <DownSvg/>
+                  <DownSvg />
                 </li>
               </ul>
               <button

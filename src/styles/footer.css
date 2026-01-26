@@ -12,7 +12,6 @@
 .footer-header {
     height: 62px;
     width: calc(100%);
-    /* background-color: var(--primary25); */
     border-block: 1px solid var(--border);
     padding: 1rem;
     display: flex;
@@ -137,7 +136,6 @@
 }
 
 .top-footer2 {
-    background-color: var(--primary25);
     border-radius: 1rem;
     border: var(--border-width) solid var(--border);
     padding: 30px;
@@ -153,7 +151,6 @@
 }
 
 :is(.get-in-touch, .navigation-link-footer) {
-    background-color: var(--primary25);
     border-radius: 1rem;
     border: var(--border-width) solid var(--border);
     padding: 30px;
