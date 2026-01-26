@@ -5,6 +5,8 @@ import lenis from './lenisSc';
 import Logo from './logo';
 import DownSvg from '../iconSvg/scrollToBottomic';
 import LogoMiring from '../iconSvg/logoMiring';
+import { href } from 'react-router-dom';
+import { a } from '@react-spring/web';
 
 function Introduction() {
     const conImageRef = useRef(null);
@@ -90,6 +92,14 @@ const formatTime = (date) => {
         }
     };
 
+    const menuLinks = [
+        {label: 'Home', href: '#', id: 'home'},
+        {label: 'Blogs', href: '#', id:'blogs'}
+    ]
+
+    
+    const [openLinkS, setOpenLinks] = useState(false)
+
     return (
         <div className='section' id='sc1'>
             <header className='navigation'>
@@ -97,9 +107,18 @@ const formatTime = (date) => {
                     <p>bivanoid.site</p>
                 </div>
                 <p>/</p>
-                <div className="con-web-name">
+                <div onClick={() => {setOpenLinks(prev => !prev)}}  className="con-web-name">
                     <p>Portfolio</p>
                 </div>
+
+                <div className={`menuLinkOption ${openLinkS ? 'open' : 'close'}`}>
+                    {menuLinks.map((items) => (
+                    <a href={items.href} id={items.id}>
+                        {items.label}
+                    </a>
+                ))}
+                </div>
+                
             </header>
             {/* <img className='bgImage-INT' src={bgImage}></img> */}
             <p className='number'></p>

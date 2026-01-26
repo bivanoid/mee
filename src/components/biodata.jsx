@@ -49,13 +49,13 @@ function Biodata() {
                                     <div className='text-bio'><i class="fi fi-rs-cake-birthday"></i><p>21 June 2007</p></div>
                                 </li> */}
                                 <li>
-                                    <div className='text-bio'><PinIc className='text-bio-icon'/><p>Surakarta, Centar Java</p></div>
+                                    <div className='text-bio'><i class="text-bio-icon fi fi-rs-thumbtack"></i><p>Surakarta, Centar Java</p></div>
                                 </li>
                                 <li>
-                                    <div className='text-bio'><AtIc className='text-bio-icon'/><p>abivandyafirdhan<br />@gmail.com</p></div>
+                                    <div className='text-bio'><i class="text-bio-icon fi fi-rs-at"></i><p>abivandyafirdhan<br />@gmail.com</p></div>
                                 </li>
                                 <li>
-                                    <div className='text-bio'><CallIc className='text-bio-icon'/><p>+62 877-3977-0494</p></div>
+                                    <div className='text-bio'><i class="text-bio-icon fi fi-rs-phone-rotary"></i><p>+62 877-3977-0494</p></div>
                                 </li>
 
                             </ul>

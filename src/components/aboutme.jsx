@@ -18,7 +18,9 @@ function AboutMe({ onImageClick }) {
                     <RevealUp isLargeScreen={isLargeScreen} threshold={0.8}>
                         <div className='text-abouts'><p className='title-about'>About/Me</p><br></br>
                             <p className='content-about'>
-                                Hello! My name is <span>Firdhan Abivandya</span>. I am from Surakarta, Central Java Province, <span>Indonesia</span> <span className='indonesia-flag'></span>.
+                                Hello! My name is <span>Firdhan Abivandya</span>. I am from Surakarta, Central Java Province, <span>Indonesia</span> 
+                                {/* <span className='indonesia-flag'></span> */}
+                                .
                                 I have been studying various programming languages such as C#, JavaScript, and others.
                                 <br></br>
                                 <br></br>

@@ -288,7 +288,8 @@
 
 .text-bio .text-bio-icon {
     height: 3rem;
-    padding: 0.5rem;
+    display: grid;
+    place-items: center;
     width: 3rem;
     border-right: var(--border-width) solid var(--border);
     margin-right: 0.5rem;
@@ -542,7 +543,10 @@
     .text-abouts .content-carrier div:hover span {
         scale: 1.2;
         color: var(--primary);
+        position: relative;
     }
+
+
 
     .text-abouts .content-carrier li:hover p {
         transform: translateX(6px);
