@@ -143,12 +143,12 @@
   font-size: 1rem;
   right: 0px;
   font-family: var(--secondfont);
-  width: 60px;
-  height: 60px;
+  width: 76px;
+  height: 76px;
   background: var(--button);
   border-radius: 5rem;
   box-sizing: border-box;
-  border: var(--border-width) solid var(--border);
+  border: 0.5rem solid var(--border);
 }
 
 .mySwiper .gambar a svg {
@@ -257,13 +257,13 @@
   border-left: var(--border-width) solid var(--border);
 }
 
-.mySwiper:hover .gambar {
+.mySwiper:hover .gambar img {
   filter: grayscale(100%) brightness(50%) opacity(0.75);
   background-color: transparent;
   opacity: 0.5;
 }
 
-.mySwiper .gambar:hover {
+.mySwiper .gambar:hover img {
   filter: none;
   opacity: 1;
 }
