@@ -98,7 +98,7 @@ export default function AddFeedback() {
                 );
               })}
             </div>
-
+            <p className='input-from'>from</p>
             <input
               className="input-textarea"
               type="text"
@@ -109,6 +109,7 @@ export default function AddFeedback() {
               
             />
             <div className='conTextArea'>
+              <div className="quote"><i className="fi fi-rs-quote-right"></i></div>
               <textarea
                 className="textarea-addfeedback"
                 placeholder="Type Out Something (Max 350 Characters)"
@@ -125,14 +126,14 @@ export default function AddFeedback() {
                 {remainingCharacters} / {maxCharacters}
               </div>
             </div>
-            
-
+            <button className="button-addfeedback" type="submit">Submit</button>
+            <Link to="/" className="back-to-home-from-addfeedback"> &lt;- Back</Link>
           </div>
 
-          <button className="button-addfeedback" type="submit">Submit</button>
+          
         </form>
 
-        <Link to="/" className="back-to-home-from-addfeedback"> &lt;- Back</Link>
+        
       </div>
     </div>
   );

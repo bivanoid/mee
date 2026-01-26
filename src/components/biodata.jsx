@@ -16,19 +16,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Biodata() {
 
+    const listSkill = [
+        {
+            label: 'HTML'
+        }, {
+            label: 'CSS'
+        }, {
+            label: 'JAVA SCRIPT'
+        }, {
+            label: 'BOOTSTRAP'
+        }, {
+            label: 'PHP'
+        }, {
+            label: 'MYSQL'
+        }, {
+            label: 'C#'
+        }, {
+            label: 'REACT.JS'
+        }, {
+            label: 'FIGMA'
+        }, {
+            label: 'UI / UX DESIGN'
+        }
+    ]
 
-
-    // var ya = document.getElementById('inp');
-
-    // Fungsi untuk memantau posisi scroll
-    // window.onscroll = function() {
-    //     if (ya.scrollTop > 400 || document.documentElement.scrollTop > 650) {
-    //         ya.style.filter = "grayscale(100%) brightness(20%)"; 
-
-    //     } else {
-    //         ya.style.filter = "grayscale(0%)"; 
-    //     }
-    // };
     return (
 
 
@@ -60,17 +71,11 @@ function Biodata() {
 
                             </ul>
                             <h1 className='skills-ttl'>Skills<span> *</span></h1>
-                            <p className='skills'>
-                                <span className='box-skill'>HTML</span>
-                                <span className='box-skill'>CSS</span>
-                                <span className='box-skill'>JAVA SCRIPT</span>
-                                <span className='box-skill'>PHP</span>
-                                <span className='box-skill'>REACT</span>
-                                <span className='box-skill'>MYSQL</span>
-                                <span className='box-skill'>BOOTSTRAP</span>
-                                <span className='box-skill'>C#</span>
-                                <span className='box-skill'>FIGMA</span>
-                            </p>
+                            <div className='skills'>
+                                {listSkill.map((items) => (
+                                    <span className='box-skill'>{items.label}</span>
+                                ))}
+                            </div>
                         </div>
                     </FadeContent>
 

@@ -14,7 +14,7 @@
   --color-font-grey: #757575;
 
   --button: #1c1c1c;
-  --border: rgba(53, 52, 52, 0.048);
+  --border: rgb(212, 212, 199);
   --border-gradient: linear-gradient(45deg, black, transparent);
   --border-light: rgb(34, 34, 34);
   --radial-grad: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--border) 100%);
@@ -129,6 +129,12 @@ svg {
   display: grid;
   place-items: center;
 }
+
+/* .fi {
+  height: fit-content;
+  display: inline-block;
+  place-items: center;
+} */
 
 svg path {
   fill: var(--button);
@@ -247,9 +253,9 @@ a {
   text-decoration: none;
 }
 
-:is(a, button, input, img):hover {
+/* :is(a, button, input, img):hover {
   cursor: none;
-}
+} */
 
 
 @keyframes colorstxt {

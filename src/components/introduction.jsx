@@ -93,8 +93,7 @@ const formatTime = (date) => {
     };
 
     const menuLinks = [
-        {label: 'Home', href: '#', id: 'home'},
-        {label: 'Blogs', href: '#', id:'blogs'}
+        {label: 'Blogs', href: '/blog', id:'blogs'}
     ]
 
     
@@ -103,21 +102,22 @@ const formatTime = (date) => {
     return (
         <div className='section' id='sc1'>
             <header className='navigation'>
-                <div className="con-web-name">
+                <div className='path-name'>
                     <p>bivanoid.site</p>
                 </div>
                 <p>/</p>
-                <div onClick={() => {setOpenLinks(prev => !prev)}}  className="con-web-name">
-                    <p>Portfolio</p>
-                </div>
 
-                <div className={`menuLinkOption ${openLinkS ? 'open' : 'close'}`}>
+                <div className="con-path-name">
+                    <div onClick={() => {setOpenLinks(prev => !prev)}}  className="path-name">
+                        <p>Portfolio <span><i class={`fi fi-rs-caret-down ${openLinkS ? 'open' : 'close'}`}></i></span></p>
+                    </div>
                     {menuLinks.map((items) => (
-                    <a href={items.href} id={items.id}>
+                    <a className={`path-name other-path-name ${openLinkS ? 'open' : 'close'}`} href={items.href} id={items.id}>
                         {items.label}
                     </a>
-                ))}
+                    ))}
                 </div>
+                
                 
             </header>
             {/* <img className='bgImage-INT' src={bgImage}></img> */}

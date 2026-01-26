@@ -5,6 +5,7 @@ import Feedback from './feedback';
 import { useMediaQuery } from 'react-responsive';
 import FadeContent from './FadeContent';
 import RevealUp from '../animation/reveal';
+import ContactMe from './contactme';
 
 function AboutMe({ onImageClick }) {
     const isLargeScreen = useMediaQuery({ minWidth: 701 });
@@ -55,6 +56,7 @@ function AboutMe({ onImageClick }) {
                 </div>
                 <HorizontalSlider onImageClick={onImageClick} />
                 <Feedback />
+                {/* <ContactMe/> */}
             </div>
 
         </div>

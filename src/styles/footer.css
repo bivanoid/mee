@@ -21,27 +21,6 @@
     box-sizing: border-box;
 }
 
-.triple-shapes {
-    display: flex;
-    gap: 7px;
-    width: fit-content;
-}
-
-:is(.rectangle, .triangle, .circle) {
-    width: 10px;
-    aspect-ratio: 1/1;
-    background-color: var(--button);
-}
-
-.triangle {
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    opacity: 0.3;
-}
-
-.circle {
-    border-radius: 30px;
-}
-
 .footer-main {
     width: 100%;
     display: flex;
@@ -98,25 +77,25 @@
     display: grid;
     width: 45px;
     height: 45px;
-    border-radius: 0px;
-    transition: 0.3s;
     font-size: 1rem;
-    border: var(--border-width) solid var(--border);
+    background: var(--border);
     place-items: center;
     outline: none;
+    border-radius: 0.5rem;
 }
 
-/* 
+.social-media-footer i {
+    transform: translateY(10%);
+}
+
+
 .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth):hover {
-    scale: 0.9;
-    outline: 1px solid var(--button);
-    outline-offset: 0.5rem;
     color: var(--primary);
 }
 
 .ig:hover {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: var(--button) !important;
+    color: var(--primary) !important;
 }
 
 .lnkdn:hover {
@@ -142,7 +121,7 @@
 .gth:hover {
     background-color: #24292e;
     color: white !important;
-} */
+} 
 
 .footer1 .footer1-main img {
     width: 70px;

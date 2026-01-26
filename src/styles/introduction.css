@@ -24,18 +24,67 @@
     color: var(--button);
 }
 
-.navigation .con-web-name {
+.navigation .con-path-name {
+    z-index: 9999;
+    position: relative;
+    gap: 1rem;
+}
+
+.navigation .path-name {
     padding: 0.5rem;
     background-color: var(--border);
     border-radius: 0.5rem;
     display: block;
+    height: fit-content;
 }
 
+.navigation .path-name span {
+    height: fit-content;
+}
 
+.navigation .path-name i {
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    transition: 0.25s var(--cubic-slow);
+}
 
-.navigation .con-web-name p {
+.navigation .path-name p {
     color: var(--button);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
 
+.navigation .path-name .fi.open {
+    rotate: 180deg;
+}
+.navigation .path-name .fi.close {
+    rotate: 0deg;
+}
+
+.other-path-name {
+    transition: 0.5s;
+    bottom: calc(-100% + -0.5rem);
+    width: 100%;
+}
+
+.navigation .other-path-name.open {
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    
+    height: 100%;
+    padding-inline: 0.5rem;
+    color: var(--button);
+}
+.navigation .other-path-name.close {
+    opacity: 0;
+    pointer-events: none;
+    height: 0%;
+    position: absolute;
+    bottom: calc(-0% + -0.5rem);
 }
 
 .menuLinkOption {
@@ -48,30 +97,17 @@
     background-color: var(--border);
     color: var(--button);
     border-radius: 1/1;
-    padding: 0.5rem;
+    padding-block: 0.5rem;
     gap: 1rem;
-    transition: 0.5s;
+    transition: 0.5s, width 0.5s;
     border-radius: 0.5rem;
     overflow: hidden;
-    width: 100%;
+    width: 0%;
     max-width: fit-content;
 }
 
 .menuLinkOption a {
     color: var(--button);
-    
-}
-
-.menuLinkOption.open {
-    opacity: 1;
-    pointer-events: auto;
-    width: fit-content;
-}
-.menuLinkOption.close {
-    opacity: 0;
-    pointer-events: none;
-    width: 0;
-    padding-inline: 0;
 }
 
 .bgImage-INT {

@@ -1,6 +1,5 @@
 .feedback {
     height: fit-content;
-    background-color: var(--primary25);
     border-radius: 1rem;
     border: var(--border-width) solid var(--border);
     overflow: hidden;
@@ -54,7 +53,7 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-    border-top: 1px solid var(--border);
+    border-top: var(--border-width) solid var(--border);
 }
 
 .next-fb,
@@ -73,11 +72,11 @@
 }
 
 .prev-fb {
-    border-right: 1px solid var(--border);
+    border-right: var(--border-width) solid var(--border);
 }
 
 .next-fb {
-    border-left: 1px solid var(--border);
+    border-left: var(--border-width) solid var(--border);
 }
 
 @media (max-width:767px) {
@@ -91,17 +90,17 @@
     }
 
     .con-swiper-button-fb {
-        gap: 1px;
+        gap: var(--border-width);
         background-color: var(--border);
-        padding-top: 1px;
+        padding-top: var(--border-width);
         border: none;
     }
 
     .next-fb,
     .prev-fb {
         width: 100%;
+        background-color: var(--primary);
         padding-inline: 30px;
-        background-color: var(--primary25);
         border-inline: none;
 
     }
@@ -284,7 +283,7 @@
     height: 62px;
     display: grid;
     place-items: center;
-    border-top: 1px solid var(--border);
+    border-top: var(--border-width) solid var(--border);
     font-weight: 600;
     position: relative;
     background-color: var(--primary);
@@ -310,12 +309,9 @@
     font-size: 1rem;
 }
 
-.link-to-addfeedback:hover {
-    background-color: var(--blue);
-}
 
 .link-to-addfeedback:hover .link-to-addfeedback-title1 {
-    color: var(--primary);
+    color: var(--blue);
 }
 
 /* Loading and Error Styles */
