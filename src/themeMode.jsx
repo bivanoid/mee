@@ -51,8 +51,8 @@ export default function ThemeMode() {
     }
 
     return (
-        <div onClick={() => toggleTheme()} className='path-name switch-theme'>
-                <p>Switch theme {theme ? (<i class="fi fi-rs-brightness"></i>) : (<i class="fi fi-rs-moon"></i>)}</p>
+        <div onClick={() => toggleTheme()} className='path-name'>
+                <p> switch{theme ? (<i class="fi fi-rs-brightness"></i>) : (<i class="fi fi-rs-moon"></i>)}</p>
         </div>
     )
 }

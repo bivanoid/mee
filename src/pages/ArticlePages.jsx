@@ -209,7 +209,6 @@ export default function ArticlePage() {
                   <h1 className="subtitle-article">{article.sub_title || "Judul tidak tersedia"}</h1>
                   
                   <div className="con-user-uploader">
-                    <div className="author-photo"></div>
                     <div className="article-modal-author">
                       <div className="author-info">
                         <Link to="/" className="author-name">{article.author || "/Firdhan Abivandya"}</Link>

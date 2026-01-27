@@ -110,8 +110,11 @@ const formatTime = (date) => {
                         <p>/ <span><i class={`fi fi-rs-caret-down ${openLinkS ? 'open' : 'close'}`}></i></span></p>
                     </div>
                     <Link to={"/blog"} className={`path-name other-path-name ${openLinkS ? 'open' : 'close'}`}>
-                        /blogs
+                        /blog
                     </Link>
+                    {/* <Link to={"/blog"} className={`path-name other-path-name ${openLinkS ? 'open' : 'close'}`}>
+                        /pa
+                    </Link> */}
          
                 </div>
                 

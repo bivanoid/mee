@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     color: var(--button);
     font-family: var(--primaryfont);
 }
@@ -36,15 +36,11 @@
 .navigation .path-name {
     padding: 0.5rem;
     width: fit-content;
-    height: 100%;
-    max-height: fit-content;
     background-color: var(--border);
     border-radius: 0.5rem;
     display: block;
     font-weight: 400;
 }
-
-
 
 .navigation .path-name span {
     height: fit-content;
