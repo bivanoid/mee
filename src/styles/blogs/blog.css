@@ -4,7 +4,6 @@
 .navigation-blog {
     height: 4rem;
     width: 100%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +38,6 @@
   justify-content: center;
   align-items: center;
   height: calc(100dvh - 4rem);
-  border: var(--border-width) solid var(--border);
   border-radius: 1rem;
 }
 
@@ -58,8 +56,9 @@
 .try-again-blog {
   background-color: var(--blue);
   font-family: var(--primaryfont);
+  border: none;
   padding: 10px 20px 10px 20px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   color: var(--primary);
   text-transform: uppercase;
   font-weight: 800;
@@ -68,6 +67,7 @@
 
 .try-again-blog2 {
   padding-block: 20px;
+  border-radius: 1rem;
   width: 100%;
 }
 
@@ -96,6 +96,7 @@ main {
   height: fit-content;
   width: calc(100%);
   padding: 1rem;
+  padding-bottom: 0;
 }
 
 .con-blog {
@@ -156,13 +157,9 @@ main {
 .con-blog-sticky {
   width: calc(25vw - 1rem);
   height: auto;
-  background-color: var(--primary);
   padding: 0px 1rem 0px 0;
   position: relative;
   flex-shrink: 0;
-  background-color: var(--primary25);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
   margin: 1rem 1rem 0 0;
 }
 
@@ -175,6 +172,9 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding-inline: 30px;
+  height: fit-content;
+  border-radius: 1rem;
+  border: var(--border-width) solid var(--border);
 }
 
 .con-blog-sticky h1 {
@@ -273,7 +273,7 @@ main {
 }
 
 .filter-by li.active svg path {
-  fill: var(--blue);
+  fill: var(--red-cl);
 }
 
 .filter-by li:nth-child(2) svg {

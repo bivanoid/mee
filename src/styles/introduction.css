@@ -31,15 +31,20 @@
     gap: 1rem;
 }
 
+
+
 .navigation .path-name {
     padding: 0.5rem;
     width: fit-content;
+    height: 100%;
+    max-height: fit-content;
     background-color: var(--border);
     border-radius: 0.5rem;
     display: block;
-    height: fit-content;
     font-weight: 400;
 }
+
+
 
 .navigation .path-name span {
     height: fit-content;
@@ -71,6 +76,10 @@
     transition: 0.5s;
     bottom: calc(-100% + -0.5rem);
     width: 100%;
+}
+
+.navigation .switch-theme p i {
+    font-size: 1rem;
 }
 
 .navigation .other-path-name.open {
@@ -148,6 +157,10 @@
     /* background: url(../assets/ordosocialist_eurasia_flag_by_neobolshevik_dhfr6jm.png);
     background-size: cover;
     background-position: center; */
+}
+
+.hero .image-logo {
+    z-index: -1;
 }
 
 .hero .image-logo svg {

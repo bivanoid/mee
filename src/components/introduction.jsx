@@ -7,6 +7,7 @@ import DownSvg from '../iconSvg/scrollToBottomic';
 import LogoMiring from '../iconSvg/logoMiring';
 import { href, Link } from 'react-router-dom';
 import { a } from '@react-spring/web';
+import ThemeMode from '../themeMode';
 
 function Introduction() {
     const conImageRef = useRef(null);
@@ -94,10 +95,12 @@ const formatTime = (date) => {
 
     
     const [openLinkS, setOpenLinks] = useState(false)
-
+ 
     return (
         <div className='section' id='sc1'>
             <header className='navigation'>
+                <ThemeMode/>
+                
                 <div className='path-name'>
                     <p>bivanoid.site</p>
                 </div>

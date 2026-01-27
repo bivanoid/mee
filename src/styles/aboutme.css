@@ -53,7 +53,7 @@
 .sticky #namamu {
     font-family: var(--secondfont);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 1000;
     color: var(--button);
     display: inline-block;
     flex: 1;
@@ -667,7 +667,7 @@
         font-family: var(--secondfont);
         color: var(--button);
         display: inline-block;
-        font-weight: 600;
+        font-weight: 1000;
         margin-block: 0.5rem;
         line-height: 1;
     }

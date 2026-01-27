@@ -5,16 +5,17 @@
 
 :root {
   --primary: #dbdbce;
-  --primary2: #dadaddff linear-gradient(45deg, #dadaddff, rgb(185, 185, 187));
+  --primary2: #dadaddff;
   --primary25: #d8d8ce;
   --primary3: #fafaff;
-  --blue: #173ff0;
+  --blue: #1a2e89;
+  /* --blue: #173ff0; */
   --grey: #252525;
 
   --color-font-grey: #757575;
 
   --button: #1c1c1c;
-  --border: rgb(212, 212, 199);
+  --border: #d4d4c7;
   --border-gradient: linear-gradient(45deg, black, transparent);
   --border-light: rgb(34, 34, 34);
   --radial-grad: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--border) 100%);
@@ -24,11 +25,12 @@
 
   --yl-code: #fcf18d;
 
-  --red-cl: #c81414;
-  --orange-cl: rgba(182, 99, 51, 1);
-  --yellow-cl: rgba(223, 182, 49, 1);
-  --lime-cl: rgba(125, 187, 43, 1);
-  --green-cl: rgba(36, 170, 81, 1);
+  --red-cl: #aa1e1e;
+  /* --red-cl: #c81414; */
+  --orange-cl: #b66333;
+  --yellow-cl: #dfb631;
+  --lime-cl: #7dbb2b;
+  --green-cl: #24aa51;
   --cubic-toeng: cubic-bezier(0.34, 1.56, 0.64, 1);
   --cubic-slow: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -40,13 +42,13 @@
 
 /* :root {
   --primary: #0a0a0a;
-  --primary25: #0d0d0d;
   --primary2: #131313;
+  --primary25: #0d0d0d;            
   --primary3: #232222;
   --blue: #73bcec;
-  --grey: rgb(59, 59, 59);
+  --grey: #3b3b3b;
   --button: #f8f8f8;
-  --border: rgb(18, 18, 18);
+  --border: #121212;
   --radial-grad: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--border) 100%);
   --secondfont: "Kode Mono",
     monospace;
@@ -54,11 +56,11 @@
 
   --yl-code: #fcf18d;
 
-  --red-cl: #b83232;
-  --orange-cl: rgba(182, 99, 51, 1);
-  --yellow-cl: rgba(223, 182, 49, 1);
-  --lime-cl: rgba(125, 187, 43, 1);
-  --green-cl: rgba(36, 170, 81, 1);
+  --red-cl: #f77171;
+  --orange-cl: #b66333;
+  --yellow-cl: #dfb631;
+  --lime-cl: #7dbb2b;
+  --green-cl: #24aa51;
   --cubic-toeng: cubic-bezier(0.34, 1.56, 0.64, 1);
   --cubic-slow: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -179,22 +181,22 @@ svg path {
 
 @keyframes alertyo {
   0% {
-    opacity: 0.1;
-    fill: var(--button);
+    opacity: 1;
+    fill: var(--color-font-grey);
   }
 
   50% {
-    opacity: 0.1;
-    fill: var(--button);
+    opacity: 1;
+    fill: var(--color-font-grey);
   }
 
   50.01% {
-    opacity: 0.6;
+    opacity: 1;
     fill: var(--red-cl);
   }
 
   100% {
-    opacity: 0.6;
+    opacity: 1;
     fill: var(--red-cl);
   }
 }

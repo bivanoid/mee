@@ -12,9 +12,12 @@ import Loading from './components/loading';
 
 import ReactGA from "react-ga4";
 import usePageTracking from "./hooks/usePageTracking";
+import ThemeMode from './themeMode';
 
 // Context untuk Lenis
 export const LenisContext = React.createContext(null);
+
+
 
 function AppRoutes() {
   const location = useLocation();
@@ -78,6 +81,7 @@ function AppRoutes() {
 function App() {
   const [loading, setLoading] = useState(true);
   const lenisRef = useRef(null);
+
 
   useEffect(() => {
     const timer = setTimeout(() => {

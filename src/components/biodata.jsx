@@ -32,11 +32,13 @@ function Biodata() {
         }, {
             label: 'C#'
         }, {
-            label: 'REACT.JS'
+            label: 'REACT'
         }, {
             label: 'FIGMA'
         }, {
             label: 'UI / UX DESIGN'
+        }, {
+            label: 'CANVA'
         }
     ]
 
