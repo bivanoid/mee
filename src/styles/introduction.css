@@ -182,9 +182,9 @@
 }
 
 .hero .image-logo svg path {
-    fill: var(--border);
+    fill: transparent;
     fill-opacity: 0.75;
-    stroke: var(--button);
+    stroke: var(--border);
     stroke-width: 4px;
     /* animation: brokenLamp 3s linear infinite; */
 }
