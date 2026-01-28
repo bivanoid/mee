@@ -253,19 +253,19 @@ export default function Blog() {
 
    let isOpenBlog = false;
 
-   function openBlog() {
-      ["menuShow", "closeBlog", "conArticle", "footerBlog", "backMenuIcon", "menuBlogIcon", "logoBlogIcon"].forEach((id) => {
-         document.getElementById(id)?.classList.toggle("open-menu-blog")
-      })
+   // function openBlog() {
+   //    ["menuShow", "closeBlog", "conArticle", "footerBlog", "backMenuIcon", "menuBlogIcon", "logoBlogIcon"].forEach((id) => {
+   //       document.getElementById(id)?.classList.toggle("open-menu-blog")
+   //    })
 
-      isOpenBlog = !isOpenBlog;
+   //    isOpenBlog = !isOpenBlog;
 
-      if (isOpenBlog) {
-         document.body.classList.add('body-overflow-hidden-blog')
-      } else {
-         document.body.classList.remove('body-overflow-hidden-blog')
-      }
-   }
+   //    if (isOpenBlog) {
+   //       document.body.classList.add('body-overflow-hidden-blog')
+   //    } else {
+   //       document.body.classList.remove('body-overflow-hidden-blog')
+   //    }
+   // }
 
    function openArticle(article) {
       const scrollPos = lenisRef?.current?.scroll || window.pageYOffset
@@ -284,7 +284,7 @@ export default function Blog() {
 
    function formatDate(dateString) {
       const options = { year: "numeric", month: "long", day: "numeric" }
-      return new Date(dateString).toLocaleDateString("id-ID", options)
+      return new Date(dateString).toLocaleDateString("en-ID", options)
    }
 
    return (
@@ -397,10 +397,10 @@ export default function Blog() {
                         className="try-again-blog try-again-blog2"
                         onClick={() => {
                            fetchBlogs(filter, 0, false)
-                           openBlog()
                         }}
                      >
-                        Refresh
+                        <p>Refresh</p>
+                        
                      </button>
                   </div>
                </div>

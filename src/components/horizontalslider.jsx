@@ -10,7 +10,8 @@ import riyadh from '../assets/riyadhmckp.webp';
 import bicture from '../assets/bicturemckp.webp';
 import kasir from '../assets/Casier.png';
 import calc from '../assets/calc.png';
-import Bynaa from "../assets/byna's-shop.webp";
+import Bynaa from "../assets/bynnashop.webp";
+import LoomnYarn from "../assets/loomnyarn.webp";
 import Logo from './logo';
 import FadeContent from './FadeContent';
 import AnimatedContent from './AnimatedContent';
@@ -45,6 +46,13 @@ export default function HorizontalSlider() {
       tags: ["JAVASCRIPT", "CSS"],
     },
     {
+      img: kasir,
+      alt: "Cashier",
+      type: "individual",
+      title: "Cashier",
+      tags: ["PHP", "BOOTSTRAP", "MYSQL"]
+    },
+    {
       img: Bynaa,
       alt: "bynna's shop",
       type: "individual",
@@ -53,20 +61,14 @@ export default function HorizontalSlider() {
       link: "https://bynnaaa.lovestoblog.com/"
     },
     {
-      img: Bynaa,
+      img: LoomnYarn,
       alt: "Loom&Yarn",
       type: "individual",
       title: "Loom&Yarn",
       tags: ["JAVASCRIPT", "CSS", "PHP"],
       link: "https://loomnyarn.lovestoblog.com/"
     },
-    {
-      img: kasir,
-      alt: "Cashier",
-      type: "individual",
-      title: "Cashier",
-      tags: ["PHP", "BOOTSTRAP", "MYSQL"]
-    }
+    
   ];
 
   useEffect(() => {

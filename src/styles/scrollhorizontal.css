@@ -257,9 +257,8 @@
 
 @media (min-width:1024px) {
   .mySwiper:hover .gambar img {
-    filter: grayscale(100%) brightness(50%) opacity(0.75);
+    filter: grayscale(100%) brightness(75%) opacity(0.75);
     background-color: transparent;
-    opacity: 0.5;
   }
   
   .mySwiper .gambar:hover img {
