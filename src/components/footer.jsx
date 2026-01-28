@@ -4,33 +4,6 @@ import lenis from './lenisSc';
 
 export default function Footer() {
 
-    const toSc1 = () => {
-        const section = document.getElementById('sc1');
-        if (section) {
-            lenis.scrollTo(section);
-        }
-    };
-
-    const toSc2 = () => {
-        const section = document.getElementById('sc2');
-        if (section) {
-            lenis.scrollTo(section);
-        }
-    };
-    const toSc3 = () => {
-        const section = document.getElementById('sc3');
-        if (section) {
-            lenis.scrollTo(section);
-        }
-    };
-
-    const toSc4 = () => {
-        const section = document.getElementById('sc4');
-        if (section) {
-            lenis.scrollTo(section);
-        }
-    }
-
     return (
         
             <div className="footer">
@@ -39,9 +12,6 @@ export default function Footer() {
                     
                     <div className='footer2'>
                         <div className='top-footer2'>
-                        {/* <div className='logo-footer logo-footer1'>
-                        <LogoPattern/>
-                        </div> */}
                         <div className='logo-footer logo-footer2'>
                         <Logo/>
                         </div>

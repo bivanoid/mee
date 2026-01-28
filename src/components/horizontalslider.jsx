@@ -14,7 +14,6 @@ import Bynaa from "../assets/bynnashop.webp";
 import LoomnYarn from "../assets/loomnyarn.webp";
 import Logo from './logo';
 import FadeContent from './FadeContent';
-import AnimatedContent from './AnimatedContent';
 import ShareSvg from '../iconSvg/shareic';
 import RevealUp from '../animation/reveal';
 
@@ -136,7 +135,7 @@ export default function HorizontalSlider() {
           {projects.map((proj, index) => (
             <SwiperSlide key={index}>
               <div className='gambar' ref={(el) => (gambarRefs.current[index] = el)}>
-                <img src={proj.img} alt={proj.alt} />
+                <img src={proj.img} alt={proj.alt} loading="lazy"  />
                 {proj.link && (
                   <a href={proj.link} target="_blank" rel="noopener noreferrer">
                     <ShareSvg/>

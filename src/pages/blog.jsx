@@ -5,11 +5,7 @@ import { supabase } from "./supabaseClient"
 import "../styles/blogs/blog.css"
 import Footer from "../components/footer"
 import Alert from "../iconSvg/alertIc"
-import Logo from "../components/logo"
 import { useNavigate, useLocation } from "react-router-dom"
-import Backic from "../iconSvg/backic"
-import Menus from '../iconSvg/menus'
-import Close from '../iconSvg/close'
 import { Link } from 'react-router-dom'
 import { LenisContext } from "../App"
 import DownSvg from "../iconSvg/scrollToBottomic"
@@ -17,7 +13,6 @@ import DownSvg from "../iconSvg/scrollToBottomic"
 const ITEMS_PER_PAGE = 6
 
 export default function Blog() {
-   const [blogs, setBlogs] = useState([])
    const [displayedBlogs, setDisplayedBlogs] = useState([])
    const [isLoading, setIsLoading] = useState(true)
    const [isLoadingMore, setIsLoadingMore] = useState(false)
@@ -27,7 +22,7 @@ export default function Blog() {
    const [hasMore, setHasMore] = useState(true)
    const [searchQuery, setSearchQuery] = useState("")
    const [searchInput, setSearchInput] = useState("")
-   const [totalCount, setTotalCount] = useState(0)
+   // const [totalCount, setTotalCount] = useState(0)
 
    const navigate = useNavigate()
    const location = useLocation()
@@ -164,7 +159,7 @@ export default function Blog() {
          if (error) throw error
 
          if (isInitialLoad) {
-            setTotalCount(count || 0)
+            // setTotalCount(count || 0)
             setDisplayedBlogs(data || [])
             setHasMore((data?.length || 0) === ITEMS_PER_PAGE)
          } else {
@@ -250,22 +245,6 @@ export default function Blog() {
       setCurrentPage(0)
       setDisplayedBlogs([])
    }
-
-   let isOpenBlog = false;
-
-   // function openBlog() {
-   //    ["menuShow", "closeBlog", "conArticle", "footerBlog", "backMenuIcon", "menuBlogIcon", "logoBlogIcon"].forEach((id) => {
-   //       document.getElementById(id)?.classList.toggle("open-menu-blog")
-   //    })
-
-   //    isOpenBlog = !isOpenBlog;
-
-   //    if (isOpenBlog) {
-   //       document.body.classList.add('body-overflow-hidden-blog')
-   //    } else {
-   //       document.body.classList.remove('body-overflow-hidden-blog')
-   //    }
-   // }
 
    function openArticle(article) {
       const scrollPos = lenisRef?.current?.scroll || window.pageYOffset

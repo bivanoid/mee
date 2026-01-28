@@ -6,7 +6,6 @@ import FadeContent from './components/FadeContent';
 import Home from './pages/home';
 import AddFeedback from './pages/addfeedback';
 import Blog from './pages/blog';
-import CustomCursor from './components/CustomCursor';
 import ArticlePage from './pages/ArticlePages';
 import Loading from './components/loading';
 
@@ -95,7 +94,6 @@ function App() {
     <Router>
       <LenisContext.Provider value={lenisRef}>
         <div className='body'>
-          <CustomCursor />
           {loading ? (
             <Loading />
           ) : (

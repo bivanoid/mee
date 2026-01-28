@@ -1,11 +1,10 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { createClient } from "@supabase/supabase-js"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import FadeContent from "./FadeContent"
-import AnimatedContent from "./AnimatedContent"
 import { Link } from "react-router-dom"
 
 // Import Swiper styles
@@ -13,12 +12,10 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "../styles/feedback.css"
 import Alert from "../iconSvg/alertIc"
-import React from "react"
 import RevealUp from "../animation/reveal"
 
-const supabaseUrl = "https://gyzebdhodmnzpdufivol.supabase.co"
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5emViZGhvZG1uenBkdWZpdm9sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5OTE4ODcsImV4cCI6MjA2MTU2Nzg4N30.1XYTKLxTMHocFRM5QfCTPiRQYyE8hhZMAtFrKib8dqc"
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
+const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 const ohNo = 'Oh noo! '
 
