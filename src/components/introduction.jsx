@@ -126,7 +126,6 @@ const formatTime = (date) => {
             <div className='text' ref={conImageRef} style={{ opacity: 1 }}>
                 <div className='hero'>
                     <div className='hero-1'>
-
                         <AnimatedContent
                             distance={10}
                             direction="vertical"
@@ -148,8 +147,6 @@ const formatTime = (date) => {
                                 <h1 className='currndate'>{formatTime(currentTime)}</h1>
                             </div>
                         </AnimatedContent>
-
-
                     </div>
                     <div className='image-logo'>
                         <LogoMiring />

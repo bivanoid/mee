@@ -170,8 +170,8 @@
     box-sizing: border-box;
     height: fit-content;
     left: 50%;
-    z-index: 9;
     top: 50%;
+    opacity: 1;
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -181,9 +181,10 @@
     }
 }
 
-.hero svg path {
+.hero .image-logo svg path {
     fill: var(--border);
-    stroke: var(--border);
+    fill-opacity: 0.75;
+    stroke: var(--button);
     stroke-width: 4px;
     /* animation: brokenLamp 3s linear infinite; */
 }

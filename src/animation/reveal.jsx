@@ -1,7 +1,7 @@
-import AnimatedContent from '../components/AnimatedContent';
 
+import AnimatedContent from '../components/AnimatedContent';
 export default function RevealUp(
-{
+  {
     children,
     isLargeScreen,
     distance = 50,
@@ -11,9 +11,9 @@ export default function RevealUp(
     threshold = 0,
     delay = 0,
     reverse = false
-}
+  }
 ) {
-    return (
+  return (
     <AnimatedContent
       distance={distance}
       direction={direction}
@@ -25,5 +25,5 @@ export default function RevealUp(
     >
       {children}
     </AnimatedContent>
-    )
+  )
 }

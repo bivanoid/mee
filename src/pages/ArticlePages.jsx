@@ -182,15 +182,15 @@ export default function ArticlePage() {
     )
 
   return (
-    
+
     <div className="body-blog">
-      
+
       <div className="article-modal-overlay" style={{ background: "transparent" }}>
         <div className="article-modal" style={{ border: "none" }}>
           <div className="article-modal-content">
             <aside className="asside-article">
               <div className="asside-main">
-            
+
                 <div className="con-header-top-article">
                   <Link to="/blog"
 
@@ -203,11 +203,11 @@ export default function ArticlePage() {
                     <ShareSvg />
                   </button>
                 </div>
-                
+
                 <div className="con-title-article">
                   <h1 className="article-modal-title">{article.title_blog || "Judul tidak tersedia"}</h1>
                   <h1 className="subtitle-article">{article.sub_title || "Judul tidak tersedia"}</h1>
-                  
+
                   <div className="con-user-uploader">
                     <div className="article-modal-author">
                       <div className="author-info">
@@ -256,10 +256,10 @@ export default function ArticlePage() {
           </div>
         </div>
       </div>
-      
+
       <Footer />
 
-      
+
     </div>
   )
 }

@@ -15,7 +15,7 @@ export default function Home() {
           </div>
           <div id='thecontent'>
             <Introduction />
-            <AboutMe/>
+            <AboutMe />
             <Footer />
           </div>
         </div>
