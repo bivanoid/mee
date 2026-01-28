@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.29f95905.css",
-    "main.js": "/static/js/main.f8816e23.js",
+    "main.css": "/static/css/main.6e338191.css",
+    "main.js": "/static/js/main.7a7d6f85.js",
     "static/js/198.9db6c00f.chunk.js": "/static/js/198.9db6c00f.chunk.js",
     "static/media/Casier.png": "/static/media/Casier.ab3270f4095b6fe2ce78.png",
     "static/media/calc.png": "/static/media/calc.1a26671ef3739b01684c.png",
@@ -10,15 +10,12 @@
     "static/media/bynnashop.webp": "/static/media/bynnashop.e1a0b20e7a62f539e9ad.webp",
     "static/media/loomnyarn.webp": "/static/media/loomnyarn.0be50b31192f5fca6850.webp",
     "index.html": "/index.html",
-    "static/media/pin.svg": "/static/media/pin.b024de1a285fd59573e0a76bc10cf0e2.svg",
-    "static/media/call.svg": "/static/media/call.ccd910e521571993fc1f4b1f5d36126a.svg",
-    "static/media/at.svg": "/static/media/at.3472bb53d2e58366752d0caf9cce9775.svg",
-    "main.29f95905.css.map": "/static/css/main.29f95905.css.map",
-    "main.f8816e23.js.map": "/static/js/main.f8816e23.js.map",
+    "main.6e338191.css.map": "/static/css/main.6e338191.css.map",
+    "main.7a7d6f85.js.map": "/static/js/main.7a7d6f85.js.map",
     "198.9db6c00f.chunk.js.map": "/static/js/198.9db6c00f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29f95905.css",
-    "static/js/main.f8816e23.js"
+    "static/css/main.6e338191.css",
+    "static/js/main.7a7d6f85.js"
   ]
 }
