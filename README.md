@@ -1,38 +1,14 @@
-# Mee — Portofolio Web
+# Mee (Portofolio Web)
 
 Deskripsi singkat:
 Mee adalah situs portofolio pribadi untuk menampilkan proyek, pengalaman, dan kontak. README ini berisi panduan instalasi, pengembangan, dan deployment agar situs dapat dijalankan secara lokal maupun dipublikasikan.
 
-## Daftar Isi
-- [Fitur](#fitur)
-- [Demo](#demo)
-- [Teknologi](#teknologi)
-- [Instalasi](#instalasi)
-- [Menjalankan Secara Lokal](#menjalankan-secara-lokal)
-- [Build & Produksi](#build--produksi)
-- [Konfigurasi](#konfigurasi)
-- [Struktur Proyek](#struktur-proyek)
-- [Kontribusi](#kontribusi)
-- [Lisensi](#lisensi)
-- [Kontak](#kontak)
-
-## Fitur
-- Halaman beranda dengan ringkasan profil
-- Halaman proyek dengan daftar proyek dan detail
-- Halaman pengalaman / resume
-- Formulir kontak atau metode kontak lainnya
-- Responsive dan dioptimalkan untuk mobile
-- (Opsional) Dark mode dan animasi halus
-
-## Demo
-Tautan demo: (isi dengan URL demo jika tersedia, misal https://your-domain.com)
-
-## Teknologi
+## Teknologi yang digunakan
 Proyek ini kemungkinan menggunakan teknologi Web modern. Contoh yang umum:
 - HTML, CSS, JavaScript / TypeScript
-- Framework (React / Next.js / Vue / Nuxt / Svelte) — sesuaikan jika perlu
-- Build tools: Vite, Webpack, atau alat bawaan framework
-- Hosting: Vercel, Netlify, GitHub Pages, atau layanan static hosting lainnya
+- Framework React.js
+- Build tools: React CRA
+- Hosting: github-pages (dengan custom domain dari Hostinger)
 
 ## Instalasi (prasyarat)
 - Node.js (versi LTS direkomendasikan)
@@ -48,18 +24,13 @@ Instal dependensi:
 ```bash
 # menggunakan npm
 npm install
-
-# atau menggunakan yarn
-yarn
 ```
 
 ## Menjalankan Secara Lokal
 Perintah umum untuk menjalankan server development:
 ```bash
 # development
-npm run dev
-# atau
-yarn dev
+npm run start
 ```
 
 Setelah server berjalan, buka http://localhost:3000 atau alamat yang ditampilkan di terminal.
@@ -68,17 +39,6 @@ Setelah server berjalan, buka http://localhost:3000 atau alamat yang ditampilkan
 Untuk membuat build produksi:
 ```bash
 npm run build
-# atau
-yarn build
-```
-
-Untuk menjalankan preview (jika tersedia):
-```bash
-npm run start
-# atau
-yarn start
-# atau untuk beberapa framework:
-npm run preview
 ```
 
 Jika menggunakan static hosting, hasil build biasanya berada di folder `dist` atau `build` — unggah folder tersebut ke layanan hosting.
@@ -114,19 +74,6 @@ Terima kasih jika ingin berkontribusi! Alur kontribusi yang disarankan:
 
 Silakan sertakan deskripsi perubahan dan screenshot bila relevan.
 
-## Testing & Linting (opsional)
-Jika proyek memiliki setup test atau linter:
-```bash
-# menjalankan test
-npm run test
-
-# menjalankan linter
-npm run lint
-
-# format otomatis
-npm run format
-```
-
 ## Deployment
 Beberapa opsi deployment yang umum:
 - Vercel: Cukup hubungkan repo, pilih branch, dan Vercel akan otomatis build & deploy.
@@ -149,8 +96,6 @@ Jika ada pertanyaan atau ingin berkolaborasi:
 ---
 
 Catatan: README ini bersifat generik untuk portofolio web. Jika Anda mau, saya bisa sesuaikan README ini dengan:
-- Framework tepat (React / Next.js / Vue / Nuxt / Svelte)
-- Perintah npm/yarn yang benar dari package.json Anda
+- Framework React.js
+- Perintah npm/yarn yang benar dari package.json
 - Menambahkan badge CI, coverage, atau screenshot yang spesifik
-
-Mau saya sesuaikan ke framework atau isi file package.json dari repo Anda?
