@@ -190,20 +190,11 @@ export default function ArticlePage() {
           <div className="article-modal-content">
             <aside className="asside-article">
               <div className="asside-main">
-
-                <div className="con-header-top-article">
-                  <Link to="/blog"
-
-                    className="close-article-btn"
-                    style={{ cursor: 'pointer' }}
-                  >
-                    <Backic />
-                  </Link>
-                  <button className="sharePage" onClick={handleShare}>
-                    <ShareSvg />
-                  </button>
+                <div className="navigation-article">
+                  <Link className="path-name back-button" to={'/blog'}><p>/blog (back)</p></Link>
+                  <p className="path-name">article</p>
+                  <p className="path-name share-button" onClick={handleShare}>share <ShareSvg/></p>
                 </div>
-
                 <div className="con-title-article">
                   <h1 className="article-modal-title">{article.title_blog || "Judul tidak tersedia"}</h1>
                   <h1 className="subtitle-article">{article.sub_title || "Judul tidak tersedia"}</h1>
@@ -211,10 +202,7 @@ export default function ArticlePage() {
                   <div className="con-user-uploader">
                     <div className="article-modal-author">
                       <div className="author-info">
-                        <Link to="/" className="author-name">{article.author || "/Firdhan Abivandya"}</Link>
-                        <p className="publish-date">
-                          {article.created_at ? formatDate(article.created_at) : "Tanggal tidak tersedia"}
-                        </p>
+                        <p className="author-name">{article.author || "/Firdhan Abivandya"}</p>
                       </div>
                     </div>
                   </div>
@@ -223,6 +211,9 @@ export default function ArticlePage() {
             </aside>
 
             <main className="main-article">
+              <p className="publish-date">
+                          {article.created_at ? formatDate(article.created_at) : "Tanggal tidak tersedia"}
+              </p>
               {article.image_url && (
                 <div className="article-modal-image">
                   <img
