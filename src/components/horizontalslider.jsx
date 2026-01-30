@@ -9,6 +9,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import riyadh from '../assets/riyadhmckp.webp';
 import bicture from '../assets/bicturemckp.webp';
 import kasir from '../assets/Casier.png';
+import ppkpt from '../assets/ppkpt (1).webp';
 import calc from '../assets/calc.png';
 import Bynaa from "../assets/bynnashop.webp";
 import LoomnYarn from "../assets/loomnyarn.webp";
@@ -50,6 +51,14 @@ export default function HorizontalSlider() {
       type: "individual",
       title: "Cashier",
       tags: ["PHP", "BOOTSTRAP", "MYSQL"]
+    },
+    {
+      img: ppkpt,
+      alt: "PPKPT Website",
+      type: "collective",
+      title: "PPKPT Website",
+      tags: ["HTML", "CSS", "JAVASCRIPT", "FIGMA"],
+      link: "https://ppkptupitra.my.id/"
     },
     {
       img: Bynaa,
