@@ -89,7 +89,6 @@
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
-    max-height: 20vh;
     gap: 0.5rem;
 }
 

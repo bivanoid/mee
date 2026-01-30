@@ -140,12 +140,28 @@ export default function ArticlePage() {
     navigate(-1, { state: { restoreScroll: true } })
   }
 
+  const [showUpButton, setShowUpButton] = useState('')
+
+    useEffect(() => {
+      function showButton() {
+        if (window.scrollY > 100) {
+          setShowUpButton('up')
+        } else {
+          setShowUpButton('down')
+        }
+      }
+
+      window.addEventListener('scroll', showButton)
+
+      return () => window.removeEventListener('scroll', showButton)
+    }, [])
+
   // ========================
   // 🌀 STATE LOADING
   // ========================
   if (isLoading)
     return (
-      <div className="body-blog loading-state">
+      <div className={`body-blog loading-state ${showUpButton}`}>
         <div className="loading-container">
           <div className="loading-text">Loading...</div>
 
@@ -180,6 +196,8 @@ export default function ArticlePage() {
         <button onClick={handleGoBack}>Kembali</button>
       </div>
     )
+
+    
 
   return (
 

@@ -266,6 +266,22 @@ export default function Blog() {
       return new Date(dateString).toLocaleDateString("en-ID", options)
    }
 
+   var [textRefresh, setTextRefresh] = useState('');
+   useEffect(() => {
+      function hanldeResize() {
+         if (window.innerWidth <= 747) {
+            setTextRefresh(<i class="fi fi-rs-refresh"></i>)
+         } else {
+            setTextRefresh('Refresh')
+         }
+      }
+
+      hanldeResize()
+      window.addEventListener('resize', hanldeResize)
+
+      return () => window.removeEventListener('resize', hanldeResize)
+   }, [])
+
    return (
       <div className="body-blog" id="theblog">
 
@@ -378,7 +394,7 @@ export default function Blog() {
                            fetchBlogs(filter, 0, false)
                         }}
                      >
-                        <p>Refresh</p>
+                        <p>{textRefresh}</p>
                         
                      </button>
                   </div>
