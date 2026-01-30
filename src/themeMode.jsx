@@ -27,6 +27,29 @@ export default function ThemeMode() {
             root.style.setProperty('--yellow-cl', '#dfb631');
             root.style.setProperty('--lime-cl', '#7dbb2b');
             root.style.setProperty('--green-cl', '#24aa51');
+
+            root.style.setProperty('--code-bg', 'var(--border)');
+            root.style.setProperty('--code-inline-bg', '#0a0a0a');
+            root.style.setProperty('--code-text', '#f8f8f2');
+            root.style.setProperty('--token-comment', '#8292a2');
+            root.style.setProperty('--token-punctuation', '#f8f8f2');
+            root.style.setProperty('--token-tag', '#f92672');
+            root.style.setProperty('--token-property', '#f92672');
+            root.style.setProperty('--token-constant', '#f92672');
+            root.style.setProperty('--token-boolean', '#ae81ff');
+            root.style.setProperty('--token-number', '#ae81ff');
+            root.style.setProperty('--token-string', '#a6e22e');
+            root.style.setProperty('--token-atrule', '#e6db74');
+            root.style.setProperty('--token-function', '#e6db74');
+            root.style.setProperty('--token-keyword', '#66d9ef');
+            root.style.setProperty('--token-regex', '#fd971f');
+            root.style.setProperty('--token-important', '#fd971f');
+            root.style.setProperty('--token-operator', '#f8f8f2');
+            root.style.setProperty('--token-variable', '#f8f8f2');
+            root.style.setProperty('--toolbar-bg', 'rgba(224, 224, 224, 0.2)');
+            root.style.setProperty('--toolbar-text', '#bbb');
+
+            
         } else {
             // Light mode
             root.style.setProperty('--primary', '#dbdbce');
@@ -42,6 +65,27 @@ export default function ThemeMode() {
             root.style.setProperty('--yellow-cl', '#dfb631');
             root.style.setProperty('--lime-cl', '#7dbb2b');
             root.style.setProperty('--green-cl', '#24aa51');
+
+            root.style.setProperty('--code-bg', '#f5f5f5');
+            root.style.setProperty('--code-inline-bg', '#dbdbce');
+            root.style.setProperty('--code-text', '#1e1e1e');
+            root.style.setProperty('--token-comment', '#7f8c8d');
+            root.style.setProperty('--token-punctuation', '#1e1e1e');
+            root.style.setProperty('--token-tag', '#d32f2f');
+            root.style.setProperty('--token-property', '#d32f2f');
+            root.style.setProperty('--token-constant', '#8e44ad');
+            root.style.setProperty('--token-boolean', '#8e44ad');
+            root.style.setProperty('--token-number', '#8e44ad');
+            root.style.setProperty('--token-string', '#27ae60');
+            root.style.setProperty('--token-atrule', '#f39c12');
+            root.style.setProperty('--token-function', '#e67e22');
+            root.style.setProperty('--token-keyword', '#0c79d0');
+            root.style.setProperty('--token-regex', '#ea6721');
+            root.style.setProperty('--token-important', '#c2185b');
+            root.style.setProperty('--token-operator', '#1e1e1e');
+            root.style.setProperty('--token-variable', '#1e1e1e');
+            root.style.setProperty('--toolbar-bg', 'rgba(0, 0, 0, 0.1)');
+            root.style.setProperty('--toolbar-text', '#444');
         }
 
         setTheme(!theme);

@@ -105,6 +105,7 @@ main {
   justify-content: space-between;
   height: fit-content;
   align-items: stretch;
+  user-select: none;
 }
 .info-blog {
   display: flex;
@@ -294,7 +295,8 @@ main {
   padding: 30px;
   position: relative;
   border-radius: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
   /* border: var(--border-width) solid var(--border); */
   transition: all 0.3s ease;
 }
@@ -308,7 +310,7 @@ main {
 .empty-state,
 .loading-state {
   width: 100%;
-  height: calc(100svh - 180px);
+  height: calc(100svh);
   font-family: var(--primaryfont);
   display: grid;
   place-items: center;
@@ -323,7 +325,7 @@ main {
 
 .article .con-image-article img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/12;
   object-fit: cover;
 }
 
@@ -598,6 +600,7 @@ main {
   position: relative;
   padding-bottom: 0;
   gap: 1rem;
+  user-select: none;
   object-fit: contain;
   object-position: center;
 }
@@ -605,14 +608,15 @@ main {
 .article-modal-image {
   width: 100%;
   overflow: hidden;
-  aspect-ratio: 16/9;
   display: grid;
+  aspect-ratio: 16/9;
   justify-content: center;
   align-content: center;
 }
 
 .article-modal-image img {
   width: 100%;
+  object-fit: cover;
   height: auto;
 }
 
@@ -1000,10 +1004,23 @@ hr {
   }
 
   .article {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: auto 1fr auto;
     padding: 30px;
     width: calc(100%);
+  }
+
+  .article p {
+    grid-row: 3;
+  }
+
+  .article .con-image-article {
+    grid-row: 1;
+  }
+
+  .article .column-article {
+    grid-row: 2;
   }
 
   .article .con-image-article {
@@ -1158,12 +1175,11 @@ hr {
 }
 
 #date-post {
-  font-family: var(--secondfont);
+  font-family: var(--primaryfont);
   color: var(--button);
-  font-weight: 800;
-  text-transform: uppercase;
+  font-weight: 600;
+  text-transform: capitalize;
   font-size: 1rem;
-  width: 350px;
 }
 
 .rendered-html {
@@ -1181,7 +1197,8 @@ hr {
 
   #date-post {
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -1519,7 +1536,7 @@ hr {
 }
 
 .rendered-html pre {
-  background-color: var(--border);
+  background-color: var(--red-cl);
   padding: 1.5rem;
   overflow-x: auto;
   margin: 2rem 0;

@@ -1,25 +1,28 @@
 :root {
   --code-bg: var(--border);
-  --code-inline-bg: #0a0a0a;
-  --code-text: #f8f8f2;
-  --token-comment: #8292a2;
-  --token-punctuation: #f8f8f2;
-  --token-tag: #f92672;
-  --token-property: #f92672;
-  --token-constant: #f92672;
-  --token-boolean: #ae81ff;
-  --token-number: #ae81ff;
-  --token-string: #a6e22e;
-  --token-atrule: #e6db74;
-  --token-function: #e6db74;
-  --token-keyword: #66d9ef;
-  --token-regex: #fd971f;
-  --token-important: #fd971f;
-  --token-operator: #f8f8f2;
-  --token-variable: #f8f8f2;
-  --toolbar-bg: rgba(224, 224, 224, 0.2);
-  --toolbar-text: #bbb;
+  --code-inline-bg: #dbdbce;
+  --code-text: #1e1e1e;
+
+  --token-comment: #7f8c8d;
+  --token-punctuation: #1e1e1e;
+  --token-tag: #d32f2f;
+  --token-property: #d32f2f;
+  --token-constant: #8e44ad;
+  --token-boolean: #8e44ad;
+  --token-number: #8e44ad;
+  --token-string: #27ae60;
+  --token-atrule: #f39c12;
+  --token-function: #e67e22;
+  --token-keyword: #0c79d0;
+  --token-regex: #ea6721;
+  --token-important: #c2185b;
+  --token-operator: #1e1e1e;
+  --token-variable: #1e1e1e;
+
+  --toolbar-bg: rgba(0, 0, 0, 0.1);
+  --toolbar-text: #444;
 }
+
 
 code[class*=language-],
 pre[class*=language-] {
