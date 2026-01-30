@@ -8,9 +8,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 import riyadh from '../assets/riyadhmckp.webp';
 import bicture from '../assets/bicturemckp.webp';
-import kasir from '../assets/Casier.png';
 import ppkpt from '../assets/ppkpt (1).webp';
-import calc from '../assets/calc.png';
 import Bynaa from "../assets/bynnashop.webp";
 import LoomnYarn from "../assets/loomnyarn.webp";
 import Logo from './logo';
@@ -37,20 +35,6 @@ export default function HorizontalSlider() {
       title: "Gallery Photo",
       tags: ["JAVA", "XML", "FIREBASE"],
       link: "https://bivanoid.site/article/77"
-    },
-    {
-      img: calc,
-      alt: "Calculator",
-      type: "individual",
-      title: "Calculator",
-      tags: ["JAVASCRIPT", "CSS"],
-    },
-    {
-      img: kasir,
-      alt: "Cashier",
-      type: "individual",
-      title: "Cashier",
-      tags: ["PHP", "BOOTSTRAP", "MYSQL"]
     },
     {
       img: ppkpt,
