@@ -57,18 +57,22 @@
   background-color: var(--blue);
   font-family: var(--primaryfont);
   border: none;
-  padding: 10px 20px 10px 20px;
-  border-radius: 0.5rem;
+  padding: 0;
+  border-radius: 1rem;
   color: var(--primary);
   text-transform: uppercase;
   font-weight: 800;
   font-size: 1rem;
+  display: grid;
+  place-items: center;
+
+  @media (min-width:747px) {
+    padding: 20px 30px;
+  }
 }
 
-.try-again-blog2 {
-  padding-block: 20px;
-  border-radius: 1rem;
-  width: 100%;
+.try-again-blog svg {
+  width: 30px;
 }
 
 .error-state p {

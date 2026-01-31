@@ -9,6 +9,7 @@ import { useNavigate, useLocation } from "react-router-dom"
 import { Link } from 'react-router-dom'
 import { LenisContext } from "../App"
 import DownSvg from "../iconSvg/scrollToBottomic"
+import { ReactComponent as RefreshIc } from "../assets/svg/refresh.svg"
 
 const ITEMS_PER_PAGE = 6
 
@@ -266,21 +267,18 @@ export default function Blog() {
       return new Date(dateString).toLocaleDateString("en-ID", options)
    }
 
-   var [textRefresh, setTextRefresh] = useState('');
+   const [isMobile, setIsMobile] = useState(false)
+
    useEffect(() => {
-      function hanldeResize() {
-         if (window.innerWidth <= 747) {
-            setTextRefresh(<i class="fi fi-rs-refresh"></i>)
-         } else {
-            setTextRefresh('Refresh')
-         }
-      }
+     function handleResize() {
+       setIsMobile(window.innerWidth <= 747)
+     }
 
-      hanldeResize()
-      window.addEventListener('resize', hanldeResize)
-
-      return () => window.removeEventListener('resize', hanldeResize)
+     handleResize()
+     window.addEventListener("resize", handleResize)
+     return () => window.removeEventListener("resize", handleResize)
    }, [])
+
 
    return (
       <div className="body-blog" id="theblog">
@@ -394,8 +392,7 @@ export default function Blog() {
                            fetchBlogs(filter, 0, false)
                         }}
                      >
-                        <p>{textRefresh}</p>
-                        
+                        {isMobile ? <RefreshIc /> : <p>Refresh</p>}
                      </button>
                   </div>
                </div>

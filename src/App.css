@@ -140,7 +140,7 @@ svg {
 } */
 
 svg path {
-  fill: var(--button);
+  fill: transparent;
 }
 
 .logo-web p {
