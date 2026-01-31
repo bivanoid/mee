@@ -176,7 +176,82 @@ pre[class*=language-]::-webkit-scrollbar-track {
 pre[class*=language-]::-webkit-scrollbar-thumb {
   background: var(--border) !important;
 }
-
+/* 
 pre[class*=language-]::-webkit-scrollbar-thumb:hover {
   background: var(--button) !important;
+} */
+
+/* Toolbar container */
+div.code-toolbar {
+  position: relative;
+}
+
+/* Toolbar always visible */
+div.code-toolbar > .toolbar {
+  position: absolute;
+  width: 100%;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+  opacity: 1; /* Always show */
+}
+
+/* Language label */
+div.code-toolbar > .toolbar .toolbar-item span {
+  background: var(--border) !important;
+  color: var(--button) !important;
+  font-family: var(--primaryfont) !important;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+
+
+/* Copy button */
+div.code-toolbar > .toolbar .toolbar-item button {
+  background: #4a9eff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+div.code-toolbar > .toolbar .toolbar-item button:hover {
+  background: #3a8eef;
+}
+
+div.code-toolbar > .toolbar .toolbar-item button:active {
+  transform: scale(0.98);
+}
+
+/* Success state */
+div.code-toolbar > .toolbar .toolbar-item button[data-copy-state="copy-success"] {
+  background: #28a745;
+}
+
+div.code-toolbar > .toolbar .toolbar-item button[data-copy-state="copy-success"]::after {
+  content: " ✓";
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #4a9eff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 1;
 }

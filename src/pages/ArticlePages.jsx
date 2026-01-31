@@ -5,13 +5,14 @@ import { useParams, useNavigate, Link } from "react-router-dom"
 import { supabase } from "./supabaseClient"
 import "../styles/blogs/blog.css"
 import Footer from "../components/footer"
-import Backic from "../iconSvg/backic"
+
+
 import { LenisContext } from "../App"
 
-import DownSvg from "../iconSvg/scrollToBottomic"
 import ShareSvg from '../iconSvg/shareic';
 import Prism from "prismjs";
 import "../styles/prism-custom.css";
+import "prismjs/components/prism-bash";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-markup";
 import "prismjs/components/prism-javascript";
@@ -27,7 +28,12 @@ import "prismjs/components/prism-php-extras";
 import "prismjs/components/prism-sql";
 import "prismjs/components/prism-json";
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
+import ButtonUp from "../components/buttonUp"
+
+import "prismjs/plugins/toolbar/prism-toolbar";
 import "prismjs/plugins/toolbar/prism-toolbar.css";
+import "prismjs/plugins/show-language/prism-show-language"; // ← Tambah ini
+import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 
 const handleShare = async () => {
   if (navigator.share) {
@@ -56,6 +62,61 @@ export default function ArticlePage() {
 
   const mainRef = useRef(null)
 
+//   useEffect(() => {
+//   if (!article) return
+  
+//   requestAnimationFrame(() => {
+//     requestAnimationFrame(() => {
+//       Prism.highlightAll()
+      
+//       // Tambahkan tombol copy manual ke dalam toolbar Prism
+//       document.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
+//         // Cari atau buat toolbar
+//         let toolbar = pre.querySelector('.toolbar')
+        
+//         // Jika toolbar belum ada (Prism belum buat), buat manual
+//         if (!toolbar) {
+//           const toolbarWrapper = document.createElement('div')
+//           toolbarWrapper.className = 'code-toolbar'
+          
+//           // Wrap pre dengan code-toolbar
+//           pre.parentNode.insertBefore(toolbarWrapper, pre)
+//           toolbarWrapper.appendChild(pre)
+          
+//           toolbar = document.createElement('div')
+//           toolbar.className = 'toolbar'
+//           toolbarWrapper.appendChild(toolbar)
+//         }
+        
+//         // Skip kalau sudah ada copy button
+//         if (toolbar.querySelector('.copy-btn')) return
+        
+//         // Buat toolbar-item (struktur Prism standard)
+//         const toolbarItem = document.createElement('div')
+//         toolbarItem.className = 'toolbar-item'
+        
+//         const button = document.createElement('button')
+//         button.className = 'copy-btn'
+//         button.textContent = 'Copy'
+//         button.onclick = () => {
+//           const code = pre.querySelector('code').textContent
+//           navigator.clipboard.writeText(code).then(() => {
+//             button.textContent = 'Copied!'
+//             button.style.background = '#28a745'
+//             setTimeout(() => {
+//               button.textContent = 'Copy'
+//               button.style.background = ''
+//             }, 2000)
+//           })
+//         }
+        
+//         toolbarItem.appendChild(button)
+//         pre.appendChild(toolbarItem)
+//       })
+//     })
+//   })
+// }, [article])
+
   // Scroll ke atas saat load
   useEffect(() => {
     if (lenisRef?.current) lenisRef.current.scrollTo(0, { immediate: true })
@@ -63,9 +124,7 @@ export default function ArticlePage() {
   }, [lenisRef])
 
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+
 
 
 
@@ -102,7 +161,7 @@ export default function ArticlePage() {
           data.content_html = doc.body.innerHTML
 
           setArticle(data)
-          // setTimeout(() => Prism.highlightAll(), 300)
+          setTimeout(() => Prism.highlightAll(), 300)
         }
       } catch (err) {
         setError("Gagal memuat artikel: " + err.message)
@@ -114,16 +173,23 @@ export default function ArticlePage() {
     fetchArticle()
   }, [id])
 
+  // Optimasi render highlight saat scroll (lazy highlight)
   useEffect(() => {
-  if (!article) return
+    if (!mainRef.current) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            Prism.highlightAllUnder(entry.target)
+          }
+        })
+      },
+      { rootMargin: "200px" }
+    )
 
-  // requestAnimationFrame memastikan DOM sudah di-render
-  const frame = requestAnimationFrame(() => {
-    Prism.highlightAll()
-  })
-
-  return () => cancelAnimationFrame(frame)
-}, [article])
+    observer.observe(mainRef.current)
+    return () => observer.disconnect()
+  }, [article])
 
   function formatDate(dateString) {
     const options = { year: "numeric", month: "long", day: "numeric" }
@@ -134,46 +200,12 @@ export default function ArticlePage() {
     navigate(-1, { state: { restoreScroll: true } })
   }
 
-  const [showButtonUp, setShowButtonUp] = useState(false)
-
-  useState(() => {
-    function showUp() {
-      const positionScroll = window.scrollY
-
-      
-
-      if (positionScroll > 100) {
-        setShowButtonUp(true)
-      }
-    }
-
-    showUp()
-
-    window.addEventListener('scroll', showUp)
-
-    window.removeEventListener('scroll', showUp)
-  }, [])
-
-  const [showUpButton, setShowUpButton] = useState('')
-
-    useEffect(() => {
-      function showButton() {
-        setShowUpButton(window.scrollY <= 747)
-      }
-
-      showButton()
-
-      window.addEventListener('scroll', showButton)
-
-      return () => window.removeEventListener('scroll', showButton)
-    }, [])
-
   // ========================
   // 🌀 STATE LOADING
   // ========================
   if (isLoading)
     return (
-      <div className={`body-blog loading-state ${showUpButton}`}>
+      <div className="body-blog loading-state">
         <div className="loading-container">
           <div className="loading-text">Loading...</div>
 
@@ -208,8 +240,6 @@ export default function ArticlePage() {
         <button onClick={handleGoBack}>Kembali</button>
       </div>
     )
-
-    
 
   return (
 
@@ -272,7 +302,7 @@ export default function ArticlePage() {
                   <p>Konten tidak tersedia</p>
                 )}
               </div>
-              <button className={`buttonUp ${showUpButton ? 'down' : 'up'}`} onClick={scrollToTop}><DownSvg/></button>
+              <ButtonUp/>
             </main>
           </div>
         </div>
