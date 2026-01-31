@@ -796,6 +796,41 @@ main {
   color: var(--button);
 }
 
+.buttonUp {
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    border-radius: 5rem;
+    background: var(--button);
+    border: var(--border-width) solid var(--border);
+    color: var(--button);
+    margin-top: 1rem;
+    position: sticky;
+    bottom: 1rem;
+    align-self: flex-end;
+}
+
+.buttonUp svg {
+  height: 100%;
+  width: 30px;
+}
+
+.buttonUp svg path {
+  fill: var(--primary);
+}
+
+.buttonUp.up {
+  opacity: 1;
+}
+
+.buttonUp.down {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .navigation-article {
   width: 100%;
   display: flex;

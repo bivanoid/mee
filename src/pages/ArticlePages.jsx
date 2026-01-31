@@ -8,6 +8,7 @@ import Footer from "../components/footer"
 import Backic from "../iconSvg/backic"
 import { LenisContext } from "../App"
 
+import DownSvg from "../iconSvg/scrollToBottomic"
 import ShareSvg from '../iconSvg/shareic';
 import Prism from "prismjs";
 import "../styles/prism-custom.css";
@@ -101,7 +102,7 @@ export default function ArticlePage() {
           data.content_html = doc.body.innerHTML
 
           setArticle(data)
-          setTimeout(() => Prism.highlightAll(), 300)
+          // setTimeout(() => Prism.highlightAll(), 300)
         }
       } catch (err) {
         setError("Gagal memuat artikel: " + err.message)
@@ -113,23 +114,16 @@ export default function ArticlePage() {
     fetchArticle()
   }, [id])
 
-  // Optimasi render highlight saat scroll (lazy highlight)
   useEffect(() => {
-    if (!mainRef.current) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            Prism.highlightAllUnder(entry.target)
-          }
-        })
-      },
-      { rootMargin: "200px" }
-    )
+  if (!article) return
 
-    observer.observe(mainRef.current)
-    return () => observer.disconnect()
-  }, [article])
+  // requestAnimationFrame memastikan DOM sudah di-render
+  const frame = requestAnimationFrame(() => {
+    Prism.highlightAll()
+  })
+
+  return () => cancelAnimationFrame(frame)
+}, [article])
 
   function formatDate(dateString) {
     const options = { year: "numeric", month: "long", day: "numeric" }
@@ -140,16 +134,34 @@ export default function ArticlePage() {
     navigate(-1, { state: { restoreScroll: true } })
   }
 
+  const [showButtonUp, setShowButtonUp] = useState(false)
+
+  useState(() => {
+    function showUp() {
+      const positionScroll = window.scrollY
+
+      
+
+      if (positionScroll > 100) {
+        setShowButtonUp(true)
+      }
+    }
+
+    showUp()
+
+    window.addEventListener('scroll', showUp)
+
+    window.removeEventListener('scroll', showUp)
+  }, [])
+
   const [showUpButton, setShowUpButton] = useState('')
 
     useEffect(() => {
       function showButton() {
-        if (window.scrollY > 100) {
-          setShowUpButton('up')
-        } else {
-          setShowUpButton('down')
-        }
+        setShowUpButton(window.scrollY <= 747)
       }
+
+      showButton()
 
       window.addEventListener('scroll', showButton)
 
@@ -260,7 +272,7 @@ export default function ArticlePage() {
                   <p>Konten tidak tersedia</p>
                 )}
               </div>
-              <div id="upTop" onClick={scrollToTop}>scroll to up</div>
+              <button className={`buttonUp ${showUpButton ? 'down' : 'up'}`} onClick={scrollToTop}><DownSvg/></button>
             </main>
           </div>
         </div>
