@@ -75,6 +75,10 @@
   width: 30px;
 }
 
+.try-again-blog svg path {
+  color: var(--primary);
+}
+
 .error-state p {
   color: var(--button);
   font-family: var(--secondfont);

@@ -392,7 +392,7 @@ export default function Blog() {
                            fetchBlogs(filter, 0, false)
                         }}
                      >
-                        {isMobile ? <RefreshIc /> : <p>Refresh</p>}
+                        {isMobile ? <i class="fi fi-rs-refresh"></i> : <p>Refresh</p>}
                      </button>
                   </div>
                </div>
