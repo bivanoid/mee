@@ -7,11 +7,15 @@ export default function ButtonUp() {
         window.scrollTo({ top: 0, behavior: "smooth" })
         }
 
-      const [showUpButton, setShowUpButton] = useState('')
+      const [showUpButton, setShowUpButton] = useState(false)
     
         useEffect(() => {
           function showButton() {
-            setShowUpButton(window.scrollY <= 747)
+            if (window.scrollY >= 1000) {
+              setShowUpButton(true)
+            } else {
+              setShowUpButton(false)
+            }
           }
     
           showButton()
@@ -22,6 +26,6 @@ export default function ButtonUp() {
         }, [])
 
     return (
-        <button className={`buttonUp ${showUpButton ? 'down' : 'up'}`} onClick={scrollToTop}><DownSvg/></button>
+        <button className={`buttonUp ${showUpButton ? 'up' : 'down'}`} onClick={scrollToTop}><DownSvg/></button>
     )
 }

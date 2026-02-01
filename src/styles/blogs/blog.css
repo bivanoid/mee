@@ -800,17 +800,21 @@ main {
     font-size: 1rem;
     display: grid;
     place-items: center;
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 100%;
+    max-width: 100px;
     border: none;
     border-radius: 5rem;
-    background: var(--button);
+    background: var(--blue);
     border: var(--border-width) solid var(--border);
     color: var(--button);
     margin-top: 1rem;
+    /* align-self: flex-end; */
     position: sticky;
     bottom: 1rem;
-    align-self: flex-end;
+    opacity: 0;
+    scale: 0.5;
+    transition: 0.25s;
 }
 
 .buttonUp svg {
@@ -824,10 +828,12 @@ main {
 
 .buttonUp.up {
   opacity: 1;
+  scale: 1;
 }
 
 .buttonUp.down {
   opacity: 0;
+  scale: 0.5;
   pointer-events: none;
 }
 
@@ -1571,12 +1577,16 @@ hr {
 .rendered-html code {
   font-family: var(--secondfont);
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.75rem !important;
   color: var(--blue);
   background-color: var(--border);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   border: 1px solid var(--border);
+}
+
+.rendered-html code span {
+  font-size: 0.75rem !important;
 }
 
 .rendered-html pre {
@@ -1592,7 +1602,7 @@ hr {
   padding: 0;
   border: none;
   border-radius: 0;
-  font-size: 0.85rem;
+  font-size: 0.75rem !important;
   line-height: 1.6;
 }
 
@@ -1624,6 +1634,7 @@ hr {
 .rendered-html .list-item {
   padding-left: 1rem;
   margin-bottom: 0.8rem;
+  
 }
 
 p.list-item[list-type="bullet"],
@@ -1965,18 +1976,41 @@ pre[class*="language-"] code {
   margin: 1.5rem 0;
 }
 
+.toolbar-item{
+  position: absolute;
+  top: 0%;
+  transform: translateY(-50%);
+  width: fit-content;
+  background-color: red;
+  padding: 1rem;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  transform: translateY(-50%);
+    background: var(--border);
+    color: var(--button);
+    font-weight: 600;
+    font-family: var(--secondfont);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 1;
+}
+
 /* Copy Code Button - positioned relative to wrapper, not pre */
 .copy-code-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
   padding: 0.5rem 0.75rem;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-  color: #fff;
+  color: var(--primary);
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1990,9 +2024,9 @@ pre[class*="language-"] code {
 }
 
 .copy-code-btn.copied {
-  background: rgba(34, 197, 94, 0.2);
-  border-color: rgba(34, 197, 94, 0.4);
-  color: #22c55e;
+  background: var(--blue);
+  border-color: var(--blue);
+  color: red;
 }
 
 .copy-code-btn i {
@@ -2023,3 +2057,4 @@ pre[class*="language-"] code {
 span {
   z-index: 0 !important;
 }
+

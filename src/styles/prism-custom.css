@@ -1,3 +1,5 @@
+@import url(../App.css);
+
 :root {
   --code-bg: var(--border);
   --code-inline-bg: #dbdbce;
@@ -30,7 +32,7 @@ pre[class*=language-] {
   background: var(--border) !important;
   text-shadow: 0 1px rgba(0, 0, 0, .3) !important;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -47,7 +49,7 @@ pre[class*=language-] {
 }
 
 pre[class*=language-] {
-  padding: 1em;
+  padding: 1rem;
   margin: .5em 0;
   overflow: auto;
   border-radius: .3em;
@@ -60,7 +62,7 @@ pre[class*=language-] {
 }
 
 :not(pre)>code[class*=language-] {
-  padding: .1em;
+  padding: 1rem;
   border-radius: .3em;
   white-space: normal;
 }
@@ -99,7 +101,7 @@ pre[class*=language-] {
   top: 0px;
   left: 0px;
   margin: 0;
-  font-size: 1.1em !important;
+  font-size: 1rem !important;
 }
 
 .token.attr-name,
@@ -205,7 +207,7 @@ div.code-toolbar > .toolbar .toolbar-item span {
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 1rem;
   text-transform: uppercase;
   font-family: monospace;
 }
@@ -220,7 +222,7 @@ div.code-toolbar > .toolbar .toolbar-item button {
   padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 500;
   transition: background 0.2s;
 }
@@ -235,23 +237,9 @@ div.code-toolbar > .toolbar .toolbar-item button:active {
 
 /* Success state */
 div.code-toolbar > .toolbar .toolbar-item button[data-copy-state="copy-success"] {
-  background: #28a745;
+  background: red;
 }
 
 div.code-toolbar > .toolbar .toolbar-item button[data-copy-state="copy-success"]::after {
   content: " ✓";
-}
-
-.copy-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #4a9eff;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  opacity: 1;
 }

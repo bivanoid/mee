@@ -30,9 +30,6 @@ import "prismjs/components/prism-json";
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 import ButtonUp from "../components/buttonUp"
 
-import "prismjs/plugins/toolbar/prism-toolbar";
-import "prismjs/plugins/toolbar/prism-toolbar.css";
-import "prismjs/plugins/show-language/prism-show-language"; // ← Tambah ini
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 
 const handleShare = async () => {
@@ -62,60 +59,60 @@ export default function ArticlePage() {
 
   const mainRef = useRef(null)
 
-//   useEffect(() => {
-//   if (!article) return
+  useEffect(() => {
+  if (!article) return
   
-//   requestAnimationFrame(() => {
-//     requestAnimationFrame(() => {
-//       Prism.highlightAll()
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      Prism.highlightAll()
       
-//       // Tambahkan tombol copy manual ke dalam toolbar Prism
-//       document.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
-//         // Cari atau buat toolbar
-//         let toolbar = pre.querySelector('.toolbar')
+      // Tambahkan tombol copy manual ke dalam toolbar Prism
+      document.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
+        // Cari atau buat toolbar
+        let toolbar = pre.querySelector('.toolbar')
         
-//         // Jika toolbar belum ada (Prism belum buat), buat manual
-//         if (!toolbar) {
-//           const toolbarWrapper = document.createElement('div')
-//           toolbarWrapper.className = 'code-toolbar'
+        // Jika toolbar belum ada (Prism belum buat), buat manual
+        if (!toolbar) {
+          const toolbarWrapper = document.createElement('div')
+          toolbarWrapper.className = 'code-toolbar'
           
-//           // Wrap pre dengan code-toolbar
-//           pre.parentNode.insertBefore(toolbarWrapper, pre)
-//           toolbarWrapper.appendChild(pre)
+          // Wrap pre dengan code-toolbar
+          pre.parentNode.insertBefore(toolbarWrapper, pre)
+          toolbarWrapper.appendChild(pre)
           
-//           toolbar = document.createElement('div')
-//           toolbar.className = 'toolbar'
-//           toolbarWrapper.appendChild(toolbar)
-//         }
+          toolbar = document.createElement('div')
+          toolbar.className = 'toolbar'
+          toolbarWrapper.appendChild(toolbar)
+        }
         
-//         // Skip kalau sudah ada copy button
-//         if (toolbar.querySelector('.copy-btn')) return
+        // Skip kalau sudah ada copy button
+        if (toolbar.querySelector('.copy-btn')) return
         
-//         // Buat toolbar-item (struktur Prism standard)
-//         const toolbarItem = document.createElement('div')
-//         toolbarItem.className = 'toolbar-item'
+        // Buat toolbar-item (struktur Prism standard)
+        const toolbarItem = document.createElement('div')
+        toolbarItem.className = 'toolbar-item'
         
-//         const button = document.createElement('button')
-//         button.className = 'copy-btn'
-//         button.textContent = 'Copy'
-//         button.onclick = () => {
-//           const code = pre.querySelector('code').textContent
-//           navigator.clipboard.writeText(code).then(() => {
-//             button.textContent = 'Copied!'
-//             button.style.background = '#28a745'
-//             setTimeout(() => {
-//               button.textContent = 'Copy'
-//               button.style.background = ''
-//             }, 2000)
-//           })
-//         }
+        const button = document.createElement('button')
+        button.className = 'copy-btn'
+        button.textContent = 'Copy'
+        button.onclick = () => {
+          const code = pre.querySelector('code').textContent
+          navigator.clipboard.writeText(code).then(() => {
+            button.textContent = 'Copied!'
+            // button.style.background = 'var(--blue)'
+            setTimeout(() => {
+              button.textContent = 'Copy'
+              button.style.background = ''
+            }, 2000)
+          })
+        }
         
-//         toolbarItem.appendChild(button)
-//         pre.appendChild(toolbarItem)
-//       })
-//     })
-//   })
-// }, [article])
+        // toolbarItem.appendChild(button)
+        pre.appendChild(button)
+      })
+    })
+  })
+}, [article])
 
   // Scroll ke atas saat load
   useEffect(() => {
