@@ -1059,11 +1059,13 @@ main {
     display: grid;
     grid-template-columns: none;
     grid-template-rows: auto 1fr auto;
+    gap: 0;
     width: calc(100%);
   }
 
-  .article p {
-    grid-row: 3;
+  .article #date-post {
+    grid-row: 2;
+    margin-top: 1rem;
   }
 
   .article .con-image-article {
@@ -1071,7 +1073,8 @@ main {
   }
 
   .article .column-article {
-    grid-row: 2;
+    grid-row: 3;
+    margin-top: 0.5rem;
   }
 
   .article .con-image-article {
@@ -1112,7 +1115,7 @@ main {
   }
 
   .text-article {
-    padding: 15px 0% 0px 0px;
+    padding: 0px 0% 0px 0px;
     width: 100%;
   }
 
@@ -1223,6 +1226,7 @@ main {
   font-family: var(--primaryfont);
   font-weight: 400;
   font-size: 1rem;
+  margin-top: 0.25rem;
 }
 
 #date-post {
@@ -1252,7 +1256,6 @@ main {
   }
 
   #date-post {
-    margin-top: 0.5rem;
     font-size: 1rem;
   }
 }
@@ -1992,17 +1995,17 @@ pre[class*="language-"] code {
 .copy-btn {
   position: absolute;
   top: 0;
-  right: 1rem;
-  transform: translateY(-50%);
+  right: 0rem;
+  transform: translateY(-15%);
     background: var(--border);
     color: var(--button);
     font-weight: 600;
     font-family: var(--secondfont);
     border: none;
-    padding: 6px 12px;
+    padding: 3px 12px;
     border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 0.75rem;
     opacity: 1;
 }
 

@@ -5,14 +5,14 @@ export default function ThemeMode() {
     const [theme, setTheme] = useState(() => {
         const root = document.documentElement;
         const currentPrimary = getComputedStyle(root).getPropertyValue('--primary').trim();
-        return currentPrimary === '#0a0a0a' || currentPrimary === 'rgb(10, 10, 10)';
+        return currentPrimary === '#0a0a0a';
     });
     const root = document.documentElement;
 
 
     function toggleTheme() {
         if (!theme) {
-            // Dark mode
+                        // Dark mode
             root.style.setProperty('--primary', '#0a0a0a');
             // root.style.setProperty('--primary', '#161616');
             root.style.setProperty('--primary2', '#131313');
@@ -47,11 +47,10 @@ export default function ThemeMode() {
             root.style.setProperty('--token-operator', '#f8f8f2');
             root.style.setProperty('--token-variable', '#f8f8f2');
             root.style.setProperty('--toolbar-bg', 'rgba(224, 224, 224, 0.2)');
-            root.style.setProperty('--toolbar-text', '#bbb');
-
-            
+            root.style.setProperty('--toolbar-text', '#bbb'); 
         } else {
-            // Light mode
+
+
             root.style.setProperty('--primary', '#dbdbce');
             root.style.setProperty('--primary2', '#dadaddff');
             root.style.setProperty('--primary25', '#d8d8ce');

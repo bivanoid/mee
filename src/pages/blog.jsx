@@ -320,8 +320,7 @@ export default function Blog() {
                               onClick={() => openArticle(blog)}
                               style={{ cursor: "pointer" }}
                               key={blog.id}
-                           >
-                              <p id="date-post">
+                           >                      <p id="date-post">
                                  {blog.created_at ? formatDate(blog.created_at) : "No date"}
                               </p>
                               <div className="con-image-article">

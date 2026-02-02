@@ -66,17 +66,13 @@ export default function ArticlePage() {
     requestAnimationFrame(() => {
       Prism.highlightAll()
       
-      // Tambahkan tombol copy manual ke dalam toolbar Prism
       document.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
-        // Cari atau buat toolbar
         let toolbar = pre.querySelector('.toolbar')
         
-        // Jika toolbar belum ada (Prism belum buat), buat manual
         if (!toolbar) {
           const toolbarWrapper = document.createElement('div')
           toolbarWrapper.className = 'code-toolbar'
           
-          // Wrap pre dengan code-toolbar
           pre.parentNode.insertBefore(toolbarWrapper, pre)
           toolbarWrapper.appendChild(pre)
           
@@ -85,10 +81,8 @@ export default function ArticlePage() {
           toolbarWrapper.appendChild(toolbar)
         }
         
-        // Skip kalau sudah ada copy button
         if (toolbar.querySelector('.copy-btn')) return
         
-        // Buat toolbar-item (struktur Prism standard)
         const toolbarItem = document.createElement('div')
         toolbarItem.className = 'toolbar-item'
         
@@ -97,17 +91,56 @@ export default function ArticlePage() {
         button.textContent = 'Copy'
         button.onclick = () => {
           const code = pre.querySelector('code').textContent
-          navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Copied!'
-            // button.style.background = 'var(--blue)'
-            setTimeout(() => {
-              button.textContent = 'Copy'
-              button.style.background = ''
-            }, 2000)
-          })
+          
+          // Fungsi copy dengan fallback untuk mobile
+          const copyToClipboard = (text) => {
+            // Method 1: Modern clipboard API (untuk browser yang support)
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              return navigator.clipboard.writeText(text)
+            }
+            
+            // Method 2: Fallback untuk mobile/browser lama
+            return new Promise((resolve, reject) => {
+              const textArea = document.createElement('textarea')
+              textArea.value = text
+              textArea.style.position = 'fixed'
+              textArea.style.left = '-999999px'
+              textArea.style.top = '-999999px'
+              document.body.appendChild(textArea)
+              textArea.focus()
+              textArea.select()
+              
+              try {
+                const successful = document.execCommand('copy')
+                document.body.removeChild(textArea)
+                if (successful) {
+                  resolve()
+                } else {
+                  reject(new Error('Copy failed'))
+                }
+              } catch (err) {
+                document.body.removeChild(textArea)
+                reject(err)
+              }
+            })
+          }
+          
+          copyToClipboard(code)
+            .then(() => {
+              button.textContent = 'Copied!'
+              setTimeout(() => {
+                button.textContent = 'Copy'
+              }, 2000)
+            })
+            .catch((err) => {
+              console.error('Failed to copy:', err)
+              button.textContent = 'Failed'
+              setTimeout(() => {
+                button.textContent = 'Copy'
+              }, 2000)
+            })
         }
         
-        // toolbarItem.appendChild(button)
         pre.appendChild(button)
       })
     })
@@ -304,10 +337,7 @@ export default function ArticlePage() {
           </div>
         </div>
       </div>
-
       <Footer />
-
-
     </div>
   )
 }

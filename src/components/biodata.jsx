@@ -55,10 +55,10 @@ function Biodata() {
                                     <div className='text-bio'><i className="text-bio-icon fi fi-rs-thumbtack"></i><p>Surakarta, Centar Java</p></div>
                                 </li>
                                 <li>
-                                    <div className='text-bio'><i className="text-bio-icon fi fi-rs-at"></i><p>abivandyafirdhan<br />@gmail.com</p></div>
+                                    <a href='mailto:abivandyafirdhan@gmail.com' className='text-bio'><i className="text-bio-icon fi fi-rs-at"></i><p>abivandyafirdhan<br />@gmail.com <i class="fi fi-rs-link"></i></p></a>
                                 </li>
                                 <li>
-                                    <div className='text-bio'><i className="text-bio-icon fi fi-rs-phone-rotary"></i><p>+62 877-3977-0494</p></div>
+                                    <a href='https://wa.me/6287739770494' className='text-bio'><i className="text-bio-icon fi fi-rs-phone-rotary"></i><p>+62 877-3977-0494 <i class="fi fi-rs-link"></i></p></a>
                                 </li>
 
                             </ul>

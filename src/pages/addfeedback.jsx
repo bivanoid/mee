@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import "../styles/addfeedback/addfeedback.css";
 import { Link } from 'react-router-dom';
-import Logo from '../components/logo';
+import Footer from '../components/footer';
 
 // Supabase config
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
@@ -136,6 +136,7 @@ export default function AddFeedback() {
         </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

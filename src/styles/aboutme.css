@@ -197,8 +197,27 @@
     border-radius: 1rem;
     border: var(--border-width) solid var(--border);
     overflow: hidden;
-
     justify-content: space-between;
+}
+
+.list-bio li a {
+    color: var(--button);
+}
+
+.list-bio li a .text-bio-icon {
+    text-decoration: none;
+}
+.list-bio li a p {
+    text-decoration: underline;
+    text-decoration-color: var(--border);
+    text-decoration-thickness: var(--border-width);
+}
+
+.list-bio li a p i {
+    display: inline;
+    font-size: 0.85rem;
+    color: var(--blue);
+
 }
 
 .title-bio i {

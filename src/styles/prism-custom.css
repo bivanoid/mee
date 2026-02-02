@@ -1,6 +1,6 @@
 @import url(../App.css);
 
-:root {
+/* :root {
   --code-bg: var(--border);
   --code-inline-bg: #dbdbce;
   --code-text: #1e1e1e;
@@ -23,7 +23,33 @@
 
   --toolbar-bg: rgba(0, 0, 0, 0.1);
   --toolbar-text: #444;
+} */
+
+:root {
+  --code-bg: var(--border);
+  --code-inline-bg: #0a0a0a;
+  --code-text: #f8f8f2;
+
+  --token-comment: #8292a2;
+  --token-punctuation: #f8f8f2;
+  --token-tag: #f92672;
+  --token-property: #f92672;
+  --token-constant: #f92672;
+  --token-boolean: #ae81ff;
+  --token-number: #ae81ff;
+  --token-string: #a6e22e;
+  --token-atrule: #e6db74;
+  --token-function: #e6db74;
+  --token-keyword: #66d9ef;
+  --token-regex: #fd971f;
+  --token-important: #fd971f;
+  --token-operator: #f8f8f2;
+  --token-variable: #f8f8f2;
+
+  --toolbar-bg: rgba(224, 224, 224, 0.2);
+  --toolbar-text: #bbb;
 }
+
 
 
 code[class*=language-],
