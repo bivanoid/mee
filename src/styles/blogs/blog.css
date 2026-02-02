@@ -193,7 +193,6 @@ main {
   font-size: 2rem;
   margin: 0;
   padding-bottom: 20px;
-  /* border-bottom: 1px solid var(--border); */
 }
 
 .con-star-blog {
@@ -303,6 +302,7 @@ main {
   position: relative;
   border-radius: 1rem;
   display: grid;
+  gap: 1rem;
   grid-template-columns: 0.5fr 1fr 1fr;
   /* border: var(--border-width) solid var(--border); */
   transition: all 0.3s ease;
@@ -470,7 +470,7 @@ main {
 }
 
 .text-article {
-  padding: 0px 30% 0px 30px;
+  padding: 0px 30% 0px 0px;
   width: 100%;
 }
 
@@ -557,6 +557,7 @@ main {
   flex: 1;
   flex-shrink: 0;
   padding-top: 0;
+  border-bottom: 0;
 }
 
 .asside-main {
@@ -633,7 +634,6 @@ main {
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
 }
 
 .article-modal-author {
@@ -810,7 +810,7 @@ main {
     border: none;
     border-radius: 5rem;
     background: var(--blue);
-    border: var(--border-width) solid var(--border);
+    outline: 8px solid var(--primary);
     color: var(--button);
     margin-top: 1rem;
     /* align-self: flex-end; */
@@ -901,9 +901,6 @@ main {
   }
 }
 
-hr {
-  border: 1px solid var(--border);
-}
 
 .editor-hr {
   border: 1px solid var(--border);
@@ -927,7 +924,7 @@ hr {
   right: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   main {
     min-height: 100svh;
     width: 100%;
@@ -1162,8 +1159,8 @@ hr {
   .asside-article {
     min-width: 100%;
     max-width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
+    border: none;
+
   }
 
   .asside-main {
@@ -1234,6 +1231,11 @@ hr {
   font-weight: 600;
   text-transform: capitalize;
   font-size: 1rem;
+  background: var(--border);
+  padding: 0.5rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
 }
 
 .rendered-html {
@@ -1241,7 +1243,7 @@ hr {
   padding-top: 30px;
 }
 
-@media (max-width: 747px) {
+@media (max-width: 1024px) {
   .rendered-html {
     border-radius: 1rem;
     border-inline: none;
@@ -1250,7 +1252,6 @@ hr {
   }
 
   #date-post {
-    width: 100%;
     margin-top: 0.5rem;
     font-size: 1rem;
   }
@@ -1460,7 +1461,6 @@ hr {
 .rendered-html a {
   color: #8097ff;
   text-decoration: none;
-  border-bottom: 1px solid #8097ff;
   transition: all 0.3s ease;
   cursor: pointer;
   pointer-events: auto;

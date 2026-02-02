@@ -119,7 +119,7 @@ export default function HorizontalSlider() {
           
           breakpoints={{
             640: { slidesPerView: 1, spaceBetween: 1 },
-            768: { slidesPerView: 2, spaceBetween: 1 },
+            768: { slidesPerView: 1, spaceBetween: 1 },
             1024: { slidesPerView: 2.5, spaceBetween: 1 },
             1424: { slidesPerView: 3.5, spaceBetween: 1 },
           }}

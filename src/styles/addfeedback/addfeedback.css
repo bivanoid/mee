@@ -52,9 +52,11 @@
 .con-addfeedback {
     display: flex;
     height: 100%;
+    padding-bottom: 1rem;
     flex-direction: column;
     color: var(--button);
     padding-inline: 1rem;
+    border-radius: 1rem;
 }
 
 .con-addfeedback h2 {
@@ -74,14 +76,15 @@
 }
 
 .con-addfeedback h2 .andText {
-    opacity: 0.3;
+    color: var(--color-font-grey);
     font-size: 1.5rem;
 }
 
 .con-addfeedback form {
     display: grid;
     width: 100%;
-    grid-template-rows: auto 1fr;
+    height: calc(100% - 1rem);
+    grid-template-rows: auto auto;
     gap: 1rem;
 }
 
@@ -175,6 +178,7 @@
     font-family: var(--primaryfont);
     background-color: transparent;
     border: var(--border-width) solid var(--border);
+    border-radius: 1rem;
     color: var(--button);
     resize: none;
 }
@@ -209,12 +213,15 @@
     font-family: var(--primaryfont);
     font-weight: 600;
     transition: 0.5s cubic-bezier(0.000, 1, 0.900, 1);
-    color: var(--blue);
-    padding: 1rem;
-    align-self: center;
+    color: var(--button);
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+}
+
+.button-addfeedback:hover {
+    color: var(--blue);
 }
 @media (max-width:767px) {
     .con-addfeedback form .con-input {
@@ -442,6 +449,7 @@ button:disabled {
 
 .con-form {
     padding: 30px;
-    height: 100%;
+    height: calc(100% - 4rem);
     border: var(--border-width) solid var(--border);
+    border-radius: 1rem;
 }

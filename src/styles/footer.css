@@ -47,6 +47,10 @@
     aspect-ratio: 1/1;
 }
 
+.logo-footer svg path {
+    fill: var(--button);
+}
+
 /* .logo-footer2 {
     display: none;
 } */
@@ -81,10 +85,6 @@
     place-items: center;
     outline: none;
     border-radius: 0.5rem;
-}
-
-.social-media-footer i {
-    transform: translateY(10%);
 }
 
 
@@ -240,6 +240,10 @@
 
     .footer1 {
         display: none;
+    }
+
+    .top-footer2 {
+        flex-direction: column;
     }
 
     .footer3 {

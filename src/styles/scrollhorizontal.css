@@ -295,7 +295,7 @@
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .swipe {
     width: 100%;
     display: flex;
@@ -403,7 +403,7 @@
   transform: scale(0.95) rotate(90deg);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .title-swiper h1 {
     font-size: 3rem;
   }

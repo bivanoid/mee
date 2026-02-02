@@ -72,9 +72,6 @@ export default function AddFeedback() {
           <div className='back-to-home-from-addfeedback'>
                bivanoid.site
             </div>
-          <div className='back-to-home-from-addfeedback'>
-               /addfb
-            </div>
           <Link to="/" className="back-to-home-from-addfeedback link-back">/ (back)</Link>
         </div>
         <div className="con-form">
