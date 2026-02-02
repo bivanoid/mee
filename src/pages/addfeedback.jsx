@@ -68,8 +68,17 @@ export default function AddFeedback() {
             <p><span className='red-alert'></span>{alertPopUp}</p>
           </div>
         )}
-
-        <h2>
+        <div className="navigation-addfb">
+          <div className='back-to-home-from-addfeedback'>
+               bivanoid.site
+            </div>
+          <div className='back-to-home-from-addfeedback'>
+               /addfb
+            </div>
+          <Link to="/" className="back-to-home-from-addfeedback link-back">/ (back)</Link>
+        </div>
+        <div className="con-form">
+          <h2>
           How’s the <span className="andText">Mood Today?</span>
         </h2>
 
@@ -109,7 +118,6 @@ export default function AddFeedback() {
               
             />
             <div className='conTextArea'>
-              <div className="quote"><i className="fi fi-rs-quote-right"></i></div>
               <textarea
                 className="textarea-addfeedback"
                 placeholder="Type Out Something (Max 350 Characters)"
@@ -126,14 +134,10 @@ export default function AddFeedback() {
                 {remainingCharacters} / {maxCharacters}
               </div>
             </div>
-            <button className="button-addfeedback" type="submit">Submit</button>
-            <Link to="/" className="back-to-home-from-addfeedback"> &lt;- Back</Link>
           </div>
-
-          
+            <button className="button-addfeedback" type="submit"><i className="fi fi-rs-plus"></i>Submit</button>
         </form>
-
-        
+        </div>
       </div>
     </div>
   );

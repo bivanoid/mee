@@ -166,7 +166,7 @@ function Feedback() {
         </div>
       </FadeContent>
 
-      <Link className="link-to-addfeedback" to="/add-feedback">
+      <Link className="link-to-addfeedback" to="/addfb">
         <div className="link-to-addfeedback-title1">
           <i className="fi fi-rs-plus"></i> Add Feedback
         </div>

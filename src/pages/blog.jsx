@@ -287,6 +287,9 @@ export default function Blog() {
             <div className='path-name'>
                <p>bivanoid.site</p>
             </div>
+            <div className='path-name'>
+               <p>/blog</p>
+            </div>
             <div className="con-path-name">
                <Link to={"/"} className="path-name path-name-back">
                   / (back)

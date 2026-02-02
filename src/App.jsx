@@ -58,7 +58,7 @@ function AppRoutes() {
           <Home />
         </FadeContent>
       } />
-      <Route path="/add-feedback" element={
+      <Route path="/addfb" element={
         <FadeContent blur={false} duration={500} easing="ease-out" initialOpacity={0}>
           <AddFeedback />
         </FadeContent>

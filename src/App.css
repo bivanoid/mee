@@ -40,6 +40,8 @@
 }
 
 
+
+
 /* :root {
   --primary: #0a0a0a;
   --primary2: #131313;
@@ -74,6 +76,10 @@
 html.dark {
   color-scheme: dark;
 } */
+html {
+  background-color: var(--primary);
+}
+
 * {
   /* cursor: none; */
   padding: 0;
@@ -87,7 +93,7 @@ html.dark {
 @media (max-width:900px) {
   @media (min-width:747px) {
     * {
-        font-size: 20px;
+        font-size: 30px;
       }
   }
 }
@@ -133,11 +139,11 @@ svg {
   place-items: center;
 }
 
-/* .fi {
+.fi {
   height: fit-content;
-  display: inline-block;
+  display: grid;
   place-items: center;
-} */
+}
 
 svg path {
   fill: transparent;

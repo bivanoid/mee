@@ -672,7 +672,7 @@
     }
 
     .sticky-header {
-        justify-content: space-between;
+        flex-direction: row;
     }
 
     .con-image-bio {

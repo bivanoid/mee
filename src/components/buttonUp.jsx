@@ -8,7 +8,7 @@ export default function ButtonUp() {
         }
 
       const [showUpButton, setShowUpButton] = useState(false)
-    
+  
         useEffect(() => {
           function showButton() {
             if (window.scrollY >= 1000) {
