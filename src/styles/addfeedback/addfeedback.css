@@ -222,6 +222,10 @@
     gap: 1rem;
 }
 
+.button-addfeedback .fi {
+    opacity: 0.5;
+}
+
 .button-addfeedback:hover {
     color: var(--blue);
 }

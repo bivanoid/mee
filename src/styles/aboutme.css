@@ -414,7 +414,6 @@
 .text-abouts .title-about {
     font-size: 1rem;
     font-weight: 1000;
-    margin-top: 15px;
     opacity: 1;
     text-transform: uppercase;
     font-family: var(--secondfont);
@@ -671,6 +670,7 @@
         height: 100%;
         border-right: 0px solid var(--border);
         padding-inline: 1rem;
+        padding-top: 0;
     }
 
     .sticky {
@@ -686,7 +686,6 @@
         color: var(--button);
         display: inline-block;
         font-weight: 1000;
-        margin-block: 0.5rem;
         line-height: 1;
     }
 
@@ -725,9 +724,9 @@
         }
     }
 
-    .text-abouts .title-about2 {
+    /* .text-abouts .title-about2 {
         margin-top: 30px;
-    }
+    } */
 
     .text-abouts .content-about {
         font-size: 1rem;

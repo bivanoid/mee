@@ -33,7 +33,7 @@
   /* text-box-trim: trim-both;
     text-box-edge: cap alphabetic; */
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .swiper-wrapper {
@@ -128,7 +128,7 @@
   border: var(--border-width) solid var(--border);
   scale: 1;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border-radius: 0rem;
+  border-radius: 2rem;
 }
 
 .gambar a {
@@ -406,6 +406,7 @@
 @media (max-width: 1024px) {
   .title-swiper h1 {
     font-size: 3rem;
+    line-height: 1;
   }
 
   .title-swiper span {

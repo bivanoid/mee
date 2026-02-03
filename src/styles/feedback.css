@@ -305,6 +305,10 @@
     gap: 1rem;
 }
 
+.link-to-addfeedback-title1 .fi {
+    opacity: 0.5;
+}
+
 
 .link-to-addfeedback:hover .link-to-addfeedback-title1 {
     color: var(--blue);

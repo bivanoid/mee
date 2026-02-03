@@ -60,94 +60,93 @@ export default function ArticlePage() {
   const mainRef = useRef(null)
 
   useEffect(() => {
-  if (!article) return
-  
-  requestAnimationFrame(() => {
+    if (!article) return
+
     requestAnimationFrame(() => {
-      Prism.highlightAll()
-      
-      document.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
-        let toolbar = pre.querySelector('.toolbar')
-        
-        if (!toolbar) {
-          const toolbarWrapper = document.createElement('div')
-          toolbarWrapper.className = 'code-toolbar'
-          
-          pre.parentNode.insertBefore(toolbarWrapper, pre)
-          toolbarWrapper.appendChild(pre)
-          
-          toolbar = document.createElement('div')
-          toolbar.className = 'toolbar'
-          toolbarWrapper.appendChild(toolbar)
-        }
-        
-        if (toolbar.querySelector('.copy-btn')) return
-        
-        const toolbarItem = document.createElement('div')
-        toolbarItem.className = 'toolbar-item'
-        
-        const button = document.createElement('button')
-        button.className = 'copy-btn'
-        button.textContent = 'Copy'
-        button.onclick = () => {
-          const code = pre.querySelector('code').textContent
-          
-          // Fungsi copy dengan fallback untuk mobile
-          const copyToClipboard = (text) => {
-            // Method 1: Modern clipboard API (untuk browser yang support)
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              return navigator.clipboard.writeText(text)
-            }
-            
-            // Method 2: Fallback untuk mobile/browser lama
-            return new Promise((resolve, reject) => {
-              const textArea = document.createElement('textarea')
-              textArea.value = text
-              textArea.style.position = 'fixed'
-              textArea.style.left = '-999999px'
-              textArea.style.top = '-999999px'
-              document.body.appendChild(textArea)
-              textArea.focus()
-              textArea.select()
-              
-              try {
-                const successful = document.execCommand('copy')
-                document.body.removeChild(textArea)
-                if (successful) {
-                  resolve()
-                } else {
-                  reject(new Error('Copy failed'))
-                }
-              } catch (err) {
-                document.body.removeChild(textArea)
-                reject(err)
-              }
-            })
+      requestAnimationFrame(() => {
+        Prism.highlightAll()
+
+        document.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
+          let toolbar = pre.querySelector('.toolbar')
+
+          if (!toolbar) {
+            const toolbarWrapper = document.createElement('div')
+            toolbarWrapper.className = 'code-toolbar'
+
+            pre.parentNode.insertBefore(toolbarWrapper, pre)
+            toolbarWrapper.appendChild(pre)
+
+            toolbar = document.createElement('div')
+            toolbar.className = 'toolbar'
+            toolbarWrapper.appendChild(toolbar)
           }
-          
-          copyToClipboard(code)
-            .then(() => {
-              button.textContent = 'Copied!'
-              setTimeout(() => {
-                button.textContent = 'Copy'
-              }, 2000)
-            })
-            .catch((err) => {
-              console.error('Failed to copy:', err)
-              button.textContent = 'Failed'
-              setTimeout(() => {
-                button.textContent = 'Copy'
-              }, 2000)
-            })
-        }
-        
-        pre.appendChild(button)
+
+          if (toolbar.querySelector('.copy-btn')) return
+
+          const toolbarItem = document.createElement('div')
+          toolbarItem.className = 'toolbar-item'
+
+          const button = document.createElement('button')
+          button.className = 'copy-btn'
+          button.textContent = 'Copy'
+          button.onclick = () => {
+            const code = pre.querySelector('code').textContent
+
+            // Fungsi copy dengan fallback untuk mobile
+            const copyToClipboard = (text) => {
+              // Method 1: Modern clipboard API (untuk browser yang support)
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                return navigator.clipboard.writeText(text)
+              }
+
+              // Method 2: Fallback untuk mobile/browser lama
+              return new Promise((resolve, reject) => {
+                const textArea = document.createElement('textarea')
+                textArea.value = text
+                textArea.style.position = 'fixed'
+                textArea.style.left = '-999999px'
+                textArea.style.top = '-999999px'
+                document.body.appendChild(textArea)
+                textArea.focus()
+                textArea.select()
+
+                try {
+                  const successful = document.execCommand('copy')
+                  document.body.removeChild(textArea)
+                  if (successful) {
+                    resolve()
+                  } else {
+                    reject(new Error('Copy failed'))
+                  }
+                } catch (err) {
+                  document.body.removeChild(textArea)
+                  reject(err)
+                }
+              })
+            }
+
+            copyToClipboard(code)
+              .then(() => {
+                button.textContent = 'Copied!'
+                setTimeout(() => {
+                  button.textContent = 'Copy'
+                }, 2000)
+              })
+              .catch((err) => {
+                console.error('Failed to copy:', err)
+                button.textContent = 'Failed'
+                setTimeout(() => {
+                  button.textContent = 'Copy'
+                }, 2000)
+              })
+          }
+
+          pre.appendChild(button)
+        })
       })
     })
-  })
-}, [article])
+  }, [article])
 
-  // Scroll ke atas saat load
   useEffect(() => {
     if (lenisRef?.current) lenisRef.current.scrollTo(0, { immediate: true })
     else window.scrollTo(0, 0)
@@ -283,7 +282,7 @@ export default function ArticlePage() {
                 <div className="navigation-article">
                   <Link className="path-name back-button" to={'/blog'}><p>/blog (back)</p></Link>
                   <p className="path-name">article</p>
-                  <p className="path-name share-button" onClick={handleShare}>share <ShareSvg/></p>
+                  <p className="path-name share-button" onClick={handleShare}>share <ShareSvg /></p>
                 </div>
                 <div className="con-title-article">
                   <h1 className="article-modal-title">{article.title_blog || "Judul tidak tersedia"}</h1>
@@ -302,7 +301,7 @@ export default function ArticlePage() {
 
             <main className="main-article">
               <p className="publish-date">
-                          {article.created_at ? formatDate(article.created_at) : "Tanggal tidak tersedia"}
+                {article.created_at ? formatDate(article.created_at) : "Tanggal tidak tersedia"}
               </p>
               {article.image_url && (
                 <div className="article-modal-image">
@@ -332,7 +331,7 @@ export default function ArticlePage() {
                   <p>Konten tidak tersedia</p>
                 )}
               </div>
-              <ButtonUp/>
+              <ButtonUp />
             </main>
           </div>
         </div>
