@@ -12,7 +12,6 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "../styles/feedback.css"
 import Alert from "../iconSvg/alertIc"
-import RevealUp from "../animation/reveal"
 
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
 const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY
@@ -69,13 +68,7 @@ function Feedback() {
   return (
     <div className="feedback" id="sc4">
       <div className='title-swiper'>
-        <RevealUp threshold={0.5} reverse={false} distance={100}>
           <h1 className="title-feedback">Their <span>Feedback</span> </h1>
-        </RevealUp>
-
-        <RevealUp direction='vertical' delay={500} distance={20}>
-          <p className="subtitle-feedback">their opinion of me. </p>
-        </RevealUp>
       </div>
 
 

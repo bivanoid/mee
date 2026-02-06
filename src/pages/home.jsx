@@ -3,6 +3,7 @@ import '../styles/home/home.css';
 import Introduction from '../components/introduction';
 import AboutMe from '../components/aboutme';
 import Footer from '../components/footer';
+import HomeContent from '../components/homeContent';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           </div>
           <div id='thecontent'>
             <Introduction />
-            <AboutMe />
+            <HomeContent />
             <Footer />
           </div>
         </div>

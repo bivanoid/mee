@@ -1,9 +1,0 @@
-.section3 {
-    width: 100%;
-  height: calc(fit-content);
-  overflow: hidden;
-  position: relative;
-  background-color: var(--primary25);
-  border-radius: 1rem;
-  border: var(--border-width) solid var(--border);
-}

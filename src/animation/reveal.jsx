@@ -1,16 +1,19 @@
 
+import { scale } from 'framer-motion';
 import AnimatedContent from '../components/AnimatedContent';
+
 export default function RevealUp(
   {
     children,
     isLargeScreen,
     distance = 50,
-    direction = "vertical",
+    direction = "horizontal",
     config = { tension: 100, friction: 30 },
     initialOpacity = 0,
     threshold = 0,
     delay = 0,
-    reverse = false
+    reverse = false,
+    scale = 1,
   }
 ) {
   return (
@@ -22,6 +25,7 @@ export default function RevealUp(
       initialOpacity={initialOpacity}
       threshold={threshold}
       delay={delay}
+      scale={scale}
     >
       {children}
     </AnimatedContent>

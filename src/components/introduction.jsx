@@ -1,6 +1,5 @@
 import '../styles/introduction.css'
 import React, { useState, useEffect, useRef } from 'react';
-import AnimatedContent from './AnimatedContent';
 import lenis from './lenisSc';
 import DownSvg from '../iconSvg/scrollToBottomic';
 import LogoMiring from '../iconSvg/logoMiring';
@@ -77,35 +76,14 @@ const formatTime = (date) => {
             <div className='text' ref={conImageRef} style={{ opacity: 1 }}>
                 <div className='hero'>
                     <div className='hero-1'>
-                        <AnimatedContent
-                            distance={10}
-                            direction="vertical"
-                            config={{ tension: 100, friction: 30 }}
-                            reverse={true}
-                            initialOpacity={0}
-                            animateOpacity
-                            delay={500}
-
-                        >
                             <div className='header-int'>
                                 <h1 className='currndate'>{formatTime(currentTime)}</h1>
                             </div>
-                        </AnimatedContent>
                     </div>
                     <div className='image-logo'>
                         <LogoMiring />
                     </div>
                     <div className='hero-2'>
-                        <AnimatedContent
-                            distance={10}
-                            direction="vertical"
-                            config={{ tension: 100, friction: 30 }}
-                            reverse={false}
-                            initialOpacity={0}
-                            animateOpacity
-                            delay={500}
-
-                        >
                             <h1>
                                 Welcome to my <span>portfolio</span> <br />
                                 a place where my <span>current work</span> <br />
@@ -113,7 +91,6 @@ const formatTime = (date) => {
                                 take shape.
                             </h1>
                             <button onClick={scrollToSection} ><DownSvg/></button>
-                        </AnimatedContent>
 
                     </div>
                 </div>

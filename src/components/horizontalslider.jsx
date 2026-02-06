@@ -11,10 +11,7 @@ import bicture from '../assets/bicturemckp.webp';
 import ppkpt from '../assets/ppkpt (1).webp';
 import Bynaa from "../assets/bynnashop.webp";
 import LoomnYarn from "../assets/loomnyarn.webp";
-import Logo from './logo';
-import FadeContent from './FadeContent';
 import ShareSvg from '../iconSvg/shareic';
-import RevealUp from '../animation/reveal';
 
 export default function HorizontalSlider() {
   const gambarRefs = useRef([]);
@@ -78,13 +75,8 @@ export default function HorizontalSlider() {
       });
     };
 
-    // Jalankan pertama kali
     setEqualHeights();
-
-    // Update kalau window diresize
     window.addEventListener('resize', setEqualHeights);
-
-    // Cleanup saat unmount
     return () => {
       window.removeEventListener('resize', setEqualHeights);
     };
@@ -94,15 +86,9 @@ export default function HorizontalSlider() {
     <div className='con-swiper' id='sc3'>
 
       <div className='title-swiper'>
-        <RevealUp threshold={0.5} reverse={false} distance={100}>
-          <h1>Highlight <span>Projects</span></h1>
-        </RevealUp>
-        <RevealUp direction='vertical' delay={500} distance={20}>
-          <p>individual or collective projects.</p>
-        </RevealUp>
+          <h1> Highlight <span>Projects</span></h1>
       </div>
 
-      <FadeContent blur={false} delay={1000} duration={1500} easing="ease-out" initialOpacity={0}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={4}
@@ -120,12 +106,13 @@ export default function HorizontalSlider() {
           breakpoints={{
             640: { slidesPerView: 1, spaceBetween: 0 },
             768: { slidesPerView: 1, spaceBetween: 0 },
-            1024: { slidesPerView: 2.5, spaceBetween: 0 },
+            1024: { slidesPerView: 3, spaceBetween: 0 },
             1424: { slidesPerView: 3.5, spaceBetween: 0 },
           }}
           className="mySwiper"
         >
           {projects.map((proj, index) => (
+            
             <SwiperSlide key={index}>
               <div className='gambar' ref={(el) => (gambarRefs.current[index] = el)}>
                 <img src={proj.img} alt={proj.alt} loading="lazy"  />
@@ -143,13 +130,15 @@ export default function HorizontalSlider() {
                 ))}
               </div>
             </SwiperSlide>
+            
           ))}
           <SwiperSlide className='see-more-project'>
-            <div className='more-btn'><Logo /></div>
-            <p>That's all for now</p>
+            <a href="https://github.com/bivanoid">
+              <div className='more-btn'><i class="fi fi-brands-github"></i></div>
+              <p>See more</p>
+            </a>
           </SwiperSlide>
         </Swiper>
-      </FadeContent>
 
       <div className='con-swiper-button-hz'>
         <div className='prev prev-hz'>Prev</div>

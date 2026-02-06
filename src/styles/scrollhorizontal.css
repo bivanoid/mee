@@ -13,7 +13,7 @@
 
 .title-swiper {
   height: fit-content;
-  padding-block: 30px;
+  padding-block: 30px 1rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -22,10 +22,12 @@
   height: fit-content;
 }
 
+
+
 .title-swiper h1 {
   color: var(--button);
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: var(--button);
   font-family: var(--secondfont);
   text-transform: uppercase;
@@ -33,7 +35,6 @@
   /* text-box-trim: trim-both;
     text-box-edge: cap alphabetic; */
   margin: 0;
-  margin-bottom: 0.5rem;
 }
 
 .swiper-wrapper {
@@ -43,7 +44,7 @@
 
 .title-swiper span {
   opacity: 0.3;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .title-swiper p {
@@ -75,16 +76,44 @@
   color: var(--button);
 }
 
+.see-more-project a {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.see-more-project p {
+  font-family: var(--secondfont);
+  text-transform: uppercase;
+  color: var(--button);
+  font-weight: 800;
+  margin: 1rem;
+  font-size: 1rem;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .more-btn {
   width: 5rem;
   aspect-ratio: 1 / 1;
-  background-color: transparent;
+  background-color: var(--border);
   border: var(--border-width) solid var(--border);
   display: grid;
   place-items: center;
   border-radius: 50%;
+  color: var(--button);
+  font-size: 3rem;
 }
 
+@media (max-width:1024px) {
+  .more-btn  {
+    font-size: 4rem;
+  }
+}
+/* 
 .more-btn svg {
   width: 50%;
 }
@@ -95,16 +124,9 @@
   stroke-width: 2px;
   opacity: 0.6;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+} */
 
-.see-more-project p {
-  font-family: var(--secondfont);
-  text-transform: uppercase;
-  font-weight: 800;
-  margin: 1rem;
-  font-size: 1rem;
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+
 
 .gambar {
   width: calc(100%);
@@ -118,17 +140,17 @@
   position: relative;
   display: grid;
   place-items: center;
-  padding: 30px 30px 15px 30px;
+  padding: 1rem 30px 15px 30px;
 }
 
 .gambar img {
   width: calc(100%);
   aspect-ratio: 1/1;
   object-fit: cover;
-  border: var(--border-width) solid var(--border);
+  border: calc(var(--border-width) * 2) solid var(--border);
   scale: 1;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .gambar a {
@@ -264,6 +286,7 @@
   .mySwiper .gambar:hover img {
     filter: none;
     opacity: 1;
+    border-color: var(--blue);
   }
 }
 
@@ -405,13 +428,13 @@
 
 @media (max-width: 1024px) {
   .title-swiper h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
   }
 
   .title-swiper span {
     opacity: 0.3;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .con-all-project {
