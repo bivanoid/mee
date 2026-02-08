@@ -19,7 +19,7 @@ export default function ConectWithMe() {
         e.preventDefault()
         
         // Membuat mailto link
-        const mailtoLink = `mailto:abivandyafirdhan@gmail.com.com?subject=Message from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}`
+        const mailtoLink = `mailto:abivandyafirdhan@gmail.com?subject=Message from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}`
         
         // Membuka email client
         window.location.href = mailtoLink
