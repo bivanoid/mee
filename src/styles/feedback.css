@@ -182,7 +182,6 @@
 
 .user-feedback .usertext {
     font-size: 1rem;
-    opacity: 0.5;
     width: 100%;
     color: var(--button);
     line-height: 1.1;
@@ -309,12 +308,10 @@
     opacity: 0.5;
 }
 
-
 .link-to-addfeedback:hover .link-to-addfeedback-title1 {
     color: var(--blue);
 }
 
-/* Loading and Error Styles */
 .loading-feedback {
     color: var(--button);
     width: 100%;
@@ -349,7 +346,6 @@
 }
 
 .error-title svg path {
-    opacity: 0.1;
     animation: alertyo 1.8s linear infinite;
     fill: var(--button);
 }
@@ -385,18 +381,8 @@
 /* Desktop Hover Effects */
 @media (min-width: 768px) {
 
-
-
     .user-feedback:hover .feedback-quote {
         color: var(--button);
-    }
-
-    .user-feedback:hover .username {
-        opacity: 0.7;
-    }
-
-    .user-feedback:hover .usertext {
-        opacity: 1;
     }
 }
 
@@ -426,11 +412,10 @@
     }
 
     .con-userfeedback .fromuser {
-        color: var(--button);
+        color: var(--color-grey-font);
         width: 18px;
         margin-right: 10px;
         text-transform: lowercase;
-        opacity: 0.6;
     }
 
     .con-userfeedback .usertext {

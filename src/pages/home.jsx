@@ -4,6 +4,7 @@ import Introduction from '../components/introduction';
 import AboutMe from '../components/aboutme';
 import Footer from '../components/footer';
 import HomeContent from '../components/homeContent';
+import ConectWithMe from '../components/connect_with_me';
 
 export default function Home() {
   return (

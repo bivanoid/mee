@@ -86,7 +86,7 @@ export default function HorizontalSlider() {
     <div className='con-swiper' id='sc3'>
 
       <div className='title-swiper'>
-          <h1> Highlight <span>Projects</span></h1>
+          <h1>Highlight <span>Projects.</span></h1>
       </div>
 
         <Swiper

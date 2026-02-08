@@ -1,6 +1,7 @@
 import '../styles/footer.css';
 import Logo from './logo';
 import lenis from './lenisSc';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
 
@@ -22,9 +23,6 @@ export default function Footer() {
                             <div className='social-media-footer'>
                                 <a href='https://www.instagram.com/bivanoid/' className='ig'><i className="fi fi-brands-instagram"></i></a>
                                 <a href='' className='lnkdn'><i className="fi fi-brands-linkedin"></i></a>
-
-                                <a href='https://x.com/frdnavn?t=_OWYH1ArXL6VGadD3H-L_w&s=08' className='twt'><i className="fi fi-brands-twitter-alt-circle"></i></a>
-                                <a href='https://wa.me/087739770494' className='wa'><i className="fi fi-brands-whatsapp"></i></a>
                                 <a href='https://t.me/bieblupee' className='tele'><i className="fi fi-brands-telegram"></i></a>
                                 <a href='https://github.com/bivanoid' className='gth'><i className="fi fi-brands-github"></i></a>
                             </div>
@@ -38,9 +36,9 @@ export default function Footer() {
                         <div className='get-in-touch'>
                             <h1>Get In Touch</h1>
                             <ul>
-                                <li><a href='mailto:abivandyafirdhan@gmail.com'>abivandyafirdhan@gmail.com</a></li>
-                                <li><a href='https://wa.me/087739770494'>Whatsapp</a></li>
-                                <li><a href='https://t.me/bieblupee'>Telegram</a></li>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/blog">Blog</Link></li>
+                                <li><a href='https://t.me/bieblupee'>Repository</a></li>
 
                             </ul>
                         </div>

@@ -13,7 +13,7 @@
 
     .wrapper-componen-vertical {
         top: 0;
-        width: calc(75vw);
+        width: calc(70vw);
         height: calc(fit-content);
         position: relative;
         padding-bottom: 0;

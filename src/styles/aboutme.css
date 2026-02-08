@@ -469,21 +469,19 @@
     place-items: center;
     margin-right: 1rem;
     position: relative;
-    border: 2px solid var(--blue);
+    border: 2px solid rgb(from var(--blue) r g b / 0.25);
     transition: 0.25s var(--cubic-toeng);
-
-    animation: carrier 3s linear infinite;
 }
 
-@keyframes carrier {
+/* @keyframes carrier {
     0% {
         border-color: var(--border);
     } 50% {
-        border-color: var(--blue);
+        border-color: rgb(from var(--blue) r g b / 0.5);
     } 100% {
         border-color: var(--border);
     }
-}
+} */
 
 .content-carrier span::before {
     content: '';

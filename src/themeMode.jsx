@@ -19,7 +19,7 @@ export default function ThemeMode() {
             root.style.setProperty('--primary25', '#0d0d0d');
             root.style.setProperty('--primary3', '#232222');
             root.style.setProperty('--blue', '#73bcec');
-            root.style.setProperty('--grey', '#3b3b3b');
+            root.style.setProperty('--grey', '#1d1d1d');
             root.style.setProperty('--button', '#f8f8f8');
             root.style.setProperty('--border', '#121212');
             root.style.setProperty('--red-cl', '#f77171');
@@ -53,10 +53,10 @@ export default function ThemeMode() {
 
             root.style.setProperty('--primary', '#dbdbce');
             root.style.setProperty('--primary2', '#dadaddff');
-            root.style.setProperty('--primary25', '#d8d8ce');
+            root.style.setProperty('--primary25', '#d7d7c4');
             root.style.setProperty('--primary3', '#fafaff');
             root.style.setProperty('--blue', '#1a2e89');
-            root.style.setProperty('--grey', '#252525');
+            root.style.setProperty('--grey', '#c9c9c9');
             root.style.setProperty('--button', '#1c1c1c');
             root.style.setProperty('--border', '#d4d4c7');
             root.style.setProperty('--red-cl', '#aa1e1e');

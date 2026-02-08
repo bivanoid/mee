@@ -68,7 +68,7 @@ function Feedback() {
   return (
     <div className="feedback" id="sc4">
       <div className='title-swiper'>
-          <h1 className="title-feedback">Their <span>Feedback</span> </h1>
+          <h1 className="title-feedback">Their <span>Feedback.</span></h1>
       </div>
 
 
@@ -82,7 +82,7 @@ function Feedback() {
       )}
 
 
-      <FadeContent blur={false} duration={1500} delay={1000} easing="ease-out" initialOpacity={0}>
+      
         <div className="swiper-container">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -154,16 +154,13 @@ function Feedback() {
             {/* <div className="swiper-pagination-custom"></div> */}
             <div className='next next-fb'>Next</div>
           </div>
-
-
-        </div>
-      </FadeContent>
-
-      <Link className="link-to-addfeedback" to="/addfb">
+                  <Link className="link-to-addfeedback" to="/add-feedback">
         <div className="link-to-addfeedback-title1">
           <i className="fi fi-rs-plus"></i> Add Feedback
         </div>
       </Link>
+
+        </div>
     </div>
   )
 }

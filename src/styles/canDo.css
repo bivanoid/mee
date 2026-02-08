@@ -36,7 +36,7 @@
   border: var(--border-width) solid var(--border);
   background-color: var(--primary25);
   gap: 1rem;
-  transition: 0.25s;
+  transition: 0.25s var(--cubic-toeng);
 }
 
 .box-i-can-do:hover {

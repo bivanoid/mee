@@ -6,8 +6,8 @@ export default function RevealUp(
   {
     children,
     isLargeScreen,
-    distance = 50,
-    direction = "horizontal",
+    distance = 100,
+    direction = "vertical",
     config = { tension: 100, friction: 30 },
     initialOpacity = 0,
     threshold = 0,

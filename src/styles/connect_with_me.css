@@ -1,0 +1,148 @@
+@import url(../App.css);
+
+.section-4 {
+    width: 100%;
+    height: calc(fit-content);
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: var(--border-width) solid var(--border);
+}
+
+.section-4-content {
+    padding: 1rem 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem;
+}
+
+.section-4-content h2 {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: var(--border);
+    border-radius: 0.25rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.section-4-content h2 span {
+    color: var(--color-font-grey);
+}
+
+.con-indonesia {
+    
+    border-radius: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    color: var(--button);
+}
+
+.con-indonesia svg path {
+    fill: var(--button);
+    stroke: var(--border);
+    stroke-width: 0.1rem;
+    fill-opacity: 1;
+}
+
+#jt {
+  fill: var(--blue);
+  stroke: var(--border);
+}
+
+.ID-JT {
+    fill: var(--blue);
+}
+
+.con-contactme {
+    list-style: none;
+    padding: 1rem;
+    border: var(--border-width) solid var( --border);
+    border-radius: 1rem;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 1005;
+    gap: 1rem;
+}
+
+.con-contactme h3 {
+    color: var(--button);
+    font-family: var(--secondfont);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.con-contactme .form-group {
+    width: 100%;
+    height: auto;
+}
+
+.con-contactme .form-group input {
+    border: var(--border-width) solid var(--border);
+    background-color: var(--primary25);
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-family: var(--primaryfont);
+    border-radius: 1rem;
+    outline: none;
+    transition: 0.25s var(--cubic-slow);
+    color: var(--button);
+}
+
+.con-contactme .form-group textarea {
+    border: var(--border-width) solid var(--border);
+    background-color: var(--primary25);
+    resize: none;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    font-family: var(--primaryfont);
+    border-radius: 1rem;
+    outline: none;
+    transition: 0.25s var(--cubic-slow);
+    color: var(--button);
+}
+
+.con-contactme .form-group input:focus,
+.con-contactme .form-group textarea:focus {
+  border: var(--border-width) solid var(--button);
+}
+
+
+.con-contactme button {
+    height: 70px;
+    background-color: var(--blue);
+    border: none;
+    color: var(--primary);
+    border-radius: 1rem;
+    font-family: var(--secondfont);
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@media (max-width:1024px) {
+    .section-4-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .con-indonesia h2, span {
+        font-size: 0.5rem;
+    }
+
+    .con-indonesia, .con-contactme {
+        height: fit-content;
+        gap: 1rem;
+        padding: 0;
+        border: none;
+    }
+}
+
