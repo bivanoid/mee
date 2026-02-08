@@ -132,6 +132,7 @@
     .section-4-content {
         display: flex;
         flex-direction: column;
+        gap: 3rem;
     }
 
     .con-indonesia h2 {

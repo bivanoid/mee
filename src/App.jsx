@@ -11,7 +11,6 @@ import Loading from './components/loading';
 
 import ReactGA from "react-ga4";
 import usePageTracking from "./hooks/usePageTracking";
-import ThemeMode from './themeMode';
 import RevealUp from './animation/reveal';
 // Context untuk Lenis
 export const LenisContext = React.createContext(null);
@@ -54,24 +53,24 @@ function AppRoutes() {
   return (
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={
-        <RevealUp>
+        <FadeContent>
           <Home />
-        </RevealUp>
+        </FadeContent>
       } />
       <Route path="/addfb" element={
-        <RevealUp>
+        <FadeContent>
           <AddFeedback />
-        </RevealUp>
+        </FadeContent>
       } />
       <Route path="/blog" element={
-        <RevealUp>
+        <FadeContent>
           <Blog />
-        </RevealUp>
+        </FadeContent>
       } />
       <Route path="/article/:id" element={
-        <RevealUp>
+        <FadeContent>
           <ArticlePage />
-        </RevealUp>
+        </FadeContent>
       } />
     </Routes>
   );
