@@ -154,7 +154,7 @@ function Feedback() {
             {/* <div className="swiper-pagination-custom"></div> */}
             <div className='next next-fb'>Next</div>
           </div>
-                  <Link className="link-to-addfeedback" to="/add-feedback">
+        <Link className="link-to-addfeedback" to="/addfb">
         <div className="link-to-addfeedback-title1">
           <i className="fi fi-rs-plus"></i> Add Feedback
         </div>

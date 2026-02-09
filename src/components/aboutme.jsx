@@ -33,20 +33,20 @@ function AboutMe() {
                         <div className='text-abouts  '><p className='title-about title-about2'>My Education.</p><br></br>
                        
                             <ul className='content-carrier'>
-                                <div>
-                                    <span></span><li><p> Purwodiningratan</p><p>2013 - 2019</p></li>
-                                </div>
-                                <div>
-                                    <span></span><li><p>SMPN 14 Surakarta</p><p>2019 - 2022</p></li>
-                                </div>
+                                <li>
+                                    <span></span><div><p> Purwodiningratan</p><p>2013 - 2019</p></div>
+                                </li>
+                                <li>
+                                    <span></span><div><p>SMPN 14 Surakarta</p><p>2019 - 2022</p></div>
+                                </li>
 
-                                <div>
-                                    <span></span><li><p>SMKN 5 Surakarta</p><p>2022 - 2025</p></li>
-                                </div>
+                                <li>
+                                    <span></span><div><p>SMKN 5 Surakarta</p><p>2022 - 2025</p></div>
+                                </li>
                     
-                                <div>
-                                    <span></span><li><p>Pignateli Triputra University</p><p>2025 - Current</p></li>
-                                </div>
+                                <li>
+                                    <span></span><div><p>Pignateli Triputra University</p><p>2025 - Current</p></div>
+                                </li>
                             </ul>
                    
                         </div>

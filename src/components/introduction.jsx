@@ -90,8 +90,7 @@ const formatTime = (date) => {
                                 and <span>future directions</span> <br />
                                 take shape.
                             </h1>
-                            <button onClick={scrollToSection} ><DownSvg/></button>
-
+                            <button type='button' aria-label="Scroll to about me" onClick={scrollToSection} ><DownSvg/></button>
                     </div>
                 </div>
             </div>

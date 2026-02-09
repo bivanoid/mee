@@ -117,7 +117,7 @@ export default function HorizontalSlider() {
               <div className='gambar' ref={(el) => (gambarRefs.current[index] = el)}>
                 <img src={proj.img} alt={proj.alt} loading="lazy"  />
                 {proj.link && (
-                  <a href={proj.link} target="_blank" rel="noopener noreferrer">
+                  <a aria-label={`${proj.title} link`} href={proj.link} target="_blank" rel="noopener noreferrer">
                     <ShareSvg/>
                   </a>
                 )}
@@ -134,7 +134,7 @@ export default function HorizontalSlider() {
           ))}
           <SwiperSlide className='see-more-project'>
             <a href="https://github.com/bivanoid">
-              <div className='more-btn'><i class="fi fi-brands-github"></i></div>
+              <div className='more-btn'><i className="fi fi-brands-github"></i></div>
               <p>See more</p>
             </a>
           </SwiperSlide>
