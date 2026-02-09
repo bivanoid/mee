@@ -1,6 +1,15 @@
 @import "prismjs/themes/prism-tomorrow.css";
 @import "../../App.css";
 
+.scrollUpTrigger {
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+}
+
 .navigation-blog {
     height: 4rem;
     width: 100%;
@@ -241,9 +250,9 @@ main {
   align-items: center;
   width: 100%;
   padding: 1rem;
-  background-color: var(--border);
+  background-color: var(--primary25);
   opacity: 0.5;
-  border: 1px solid var(--border);
+  border: var(--border-width) solid var(--border);
   border-radius: 1rem;
 }
 
@@ -327,14 +336,13 @@ main {
   width: 100%;
   max-width: 400px;
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .article .con-image-article img {
   width: 100%;
   aspect-ratio: 16/12;
   object-fit: cover;
-  border-radius: 2rem;
 }
 
 .con-profile-blog {
@@ -621,6 +629,7 @@ main {
   aspect-ratio: 16/9;
   justify-content: center;
   align-content: center;
+  border-radius: 1rem;
 }
 
 .article-modal-image img {
@@ -1484,7 +1493,7 @@ main {
   border: 1px solid var(--border);
   padding: 10px;
   background-color: var(--primary);
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .rendered-html figure {

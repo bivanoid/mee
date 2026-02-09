@@ -117,15 +117,23 @@
 
 
 .con-contactme button {
-    height: 70px;
-    background-color: var(--blue);
+    width: fit-content;
+    background-color: transparent;
     border: none;
-    color: var(--primary);
+    color: var(--blue);
     border-radius: 1rem;
     font-family: var(--secondfont);
     font-size: 1rem;
     font-weight: 800;
     text-transform: uppercase;
+    justify-self: center;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.con-contactme button i {
+    color: rgb(from var(--blue) r g b / 0.5);
 }
 
 @media (max-width:1024px) {

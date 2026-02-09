@@ -6,7 +6,6 @@ import { supabase } from "./supabaseClient"
 import "../styles/blogs/blog.css"
 import Footer from "../components/footer"
 
-
 import { LenisContext } from "../App"
 
 import ShareSvg from '../iconSvg/shareic';
@@ -31,6 +30,7 @@ import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 import ButtonUp from "../components/buttonUp"
 
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
+import lenis from "../components/lenisSc"
 
 const handleShare = async () => {
   if (navigator.share) {
@@ -229,6 +229,13 @@ export default function ArticlePage() {
     navigate(-1, { state: { restoreScroll: true } })
   }
 
+  const ScrollUpTrigger = useRef(null);
+
+function scrollToTop() {
+  lenis.scrollTo(ScrollUpTrigger.current);
+  console.log('up')
+}
+
   // ========================
   // 🌀 STATE LOADING
   // ========================
@@ -274,6 +281,8 @@ export default function ArticlePage() {
 
     <div className="body-blog">
 
+    <div className="scrollUpTrigger" ref={ScrollUpTrigger}></div>
+
       <div className="article-modal-overlay" style={{ background: "transparent" }}>
         <div className="article-modal" style={{ border: "none" }}>
           <div className="article-modal-content">
@@ -300,7 +309,7 @@ export default function ArticlePage() {
             </aside>
 
             <main className="main-article">
-              <p className="publish-date">
+              <p className="publish-date" >
                 {article.created_at ? formatDate(article.created_at) : "Tanggal tidak tersedia"}
               </p>
               {article.image_url && (
@@ -331,7 +340,7 @@ export default function ArticlePage() {
                   <p>Konten tidak tersedia</p>
                 )}
               </div>
-              <ButtonUp />
+              <ButtonUp onClick={scrollToTop} />
             </main>
           </div>
         </div>

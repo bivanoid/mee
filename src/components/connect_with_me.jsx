@@ -75,7 +75,7 @@ export default function ConectWithMe() {
                     </div>
 
                     <button type="submit" className="submit-btn">
-                        Submit
+                        Submit <i className="fi fi-rs-paper-plane"></i>
                     </button>
                 </form>
             </div>

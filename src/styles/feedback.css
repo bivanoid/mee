@@ -296,20 +296,17 @@
 }
 
 .link-to-addfeedback-title1 {
-    color: var(--button);
+    color: var(--blue);
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 1rem;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .link-to-addfeedback-title1 .fi {
-    opacity: 0.5;
-}
-
-.link-to-addfeedback:hover .link-to-addfeedback-title1 {
-    color: var(--blue);
+    color: rgb(from var(--blue) r g b / 0.5);
 }
 
 .loading-feedback {

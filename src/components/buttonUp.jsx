@@ -1,31 +1,28 @@
-import { useEffect, useState, useContext, useRef } from "react"
+
 import DownSvg from "../iconSvg/scrollToBottomic"
+import { useEffect, useState } from "react";
 
-export default function ButtonUp() {
+export default function ButtonUp({ onClick }) {
+  const [showUpButton, setShowUpButton] = useState(false);
 
-      const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" })
-        }
+  useEffect(() => {
+    function handleScroll() {
+      setShowUpButton(window.scrollY >= 1000);
+    }
 
-      const [showUpButton, setShowUpButton] = useState(false)
-  
-        useEffect(() => {
-          function showButton() {
-            if (window.scrollY >= 1000) {
-              setShowUpButton(true)
-            } else {
-              setShowUpButton(false)
-            }
-          }
-    
-          showButton()
-    
-          window.addEventListener('scroll', showButton)
-    
-          return () => window.removeEventListener('scroll', showButton)
-        }, [])
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
 
-    return (
-        <button className={`buttonUp ${showUpButton ? 'up' : 'down'}`} onClick={scrollToTop}><DownSvg/></button>
-    )
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <button
+      onClick={onClick}
+      className={`buttonUp ${showUpButton ? "up" : "down"}`}
+      aria-label="Scroll ke atas"
+    >
+      <DownSvg />
+    </button>
+  );
 }
