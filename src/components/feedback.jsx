@@ -12,6 +12,8 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "../styles/feedback.css"
 import Alert from "../iconSvg/alertIc"
+import AddFeedback from "../pages/addfeedback"
+import BtnAddFb from "./btnAddFb"
 
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
 const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY
@@ -36,11 +38,10 @@ function getEmojiFromRating(rating) {
   }
 }
 
-function Feedback() {
+function Feedback({ setShowAddFb }) {
   const [users, setUsers] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-
 
   useEffect(() => {
 
@@ -68,7 +69,7 @@ function Feedback() {
   return (
     <div className="feedback" id="sc4">
       <div className='title-swiper'>
-          <h1 className="title-feedback">Their <span>Feedback.</span></h1>
+        <h1 className="title-feedback">Their <span>Feedback.</span></h1>
       </div>
 
 
@@ -82,85 +83,82 @@ function Feedback() {
       )}
 
 
-      
-        <div className="swiper-container">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={1}
-            slidesPerView={1}
-            navigation={{
-              nextEl: ".next-fb",
-              prevEl: ".prev-fb",
-            }}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 1,
-              },
-              768: {
-                slidesPerView: 1,
-                spaceBetween: 1,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 1,
-              },
-            }}
-            loop = {users.length > 3}
-            className="feedback-swiper"
-          >
-            {users.map((user) => {
-              const date = user.created_at ? new Date(user.created_at).toISOString().split("T")[0] : "Unknown date"
 
-              const emoji = getEmojiFromRating(user.rating)
+      <div className="swiper-container">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={1}
+          slidesPerView={1}
+          navigation={{
+            nextEl: ".next-fb",
+            prevEl: ".prev-fb",
+          }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 1,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 1,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 1,
+            },
+          }}
+          loop={users.length > 3}
+          className="feedback-swiper"
+        >
+          {users.map((user) => {
+            const date = user.created_at ? new Date(user.created_at).toISOString().split("T")[0] : "Unknown date"
 
-              return (
-                <SwiperSlide key={user.id}>
-                  <div className="user-feedback swiper-slide-content">
-                    <div className="feedback-quote">
-                      <i className="fi fi-rs-quote-right"></i>
-                    </div>
-                    <div className="con-userfeedback">
-                      <div className="con-usertext">
-                        <p className="usertext">"{user.email}"</p>
-                      </div>
-                    </div>
-                    <div className="con-btm-fd">
-                      <div className="con-username">
-                        <p className="fromuser">from</p>
-                        <p className="username">{user.name}</p>
-                      </div>
-                      <div className="con-feedback-btm">
-                        <div className="userrating">
-                          <div className={emoji}></div>
-                        </div>
-                        <p className="userdate">{date}</p>
-                      </div>
+            const emoji = getEmojiFromRating(user.rating)
+
+            return (
+              <SwiperSlide key={user.id}>
+                <div className="user-feedback swiper-slide-content">
+                  <div className="feedback-quote">
+                    <i className="fi fi-rs-quote-right"></i>
+                  </div>
+                  <div className="con-userfeedback">
+                    <div className="con-usertext">
+                      <p className="usertext">"{user.email}"</p>
                     </div>
                   </div>
-                </SwiperSlide>
-              )
-            })}
-          </Swiper>
+                  <div className="con-btm-fd">
+                    <div className="con-username">
+                      <p className="fromuser">from</p>
+                      <p className="username">{user.name}</p>
+                    </div>
+                    <div className="con-feedback-btm">
+                      <div className="userrating">
+                        <div className={emoji}></div>
+                      </div>
+                      <p className="userdate">{date}</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
 
-          {/* Custom Navigation Buttons */}
-          <div className='con-swiper-button-fb' >
-            <div className='prev prev-fb'>Prev</div>
-            {/* Custom Pagination */}
-            {/* <div className="swiper-pagination-custom"></div> */}
-            <div className='next next-fb'>Next</div>
-          </div>
-        <Link className="link-to-addfeedback" to="/addfb">
-        <div className="link-to-addfeedback-title1">
-          <i className="fi fi-rs-plus"></i> Add Feedback
+        {/* Custom Navigation Buttons */}
+        <div className='con-swiper-button-fb' >
+          <div className='prev prev-fb'>Prev</div>
+          {/* Custom Pagination */}
+          {/* <div className="swiper-pagination-custom"></div> */}
+          <div className='next next-fb'>Next</div>
         </div>
-      </Link>
 
-        </div>
+          <BtnAddFb setShowAddFb={setShowAddFb}/>
+
+      </div>
     </div>
   )
 }

@@ -1,9 +1,31 @@
-.body-addfeedback {
-    height: auto;
+.show-addfb-container {
+    height: 100vh;
+    width: 100%;
     background-position: center;
     background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(from var(--primary) r g b / 0.5);
+    position: fixed;
+    backdrop-filter: brightness(25%) grayscale(1);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    gap: 1rem;
 
+    /* default = hidden */
+    display: none;
 }
+
+.show-addfb-container.aktif {
+    display: flex;
+}
+
+.show-addfb-container.non-aktif {
+    display: none;
+}
+
 
 .navigation-addfb {
     height: 4rem;
@@ -48,9 +70,9 @@
 }
 
 .con-addfeedback {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
+        display: grid;
+    place-items: center;
+    height: fit-content;
     color: var(--button);
     padding-inline: 1rem;
     border-radius: 1rem;
@@ -63,6 +85,7 @@
     font-family: var(--secondfont);
     color: var(--button);
     font-size: 2rem;
+    padding-bottom: 1rem;
     margin: 0;
     font-weight: 800;
     text-transform: uppercase;
@@ -91,6 +114,7 @@
 .con-addfeedback form .con-input {
     display: grid;
     grid-template-rows: auto 1fr;
+    gap: 1rem;
     width: 100%;
     height: auto;
     flex-direction: column;
@@ -145,29 +169,23 @@
     background-color: var(--green-cl);
 }
 
-.input-from {
-    margin-top: 1rem;
-    color: var(--color-font-grey);
-    font-family: var(--primaryfont);
-}
-
 .input-textarea {
-    border: none;
+    width: 100%;
     outline: none;
+    font-size: 1rem;
     height: fit-content;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-family: var(--primaryfont);
     background-color: transparent;
-    font-family: var(--secondfont);
-    text-transform: uppercase;
-    font-weight: 1000;
+    border: var(--border-width) solid var(--border);
+    border-radius: 1rem;
     color: var(--button);
-    text-decoration: underline;
+    margin-bottom: 1rem;
 }
 
 .conTextArea {
     position: relative;
-    height: 150px;
+    height: 125px;
 }
 
 .textarea-addfeedback {
@@ -175,7 +193,7 @@
     border: none;
     outline: none;
     font-size: 1rem;
-    height: 150px;
+    height: 125px;
     padding: 20px 1rem 10px 1rem;
     font-family: var(--primaryfont);
     background-color: transparent;
@@ -183,6 +201,20 @@
     border-radius: 1rem;
     color: var(--button);
     resize: none;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+
+.textarea-addfeedback::-webkit-scrollbar {
+    display: block !important;
+}
+
+.textarea-addfeedback::-webkit-scrollbar-button {
+    display: none;
+}
+
+.textarea-addfeedback::-webkit-scrollbar-thumb {
+    background-color: var(--button);
 }
 
 .character-count {
@@ -440,7 +472,6 @@ button:disabled {
     font-family: var(--secondfont);
     text-transform: capitalize;
     font-size: 1rem;
-    padding-bottom: 1em;
     color: var(--button);
     font-family: var(--primaryfont);
     height: 35px;
@@ -457,4 +488,14 @@ button:disabled {
     padding: 30px;
     border: var(--border-width) solid var(--border);
     border-radius: 1rem;
+    background-color: var(--primary);
+}
+
+.closeAddFb {
+    font-family: var(--primaryfont);
+    padding: 0.5rem;
+    background-color: var(--primary25);
+    border: var(--border-width) solid var(--border);
+    border-radius: 0.5rem;
+    color: var(--red-cl);
 }

@@ -282,13 +282,14 @@
     height: 62px;
     display: grid;
     place-items: center;
-    border-top: var(--border-width) solid var(--border);
     font-weight: 600;
     position: relative;
     background-color: var(--primary);
     text-transform: uppercase;
     overflow: hidden;
     gap: 10px;
+    border: none;
+    border-top: var(--border-width) solid var(--border);
 }
 
 .link-to-addfeedback i {

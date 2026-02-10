@@ -61,19 +61,14 @@ export default function AddFeedback() {
   const remainingCharacters = maxCharacters - email.length;
 
   return (
-    <div className="body-addfeedback">
+    
       <div className="con-addfeedback">
         {alertPopUp && (
           <div className={`AlertPopUp ${isVisible ? "show" : "hide"}`}>
             <p><span className='red-alert'></span>{alertPopUp}</p>
           </div>
         )}
-        <div className="navigation-addfb">
-          <div className='back-to-home-from-addfeedback'>
-               bivanoid.site
-            </div>
-          <Link to="/" className="back-to-home-from-addfeedback link-back">/ (back)</Link>
-        </div>
+        
         <div className="con-form">
           <h2>
           How’s the <span className="andText">Mood Today?</span>
@@ -81,7 +76,6 @@ export default function AddFeedback() {
 
         <form onSubmit={addUser}>
           <div className="con-input">
-            <p className="note-addfb">Note : red(bad) to green(good) is like a grade from 1 - 5</p>
             <div className="rating-container">
               {[1, 2, 3, 4, 5].map((num) => {
                 const emoji = {
@@ -104,7 +98,6 @@ export default function AddFeedback() {
                 );
               })}
             </div>
-            <p className='input-from'>from</p>
             <input
               className="input-textarea"
               type="text"
@@ -136,7 +129,6 @@ export default function AddFeedback() {
         </form>
         </div>
       </div>
-      <Footer/>
-    </div>
+    
   );
 }

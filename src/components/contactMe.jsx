@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../styles/connect_with_me.css"
+import "../styles/connectMe.css"
 import { ReactComponent as Indonesia } from "../assets/svg/indonesia.svg"
 
 export default function ConectWithMe() {
@@ -51,13 +51,13 @@ export default function ConectWithMe() {
                     <h3>Write Me a Message.</h3>
                     <div className="form-group">
                         <input
-                            type="email"
+                            type="text"
                             id="name"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
                             autoComplete="off"
-                            placeholder="Your email"
+                            placeholder="Your name"
                             required
                         />
                     </div>
