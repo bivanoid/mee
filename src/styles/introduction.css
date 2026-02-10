@@ -276,6 +276,12 @@ grid-template-rows: repeat(2, 1fr);
         display: flex;
         flex-direction: column;
         padding-inline: 0;
+        padding: 30px;
+    }
+
+    .hero .currndate {
+        justify-self: flex-end;
+        text-align: end;
     }
 
     .hero .hero-1 {
@@ -368,8 +374,9 @@ grid-template-rows: repeat(2, 1fr);
     flex-direction: column;
 }
 
-.header-int span{
+.text .currndate .time{
     color: var(--color-font-grey);
+    font-family: var(--primaryfont);
 }
 
 .text .explore {

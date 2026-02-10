@@ -4,7 +4,7 @@ export default function CanDo() {
     return (
         <div className="section-3">
             <div className='title-swiper'>
-                <h1>What i can <span> Do.</span></h1>
+                <h1>What i <span>can Do.</span></h1>
             </div>
 
             <div className="section-3-content">

@@ -33,7 +33,7 @@ const formatTime = (date) => {
     
     return (
         <>
-            {gmtString} <span>{hours} :. {minutes} :. {seconds}</span>
+            {gmtString} <span className='time'>{hours} :. {minutes} :. {seconds}</span>
         </>
     )
     
