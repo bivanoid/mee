@@ -6,8 +6,7 @@ import CanDo from './canDo';
 
 function AboutMe() {
     return (
-        <div className='section2' >
-            <p className='number number2' id='sc2'></p>
+        <div className='section2'>
             
             <div className='contents'>
                 <div className='abouts'>

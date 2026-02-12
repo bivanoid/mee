@@ -1,10 +1,5 @@
 
 import '../styles/aboutme.css';
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import RevealUp from '../animation/reveal';
-
-gsap.registerPlugin(ScrollTrigger);
 
 function Biodata() {
 

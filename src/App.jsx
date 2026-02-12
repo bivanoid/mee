@@ -11,7 +11,6 @@ import Loading from './components/loading';
 
 import ReactGA from "react-ga4";
 import usePageTracking from "./hooks/usePageTracking";
-import RevealUp from './animation/reveal';
 // Context untuk Lenis
 export const LenisContext = React.createContext(null);
 
