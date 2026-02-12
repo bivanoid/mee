@@ -15,7 +15,7 @@ export default function HomeContent({ setShowAddFb }) {
     // }, [triggerToHomeContent, setShowAddFb]);
 
     return (
-        <div className="wrapper-components-home">
+        <div className="wrapper-components-home" id='sc2'>
             <Biodata />
             <div className="wrapper-componen-vertical">
                 <AboutMe />

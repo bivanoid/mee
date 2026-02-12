@@ -1,5 +1,5 @@
 import "../styles/canDo.css"
-
+import { FileBracesCorner, PanelsTopLeft, VectorSquare } from 'lucide-react';
 export default function CanDo() {
     return (
         <div className="section-3">
@@ -9,23 +9,23 @@ export default function CanDo() {
 
             <div className="section-3-content">
                 <div className="box-i-can-do">
-                    <div className="icon">
-                        <i className="fi fi-rs-display-code"></i>
-                    </div>
+             
+                        <FileBracesCorner className="icon"/>
+       
                     <h2><span>Web</span><br />Development</h2>
                     <p>website development and maintenance</p>
                 </div>
                 <div className="box-i-can-do">
-                    <div className="icon">
-                        <i className="fi fi-rs-ux-browser"></i>
-                    </div>
+            
+                        <PanelsTopLeft className="icon"/>
+             
                     <h2>UI / UX <span><br />Designer</span></h2>
                     <p>designing the initial design for the website/application</p>
                 </div>
                 <div className="box-i-can-do">
-                    <div className="icon">
-                        <i className="fi fi-rs-vector-polygon"></i>
-                    </div>
+        
+                        <VectorSquare className="icon"/>
+
                     <h2><span>Graphic</span><br />design</h2>
                     <p>creating a poster or graphic asset</p>
                 </div>

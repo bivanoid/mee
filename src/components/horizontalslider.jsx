@@ -12,6 +12,7 @@ import ppkpt from '../assets/ppkpt (1).webp';
 import Bynaa from "../assets/bynnashop.webp";
 import LoomnYarn from "../assets/loomnyarn.webp";
 import ShareSvg from '../iconSvg/shareic';
+import { Github } from 'lucide-react';
 
 export default function HorizontalSlider() {
   const gambarRefs = useRef([]);
@@ -134,7 +135,7 @@ export default function HorizontalSlider() {
           ))}
           <SwiperSlide className='see-more-project'>
             <a href="https://github.com/bivanoid">
-              <div className='more-btn'><i className="fi fi-brands-github"></i></div>
+              <div className='more-btn'><Github/></div>
               <p>See more</p>
             </a>
           </SwiperSlide>

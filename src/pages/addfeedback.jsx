@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
 import "../styles/addfeedback/addfeedback.css";
-import { Link } from 'react-router-dom';
-import Footer from '../components/footer';
 
 // Supabase config
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+import { supabase } from "../pages/supabaseClient"
+import { Forward } from 'lucide-react';
 
 export default function AddFeedback() {
   const [name, setName] = useState('');
@@ -125,7 +121,7 @@ export default function AddFeedback() {
               </div>
             </div>
           </div>
-            <button className="button-addfeedback" type="submit"><i className="fi fi-rs-plus"></i>Submit</button>
+            <button className="button-addfeedback" type="submit">Submit<Forward/></button>
         </form>
         </div>
       </div>

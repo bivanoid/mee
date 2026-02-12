@@ -1,5 +1,6 @@
 // lenis.js - Konfigurasi yang diperbaiki
-import Lenis from '@studio-freight/lenis';
+import Lenis from "lenis"
+
 
 const lenis = new Lenis({
   duration: 1.5,

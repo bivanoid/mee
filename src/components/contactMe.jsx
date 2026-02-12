@@ -1,6 +1,8 @@
 import { useState } from "react"
 import "../styles/connectMe.css"
-import { ReactComponent as Indonesia } from "../assets/svg/indonesia.svg"
+import Indonesia from "../assets/svg/indonesia.svg?react"
+import { Send } from "lucide-react"
+import { Forward } from "lucide-react"
 
 export default function ConectWithMe() {
     const [formData, setFormData] = useState({
@@ -41,7 +43,7 @@ export default function ConectWithMe() {
 
             <div className="section-4-content">
                 <div className="con-indonesia">
-                    <Indonesia/>
+                    <Indonesia className="indo-svg" />
                     <h2>
                         Surakarta <span>:.</span> Central Java <span>:.</span> Indonesia
                     </h2>
@@ -75,7 +77,7 @@ export default function ConectWithMe() {
                     </div>
 
                     <button type="submit" className="submit-btn">
-                        Submit <i className="fi fi-rs-paper-plane"></i>
+                        Submit <Forward/>
                     </button>
                 </form>
             </div>

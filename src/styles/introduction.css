@@ -46,13 +46,6 @@
     height: fit-content;
 }
 
-.navigation .path-name i {
-    height: fit-content;
-    display: grid;
-    place-items: center;
-    transition: 0.25s var(--cubic-slow);
-}
-
 .navigation .path-name p {
     color: var(--button);
     display: flex;
@@ -61,10 +54,14 @@
     gap: 0.5rem;
 }
 
-.navigation .path-name .fi.open {
+.navigation .path-name svg {
+    transition: 0.25s var(--cubic-toeng);
+}
+
+.navigation .path-name svg.open {
     rotate: 180deg;
 }
-.navigation .path-name .fi.close {
+.navigation .path-name svg.close {
     rotate: 0deg;
 }
 

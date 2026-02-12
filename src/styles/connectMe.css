@@ -120,7 +120,7 @@
     width: fit-content;
     background-color: transparent;
     border: none;
-    color: var(--blue);
+    color: var(--button);
     border-radius: 1rem;
     font-family: var(--secondfont);
     font-size: 1rem;
@@ -130,10 +130,16 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    transition: 0.5s var(--cubic-toeng);
 }
 
-.con-contactme button i {
+.con-contactme button svg {
     color: rgb(from var(--blue) r g b / 0.5);
+    height: 1.25rem;
+}
+
+.con-contactme button:hover {
+    color: var(--blue);
 }
 
 @media (max-width:1024px) {

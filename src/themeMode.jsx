@@ -1,4 +1,5 @@
 // themeMode.jsx
+import { Sun, Moon } from 'lucide-react';
 import React, { useState, useEffect } from "react";
 
 export default function ThemeMode() {
@@ -95,9 +96,9 @@ export default function ThemeMode() {
             <p>
                 switch
                 {theme ? (
-                    <i className="fi fi-rs-brightness"></i>
+                    <Sun/>
                 ) : (
-                    <i className="fi fi-rs-moon"></i>
+                    <Moon/>
                 )}
             </p>
         </div>

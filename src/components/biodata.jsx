@@ -1,6 +1,11 @@
 
+import { MapPin } from 'lucide-react';
 import '../styles/aboutme.css';
+<<<<<<< HEAD
 
+=======
+import {  UserRound, GraduationCap } from 'lucide-react';
+>>>>>>> cb72839 (uptd)
 function Biodata() {
 
     const listSkill = [
@@ -44,13 +49,19 @@ function Biodata() {
 
                                 <ul className='list-bio'>
                                     <li>
-                                        <div className='text-bio'><i className="text-bio-icon fi fi-rs-thumbtack"></i><p>Surakarta, Central Java</p></div>
+                                        <div className='text-bio'>
+                                            <div className="text-bio-icon"><MapPin/></div>
+                                            <p>Surakarta, Central Java</p></div>
                                     </li>
                                     <li>
-                                        <a href='mailto:abivandyafirdhan@gmail.com' className='text-bio'><i className="text-bio-icon fi fi-rs-user"></i><p>Junior Web Developer</p></a>
+                                        <a href='mailto:abivandyafirdhan@gmail.com' className='text-bio'>
+                                            <div className="text-bio-icon"><UserRound/></div>
+                                            <p>Junior Web Developer</p></a>
                                     </li>
                                     <li>
-                                        <a href='https://wa.me/6287739770494' className='text-bio'><i className="text-bio-icon fi fi-rs-student-alt"></i><p>As a student</p></a>
+                                        <a href='https://wa.me/6287739770494' className='text-bio'>
+                                        <div className="text-bio-icon"><GraduationCap/></div>
+                                        <p>As a student</p></a>
                                     </li>
                                 </ul>
 

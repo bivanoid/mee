@@ -9,7 +9,7 @@ import { useNavigate, useLocation } from "react-router-dom"
 import { Link } from 'react-router-dom'
 import { LenisContext } from "../App"
 import DownSvg from "../iconSvg/scrollToBottomic"
-import { ReactComponent as RefreshIc } from "../assets/svg/refresh.svg"
+import { RefreshCcw } from "lucide-react"
 
 const ITEMS_PER_PAGE = 6
 
@@ -391,7 +391,7 @@ export default function Blog() {
                            fetchBlogs(filter, 0, false)
                         }}
                      >
-                        {isMobile ? <i class="fi fi-rs-refresh"></i> : <p>Refresh</p>}
+                        {isMobile ? <RefreshCcw/> : <p>Refresh</p>}
                      </button>
                   </div>
                </div>

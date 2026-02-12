@@ -193,7 +193,9 @@
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
+    gap: var(--border-width);
     border: var(--border-width) solid var(--border);
+    background-color: var(--border);
     overflow: hidden;
     justify-content: space-between;
 }
@@ -211,13 +213,6 @@
     text-decoration-thickness: var(--border-width);
 }
 
-.list-bio li a p i {
-    display: inline;
-    font-size: 0.85rem;
-    color: var(--blue);
-
-}
-
 .title-bio i {
     font-size: 1rem;
 }
@@ -226,7 +221,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid var(--border);
     color: var(--button);
     overflow: hidden;
     height: 3rem;
@@ -292,6 +286,9 @@
 .bio .list-bio li .text-bio {
     display: flex;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
 }
 
 .text-bio span {
@@ -302,19 +299,17 @@
 }
 
 .text-bio .text-bio-icon {
-    height: 3rem;
+    aspect-ratio: 1/1;
     display: grid;
     place-items: center;
-    width: 3rem;
+    height: 100%;
     border-right: var(--border-width) solid var(--border);
     margin-right: 0.5rem;
     
 }
 
-.text-bio .text-bio-icon path {
-    color: var(--button);
-    fill: transparent;
-    stroke: var(--button);
+.text-bio .text-bio-icon svg {
+    width: 1.25rem;
 }
 
 @media (max-width:767px) {

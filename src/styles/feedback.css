@@ -280,20 +280,32 @@
     font-family: var(--secondfont);
     width: 100%;
     height: 62px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 600;
     position: relative;
     background-color: var(--primary);
     text-transform: uppercase;
     overflow: hidden;
     gap: 10px;
+    font-size: 1rem;
     border: none;
     border-top: var(--border-width) solid var(--border);
+    transition: 0.5s var(--cubic-toeng);
 }
 
-.link-to-addfeedback i {
-    font-size: 1rem;
+.link-to-addfeedback:hover {
+    color: var(--blue);
+}
+
+.link-to-addfeedback svg {
+    width: fit-content;
+    height: 1.5rem;
+}
+
+.link-to-addfeedback svg path {
+    color: rgb(from var(--blue) r g b / 0.5);
 }
 
 .link-to-addfeedback-title1 {
@@ -304,10 +316,6 @@
     align-items: center;
     font-size: 1rem;
     gap: 0.5rem;
-}
-
-.link-to-addfeedback-title1 .fi {
-    color: rgb(from var(--blue) r g b / 0.5);
 }
 
 .loading-feedback {

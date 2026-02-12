@@ -4,8 +4,8 @@ import { useEffect, useState } from "react"
 import { createClient } from "@supabase/supabase-js"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
-import FadeContent from "./FadeContent"
-import { Link } from "react-router-dom"
+
+import { supabase } from "../pages/supabaseClient"
 
 // Import Swiper styles
 import "swiper/css"
@@ -14,10 +14,7 @@ import "../styles/feedback.css"
 import Alert from "../iconSvg/alertIc"
 import AddFeedback from "../pages/addfeedback"
 import BtnAddFb from "./btnAddFb"
-
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
-const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
+import { Quote } from "lucide-react"
 const ohNo = 'Oh noo! '
 
 // Fungsi untuk mengonversi rating ke emoji
@@ -123,7 +120,7 @@ function Feedback({ setShowAddFb }) {
               <SwiperSlide key={user.id}>
                 <div className="user-feedback swiper-slide-content">
                   <div className="feedback-quote">
-                    <i className="fi fi-rs-quote-right"></i>
+                    <Quote/>
                   </div>
                   <div className="con-userfeedback">
                     <div className="con-usertext">

@@ -5,6 +5,7 @@ import DownSvg from '../iconSvg/scrollToBottomic';
 import LogoMiring from '../iconSvg/logoMiring';
 import { href, Link } from 'react-router-dom';
 import ThemeMode from '../themeMode';
+import { ChevronDown } from 'lucide-react';
 
 function Introduction() {
     const conImageRef = useRef(null);
@@ -61,7 +62,7 @@ const formatTime = (date) => {
 
                 <div className="con-path-name">
                     <div onClick={() => {setOpenLinks(prev => !prev)}}  className="path-name">
-                        <p>/ <span><i className={`fi fi-rs-caret-down ${openLinkS ? 'open' : 'close'}`}></i></span></p>
+                        <p>/ <span><ChevronDown className={openLinkS ? 'open' : 'close'}/></span></p>
                     </div>
                     <Link to={"/blog"} className={`path-name other-path-name ${openLinkS ? 'open' : 'close'}`}>
                         /blog

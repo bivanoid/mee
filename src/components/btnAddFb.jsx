@@ -1,3 +1,4 @@
+import { Plus } from "lucide-react"
 import { useState } from "react"
 
 export default function BtnAddFb({ setShowAddFb }) {
@@ -6,7 +7,7 @@ export default function BtnAddFb({ setShowAddFb }) {
       onClick={() => setShowAddFb(prev => !prev)}
       className="link-to-addfeedback"
     >
-      Add Feedback
+     <Plus/> Add Feedback
     </button>
   )
 }

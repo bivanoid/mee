@@ -2,6 +2,10 @@ import '../styles/footer.css';
 import Logo from './logo';
 import lenis from './lenisSc';
 import { Link } from 'react-router-dom';
+import { Instagram } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 export default function Footer() {
 
@@ -21,10 +25,10 @@ export default function Footer() {
                             <p>Creative developer passionate about building exceptional digital experiences with modern<br /> technologies.</p>
                             <p>Connect with me.</p>
                             <div className='social-media-footer'>
-                                <a aria-label='instagram link' href='https://www.instagram.com/bivanoid/' className='ig'><i className="fi fi-brands-instagram"></i></a>
-                                <a aria-label='linkedin link' href='' className='lnkdn'><i className="fi fi-brands-linkedin"></i></a>
-                                <a aria-label='telegram link' href='https://t.me/bieblupee' className='tele'><i className="fi fi-brands-telegram"></i></a>
-                                <a aria-label='github link' href='https://github.com/bivanoid' className='gth'><i className="fi fi-brands-github"></i></a>
+                                <a aria-label='instagram link' href='https://www.instagram.com/bivanoid/' className='ig'><Instagram/></a>
+                                <a aria-label='linkedin link' href='' className='lnkdn'><Linkedin/></a>
+                                <a aria-label='telegram link' href='https://t.me/bieblupee' className='tele'><Send/></a>
+                                <a aria-label='github link' href='https://github.com/bivanoid' className='gth'><Github/></a>
                             </div>
                             <p className='copyright'>&copy; 2025 Firdhan Abivandya. All rights reserved.</p>
                             </div>
