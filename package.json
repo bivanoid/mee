@@ -1,9 +1,9 @@
 {
+  "homepage": "https://bivanoid.site",
   "name": "meeee",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bivanoid.github.io/mee",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
