@@ -11,11 +11,6 @@ import Loading from './components/loading';
 
 import ReactGA from "react-ga4";
 import usePageTracking from "./hooks/usePageTracking";
-<<<<<<< HEAD
-// Context untuk Lenis
-=======
-
->>>>>>> cb72839 (uptd)
 export const LenisContext = React.createContext(null);
 
 

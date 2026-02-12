@@ -1,11 +1,7 @@
 
 import { MapPin } from 'lucide-react';
 import '../styles/aboutme.css';
-<<<<<<< HEAD
-
-=======
 import {  UserRound, GraduationCap } from 'lucide-react';
->>>>>>> cb72839 (uptd)
 function Biodata() {
 
     const listSkill = [
