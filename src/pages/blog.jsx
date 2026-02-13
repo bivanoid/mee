@@ -317,8 +317,6 @@ export default function Blog() {
                         {displayedBlogs.map((blog) => (
                            <div
                               className="article"
-                              onClick={() => openArticle(blog)}
-                              style={{ cursor: "pointer" }}
                               key={blog.id}
                            >                      <p id="date-post">
                                  {blog.created_at ? formatDate(blog.created_at) : "No date"}
@@ -337,7 +335,10 @@ export default function Blog() {
 
                               <div className="column-article">
                                  <div className="text-article">
-                                    <h1 className="title-article">{blog.title_blog || "Untitled"}</h1>
+                                    <h1
+                                    onClick={() => openArticle(blog)}
+                              style={{ cursor: "pointer" }}
+                                    className="title-article">{blog.title_blog || "Untitled"}</h1>
                                     {blog.sub_title && (
                                        <p className="subtitle-article">{blog.sub_title}</p>
                                     )}

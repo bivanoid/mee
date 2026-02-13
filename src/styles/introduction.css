@@ -56,6 +56,7 @@
 
 .navigation .path-name svg {
     transition: 0.25s var(--cubic-toeng);
+    width: 1rem;
 }
 
 .navigation .path-name svg.open {

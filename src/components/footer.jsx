@@ -30,7 +30,7 @@ export default function Footer() {
                                 <a aria-label='telegram link' href='https://t.me/bieblupee' className='tele'><Send/></a>
                                 <a aria-label='github link' href='https://github.com/bivanoid' className='gth'><Github/></a>
                             </div>
-                            <p className='copyright'>&copy; 2025 Firdhan Abivandya. All rights reserved.</p>
+                            <p className='copyright'>&copy; 2026 Firdhan Abivandya. All rights reserved.</p>
                             </div>
                         </div>
 

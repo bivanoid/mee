@@ -20,11 +20,7 @@ export default function ConectWithMe() {
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        // Membuat mailto link
-        const mailtoLink = `mailto:abivandyafirdhan@gmail.com?subject=Message from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}`
-        
-        // Membuka email client
-        window.location.href = mailtoLink
+        window.location.href = `mailto:abivandyafirdhan@gmail.com?subject=Message from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}`
         
         // Reset form
         setFormData({

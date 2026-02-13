@@ -215,7 +215,7 @@ svg path {
     margin-top: 1rem;
     text-align: center;
     color: var(--primary);
-    z-index: 9999999;
+    z-index: 9999999999;
     border: 1px solid var(--border);
     border-radius: 1rem;
     transition: 0s var(--cubic-toeng);

@@ -116,7 +116,7 @@ export default function HorizontalSlider() {
             
             <SwiperSlide key={index}>
               <div className='gambar' ref={(el) => (gambarRefs.current[index] = el)}>
-                <img src={proj.img} alt={proj.alt} loading="lazy"  />
+                <img src={proj.img} alt={proj.alt}  />
                 {proj.link && (
                   <a aria-label={`${proj.title} link`} href={proj.link} target="_blank" rel="noopener noreferrer">
                     <ShareSvg/>

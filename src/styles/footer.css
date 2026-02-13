@@ -72,6 +72,11 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
+    transition: 0.5s var(--cubic-slow);
+}
+
+.social-media-footer svg {
+    width: 1rem;
 }
 
 .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth) {
@@ -89,12 +94,12 @@
 
 
 .social-media-footer :is(.ig, .lnkdn, .twt, .wa, .tele, .gth):hover {
-    color: var(--primary);
+    filter: brightness(75%);
 }
-
+/*
 .ig:hover {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: var(--primary) !important;
+    color: white !important;
 }
 
 .lnkdn:hover {
@@ -120,7 +125,7 @@
 .gth:hover {
     background-color: #24292e;
     color: white !important;
-} 
+}  */
 
 .footer1 .footer1-main img {
     width: 70px;
