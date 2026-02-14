@@ -1,11 +1,13 @@
 import '../styles/introduction.css'
 import React, { useState, useEffect, useRef } from 'react';
 import lenis from './lenisSc';
-import DownSvg from '../iconSvg/scrollToBottomic';
 import LogoMiring from '../iconSvg/logoMiring';
 import { href, Link } from 'react-router-dom';
 import ThemeMode from '../themeMode';
 import { ChevronDown } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
+import { ArrowDownToDot } from 'lucide-react';
+import { ArrowDownToLine } from 'lucide-react';
 
 function Introduction() {
     const conImageRef = useRef(null);
@@ -91,7 +93,7 @@ const formatTime = (date) => {
                                 and <span>future directions</span> <br />
                                 take shape.
                             </h1>
-                            <button type='button' aria-label="Scroll to about me" onClick={scrollToSection} ><DownSvg/></button>
+                            <button type='button' aria-label="Scroll to about me" onClick={scrollToSection} ><ArrowDown/></button>
                     </div>
                 </div>
             </div>

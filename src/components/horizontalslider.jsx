@@ -11,8 +11,8 @@ import bicture from '../assets/bicturemckp.webp';
 import ppkpt from '../assets/ppkpt (1).webp';
 import Bynaa from "../assets/bynnashop.webp";
 import LoomnYarn from "../assets/loomnyarn.webp";
-import ShareSvg from '../iconSvg/shareic';
 import { Github } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function HorizontalSlider() {
   const gambarRefs = useRef([]);
@@ -119,7 +119,7 @@ export default function HorizontalSlider() {
                 <img src={proj.img} alt={proj.alt}  />
                 {proj.link && (
                   <a aria-label={`${proj.title} link`} href={proj.link} target="_blank" rel="noopener noreferrer">
-                    <ShareSvg/>
+                    <ArrowUpRight/>
                   </a>
                 )}
               </div>

@@ -23,11 +23,11 @@ export default function ThemeMode() {
             root.style.setProperty('--grey', '#1d1d1d');
             root.style.setProperty('--button', '#f8f8f8');
             root.style.setProperty('--border', '#121212');
-            root.style.setProperty('--red-cl', '#f77171');
-            root.style.setProperty('--orange-cl', '#b66333');
-            root.style.setProperty('--yellow-cl', '#dfb631');
-            root.style.setProperty('--lime-cl', '#7dbb2b');
-            root.style.setProperty('--green-cl', '#24aa51');
+            root.style.setProperty('--red-cl', '#fc5858');
+            root.style.setProperty('--orange-cl', '#fa8642');
+            root.style.setProperty('--yellow-cl', '#fcd658');
+            root.style.setProperty('--lime-cl', '#b5fc58');
+            root.style.setProperty('--green-cl', '#58fc8f');
 
             root.style.setProperty('--code-bg', 'var(--border)');
             root.style.setProperty('--code-inline-bg', '#0a0a0a');
@@ -62,7 +62,7 @@ export default function ThemeMode() {
             root.style.setProperty('--border', '#d4d4c7');
             root.style.setProperty('--red-cl', '#aa1e1e');
             root.style.setProperty('--orange-cl', '#b66333');
-            root.style.setProperty('--yellow-cl', '#dfb631');
+            root.style.setProperty('--yellow-cl', '#c7a021');
             root.style.setProperty('--lime-cl', '#7dbb2b');
             root.style.setProperty('--green-cl', '#24aa51');
 

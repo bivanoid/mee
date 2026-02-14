@@ -292,12 +292,8 @@ main {
 	color: var(--button);
 }
 
-.filter-by li.active svg path {
-	fill: var(--red-cl);
-}
-
-.filter-by li:nth-child(2) svg {
-	rotate: 180deg;
+.filter-by li.active svg {
+	color: var(--red-cl);
 }
 
 .filter-by li::marker {
@@ -890,11 +886,7 @@ main {
 }
 
 .navigation-article .share-button svg {
-	height: 0.75rem;
-}
-
-.navigation-article .share-button svg path {
-	fill: var(--primary);
+	width: 1rem;
 }
 
 .con-title-article {

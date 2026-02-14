@@ -129,7 +129,7 @@
 
 .rating-box {
     width: fit-content;
-    padding: 0.5rem;
+    aspect-ratio: 1/1;
     display: grid;
     place-items: center;
     font-size: 2rem;
@@ -144,16 +144,42 @@
 }
 
 .rating-box.selected {
-    background-color: var(--button);
+    background-color: var(--border);
 }
+
 
 .rating-box .rating-def {
-    width: 100%;
+    width: 2rem;
     height: 70px;
     border-radius: 1rem;
+    color: var(--color-font-grey);
 }
 
-.rating-box .rating-1 {
+.rating-box .rating-def:hover {
+    color: var(--button);
+}
+
+.rating-box:nth-child(1).selected .rating-def {
+    color: var(--red-cl);
+}
+
+.rating-box:nth-child(2).selected .rating-def {
+    color: var(--orange-cl);
+}
+
+.rating-box:nth-child(3).selected .rating-def {
+    color: var(--yellow-cl);
+}
+
+.rating-box:nth-child(4).selected .rating-def {
+    color: var(--lime-cl);
+}
+
+.rating-box:nth-child(5).selected .rating-def {
+    color: var(--green-cl);
+}
+
+/* .rating-box .rating-1 {
     background-color: var(--red-cl);
 }
 .rating-box .rating-2 {
@@ -167,7 +193,7 @@
 }
 .rating-box .rating-5 {
     background-color: var(--green-cl);
-}
+} */
 
 .input-textarea {
     width: 100%;
@@ -203,6 +229,10 @@
     resize: none;
     overflow-y: auto !important;
     overflow-x: hidden;
+}
+
+:is(.input-textarea, .textarea-addfeedback):focus {
+    border-color: var(--button);
 }
 
 .textarea-addfeedback::-webkit-scrollbar {

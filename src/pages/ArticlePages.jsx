@@ -7,8 +7,6 @@ import "../styles/blogs/blog.css"
 import Footer from "../components/footer"
 
 import { LenisContext } from "../App"
-
-import ShareSvg from '../iconSvg/shareic';
 import Prism from "prismjs";
 import "../styles/prism-custom.css";
 import "prismjs/components/prism-bash";
@@ -31,6 +29,8 @@ import ButtonUp from "../components/buttonUp"
 
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 import lenis from "../components/lenisSc"
+import { ArrowUpRight } from "lucide-react"
+import { Share2 } from "lucide-react"
 
 const handleShare = async () => {
   if (navigator.share) {
@@ -291,7 +291,7 @@ function scrollToTop() {
                 <div className="navigation-article">
                   <Link className="path-name back-button" to={'/blog'}><p>/blog (back)</p></Link>
                   <p className="path-name">article</p>
-                  <p className="path-name share-button" onClick={handleShare}>share <ShareSvg /></p>
+                  <p className="path-name share-button" onClick={handleShare}>share <Share2 /></p>
                 </div>
                 <div className="con-title-article">
                   <h1 className="article-modal-title">{article.title_blog || "Judul tidak tersedia"}</h1>

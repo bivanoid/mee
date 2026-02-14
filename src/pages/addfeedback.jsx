@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/addfeedback/addfeedback.css";
-
+import {  Star } from 'lucide-react';
 // Supabase config
 import { supabase } from "../pages/supabaseClient"
 import { Forward } from 'lucide-react';
+import { Laugh } from 'lucide-react';
+import { Smile } from 'lucide-react';
+import { Frown } from 'lucide-react';
+import { Angry } from 'lucide-react';
+import { Meh } from 'lucide-react';
 
-export default function AddFeedback() {
+export default function AddFeedback({ setShowAddFb, onFeedbackSubmitted }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [rating, setRating] = useState(null);
@@ -43,9 +48,21 @@ export default function AddFeedback() {
         showAlert('Failed to submit feedback');
       } else {
         showAlert('Feedback submitted successfully!');
+        
+        // Reset form fields
         setName('');
         setEmail('');
         setRating(null);
+        
+        // Auto close setelah 1.5 detik
+        setTimeout(() => {
+          if (setShowAddFb) {
+            setShowAddFb(false); // Tutup form AddFeedback
+          }
+          if (onFeedbackSubmitted) {
+            onFeedbackSubmitted(); // Trigger refresh di parent component
+          }
+        }, 1500);
       }
     } catch (err) {
       console.error('❌ Unexpected error:', err);
@@ -67,7 +84,7 @@ export default function AddFeedback() {
         
         <div className="con-form">
           <h2>
-          How’s the <span className="andText">Mood Today?</span>
+          How's the <span className="andText">Mood Today?</span>
         </h2>
 
         <form onSubmit={addUser}>
@@ -75,11 +92,11 @@ export default function AddFeedback() {
             <div className="rating-container">
               {[1, 2, 3, 4, 5].map((num) => {
                 const emoji = {
-                  1: 'rating-1',
-                  2: 'rating-2',
-                  3: 'rating-3',
-                  4: 'rating-4',
-                  5: 'rating-5',
+                  1: (<Angry className="rating-def"/>),
+                  2: (<Frown className="rating-def"/>),
+                  3: (<Meh className="rating-def"/>),
+                  4: (<Smile className="rating-def"/>),
+                  5: (<Laugh className="rating-def"/>),
                 }[num];
 
                 return (
@@ -88,7 +105,8 @@ export default function AddFeedback() {
                     className={`rating-box ${rating === num ? 'selected' : ''}`}
                     onClick={() => setRating(num)}
                   >
-                    <div className={`${emoji} rating-def`}></div>
+                    
+                    {emoji}
 
                   </div>
                 );

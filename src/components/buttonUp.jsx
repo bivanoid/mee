@@ -1,5 +1,4 @@
-
-import DownSvg from "../iconSvg/scrollToBottomic"
+import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ButtonUp({ onClick }) {
@@ -22,7 +21,7 @@ export default function ButtonUp({ onClick }) {
       className={`buttonUp ${showUpButton ? "up" : "down"}`}
       aria-label="Scroll ke atas"
     >
-      <DownSvg />
+      <ArrowUp />
     </button>
   );
 }

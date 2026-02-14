@@ -116,10 +116,10 @@
     font-size: 4rem;
   }
 }
-/* 
 .more-btn svg {
-  width: 50%;
+  width: 2.5rem;
 }
+/* 
 
 .more-btn svg path {
   fill: transparent;
@@ -173,11 +173,8 @@
 }
 
 .mySwiper .gambar a svg {
-  width: 25%;
-}
-
-.mySwiper .gambar a svg path {
-  fill: var(--primary);
+  width: 1.5rem;
+  color: var(--primary);
 }
 
 .gambar .fi {

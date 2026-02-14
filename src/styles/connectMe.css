@@ -91,7 +91,6 @@
     font-family: var(--primaryfont);
     border-radius: 1rem;
     outline: none;
-    transition: 0.25s var(--cubic-slow);
     color: var(--button);
 }
 
@@ -106,7 +105,7 @@
     font-family: var(--primaryfont);
     border-radius: 1rem;
     outline: none;
-    transition: 0.25s var(--cubic-slow);
+    
     color: var(--button);
 }
 

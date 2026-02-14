@@ -8,8 +8,9 @@ import Alert from "../iconSvg/alertIc"
 import { useNavigate, useLocation } from "react-router-dom"
 import { Link } from 'react-router-dom'
 import { LenisContext } from "../App"
-import DownSvg from "../iconSvg/scrollToBottomic"
 import { RefreshCcw } from "lucide-react"
+import { ListEnd } from "lucide-react"
+import { ListStart } from "lucide-react"
 
 const ITEMS_PER_PAGE = 6
 
@@ -22,7 +23,6 @@ export default function Blog() {
    const [currentPage, setCurrentPage] = useState(0)
    const [hasMore, setHasMore] = useState(true)
    const [searchQuery, setSearchQuery] = useState("")
-   const [searchInput, setSearchInput] = useState("")
    // const [totalCount, setTotalCount] = useState(0)
 
    const navigate = useNavigate()
@@ -179,14 +179,6 @@ export default function Blog() {
       }
    }, [searchQuery])
 
-   const handleSearch = useCallback(() => {
-      const query = searchInput.trim()
-      setSearchQuery(query)
-      setCurrentPage(0)
-      setDisplayedBlogs([])
-      fetchBlogs(filter, 0, !!query)
-   }, [searchInput, filter, fetchBlogs])
-
    const loadMoreBlogs = useCallback(() => {
       if (isLoadingMore || !hasMore) return
       fetchBlogs(filter, currentPage + 1, !!searchQuery)
@@ -242,7 +234,6 @@ export default function Blog() {
    function handleFilterChange(newFilter) {
       setFilter(newFilter)
       setSearchQuery("")
-      setSearchInput("")
       setCurrentPage(0)
       setDisplayedBlogs([])
    }
@@ -376,14 +367,14 @@ export default function Blog() {
                            onClick={() => handleFilterChange("latest")}
                         >
                            <p>Latest</p>
-                           <DownSvg />
+                           <ListEnd />
                         </li>
                         <li
                            className={filter === "oldest" ? "active" : ""}
                            onClick={() => handleFilterChange("oldest")}
                         >
                            <p>Oldest</p>
-                           <DownSvg />
+                           <ListStart />
                         </li>
                      </ul>
                      <button

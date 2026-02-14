@@ -232,22 +232,13 @@ grid-template-rows: repeat(2, 1fr);
 
 .hero .hero-2 button {
     font-size: 1rem;
-    padding: 1rem;
-    height: 4rem;
     width: 4rem;
+    padding: 1rem;
     border: none;
     border-radius: 5rem;
     background: var(--border);
     color: var(--button);
     margin-top: 1rem;
-}
-
-.hero .hero-2 button svg {
-    rotate: 180deg;
-}
-
-.hero .hero-2 button svg path {
-    fill: var(--button);
 }
 
 .hero .hero-1{
