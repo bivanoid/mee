@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import FadeContent from './components/FadeContent';
 // Halaman
+
 import Home from './pages/home';
 import AddFeedback from './pages/addfeedback';
 import Blog from './pages/blog';

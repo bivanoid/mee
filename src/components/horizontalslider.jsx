@@ -16,7 +16,6 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function HorizontalSlider() {
   const gambarRefs = useRef([]);
-
   const projects = [
     {
       img: riyadh,
@@ -58,7 +57,6 @@ export default function HorizontalSlider() {
       tags: ["JAVASCRIPT", "CSS", "PHP"],
       link: "https://loomnyarn.lovestoblog.com/"
     },
-    
   ];
 
   useEffect(() => {

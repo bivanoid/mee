@@ -54,7 +54,7 @@
 }
 
 .ID-JT {
-    fill: var(--blue);
+    fill: var(--blue) !important;
 }
 
 .con-contactme {

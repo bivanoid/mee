@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "../styles/connectMe.css"
 import Indonesia from "../assets/svg/indonesia.svg?react"
+
 import { Send } from "lucide-react"
 import { Forward } from "lucide-react"
 
@@ -39,7 +40,7 @@ export default function ConectWithMe() {
 
             <div className="section-4-content">
                 <div className="con-indonesia">
-                    <Indonesia className="indo-svg" />
+                    <Indonesia />
                     <h2>
                         Surakarta <span>:.</span> Central Java <span>:.</span> Indonesia
                     </h2>

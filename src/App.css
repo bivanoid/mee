@@ -1,12 +1,13 @@
 @font-face {
 	font-family: "Kode Mono";
-	src: url(./fonts/KodeMono-VariableFont_wght.ttf);
+	src: url(./fonts/KodeMono-VariableFont_wght.woff2) format('woff2');
+	font-display: swap;
 }
 @font-face {
 	font-family: "Space Grotesk";
-	src: url(./fonts/SpaceGrotesk-VariableFont_wght.ttf);
+	src: url(./fonts/SpaceGrotesk-VariableFont_wght.woff2) format('woff2');
+	font-display: swap;
 }
-
 
 /* :root {
 	--primary: #dbdbce;
@@ -62,7 +63,7 @@
 	--secondfont: "Kode Mono";
 	--primaryfont: "Space Grotesk";
 
-  	--color-font-grey: #757575;
+	--color-font-grey: #757575;
 	--yl-code: #fcf18d;
 
 	--red-cl: #f77171;
@@ -78,25 +79,26 @@
 	color-scheme: dark;
 }
 
-/* Light */
-/* html.light {
-  color-scheme: light;
-}
-html.dark {
-  color-scheme: dark;
-} */
 html {
 	background-color: var(--primary);
 }
 
 * {
-	/* cursor: none; */
 	padding: 0;
 	-webkit-tap-highlight-color: transparent;
 	margin: 0;
 	box-sizing: border-box;
-	/* transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
-	/* font-size: 16px; */
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	padding: 0;
+	overflow-x: hidden;
+	position: relative;
+	fill: #919191;
+	background-position: center;
+	background-color: var(--primary) !important;
 }
 
 @media (max-width: 900px) {
@@ -113,38 +115,9 @@ html {
 	}
 }
 
-.kode-mono {
-	font-family: "Kode Mono", monospace;
-	font-optical-sizing: auto;
-	font-weight: 800;
-	font-style: normal;
-}
-
-.sharePage {
-	width: 50px;
-	aspect-ratio: 1/1;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	border: none;
-	background-color: transparent;
-}
-
-.syne-mono-regular {
-	font-family: "Syne Mono", monospace;
-	font-weight: 400;
-	font-style: normal;
-}
-
 svg {
 	width: 100%;
 	height: 100%;
-	display: grid;
-	place-items: center;
-}
-
-.fi {
-	height: fit-content;
 	display: grid;
 	place-items: center;
 }
@@ -164,18 +137,6 @@ svg {
 #smooth-content {
 	will-change: transform;
 }
-
-/* :root {
-  --primary: #e0e0e0;
-  --primary2: #d1d1d1;
-  --primary3: #bebebe4f;
-  --grey: rgb(59, 59, 59);
-  --button: #0a0a0a;
-  --border: #0000002f;
-  --secondfont: "Elsie",
-    serif;
-  --primaryfont: "Space Grotesk", sans-serif;
-} */
 
 ::selection {
 	background-color: var(--blue);
@@ -223,77 +184,12 @@ svg {
 	transition: 0.5s;
 }
 
-.habibi-regular {
-	font-family: "Habibi", serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
-.elsie-regular {
-	font-family: "Elsie", serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
-.elsie-black {
-	font-family: "Elsie", serif;
-	font-weight: 900;
-	font-style: normal;
-}
-
-body {
-	margin: 0;
-	height: 100%;
-	padding: 0;
-	overflow-x: hidden;
-	position: relative;
-	/* background: linear-gradient(319deg, var(--primary2) 0%, var(--primary) 50%, var(--primary2) 100%);
-  background-attachment: fixed; */
-	fill: #919191;
-	background-position: center;
-	background-color: var(--primary) !important;
-}
-
 a {
 	text-decoration: none;
 }
 
-/* :is(a, button, input, img):hover {
-  cursor: none;
-} */
-
-@keyframes colorstxt {
-	0% {
-		opacity: 0;
-		letter-spacing: 1px;
-		filter: grayscale(100%);
-	}
-
-	99% {
-		opacity: 0;
-		letter-spacing: 1px;
-		filter: grayscale(100%);
-	}
-
-	100% {
-		opacity: 1;
-		letter-spacing: 1px;
-		filter: grayscale(0%);
-	}
-}
-
 .con-star path {
 	fill: var(--button);
-}
-
-.number {
-	position: absolute;
-	color: rgba(255, 255, 255, 0.658);
-	top: 0px;
-	left: 30px;
-	margin: 0;
-	margin-top: 20px;
-	font-size: 18px;
 }
 
 @media (min-width: 1000px) {
