@@ -1,4 +1,5 @@
 import '../styles/introduction.css'
+import { useState, useEffect, useRef } from 'react';
 import lenis from './lenisSc';
 import LogoMiring from '../iconSvg/logoMiring';
 import { Link } from 'react-router-dom';
