@@ -1,18 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="theme-color" content="#161616" />
-    <link rel="icon" type="image/svg+xml" href="/logowebbivanoid.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="theme-color" content="#0a0a0a"> -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <link rel="stylesheet" href="%PUBLIC_URL%/prismCSS.css" />
+    <script src="%PUBLIC_URL%/prismToolbar.js"></script>
     <meta
       name="description"
       content="Portfolio resmi bIVANOId. Menampilkan proyek web development, artikel blog teknologi, dan keahlian di bidang HTML, CSS, JavaScript, dan React."
     />
-    <title>bivanoid</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"
+    />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <meta property="og:title" content="bIVANOId" />
+    <meta
+      property="og:description"
+      content="Portfolio, Blogs, and Web Projects by bIVANOId."
+    />
+    <meta property="og:url" content="https://bivanoid.site" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="bIVANOId" />
+    <meta
+      name="twitter:description"
+      content="Portfolio, Blogs, and Web Projects by bIVANOId."
+    />
+
+    <meta name="twitter:image" content="%PUBLIC_URL%/logowebbivanoid.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logowebbivanoid.png" />
+    <meta property="og:image" content="%PUBLIC_URL%/logowebbivanoid.png" />
+    <link rel="icon" href="%PUBLIC_URL%/logowebbivanoid.png" />
+
+    <title>bIVANOId</title>
+
+    <style>
+      html,
+      body {
+        overscroll-behavior: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
+
   <body>
+    <noscript>BIVANOID - Portfolio & Blogs.</noscript>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
