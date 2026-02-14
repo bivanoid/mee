@@ -134,7 +134,7 @@ export default function HorizontalSlider() {
           <SwiperSlide className='see-more-project'>
             <a href="https://github.com/bivanoid">
               <div className='more-btn'><Github/></div>
-              <p>See more</p>
+              <p>See al on Github</p>
             </a>
           </SwiperSlide>
         </Swiper>

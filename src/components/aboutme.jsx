@@ -1,8 +1,4 @@
 import '../styles/aboutme.css'
-import Biodata from './biodata';
-import HorizontalSlider from './horizontalslider';
-import Feedback from './feedback';
-import CanDo from './canDo';
 
 function AboutMe() {
     return (

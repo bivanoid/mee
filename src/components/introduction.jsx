@@ -1,13 +1,10 @@
 import '../styles/introduction.css'
-import React, { useState, useEffect, useRef } from 'react';
 import lenis from './lenisSc';
 import LogoMiring from '../iconSvg/logoMiring';
-import { href, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ThemeMode from '../themeMode';
 import { ChevronDown } from 'lucide-react';
 import { ArrowDown } from 'lucide-react';
-import { ArrowDownToDot } from 'lucide-react';
-import { ArrowDownToLine } from 'lucide-react';
 
 function Introduction() {
     const conImageRef = useRef(null);

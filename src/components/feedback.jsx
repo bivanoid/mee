@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { createClient } from "@supabase/supabase-js"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 
@@ -12,7 +11,6 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "../styles/feedback.css"
 import Alert from "../iconSvg/alertIc"
-import AddFeedback from "../pages/addfeedback"
 import BtnAddFb from "./btnAddFb"
 import { Quote } from "lucide-react"
 const ohNo = 'Oh noo! '
@@ -148,8 +146,6 @@ function Feedback({ setShowAddFb }) {
         {/* Custom Navigation Buttons */}
         <div className='con-swiper-button-fb' >
           <div className='prev prev-fb'>Prev</div>
-          {/* Custom Pagination */}
-          {/* <div className="swiper-pagination-custom"></div> */}
           <div className='next next-fb'>Next</div>
         </div>
 
