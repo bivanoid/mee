@@ -64,7 +64,7 @@ function Feedback({ setShowAddFb }) {
   return (
     <div className="feedback" id="sc4">
       <div className='title-swiper'>
-        <h1 className="title-feedback">Their <span>Feedback.</span></h1>
+        <h1 className="title-feedback">Their <span>Feedback<span> *</span></span></h1>
       </div>
 
 

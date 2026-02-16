@@ -75,16 +75,15 @@ export default function AddFeedback({ setShowAddFb, onFeedbackSubmitted }) {
 
   return (
     
-      <div className="con-addfeedback">
-        {alertPopUp && (
+      <div className="con-addfeedback">        
+        <div className="con-form">
+                  {alertPopUp && (
           <div className={`AlertPopUp ${isVisible ? "show" : "hide"}`}>
-            <p><span className='red-alert'></span>{alertPopUp}</p>
+            <p><span className='red-alert'>*</span>{alertPopUp}</p>
           </div>
         )}
-        
-        <div className="con-form">
           <h2>
-          How's the <span className="andText">Mood Today?</span>
+          Send me a <span className="andText">Feedback</span>
         </h2>
 
         <form onSubmit={addUser}>

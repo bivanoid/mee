@@ -1,16 +1,17 @@
+import { CodeXml } from "lucide-react";
 import "../styles/canDo.css"
 import { FileBracesCorner, PanelsTopLeft, VectorSquare } from 'lucide-react';
 export default function CanDo() {
     return (
         <div className="section-3">
             <div className='title-swiper'>
-                <h1>mY <span>eXPERTISE.</span></h1>
+                <h1>mY <span>eXPERTISE<span> *</span></span></h1>
             </div>
 
             <div className="section-3-content">
                 <div className="box-i-can-do">
              
-                        <FileBracesCorner className="icon"/>
+                        <CodeXml className="icon"/>
        
                     <h2><span>Web</span><br />Development</h2>
                     <p>website development and maintenance</p>

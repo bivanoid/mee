@@ -300,7 +300,7 @@ function scrollToTop() {
                   <div className="con-user-uploader">
                     <div className="article-modal-author">
                       <div className="author-info">
-                        <p className="author-name">{article.author || "/Firdhan Abivandya"}</p>
+                        <p className="author-name">{article.author || "Firdhan Abivandya"}</p>
                       </div>
                     </div>
                   </div>

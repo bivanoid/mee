@@ -206,7 +206,6 @@
     border: var(--border-width) solid var(--border);
     border-radius: 1rem;
     color: var(--button);
-    margin-bottom: 1rem;
 }
 
 .conTextArea {
@@ -338,19 +337,20 @@
 }
 
 .AlertPopUp {
-    position: fixed;
+    position: relative;
     top: 0;
     /* Start above screen */
     left: 50%;
-    transform: translateX(-50%);
     padding: 8px 16px;
-    border: 1px solid var(--border);
-    background-color: var(--button);
+    margin-bottom: 1rem;
+    width: 100%;
+    border: var(--border-width) solid var(--border);
+    background-color: var(--primary25);
     font-family: var(--secondfont);
     z-index: 1000;
     display: inline-block;
     opacity: 0;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: 0.5rem;
     /* Smooth bounce effect */
 }
 
@@ -358,18 +358,19 @@
     padding: 0;
     margin: 0;
     font-size: 1em;
-    color: var(--primary);
+    color: var(--button);
     font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .red-alert {
-    background: rgb(243, 71, 41);
-    margin-left: 5px;
-    width: 1.3vw;
-    aspect-ratio: 1 / 1;
-    border-radius: 100px;
+    color: var(--red-cl);
     display: inline-block;
-    margin-right: 16px;
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    line-height: 0px;
     animation: kedip 1s linear infinite;
 }
 

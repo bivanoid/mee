@@ -413,6 +413,11 @@
 
 }
 
+.text-abouts .title-about span {
+    color: var(--red-cl);
+}
+
+
 .text-abouts .content-about {
     font-size: 1rem;
     width: 100%;

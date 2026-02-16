@@ -1,4 +1,4 @@
-import { ArrowUp } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ButtonUp({ onClick }) {
@@ -21,7 +21,7 @@ export default function ButtonUp({ onClick }) {
       className={`buttonUp ${showUpButton ? "up" : "down"}`}
       aria-label="Scroll ke atas"
     >
-      <ArrowUp />
+      <ChevronUp/>
     </button>
   );
 }

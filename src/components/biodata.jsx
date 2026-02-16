@@ -37,7 +37,7 @@ function Biodata() {
             <div className='sticky'>
                 <div className='con-scroll-sticky'>
                     <div className='sticky-header'>
-                            <h1 id='namamu'>/Firdhan <span>Abivandya.</span></h1>
+                            <h1 id='namamu'>Firdhan <span>Abivandya.</span></h1>
                     </div>
                         <div className='bio' id='bio'>
                                 <h1 >Information<span> *</span></h1>

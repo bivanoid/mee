@@ -1,6 +1,6 @@
 // themeMode.jsx
 import { Sun, Moon } from 'lucide-react';
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function ThemeMode() {
     const [theme, setTheme] = useState(() => {
@@ -13,9 +13,8 @@ export default function ThemeMode() {
 
     function toggleTheme() {
         if (!theme) {
-                        // Dark mode
+            // Dark mode
             root.style.setProperty('--primary', '#0a0a0a');
-            // root.style.setProperty('--primary', '#161616');
             root.style.setProperty('--primary2', '#131313');
             root.style.setProperty('--primary25', '#0d0d0d');
             root.style.setProperty('--primary3', '#232222');
@@ -50,11 +49,10 @@ export default function ThemeMode() {
             root.style.setProperty('--toolbar-bg', 'rgba(224, 224, 224, 0.2)');
             root.style.setProperty('--toolbar-text', '#bbb'); 
         } else {
-
-
+            //Light Mode
             root.style.setProperty('--primary', '#dbdbce');
             root.style.setProperty('--primary2', '#dadaddff');
-            root.style.setProperty('--primary25', '#d7d7c4');
+            root.style.setProperty('--primary25', '#dadacc');
             root.style.setProperty('--primary3', '#fafaff');
             root.style.setProperty('--blue', '#1a2e89');
             root.style.setProperty('--grey', '#c9c9c9');

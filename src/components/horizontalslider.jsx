@@ -85,7 +85,7 @@ export default function HorizontalSlider() {
     <div className='con-swiper' id='sc3'>
 
       <div className='title-swiper'>
-          <h1>Highlight <span>Projects.</span></h1>
+          <h1>Highlight <span>Projects<span> *</span></span></h1>
       </div>
 
         <Swiper
@@ -134,7 +134,7 @@ export default function HorizontalSlider() {
           <SwiperSlide className='see-more-project'>
             <a href="https://github.com/bivanoid">
               <div className='more-btn'><Github/></div>
-              <p>See al on Github</p>
+              <p>See all on Github</p>
             </a>
           </SwiperSlide>
         </Swiper>

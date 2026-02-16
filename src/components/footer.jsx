@@ -38,11 +38,11 @@ export default function Footer() {
                     <div className='footer3'>
                         <div className='con-footer3-content'>
                         <div className='get-in-touch'>
-                            <h1>Get In Touch</h1>
+                            <h1>Navigation</h1>
                             <ul>
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/blog">Blog</Link></li>
-                                <li><a href='https://t.me/bieblupee'>Repository</a></li>
+                                <li><a href='https://github.com/bivanoid?tab=repositories'>Repository</a></li>
 
                             </ul>
                         </div>

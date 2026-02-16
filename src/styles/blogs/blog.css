@@ -482,7 +482,7 @@ main {
 .title-article {
 	color: var(--button);
 	font-family: var(--secondfont);
-	font-weight: 800;
+	font-weight: 1000;
 	font-size: 1.25rem;
 	text-transform: uppercase;
 	width: 100%;
@@ -822,7 +822,7 @@ main {
 	border: none;
 	border-radius: 5rem;
 	background: var(--blue);
-	outline: 8px solid var(--primary);
+	box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.479);
 	color: var(--button);
 	margin-top: 1rem;
 	/* align-self: flex-end; */
@@ -835,11 +835,8 @@ main {
 
 .buttonUp svg {
 	height: 100%;
-	width: 30px;
-}
-
-.buttonUp svg path {
-	fill: var(--primary);
+	width: 2rem;
+	color: var(--primary);
 }
 
 .buttonUp.up {

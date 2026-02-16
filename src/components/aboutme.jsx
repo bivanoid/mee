@@ -7,7 +7,7 @@ function AboutMe() {
             <div className='contents'>
                 <div className='abouts'>
                     
-                        <div className='text-abouts'><p className='title-about'>About Me.</p><br></br>
+                        <div className='text-abouts'><p className='title-about'>About Me<span> *</span></p><br></br>
   
                             <p className='content-about'>
                                 Hello! My name is <span>Firdhan Abivandya</span>. I am from Surakarta, Central Java Province, <span>Indonesia</span> 
@@ -25,7 +25,7 @@ function AboutMe() {
               
                         </div>
                     
-                        <div className='text-abouts  '><p className='title-about title-about2'>My Education.</p><br></br>
+                        <div className='text-abouts  '><p className='title-about title-about2'>My Education<span> *</span></p><br></br>
                        
                             <ul className='content-carrier'>
                                 <li>
