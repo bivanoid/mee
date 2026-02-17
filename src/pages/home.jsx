@@ -1,12 +1,18 @@
 import '../App.css';
 import '../styles/home/home.css';
-import Introduction from '../components/introduction';
-import Footer from '../components/footer';
-import HomeContent from '../components/homeContent';
-import AddFeedback from './addfeedback';
-import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense } from 'react';
+
+
+const Introduction = lazy(() => import('../components/introduction'));
+const Footer = lazy(() => import('../components/footer'));
+const HomeContent = lazy(() => import('../components/homeContent'));
+const AddFeedback = lazy(() => import('./addfeedback'));
+
+import { useEffect, useState } from 'react';
 import '../components/btnAddFb';
 import lenis from '../components/lenisSc';
+import Loading from '../components/loading';
+
 
 export default function Home() {
   const [showAddFb, setShowAddFb] = useState(false)
@@ -23,16 +29,16 @@ export default function Home() {
     <div>
       <div className='body body-home' id='bodyHome'>
         <div className={`show-addfb-container ${showAddFb ? 'aktif' : 'non-aktif'}`}>
-          {/* UBAH INI - jangan pakai toggle, langsung set false */}
           <div onClick={() => setShowAddFb(!setShowAddFb)} className="closeAddFb">close</div>
           <AddFeedback />
         </div>
         <div id='thenav'></div>
-        <div id='thecontent'>
+        <Suspense fallback={<Loading/>}>
           <Introduction />
           <HomeContent setShowAddFb={setShowAddFb}/>
           <Footer />
-        </div>
+        </Suspense>
+
       </div>
     </div>
   );

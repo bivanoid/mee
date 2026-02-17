@@ -1,14 +1,12 @@
 import './App.css';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import FadeContent from './components/FadeContent';
-// Halaman
 
 import Home from './pages/home';
 import AddFeedback from './pages/addfeedback';
 import Blog from './pages/blog';
 import ArticlePage from './pages/ArticlePages';
-import Loading from './components/loading';
 
 import ReactGA from "react-ga4";
 import usePageTracking from "./hooks/usePageTracking";
@@ -21,7 +19,7 @@ function AppRoutes() {
   const lenisRef = React.useContext(LenisContext);
 
   useEffect(() => {
-    ReactGA.initialize("G-J4M22QCN11"); // <--- Ganti ini pakai Measurement ID kamu
+    ReactGA.initialize("G-J4M22QCN11");
   }, []);
 
   usePageTracking();
@@ -76,29 +74,15 @@ function AppRoutes() {
 }
 
 function App() {
-  const [loading, setLoading] = useState(true);
   const lenisRef = useRef(null);
-
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 0);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <Router>
       <LenisContext.Provider value={lenisRef}>
         <div className='body'>
-          {loading ? (
-            <Loading />
-          ) : (
-            <div>
+          <div>
               <AppRoutes />
             </div>
-          )}
         </div>
       </LenisContext.Provider>
     </Router>
