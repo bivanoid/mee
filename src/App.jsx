@@ -3,10 +3,11 @@ import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import FadeContent from './components/FadeContent';
 
-import Home from './pages/home';
-import AddFeedback from './pages/addfeedback';
-import Blog from './pages/blog';
-import ArticlePage from './pages/ArticlePages';
+import { lazy, Suspense } from 'react';
+const Home = lazy(() => import('./pages/home'));
+const AddFeedback = lazy(() => import('./pages/addfeedback'));
+const Blog = lazy(() => import('./pages/blog'));
+const ArticlePage = lazy(() => import('./pages/ArticlePages'));
 
 import ReactGA from "react-ga4";
 import usePageTracking from "./hooks/usePageTracking";

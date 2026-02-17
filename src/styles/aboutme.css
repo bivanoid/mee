@@ -63,7 +63,7 @@
 }
 
 .sticky #namamu span {
-    opacity: 0.3;
+    color: var(--color-font-grey);
     font-size: 2rem;
 }
 

@@ -2,7 +2,6 @@ import '../App.css';
 import '../styles/home/home.css';
 import { lazy, Suspense } from 'react';
 
-
 const Introduction = lazy(() => import('../components/introduction'));
 const Footer = lazy(() => import('../components/footer'));
 const HomeContent = lazy(() => import('../components/homeContent'));
@@ -12,6 +11,7 @@ import { useEffect, useState } from 'react';
 import '../components/btnAddFb';
 import lenis from '../components/lenisSc';
 import Loading from '../components/loading';
+import FadeContent from '../components/FadeContent';
 
 
 export default function Home() {
@@ -34,9 +34,11 @@ export default function Home() {
         </div>
         <div id='thenav'></div>
         <Suspense fallback={<Loading/>}>
-          <Introduction />
-          <HomeContent setShowAddFb={setShowAddFb}/>
-          <Footer />
+          <FadeContent>
+            <Introduction />
+            <HomeContent setShowAddFb={setShowAddFb}/>
+            <Footer />
+          </FadeContent>
         </Suspense>
 
       </div>

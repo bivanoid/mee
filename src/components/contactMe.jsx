@@ -33,7 +33,7 @@ export default function ConectWithMe() {
     return (
         <div className="section-4">
             <div className='title-swiper'>
-                <h1 className="title-feedback">Contact<span> Me<span> *</span></span> 
+                <h1 className="title-feedback">Get <span>In Touch<span> *</span></span> 
                 {/* <span className="noice-title">.</span> */}
                 </h1>
             </div>
