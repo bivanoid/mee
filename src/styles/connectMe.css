@@ -24,7 +24,7 @@
     border-radius: 0.25rem;
     width: fit-content;
     border-radius: 0.5rem;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .section-4-content h2 span {
@@ -123,7 +123,7 @@
     border-radius: 1rem;
     font-family: var(--secondfont);
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     justify-self: center;
     display: flex;

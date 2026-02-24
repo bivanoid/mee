@@ -46,7 +46,7 @@
 .box-i-can-do h2 {
   font-family: var(--secondfont);
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 1.5rem;
   color: var(--button);
 }

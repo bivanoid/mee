@@ -125,7 +125,7 @@ svg {
 .logo-web p {
 	font-size: 1vw;
 	margin-left: 10px !important;
-	font-weight: 800 !important;
+	font-weight: bold;
 	text-transform: uppercase;
 	padding: 0 !important;
 }
@@ -177,7 +177,7 @@ svg {
 	border-radius: 1rem;
 	transition: 0s var(--cubic-toeng);
 	font-family: var(--secondfont);
-	font-weight: 800;
+	font-weight: bold;
 	bottom: 1rem;
 	text-transform: uppercase;
 	right: 1rem;
@@ -232,7 +232,7 @@ a {
 	}
 
 	.loading-screen h1 {
-		font-weight: 400;
+		font-weight: normal;
 		font-size: 1rem;
 		animation: fadeIn 3.8s ease-in-out;
 	}

@@ -7,7 +7,7 @@
 
 .title-feedback {
     color: var(--button);
-    font-weight: 800;
+    font-weight: bold;
     font-size: 3rem;
     font-family: var(--secondfont);
     padding: 0;
@@ -16,7 +16,7 @@
 
 .subtitle-feedback {
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: normal;
     opacity: 0.7;
     line-height: 1;
     color: var(--button);
@@ -66,7 +66,7 @@
     font-family: var(--secondfont);
     color: var(--button);
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     padding-inline: 30px;
 }
@@ -165,7 +165,7 @@
     text-transform: uppercase;
     color: var(--button);
     font-family: var(--secondfont);
-    font-weight: 800;
+    font-weight: bold;
     width: 100%;
 }
 
@@ -249,7 +249,7 @@
     font-family: var(--secondfont);
     background-color: var(--primary);
     opacity: 1;
-    font-weight: 600;
+    font-weight: normal;
     display: grid;
     place-items: center;
     padding-inline: 10px;
@@ -283,7 +283,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: normal;
     position: relative;
     background-color: var(--primary);
     text-transform: uppercase;
@@ -341,7 +341,7 @@
     color: var(--button);
     font-family: var(--secondfont);
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: bold;
     max-width: 80%;
     margin-block: 15px;
 }

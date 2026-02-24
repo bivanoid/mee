@@ -15,7 +15,7 @@
     color: var(--button);
     text-transform: uppercase;
     display: inline-block;
-    font-weight: 800;
+    font-weight: bold;
 }
 
 .loading-screen h1 span {

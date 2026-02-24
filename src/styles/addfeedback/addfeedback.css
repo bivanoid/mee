@@ -44,7 +44,7 @@
     background-color: var(--border);
     border-radius: 0.5rem;
     display: block;
-    font-weight: 400;
+    font-weight: normal;
     align-self: center;
 }
 
@@ -62,7 +62,7 @@
     margin-left: 9px;
     font-family: var(--secondfont);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: normal;
     padding: 2px 5px 2px 5px;
     background-color: var(--button);
     color: var(--primary);
@@ -87,7 +87,7 @@
     font-size: 2rem;
     padding-bottom: 1rem;
     margin: 0;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -255,7 +255,7 @@
     font-family: var(--secondfont);
     right: 15px;
     padding: 0px 12px;
-    font-weight: 500;
+    font-weight: normal;
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
@@ -274,7 +274,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     font-family: var(--primaryfont);
-    font-weight: 600;
+    font-weight: normal;
     transition: 0.5s var(--cubic-toeng);
     color: var(--button);
     display: flex;
@@ -359,7 +359,7 @@
     margin: 0;
     font-size: 1em;
     color: var(--button);
-    font-weight: 800;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;

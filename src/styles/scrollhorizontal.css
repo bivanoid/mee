@@ -26,12 +26,12 @@
 
 .title-swiper h1 {
   color: var(--button);
-  font-weight: 400;
+  font-weight: normal;
   font-size: 2.5rem;
   color: var(--button);
   font-family: var(--secondfont);
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: bold;
   /* text-box-trim: trim-both;
     text-box-edge: cap alphabetic; */
   word-spacing: -5px;
@@ -58,7 +58,7 @@
 
 .title-swiper p {
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: normal;
   line-height: 1;
   margin: 0;
 }
@@ -98,7 +98,7 @@
   font-family: var(--secondfont);
   text-transform: uppercase;
   color: var(--button);
-  font-weight: 800;
+  font-weight: bold;
   margin: 1rem;
   font-size: 1rem;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -195,7 +195,7 @@
   top: 0;
   text-transform: capitalize;
   opacity: 0.5;
-  font-weight: 400;
+  font-weight: normal;
   padding: 0;
   padding-inline: 30px;
   margin: 0;
@@ -206,7 +206,7 @@
   font-size: 1.5em;
   font-family: var(--secondfont);
   color: var(--button);
-  font-weight: 800;
+  font-weight: bold;
   margin: 0;
   padding-top: 5px;
   position: relative;
@@ -224,7 +224,7 @@
   width: calc(100% - 20px);
   overflow: hidden;
   gap: 0.3rem;
-  font-weight: 1000;
+  font-weight: bold;
   font-family: var(--secondfont);
 }
 
@@ -240,7 +240,7 @@
   padding-inline: 0.5rem;
   padding-block: 0.5rem;
   color: var(--button);
-  font-weight: 800;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -267,7 +267,7 @@
     font-family: var(--secondfont);
     color: var(--button);
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     padding-inline: 30px;
 }

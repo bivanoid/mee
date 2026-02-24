@@ -160,7 +160,7 @@
 .footer2 .top-footer2 p {
     color: var(--button);
     font-family: var(--primaryfont);
-    font-weight: 400;
+    font-weight: normal;
     font-size: 1rem;
     margin: 0;
     line-height: 1.6;
@@ -178,7 +178,7 @@
 .footer3 h1 {
     font-family: var(--secondfont);
     color: var(--button);
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 1rem;
     margin: 0 0 15px 0;

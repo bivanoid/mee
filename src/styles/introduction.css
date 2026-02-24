@@ -36,10 +36,11 @@
 .navigation .path-name {
     padding: 0.5rem;
     width: fit-content;
-    background-color: var(--border);
+    background-color: var(--primary25);
+    border: var(--border-width) solid var(--border);
     border-radius: 0.5rem;
     display: block;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .navigation .path-name span {
@@ -247,7 +248,7 @@ grid-template-rows: repeat(2, 1fr);
 
 .hero p {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: bold;
     opacity: 0.3;
 }
 
@@ -280,7 +281,7 @@ grid-template-rows: repeat(2, 1fr);
 
     .hero p {
         font-size: 2rem;
-        font-weight: 800;
+        font-weight: bold;
         opacity: 0.3;
     }
 
@@ -319,7 +320,7 @@ grid-template-rows: repeat(2, 1fr);
 
     .hero p {
         font-size: 1.5rem;
-        font-weight: 800;
+        font-weight: bold;
         opacity: 0.3;
     }
 
@@ -359,7 +360,7 @@ grid-template-rows: repeat(2, 1fr);
     font-family: var(--secondfont);
     display: flex;
     align-items: flex-start;
-    font-weight: 800;
+    font-weight: bold;
     flex-direction: column;
 }
 
@@ -395,16 +396,6 @@ grid-template-rows: repeat(2, 1fr);
 .text .AnimatedContent2 {
     width: 100%;
 }
-
-/* .text p:nth-child(2) {
-    -webkit-text-stroke: 0.8px;
-    -webkit-text-stroke-color: var(--button);
-    font-size: clamp(1rem, 4vw, 6rem);
-    color: var(--button);
-    font-weight: 800;
-    padding-inline: 30px;
-    line-height: 0.8;
-} */
 
 .con-image {
     position: absolute;

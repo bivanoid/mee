@@ -51,7 +51,7 @@
 .sticky #namamu {
     font-family: var(--secondfont);
     text-transform: uppercase;
-    font-weight: 1000;
+    font-weight: bold;
     color: var(--button);
     display: inline-block;
     flex: 1;
@@ -105,7 +105,7 @@
     padding-inline: 0.5rem;
     padding-block: 0.5rem;
     color: var(--button);
-    font-weight: 800;
+    font-weight: bold;
     font-family: var(--secondfont);
     text-transform: uppercase;
 
@@ -152,7 +152,7 @@
     display: grid;
     place-items: center;
     border-top: 1px solid var(--border);
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
@@ -165,7 +165,7 @@
 
 .bio h1 {
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: bold;
     margin-block: calc(2vh);
     display: flex;
     align-items: center;
@@ -405,7 +405,7 @@
 
 .text-abouts .title-about {
     font-size: 1rem;
-    font-weight: 1000;
+    font-weight: bold;
     opacity: 1;
     text-transform: uppercase;
     font-family: var(--secondfont);
@@ -428,7 +428,7 @@
     color: var(--color-font-grey);
 }
 .content-about span {
-    font-weight: 600;
+    font-weight: normal;
     color: var(--button);
     opacity: 1 !important;
 }
@@ -507,7 +507,7 @@
 
 .content-carrier li p {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: normal;
     transition: 0.25s var(--cubic-slow);
 }
 
@@ -553,7 +553,7 @@
 
 @media (min-width:1024px) {
     .text-abouts .content-carrier div:hover p:nth-child(1) {
-        font-weight: 600;
+        font-weight: normal;
     }
 
     .text-abouts .content-carrier li p {
@@ -691,7 +691,7 @@
         font-family: var(--secondfont);
         color: var(--button);
         display: inline-block;
-        font-weight: 1000;
+        font-weight: bold;
         line-height: 1;
     }
 
