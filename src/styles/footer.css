@@ -76,7 +76,8 @@
     width: 45px;
     height: 45px;
     font-size: 1rem;
-    background: var(--border);
+    background: var(--primary25);
+    border: var(--border-width) solid var(--border);
     place-items: center;
     outline: none;
     border-radius: 0.5rem;

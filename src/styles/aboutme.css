@@ -100,9 +100,10 @@
     width: fit-content;
     height: fit-content;
     font-size: 0.8rem;
-    background-color: var(--border);
+    background-color: var(--primary25);
+    border: var(--border-width) solid var(--border);
     border-radius: 0.5rem;
-    padding-inline: 0.5rem;
+    padding-inline: 0.75rem;
     padding-block: 0.5rem;
     color: var(--button);
     font-weight: bold;

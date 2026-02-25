@@ -73,7 +73,7 @@
 	display: grid;
 	place-items: center;
 	padding: 0.5rem;
-	background-color: transparent;
+	background-color: var(--primary25);
 	border: var(--border-width) solid var(--border);
 	color: var(--blue);
 	@media (min-width: 747px) {
