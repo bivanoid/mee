@@ -5,6 +5,7 @@ import HorizontalSlider from "./horizontalslider"
 import "../styles/home/homeContent.css"
 import Feedback from "./feedback"
 import ConectWithMe from "./contactMe"
+import MyExperience from "./myExperience"
 
 export default function HomeContent({ setShowAddFb }) {
     return (
@@ -13,6 +14,7 @@ export default function HomeContent({ setShowAddFb }) {
             <div className="wrapper-componen-vertical">
                 <AboutMe />
                 <CanDo />
+                <MyExperience/>
                 <HorizontalSlider />
                 <Feedback setShowAddFb={setShowAddFb}/>
                 <ConectWithMe />

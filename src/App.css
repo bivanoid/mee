@@ -75,6 +75,7 @@
 	--cubic-slow: cubic-bezier(0.4, 0, 0.2, 1);
 
 	--border-width: 2px;
+	--border-black025: var(--border-width) solid rgb(from var(--primary) r g b / 0.25);
 
 	color-scheme: dark;
 }
@@ -99,6 +100,27 @@ body {
 	fill: #919191;
 	background-position: center;
 	background-color: var(--primary) !important;
+}
+
+section {
+	width: 100%;
+    height: calc(fit-content);
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+    border: var(--border-width) solid var(--border);
+}
+
+.text-abouts .title-about span {
+    color: var(--red-cl);
+	padding-left: 0.5rem;
+	display: inline-flex;
+}
+
+.title-swiper span span {
+	    color: var(--red-cl);
+	margin-left: 0.5rem;
+	display: inline-flex;
 }
 
 @media (max-width: 900px) {

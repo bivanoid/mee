@@ -1,0 +1,29 @@
+.section-experience {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--blue);
+    border: calc(var(--border-width) * 2) solid rgb(from var(--primary) r g b / 0.25);
+    gap: 1rem;
+}
+
+.items-experience {
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: var(--border-black025);
+}
+
+.items-experience:last-child {
+    border: 0;
+}
+
+.items-experience p {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+}

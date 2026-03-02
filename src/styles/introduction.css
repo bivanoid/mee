@@ -234,12 +234,18 @@ grid-template-rows: repeat(2, 1fr);
 .hero .hero-2 button {
     font-size: 1rem;
     width: 4rem;
+    height: 4rem;
     padding: 1rem;
     border: none;
-    border-radius: 5rem;
+    border-radius: 4rem;
     background: var(--border);
     color: var(--button);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1rem;
+    font-family: var(--primaryfont);
+    text-transform: uppercase;
 }
 
 .hero .hero-1{
@@ -408,25 +414,7 @@ grid-template-rows: repeat(2, 1fr);
     z-index: -1;
 }
 
-.arrow-to-sc2 {
-    bottom: calc(30px);
-    right: calc(1rem + 30px);
-    z-index: 3;
-    width: 10%;
-    box-sizing: border-box;
-    aspect-ratio: 1/1;
-    display: grid;
-    background: var(--radial-grad);
-    position: absolute;
-    z-index: 4;
-    border: none;
-    border-radius: 1rem;
-    place-items: center;
-    display: none;
-    /* clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%); */
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: var(--border-width) solid var(--border);
-}
+
 
 .arrow-to-sc2 svg {
     width: 35%;

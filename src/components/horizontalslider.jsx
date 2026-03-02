@@ -82,10 +82,9 @@ export default function HorizontalSlider() {
   }, []);
 
   return (
-    <div className='con-swiper' id='sc3'>
-
+    <section>
       <div className='title-swiper'>
-          <h1>Highlight <span>Projects<span> *</span></span></h1>
+          <h1>Highlight <span>Projects<span>*</span></span></h1>
       </div>
 
         <Swiper
@@ -143,6 +142,6 @@ export default function HorizontalSlider() {
         <div className='prev prev-hz'>Prev</div>
         <div className='next next-hz'>Next</div>
       </div>
-    </div>
+    </section>
   );
 }

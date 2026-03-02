@@ -6,6 +6,12 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules"
 
 import { supabase } from "../pages/supabaseClient"
 
+
+import { Laugh } from 'lucide-react';
+import { Smile } from 'lucide-react';
+import { Frown } from 'lucide-react';
+import { Angry } from 'lucide-react';
+import { Meh } from 'lucide-react';
 // Import Swiper styles
 import "swiper/css"
 import "swiper/css/pagination"
@@ -19,15 +25,15 @@ const ohNo = 'Oh noo! '
 function getEmojiFromRating(rating) {
   switch (rating) {
     case 1:
-      return "rating-1"
+      return (<Angry className="angry"/>)
     case 2:
-      return "rating-2"
+      return (<Frown className="frown"/>)
     case 3:
-      return "rating-3"
+      return (<Meh className="meh"/>)
     case 4:
-      return "rating-4"
+      return (<Smile className="smile"/>)
     case 5:
-      return "rating-5"
+      return (<Laugh className="laugh"/>)
     default:
       return "rating-unknown"
   }
@@ -62,12 +68,10 @@ function Feedback({ setShowAddFb }) {
   }, [])
 
   return (
-    <div className="feedback" id="sc4">
-      <div className='title-swiper'>
-        <h1 className="title-feedback">Their <span>Feedback<span> *</span></span></h1>
+    <section className="section-feedback">
+      <div className='title-swiper title-swiper-feedback'>
+        <h1 className="title-feedback">Their <span>Feedback<span>*</span></span></h1>
       </div>
-
-
       {loading && <p className="loading-feedback">Loading...</p>}
       {error && (
         <div className="error-title">
@@ -76,9 +80,6 @@ function Feedback({ setShowAddFb }) {
           {!loading && users.length === 0 && <p className="error-fetch">No feedback yet.</p>}
         </div>
       )}
-
-
-
       <div className="swiper-container">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -88,22 +89,22 @@ function Feedback({ setShowAddFb }) {
             nextEl: ".next-fb",
             prevEl: ".prev-fb",
           }}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 4000,
+          //   disableOnInteraction: false,
+          // }}
           breakpoints={{
-            640: {
+            40: {
               slidesPerView: 1,
-              spaceBetween: 1,
+              spaceBetween: 16,
             },
             768: {
-              slidesPerView: 1,
-              spaceBetween: 1,
+              slidesPerView: 2,
+              spaceBetween: 16,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 1,
+              spaceBetween: 16,
             },
           }}
           loop={users.length > 3}
@@ -117,9 +118,6 @@ function Feedback({ setShowAddFb }) {
             return (
               <SwiperSlide key={user.id}>
                 <div className="user-feedback swiper-slide-content">
-                  <div className="feedback-quote">
-                    <Quote/>
-                  </div>
                   <div className="con-userfeedback">
                     <div className="con-usertext">
                       <p className="usertext">"{user.email}"</p>
@@ -127,12 +125,11 @@ function Feedback({ setShowAddFb }) {
                   </div>
                   <div className="con-btm-fd">
                     <div className="con-username">
-                      <p className="fromuser">from</p>
                       <p className="username">{user.name}</p>
                     </div>
                     <div className="con-feedback-btm">
                       <div className="userrating">
-                        <div className={emoji}></div>
+                        <div>{emoji}</div>
                       </div>
                       <p className="userdate">{date}</p>
                     </div>
@@ -152,7 +149,7 @@ function Feedback({ setShowAddFb }) {
           <BtnAddFb setShowAddFb={setShowAddFb}/>
 
       </div>
-    </div>
+    </section>
   )
 }
 

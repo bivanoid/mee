@@ -1,3 +1,4 @@
+
 .feedback {
     height: fit-content;
     border-radius: 1rem;
@@ -32,19 +33,46 @@
     height: fit-content;
 }
 
+.userrating .angry {
+    color: var(--red-cl);
+}
+
+.userrating .frown {
+    color: var(--orange-cl);
+}
+
+.userrating .meh {
+    color: var(--yellow-cl);
+}
+
+.userrating .smile {
+    color: var(--lime-cl);
+}
+
+.userrating .laugh {
+    color: var(--green-cl);
+}
+
 .feedback-swiper {
     width: 100%;
     height: fit-content;
+    padding: 1rem;
+}
+
+.feedback-swiper .swiper-wrapper {
+    width: calc(100% - 20rem);
+    height: auto;
 }
 
 .feedback-swiper .swiper-slide {
     padding: 0;
     border: none;
+    background-color: var(--primary25);
 }
 
 .swiper-slide-content {
     height: 100%;
-    min-height: 300px;
+    min-height: 270px;
 }
 
 .con-swiper-button-fb {
@@ -112,7 +140,9 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(fit-content + 20px);
-    min-height: 380px;
+    border-radius: 1rem;
+    min-height: 300px;
+    border: var(--border-width) solid var(--border);
     transition: 0.2s, background 0s;
     overflow: hidden;
     position: relative;
@@ -121,12 +151,12 @@
 .con-btm-fd {
     display: flex;
     flex-direction: column;
-    padding-inline: 30px;
+    padding-inline: 1rem;
 }
 
 .con-userfeedback {
     display: block;
-    padding-top: 45px;
+    padding-top: 1rem;
     flex-grow: 1;
     overflow: hidden;
 }
@@ -139,7 +169,7 @@
     justify-content: stretch;
     height: fit-content;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 1rem;
     margin-top: 5px;
     overflow: hidden;
     border-radius: 0.5rem;
@@ -199,48 +229,11 @@
 .user-feedback .userrating {
     display: grid;
     place-items: center;
-    padding: 0.7rem;
+    padding: 0.5rem;
     border-radius: 0.5rem 0 0 0.5rem;
     border: var(--border-width) solid var(--border);
     background: var(--border);
-
 }
-
-:is(.rating-1, .rating-2, .rating-3, .rating-4, .rating-5) {
-    border-radius: 0.25rem;
-}
-
-.user-feedback .userrating .rating-1 {
-    width: 0.9rem;
-    aspect-ratio: 1 / 1;
-    background-color: var(--red-cl);
-
-}
-
-.user-feedback .userrating .rating-2 {
-    width: 0.9rem;
-    aspect-ratio: 1 / 1;
-    background-color: var(--orange-cl);
-}
-
-.user-feedback .userrating .rating-3 {
-    width: 0.9rem;
-    aspect-ratio: 1 / 1;
-    background-color: var(--yellow-cl);
-}
-
-.user-feedback .userrating .rating-4 {
-    width: 0.9rem;
-    aspect-ratio: 1 / 1;
-    background-color: var(--lime-cl);
-}
-
-.user-feedback .userrating .rating-5 {
-    width: 0.9rem;
-    aspect-ratio: 1 / 1;
-    background-color: var(--green-cl);
-}
-
 
 .user-feedback .userdate {
     font-size: 0.8em;
@@ -252,9 +245,10 @@
     font-weight: normal;
     display: grid;
     place-items: center;
+    font-weight: bold;
     padding-inline: 10px;
     width: max-content;
-    color: var(--button);
+    color: var(--color-font-grey);
     border: var(--border-width) solid var(--border);
     border-radius: 0 0.5rem 0.5rem 0;
 }
@@ -399,7 +393,7 @@
     }
 
     .user-feedback {
-        min-height: 360px;
+        min-height:270px;
     }
 
     .con-userfeedback {
@@ -447,6 +441,10 @@
 
     .user-feedback .userrating {
         font-size: 1rem;
+    }
+
+    .swiper-wrapper {
+        
     }
 
     .swiper-button-prev-custom,

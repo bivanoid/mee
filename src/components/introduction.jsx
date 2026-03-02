@@ -54,7 +54,7 @@ const formatTime = (date) => {
     return (
         <div className='section' id='sc1'>
             <header className='navigation'>
-                <ThemeMode/>
+                {/* <ThemeMode/> */}
                 
                 <div className='path-name'>
                     <p>bivanoid.site</p>

@@ -1,12 +1,13 @@
 @import url(../App.css);
 
-.section2 {
+.section-aboutme {
     font-family: var(--primaryfont);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     height: fit-content;
     width: 100%;
+    gap: 1rem;
     position: relative;
     align-items: stretch;
 }
@@ -20,19 +21,10 @@
 
 .sticky {
     position: sticky;
-    display: flex;
-    padding-top: 2rem;
-    justify-content: flex-start;
-    overflow: hidden;
-    height: calc(100svh - 2rem);
-    flex-direction: column;
-    background-color: transparent;
     top: 1rem;
-    border-radius: 1rem;
-    border: var(--border-width) solid var(--border);
+    padding-top: 2rem;
+    height: calc(100svh - 2rem);
 }
-
-
 
 .sticky-header {
     display: flex;
@@ -414,11 +406,6 @@
 
 }
 
-.text-abouts .title-about span {
-    color: var(--red-cl);
-}
-
-
 .text-abouts .content-about {
     font-size: 1rem;
     width: 100%;
@@ -645,7 +632,7 @@
 }
 
 @media (max-width:1024px) {
-    .section2 {
+    .section-aboutme {
         font-family: var(--primaryfont);
         display: flex;
         justify-content: space-between;
@@ -654,7 +641,6 @@
         height: fit-content;
         width: 100%;
         position: relative;
-
     }
 
     .con-bio-title {

@@ -33,7 +33,7 @@ export default function ConectWithMe() {
     return (
         <div className="section-4">
             <div className='title-swiper'>
-                <h1 className="title-feedback">Get <span>In Touch<span> *</span></span> 
+                <h1 className="title-feedback">Get <span>In Touch<span>*</span></span> 
                 {/* <span className="noice-title">.</span> */}
                 </h1>
             </div>
@@ -47,7 +47,7 @@ export default function ConectWithMe() {
                 </div>
 
                 <form className="con-contactme" onSubmit={handleSubmit}>
-                    <h3>Write Me a Message.</h3>
+                    <h3>Write Me a Mail.</h3>
                     <div className="form-group">
                         <input
                             type="text"

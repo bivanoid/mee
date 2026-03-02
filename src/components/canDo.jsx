@@ -3,9 +3,9 @@ import "../styles/canDo.css"
 import { PanelsTopLeft, VectorSquare } from 'lucide-react';
 export default function CanDo() {
     return (
-        <div className="section-3">
+        <section>
             <div className='title-swiper'>
-                <h1>mY <span>eXPERTISE<span> *</span></span></h1>
+                <h1>mY <span>eXPERTISE<span>*</span></span></h1>
             </div>
             <div className="section-3-content">
                 <div className="box-i-can-do">
@@ -24,6 +24,6 @@ export default function CanDo() {
                     <p>creating a poster or graphic asset</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
