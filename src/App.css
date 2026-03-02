@@ -51,7 +51,7 @@
 	--primary2: #131313;
 	--primary25: #0d0d0d;
 	--primary3: #232222;
-	--blue: #73bcec;
+	--blue: rgb(115, 188, 236);
 	--grey: #1d1d1d;
 	--button: #f8f8f8;
 	--border: #121212;
@@ -75,7 +75,8 @@
 	--cubic-slow: cubic-bezier(0.4, 0, 0.2, 1);
 
 	--border-width: 2px;
-	--border-black025: var(--border-width) solid rgb(from var(--primary) r g b / 0.25);
+	--border-black025: var(--border-width) solid rgb(from var(--blue) r g b / 0.25);
+	--bg-black025: #415f74;
 
 	color-scheme: dark;
 }

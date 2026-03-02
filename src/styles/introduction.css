@@ -160,7 +160,7 @@ grid-template-rows: repeat(2, 1fr);
 }
 
 .hero .image-logo svg {
-    width: 60%;
+    width: 80%;
     aspect-ratio: 1/1;
     position: relative;
     display: grid;
@@ -181,11 +181,11 @@ grid-template-rows: repeat(2, 1fr);
 }
 
 .hero .image-logo svg path {
-    fill: var(--border);
+    fill: var(--primary25);
     fill-opacity: 0.5;
-    stroke-opacity: 0.05;
-    stroke: var(--button);
-    stroke-width: 6px;
+    stroke-opacity: 1;
+    stroke: var(--border);
+    stroke-width: var(--border-width);
     /* animation: brokenLamp 3s linear infinite; */
 }
 
@@ -236,9 +236,9 @@ grid-template-rows: repeat(2, 1fr);
     width: 4rem;
     height: 4rem;
     padding: 1rem;
-    border: none;
+    border: var(--border-width) solid var(--border);
     border-radius: 4rem;
-    background: var(--border);
+    background: var(--primary25);
     color: var(--button);
     display: flex;
     align-items: center;
