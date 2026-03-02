@@ -70,6 +70,7 @@
 }
 
 .con-addfeedback {
+    width: calc(100%);
         display: grid;
     place-items: center;
     height: fit-content;
@@ -125,6 +126,7 @@
     justify-content: space-between;
     gap: 1rem;
     height: auto;
+    width: 100%;
 }
 
 .rating-box {
@@ -132,7 +134,7 @@
     aspect-ratio: 1/1;
     display: grid;
     place-items: center;
-    font-size: 2rem;
+    font-size: 1rem;
     outline: none;
     width: 100%;
         /* background-color: var(--border); */
@@ -318,11 +320,23 @@
     .rating-container {
         display: flex;
         justify-content: space-between;
+        gap: 0;
     }
 
     .rating-box {
-        width: calc(100% / 5);
-        padding: 1rem;
+        width: 2rem;
+        height: 2rem;
+        aspect-ratio: 0;
+        display: grid;
+        place-items: center;
+    }
+
+    .rating-box svg {
+        height: 20px;
+    }
+
+    .rating-box .rating-def {
+        width: 1.5rem;
     }
 
     .input-textarea {
@@ -519,6 +533,7 @@ button:disabled {
 
 .con-form {
     padding: 30px;
+    width: calc(100%);
     border: var(--border-width) solid var(--border);
     border-radius: 1rem;
     background-color: var(--primary);
