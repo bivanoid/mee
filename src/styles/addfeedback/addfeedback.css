@@ -274,10 +274,6 @@
     width: 100%;
     margin-top: 1rem;
     font-size: 1rem;
-    text-transform: uppercase;
-    font-family: var(--primaryfont);
-    font-weight: normal;
-    transition: 0.5s var(--cubic-toeng);
     color: var(--button);
     display: flex;
     align-items: center;
@@ -285,14 +281,26 @@
     gap: 0.5rem;
 }
 
+.button-addfeedback p {
+    text-transform: uppercase;
+    font-family: var(--secondfont);
+    font-weight: bold;
+    transition: 0.5s var(--cubic-toeng);
+}
+
 .button-addfeedback svg {
     height: 1.25rem;
     width: fit-content;
-    color: rgb(from var(--blue) r g b / 0.5);
+    color: var(--blue);
+    transition: 0.5s var(--cubic-toeng);
 }
 
-.button-addfeedback:hover {
+.button-addfeedback:hover p {
     color: var(--blue);
+}
+
+.button-addfeedback:hover svg {
+    color: var(--button);
 }
 @media (max-width:767px) {
     .con-addfeedback form .con-input {

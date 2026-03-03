@@ -23,7 +23,6 @@ function Introduction() {
 const formatTime = (date) => {
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
     
     // Mendapatkan timezone dengan nama singkat
     const offset = -date.getTimezoneOffset();
@@ -34,7 +33,7 @@ const formatTime = (date) => {
     
     return (
         <>
-            {gmtString} <span className='time'>{hours} :. {minutes} :. {seconds}</span>
+            <span className='time'>{hours} :. {minutes}</span>
         </>
     )
     
@@ -81,10 +80,11 @@ const formatTime = (date) => {
                                 <h1 className='currndate'>{formatTime(currentTime)}</h1>
                             </div>
                     </div>
-                    <div className='image-logo'>
+                    {/* <div className='image-logo'>
                         <LogoMiring />
-                    </div>
+                    </div> */}
                     <div className='hero-2'>
+                            <p><span className='red-star'>*</span>Hi!, Visitors!</p>
                             <h1>
                                 Welcome to my <span>portfolio</span> <br />
                                 a place where my <span>current work</span> <br />

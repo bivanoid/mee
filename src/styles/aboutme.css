@@ -57,6 +57,7 @@
 .sticky #namamu span {
     color: var(--color-font-grey);
     font-size: 2rem;
+    font-family: var(--secondfont);
 }
 
 .bio {
@@ -176,7 +177,6 @@
     font-size: 1rem;
     color: var(--red-cl);
     display: inline-block;
-    margin-left: 0.5rem;
 }
 
 .list-bio {
@@ -409,14 +409,13 @@
 .text-abouts .content-about {
     font-size: 1rem;
     width: 100%;
-    flex: 1.5;
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 0;
+    font-weight: normal;
     position: relative;
     color: var(--color-font-grey);
 }
 .content-about span {
-    font-weight: normal;
     color: var(--button);
     opacity: 1 !important;
 }
@@ -460,16 +459,6 @@
     border: 2px solid rgb(from var(--blue) r g b / 0.25);
     transition: 0.25s var(--cubic-toeng);
 }
-
-/* @keyframes carrier {
-    0% {
-        border-color: var(--border);
-    } 50% {
-        border-color: rgb(from var(--blue) r g b / 0.5);
-    } 100% {
-        border-color: var(--border);
-    }
-} */
 
 .content-carrier span::before {
     content: '';

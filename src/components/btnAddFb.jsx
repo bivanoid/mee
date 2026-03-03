@@ -6,7 +6,7 @@ export default function BtnAddFb({ setShowAddFb }) {
       onClick={() => setShowAddFb(prev => !prev)}
       className="link-to-addfeedback"
     >
-     <Plus/> Add Feedback
+     <Plus/> <p>Add Feedback</p>
     </button>
   )
 }

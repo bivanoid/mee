@@ -4,6 +4,7 @@ import Indonesia from "../assets/svg/indonesia.svg?react"
 
 import { Send } from "lucide-react"
 import { Forward } from "lucide-react"
+import { Mail } from "lucide-react"
 
 export default function ConectWithMe() {
     const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ export default function ConectWithMe() {
     return (
         <div className="section-4">
             <div className='title-swiper'>
-                <h1 className="title-feedback">Get <span>In Touch<span>*</span></span> 
+                <h1 className="title-feedback">Get <span>In Touch<span className='red-star'>*</span></span> 
                 {/* <span className="noice-title">.</span> */}
                 </h1>
             </div>
@@ -74,7 +75,7 @@ export default function ConectWithMe() {
                     </div>
 
                     <button type="submit" className="submit-btn">
-                        Submit <Forward/>
+                        <p>Send Mail</p> <Mail/>
                     </button>
                 </form>
             </div>

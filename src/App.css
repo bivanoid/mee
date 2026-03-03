@@ -7,6 +7,13 @@
 	font-family: "Space Grotesk";
 	src: url(./fonts/SpaceGrotesk-VariableFont_wght.woff2) format('woff2');
 	font-display: swap;
+	
+}
+
+*[style*="Space Grotesk"],
+* {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.5;
 }
 
 /* :root {
@@ -99,9 +106,9 @@ body {
 	overflow-x: hidden;
 	position: relative;
 	fill: #919191;
-	background-position: center;
-	background-color: var(--primary) !important;
 }
+
+
 
 section {
 	width: 100%;
@@ -112,17 +119,13 @@ section {
     border: var(--border-width) solid var(--border);
 }
 
-.text-abouts .title-about span {
-    color: var(--red-cl);
+.red-star {
+    color: var(--red-cl) !important;
 	padding-left: 0.5rem;
 	display: inline-flex;
+	font-family: var(--secondfont) !important;
 }
 
-.title-swiper span span {
-	    color: var(--red-cl);
-	margin-left: 0.5rem;
-	display: inline-flex;
-}
 
 @media (max-width: 900px) {
 	@media (min-width: 747px) {

@@ -24,7 +24,7 @@ function AboutMe() {
     return (
         <div className='section-aboutme'>
             <section className='text-abouts'>
-                <p className='title-about'>About Me<span>*</span></p><br/>
+                <p className='title-about'>About Me<span className='red-star'>*</span></p><br/>
                 <p className='content-about'>
                     Hello! My name is <span>Firdhan Abivandya</span>. I am from Surakarta, Central Java Province, <span>Indonesia</span> 
                     {/* <span className='indonesia-flag'></span> */}
@@ -40,7 +40,7 @@ function AboutMe() {
                 </p>
             </section>
             <section className='text-abouts  '>
-                <p className='title-about title-about2'>My Education<span>*</span></p><br/>
+                <p className='title-about title-about2'>My Education<span className='red-star'>*</span></p><br/>
                 <ul className='content-carrier'>
                     {isiCarrier.map((items) => (
                         <li>

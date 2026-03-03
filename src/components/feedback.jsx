@@ -70,7 +70,7 @@ function Feedback({ setShowAddFb }) {
   return (
     <section className="section-feedback">
       <div className='title-swiper title-swiper-feedback'>
-        <h1 className="title-feedback">Their <span>Feedback<span>*</span></span></h1>
+        <h1 className="title-feedback">Their <span>Feedback<span className='red-star'>*</span></span></h1>
       </div>
       {loading && <p className="loading-feedback">Loading...</p>}
       {error && (

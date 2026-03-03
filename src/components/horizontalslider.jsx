@@ -84,7 +84,7 @@ export default function HorizontalSlider() {
   return (
     <section>
       <div className='title-swiper'>
-          <h1>Highlight <span>Projects<span>*</span></span></h1>
+          <h1>Highlight <span>Project<span className='red-star'>*</span></span></h1>
       </div>
 
         <Swiper

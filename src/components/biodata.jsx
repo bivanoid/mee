@@ -36,7 +36,7 @@ function Biodata() {
                         <h1 id='namamu'>Firdhan <span>Abivandya.</span></h1>
                     </div>
                     <div className='bio' id='bio'>
-                        <h1 >Information<span>*</span></h1>
+                        <h1 >Information<span className='red-star'>*</span></h1>
                         <ul className='list-bio'>
                             <li>
                                 <div className='text-bio'>
@@ -57,7 +57,7 @@ function Biodata() {
                                 </div>
                             </li>
                         </ul>
-                        <h1 className='skills-ttl'>Skills<span>*</span></h1>                            
+                        <h1 className='skills-ttl'>Skills<span className='red-star'>*</span></h1>                            
                         <div className='skills'>
                             {listSkill.map((items) => (
                                 <span key={items.label}  className='box-skill'>{items.label}</span>

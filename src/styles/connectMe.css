@@ -36,7 +36,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 30px;
     color: var(--button);
 }
 
@@ -119,24 +119,35 @@
     border: none;
     color: var(--button);
     border-radius: 1rem;
-    font-family: var(--secondfont);
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
     justify-self: center;
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    
+}
+
+.con-contactme button p {
+    width: fit-content;
+    font-family: var(--secondfont);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
     transition: 0.5s var(--cubic-toeng);
 }
 
 .con-contactme button svg {
-    color: rgb(from var(--blue) r g b / 0.5);
+    color: var(--blue);
     height: 1.25rem;
+    width: 1.25rem;
+    transition: 0.5s var(--cubic-toeng);
 }
 
-.con-contactme button:hover {
+.con-contactme button:hover p {
     color: var(--blue);
+}
+
+.con-contactme button:hover svg {
+    color: var(--button);
 }
 
 @media (max-width:1024px) {

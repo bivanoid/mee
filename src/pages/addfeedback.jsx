@@ -3,7 +3,7 @@ import "../styles/addfeedback/addfeedback.css";
 import {  Star } from 'lucide-react';
 // Supabase config
 import { supabase } from "../pages/supabaseClient"
-import { Forward } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { Laugh } from 'lucide-react';
 import { Smile } from 'lucide-react';
 import { Frown } from 'lucide-react';
@@ -138,7 +138,7 @@ export default function AddFeedback({ setShowAddFb, onFeedbackSubmitted }) {
               </div>
             </div>
           </div>
-            <button className="button-addfeedback" type="submit">Submit<Forward/></button>
+            <button className="button-addfeedback" type="submit"><p>Submit</p><Send/></button>
         </form>
         </div>
       </div>
