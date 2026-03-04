@@ -191,10 +191,9 @@
 }
 
 .footer3 li {
-    color: var(--button);
+    color: var(--color-font-grey);
     font-size: 1rem;
     font-family: var(--primaryfont);
-    opacity: 0.5;
     list-style: none;
     padding-bottom: 10px;
     cursor: pointer;
@@ -206,7 +205,7 @@
 }
 
 .footer3 a {
-    color: var(--button);
+    color: var(--color-font-grey);
     text-decoration: none;
     transition: opacity 0.3s;
 }
@@ -404,7 +403,7 @@
 }
 
 .copyright {
-    opacity: 0.5;
+    color: var(--color-font-grey) !important;
     padding-top: 1rem;
 
 }

@@ -145,7 +145,6 @@ function Feedback({ setShowAddFb }) {
           <div className='prev prev-fb'>Prev</div>
           <div className='next next-fb'>Next</div>
         </div>
-
           <BtnAddFb setShowAddFb={setShowAddFb}/>
 
       </div>

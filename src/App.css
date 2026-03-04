@@ -108,8 +108,6 @@ body {
 	fill: #919191;
 }
 
-
-
 section {
 	width: 100%;
     height: calc(fit-content);
@@ -126,6 +124,28 @@ section {
 	font-family: var(--secondfont) !important;
 }
 
+.build-with {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1rem;
+	gap: 0.5rem;
+	color: var(--color-font-grey);
+	text-decoration: none;
+}
+
+.build-with svg {
+	width: 1.5rem;
+}
+
+.build-with .vite-icon path {
+	fill: #9135FF !important;
+}
+
+.build-with svg path {
+	fill: var(--blue);
+	stroke-width: 9px;
+}
 
 @media (max-width: 900px) {
 	@media (min-width: 747px) {

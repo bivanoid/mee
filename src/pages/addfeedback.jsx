@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/addfeedback/addfeedback.css";
-import {  Star } from 'lucide-react';
-// Supabase config
+
 import { supabase } from "../pages/supabaseClient"
 import { Send } from 'lucide-react';
 import { Laugh } from 'lucide-react';
